@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader';
 import { Settings } from '@folio/stripes/smart-components';
 
 import Configuration from './Configuration';
+import Locale from './Locale';
 import TestHotkeys from './TestHotkeys';
 import Token from './Token';
 
@@ -21,6 +22,11 @@ const pages = [
     route: 'token',
     label: 'Set Token',
     component: Token,
+  },
+  {
+    route: 'locale',
+    label: 'Session locale',
+    component: Locale,
   },
 ];
 
