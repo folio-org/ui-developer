@@ -1,6 +1,6 @@
 {
   "name": "@folio/developer",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "Developer settings",
   "repository": "folio-org/ui-developer",
   "publishConfig": {
@@ -11,7 +11,7 @@
     "node": ">=6.0.0"
   },
   "stripes": {
-    "type": "settings",
+    "actsAs": ["settings"],
     "displayName": "ui-developer.meta.title",
     "route": "/developer",
     "actionNames": [
@@ -75,11 +75,7 @@
     "@folio/stripes": "^2.0.0",
     "@folio/stripes-cli": "^1.4.0",
     "babel-eslint": "^9.0.0",
-    "eslint": "^5.5.0",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "eslint": "^5.5.0"
   },
   "dependencies": {
     "@folio/react-intl-safe-html": "^1.0.2",
