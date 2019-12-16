@@ -23,7 +23,7 @@
     "sessionLocale.en-GB": "English - Great Britain",
     "sessionLocale.en-SE": "English - Sweden",
     "sessionLocale.en-US": "English - United States",
-    "sessionLocale.de-DE": "German - Germany / Deutsch – Deutschland",
+    "sessionLocale.de-DE": "Alemán - Alemania / Deutsch - Deutschland",
     "sessionLocale.hu-HU": "Hungarian / Magyar",
     "sessionLocale.it-IT": "Italian / Italiano",
     "sessionLocale.pt-BR": "Portuguese - Brazil / Português - Brasil",
@@ -31,9 +31,9 @@
     "sessionLocale.es": "Spanish / Español",
     "sessionLocale.es-419": "Spanish - Latin America / Español - Latino America",
     "sessionLocale.es-ES": "Spanish - Spain / Español - España",
-    "sessionLocale.ru": "Russian / русский",
-    "sessionLocale.zh-TW": "Chinese Traditional / 中國傳統的",
-    "sessionLocale.ja": "Japanese / 日本語",
-    "sessionLocale.he": "Hebrew / עברית",
-    "sessionLocale.fr-FR": "French - France / Français – France"
+    "sessionLocale.ru": "Ruso / русский",
+    "sessionLocale.zh-TW": "Chino tradicional / 中國傳統的",
+    "sessionLocale.ja": "Japonés / 日本語",
+    "sessionLocale.he": "Hebreo / עברית",
+    "sessionLocale.fr-FR": "Francés - Francia / Français - Francia"
 }
