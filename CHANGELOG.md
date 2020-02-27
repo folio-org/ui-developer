@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## 2.0.0 (IN PROGRESS)
+
+* Migrate to `stripes` `v3.0.0` and move `react-intl` and `react-router-dom` to peerDependencies.
+
 ## [1.11.0](https://github.com/folio-org/ui-developer/tree/v1.11.0) (2019-12-04)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.10.1...v1.11.0)
 
