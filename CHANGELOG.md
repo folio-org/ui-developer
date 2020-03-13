@@ -1,7 +1,9 @@
 # Change history for ui-developer
 
-## 2.0.0 (IN PROGRESS)
+## [2.0.0](https://github.com/folio-org/ui-developer/tree/v2.0.0.0) (2020-03-12)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.11.0...v2.0.0)
 
+* Add Urdu.
 * Migrate to `stripes` `v3.0.0` and move `react-intl` and `react-router-dom` to peerDependencies.
 * Migrate from `stripes.type` to `stripes.actsAs`
 
@@ -49,7 +51,6 @@
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.4.0...v1.5.0)
 
 * Use `stripes` 1.0 framework
-
 
 ## [1.4.0](https://github.com/folio-org/ui-developer/tree/v1.4.0) (2018-09-03)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.3.0...v1.4.0)
