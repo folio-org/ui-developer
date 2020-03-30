@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## 2.1.0 (IN PROGRESS)
+
+* Correctly label the "Settings > Developer > Configuration" permissions. Fixes UID-22.
+
 ## [2.0.0](https://github.com/folio-org/ui-developer/tree/v2.0.0.0) (2020-03-12)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.11.0...v2.0.0)
 

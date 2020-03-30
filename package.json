@@ -33,7 +33,7 @@
       },
       {
         "permissionName": "ui-developer.settings.configuration",
-        "displayName": "Settings (Developer): display list of settings pages",
+        "displayName": "Settings (Developer): configuration",
         "subPermissions": [
           "settings.developer.enabled"
         ],
