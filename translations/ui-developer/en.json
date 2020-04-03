@@ -12,6 +12,8 @@
   "configuration.showPermissionsInMenu": "Show permissions in user menu?",
   "configuration.listInvisiblePermissions": "List \"invisible\" permissions in add-perm menus?",
   "configuration.actAsRoot": "Act as though user has all permissions?",
+  "configuration.showHomeLink": "Show home link in top-right menu",
+  "configuration.showDevInfo": "Show developer info",
 
   "hotkeys.instructions": "When this area is focused, type:",
   "hotkeys.home": "to go to the Home page",
