@@ -2,17 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form';
 import { FormattedMessage } from 'react-intl';
+
+import { stripesShape } from '@folio/stripes/core';
 import { ConfigForm } from '@folio/stripes/smart-components';
 import { Col, Row, TextField } from '@folio/stripes/components';
+
 
 class Token extends React.Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
-    stripes: PropTypes.shape({
-      logger: PropTypes.shape({
-        log: PropTypes.func.isRequired,
-      }).isRequired,
-    }).isRequired,
+    stripes: stripesShape.isRequired,
   };
 
   constructor() {
