@@ -71,11 +71,11 @@
     "test": "echo 'placeholder. no tests implemented'"
   },
   "devDependencies": {
-    "@folio/eslint-config-stripes": "^3.2.1",
+    "@folio/eslint-config-stripes": "^5.2.0",
     "@folio/stripes": "^3.0.0",
     "@folio/stripes-cli": "^1.4.0",
     "babel-eslint": "^9.0.0",
-    "eslint": "^5.5.0",
+    "eslint": "^6.8.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-redux": "^5.0.7",
