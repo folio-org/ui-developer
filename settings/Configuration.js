@@ -11,7 +11,10 @@ import SafeHTMLMessage from '@folio/react-intl-safe-html';
 
 class Configuration extends React.Component {
   static propTypes = {
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
+    ]).isRequired,
     stripes: stripesShape.isRequired,
   };
 
