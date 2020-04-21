@@ -6,6 +6,7 @@ import { Settings } from '@folio/stripes/smart-components';
 
 import Configuration from './Configuration';
 import Locale from './Locale';
+import OkapiPaths from './OkapiPaths';
 import TestHotkeys from './TestHotkeys';
 import Token from './Token';
 
@@ -33,6 +34,11 @@ const pages = [
     label: <FormattedMessage id="ui-developer.sessionLocale" />,
     component: Locale,
     perm: 'ui-developer.settings.locale',
+  },
+  {
+    route: 'okapi-paths',
+    label: 'Okapi paths',
+    component: OkapiPaths,
   },
 ];
 
