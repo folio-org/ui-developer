@@ -1,8 +1,8 @@
 {
-    "meta.title": "Developer",
+    "meta.title": "開発者",
     "configuration": "Configuration",
     "hotkeys": "Hotkeys test",
-    "sessionLocale": "Session locale",
+    "sessionLocale": "セッションロケール",
     "setToken": "Set token",
     "configuration.loggingCategories": "Logging categories",
     "configuration.loggingDocumentationLink": "See <a href=\"{linkHref}\">{linkText}</a> for available levels.",
@@ -16,7 +16,7 @@
     "hotkeys.about": "to go to the About page",
     "hotkeys.undefined": "undefined",
     "setToken.authenticationToken": "Authentication token (JWT)",
-    "sessionLocale.temporarySessionLocale": "TEMPORARY Session locale",
+    "sessionLocale.temporarySessionLocale": "暫定セッションロケール",
     "sessionLocale.ar-AR": "Arabic / العربية",
     "sessionLocale.zh-CN": "Chinese Simplified / 简体中文",
     "sessionLocale.da-DK": "Danish / Dansk",
@@ -36,5 +36,7 @@
     "sessionLocale.ja": "Japanese / 日本語",
     "sessionLocale.he": "Hebrew / עברית",
     "sessionLocale.fr-FR": "French - France / Français – France",
-    "sessionLocale.": "Urdu / اُردُو‎"
+    "sessionLocale.": "Urdu / اُردُو‎",
+    "configuration.showHomeLink": "Show home link in top-right menu",
+    "configuration.showDevInfo": "Show developer info"
 }

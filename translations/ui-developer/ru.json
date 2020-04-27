@@ -36,5 +36,7 @@
     "sessionLocale.ja": "Японский / 日本語",
     "sessionLocale.he": "Иврит / עברית",
     "sessionLocale.fr-FR": "Французский - Франция",
-    "sessionLocale.": "Urdu / اُردُو‎"
+    "sessionLocale.": "Urdu / اُردُو‎",
+    "configuration.showHomeLink": "Показать ссылку на домашнюю страницу правом верхнем углу",
+    "configuration.showDevInfo": "Показать информацию для разработчиков"
 }

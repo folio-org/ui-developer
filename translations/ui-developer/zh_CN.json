@@ -36,5 +36,7 @@
     "sessionLocale.ja": "日语",
     "sessionLocale.he": "希伯来语",
     "sessionLocale.fr-FR": "法语-法国",
-    "sessionLocale.": "乌尔都语"
+    "sessionLocale.": "乌尔都语",
+    "configuration.showHomeLink": "在右上方的菜单中显示主页链接",
+    "configuration.showDevInfo": "显示开发者信息"
 }
