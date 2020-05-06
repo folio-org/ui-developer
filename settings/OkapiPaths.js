@@ -1,23 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { get } from 'lodash';
 
-import { stripesConnect, withStripes } from '@folio/stripes/core';
+import { stripesConnect } from '@folio/stripes/core';
 
 
 import {
   Pane,
-  Button,
-  List,
 } from '@folio/stripes/components';
 
+/**
+ * fetch the paths associated with the available interfaces to provide a way
+ * to figure out which path is provided by which interface.
+ */
 class OkapiPaths extends React.Component {
   static manifest = Object.freeze({
     moduleDetails: {
       type: 'okapi',
-//      records: 'users',
-      path: '_/proxy/modules/%{moduleId}',
       accumulate: true,
+      fetch: false,
     },
     moduleId: '',
   });
@@ -30,62 +31,51 @@ class OkapiPaths extends React.Component {
       moduleDetails: PropTypes.object,
       moduleId: PropTypes.object,
     }).isRequired,
+    mutator: PropTypes.shape({
+      moduleDetails: PropTypes.object,
+    }),
   };
 
 
+  constructor() {
+    super();
+    this.state = {
+      paths: {},
+      filter: '',
+    };
+  }
+
   componentDidMount() {
-    const modules = _.get(this.props.stripes, ['discovery', 'modules']) || {};
-    console.log(modules);
+    const { mutator } = this.props;
 
-    const getter = this.props.resources.moduleDetails;
-    console.log(this.props.resources);
+    const modules = get(this.props.stripes, ['discovery', 'modules']) || {};
+
+    const paths = this.state.paths;
     Object.keys(modules).forEach(m => {
-      this.setState({ [m] : {} });
-      // getter.reset();
-      // moduleId.replace(m)
-      // getter.GET().then(details => {
-      //   console.log(`module: ${m}`, details);
-      // });
-    });
-
-
-
-/*
-18   const uv = props.parentMutator.userUniquenessValidator;
-19   const query = `(barcode="${values.requester.barcode}")`;
-20
-21   uv.reset();
-22   return uv.GET({ params: { query } }).then((users) => {
-23     return (users.length < 1)
-24       ? { barcode: <FormattedMessage id="ui-requests.errors.userBarcodeDoesNotExist" /> }
-25       : null;
-26   });
-
-*/
-  }
-
-  componentDidUpdate() {
-    const modules = _.get(this.props.stripes, ['discovery', 'modules']) || {};
-
-    console.log(this.props.resources);
-    if (this.props.resources.moduleDetails) {
-      const getter = this.props.resources.moduleDetails;
-      Object.keys(modules).forEach(m => {
-        getter.reset();
-        moduleId.replace(m);
-
-        getter.GET().then(details => {
-          console.log(`module: ${m}`, details);
-        });
+      mutator.moduleDetails.GET({ path: `_/proxy/modules/${m}` }).then(res => {
+        if (res.provides) {
+          res.provides.forEach(i => {
+            i.handlers.forEach(handler => {
+              paths[handler.pathPattern] = m;
+            });
+          });
+        }
+        this.setState({ paths });
       });
-
-    }
-
-
-        console.log(this.state);
-
+    });
   }
 
+  showPaths = () => {
+    return Object
+      .keys(this.state.paths)
+      .sort()
+      .filter(path => path.indexOf(this.state.filter) >= 0)
+      .map(path => <li key={path}>{path} = {this.state.paths[path]}</li>);
+  }
+
+  handleFilter = (event) => {
+    this.setState({ filter: event.target.value });
+  }
 
   render() {
     return (
@@ -93,7 +83,13 @@ class OkapiPaths extends React.Component {
         defaultWidth="fill"
         paneTitle="Okapi paths"
       >
-        testing 123
+        <div>
+          <h3>resource path to interface mapper</h3>
+          <input type="text" name="" onChange={this.handleFilter} />
+        </div>
+        <ul>
+          {this.showPaths()}
+        </ul>
       </Pane>
     );
   }
