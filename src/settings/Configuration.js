@@ -7,8 +7,6 @@ import { Checkbox, Col, Row, TextField } from '@folio/stripes/components';
 import { ConfigForm } from '@folio/stripes/smart-components';
 import { stripesShape } from '@folio/stripes/core';
 
-import SafeHTMLMessage from '@folio/react-intl-safe-html';
-
 class Configuration extends React.Component {
   static propTypes = {
     label: PropTypes.oneOfType([
@@ -62,11 +60,14 @@ class Configuration extends React.Component {
                 label={<FormattedMessage id="ui-developer.configuration.loggingCategories" />}
               />
               (
-              <SafeHTMLMessage
+              <FormattedMessage
                 id="ui-developer.configuration.loggingDocumentationLink"
                 values={{
-                  linkHref: 'https://github.com/folio-org/stripes/blob/master/doc/dev-guide.md#configuring-the-logger',
-                  linkText: 'the documentation',
+                  a: (...chunks) => (
+                    <a href="https://github.com/folio-org/stripes/blob/master/doc/dev-guide.md#configuring-the-logger">
+                      {chunks}
+                    </a>
+                  ),
                 }}
               />
               )

@@ -6,7 +6,7 @@
   "setToken": "Set token",
 
   "configuration.loggingCategories": "Logging categories",
-  "configuration.loggingDocumentationLink": "See <a href=\"{linkHref}\">{linkText}</a> for available levels.",
+  "configuration.loggingDocumentationLink": "See <a>the documentation</a> for available levels.",
   "configuration.autoLoginUsername": "Auto-login username",
   "configuration.autoLoginPassword": "Auto-login password",
   "configuration.showPermissionsInMenu": "Show permissions in user menu?",
