@@ -7,6 +7,7 @@ import { Settings } from '@folio/stripes/smart-components';
 import Configuration from './Configuration';
 import Locale from './Locale';
 import OkapiPaths from './OkapiPaths';
+import CanIUse from './CanIUse';
 import TestHotkeys from './TestHotkeys';
 import Token from './Token';
 
@@ -39,6 +40,11 @@ const pages = [
     route: 'okapi-paths',
     label: 'Okapi paths',
     component: OkapiPaths,
+  },
+  {
+    route: 'can-i-use',
+    label: 'Can I Use',
+    component: CanIUse,
   },
 ];
 
