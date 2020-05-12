@@ -9,6 +9,7 @@ import Locale from './Locale';
 import OkapiPaths from './OkapiPaths';
 import TestHotkeys from './TestHotkeys';
 import Token from './Token';
+import FolioBabies from './FolioBabies';
 
 const pages = [
   {
@@ -39,6 +40,11 @@ const pages = [
     route: 'okapi-paths',
     label: 'Okapi paths',
     component: OkapiPaths,
+  },
+  {
+    route: 'folio-babies',
+    label: <FormattedMessage id="ui-developer.folioBabies" />,
+    component: FolioBabies,
   },
 ];
 
