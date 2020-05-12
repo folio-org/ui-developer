@@ -9,8 +9,12 @@ import {
 } from '@folio/stripes/components';
 
 /**
- * fetch the paths associated with the available interfaces to provide a way
- * to figure out which path is provided by which interface.
+ * given a partial path, find the API endpoints that match it
+ * and list the required permissions to access each. Click a
+ * permission to retrieve the publicly accessible permission sets
+ * that contain it.
+ *
+ * i.e. given an endpoint, tell me what permissions I need to access it.
  */
 class CanIUse extends React.Component {
   static manifest = Object.freeze({
@@ -18,6 +22,12 @@ class CanIUse extends React.Component {
       type: 'okapi',
       accumulate: true,
       fetch: false,
+    },
+    permissions: {
+      type: 'okapi',
+      accumulate: true,
+      fetch: false,
+      path: 'perms/permissions',
     },
     moduleId: '',
   });
@@ -28,10 +38,12 @@ class CanIUse extends React.Component {
     }).isRequired,
     resources: PropTypes.shape({
       moduleDetails: PropTypes.object,
+      permissions: PropTypes.object,
       moduleId: PropTypes.object,
     }).isRequired,
     mutator: PropTypes.shape({
       moduleDetails: PropTypes.object,
+      permissions: PropTypes.object,
     }),
   };
 
@@ -42,6 +54,7 @@ class CanIUse extends React.Component {
       paths: {},
       permissionSets: {},
       filter: '',
+      publicPermissions: [],
     };
   }
 
@@ -64,6 +77,35 @@ class CanIUse extends React.Component {
         this.setState({ paths, permissionSets });
       });
     });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.desiredPermission && this.state.desiredPermission !== prevState.desiredPermission) {
+      const { mutator } = this.props;
+      mutator.permissions.GET({ params: { query: `(subPermissions=(${this.state.desiredPermission}))` } }).then(subRes => {
+        const parents = {};
+        subRes.permissions.forEach(p => {
+          if (p.childOf) {
+            p.childOf.forEach(c => {
+              parents[c] = true;
+            });
+          }
+          if (p.visible) {
+            parents[p.permissionName] = true;
+          }
+        });
+
+        if (Object.keys(parents).length) {
+          mutator.permissions.GET({ params: { query: `(permissionName=(${Object.keys(parents).join(' or ')}))` } }).then(pRes => {
+            this.setState({ publicPermissions: pRes.permissions });
+          });
+        }
+
+        // mutator.permissions.GET({ query: `query=(permissionName=(${subRes.childOf.join(' or ')}))` }).then(pRes => {
+        //   this.setState({ publicPermissions: pRes.permissions });
+        // });
+      });
+    }
   }
 
   mapPathToImpl = (res, impl, paths) => {
@@ -135,12 +177,21 @@ class CanIUse extends React.Component {
       });
     }
 
-    return <div>requires one of: {this.listFormatter(this.state.paths[path].permissions)} publicly available in {this.listFormatter(Object.keys(psets))}</div>;
-//    return <div>may require <tt>{this.state.paths[path].permissions.join(', ')}</tt>, publicly available in <tt>{Object.keys(psets).join(', ')}</tt></div>;
-    //this.state.paths[path].permissions ? this.state.paths[path].permissions.join(', ') : '';
+    return <div>requires one of: {this.listFormatter(this.state.paths[path].permissions)} publicly available in {this.linkFormatter(Object.keys(psets))}</div>;
   }
 
   listFormatter = (l) => <ul>{l.map(i => <li key={i}><tt>{i}</tt></li>)}</ul>;
+
+  linkFormatter = (l) => <ul>{l.map(i => <li key={i}><tt><button type="button" onClick={() => this.handlePermissionClick(i)}>{i}</button></tt></li>)}</ul>;
+
+  showPublicPermissions = () => {
+    return (
+      <div>
+        <h4>{this.state.desiredPermission} is available in the following public permission sets:</h4>
+        <ul>{this.state.publicPermissions.map(p => (<li key={p.permissionName}>{p.displayName} / {p.permissionName}</li>))}</ul>
+      </div>
+    );
+  }
 
   /**
    * iterate through this.state.paths to find those matching this.state.filter
@@ -169,6 +220,10 @@ class CanIUse extends React.Component {
     this.setState({ filter: event.target.value });
   }
 
+  handlePermissionClick = (desiredPermission) => {
+    this.setState({ desiredPermission, publicPermissions: [] });
+  }
+
   render() {
     return (
       <Pane
@@ -179,9 +234,13 @@ class CanIUse extends React.Component {
           <h3>resource path to permission-set mapper</h3>
           <input type="text" name="" onChange={this.handleFilter} />
         </div>
-        <ul>
-          {this.showPaths()}
-        </ul>
+        <div>{this.showPublicPermissions()}</div>
+        <div>
+          <h4>matched paths</h4>
+          <ul>
+            {this.showPaths()}
+          </ul>
+        </div>
       </Pane>
     );
   }
