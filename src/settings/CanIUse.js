@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 import { stripesConnect } from '@folio/stripes/core';
 import {
@@ -79,6 +80,14 @@ class CanIUse extends React.Component {
     });
   }
 
+  /**
+   * Find visible psets containing state.desiredPermission.
+   *
+   * This isn't perfect as it only looks two levels up in the hierarchy,
+   * but it's better than nothing. We look for a pset containing desiredPermission
+   * as a subPermission. If that container is itself visible or has parents that
+   * are visible, they are saved in state.publicPermissions.
+   */
   componentDidUpdate(prevProps, prevState) {
     if (this.state.desiredPermission && this.state.desiredPermission !== prevState.desiredPermission) {
       const { mutator } = this.props;
@@ -96,14 +105,10 @@ class CanIUse extends React.Component {
         });
 
         if (Object.keys(parents).length) {
-          mutator.permissions.GET({ params: { query: `(permissionName=(${Object.keys(parents).join(' or ')}))` } }).then(pRes => {
+          mutator.permissions.GET({ params: { query: `(permissionName=(${Object.keys(parents).join(' or ')}) and visible=true)` } }).then(pRes => {
             this.setState({ publicPermissions: pRes.permissions });
           });
         }
-
-        // mutator.permissions.GET({ query: `query=(permissionName=(${subRes.childOf.join(' or ')}))` }).then(pRes => {
-        //   this.setState({ publicPermissions: pRes.permissions });
-        // });
       });
     }
   }
@@ -177,10 +182,8 @@ class CanIUse extends React.Component {
       });
     }
 
-    return <div>requires one of: {this.listFormatter(this.state.paths[path].permissions)} publicly available in {this.linkFormatter(Object.keys(psets))}</div>;
+    return <div>requires one of: {this.linkFormatter(this.state.paths[path].permissions)}</div>;
   }
-
-  listFormatter = (l) => <ul>{l.map(i => <li key={i}><tt>{i}</tt></li>)}</ul>;
 
   linkFormatter = (l) => <ul>{l.map(i => <li key={i}><tt><button type="button" onClick={() => this.handlePermissionClick(i)}>{i}</button></tt></li>)}</ul>;
 
@@ -188,9 +191,14 @@ class CanIUse extends React.Component {
     return (
       <div>
         <h4>{this.state.desiredPermission} is available in the following public permission sets:</h4>
-        <ul>{this.state.publicPermissions.map(p => (<li key={p.permissionName}>{p.displayName} / {p.permissionName}</li>))}</ul>
+        <ul>{this.state.publicPermissions.map(p => <li key={p.permissionName}>{this.formatPermissionName(p.permissionName)} ({p.permissionName})</li>)}</ul>
       </div>
     );
+  }
+
+  formatPermissionName = (name) => {
+    const [id, ...rest] = name.split('.');
+    return <FormattedMessage id={`${id}.permission.${rest.join('.')}`} />;
   }
 
   /**
