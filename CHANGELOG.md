@@ -1,9 +1,10 @@
 # Change history for ui-developer
 
-## 2.1.0 (IN PROGRESS)
+## 3.0.0 (IN PROGRESS)
 
 * Correctly label the "Settings > Developer > Configuration" permissions. Fixes UID-22.
 * Provide checkboxes for two more config settings: `showHomeLink` and `showDevInfo`. From v2.0.1.
+* Increment `stripes` to `v4.0`, `react-intl` to `v4.5`, `react-intl-safe-html` to `v2.0`. Refs STRIPES-672.
 
 ## [2.0.0](https://github.com/folio-org/ui-developer/tree/v2.0.0.0) (2020-03-12)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.11.0...v2.0.0)
