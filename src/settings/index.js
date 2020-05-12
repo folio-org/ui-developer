@@ -38,12 +38,12 @@ const pages = [
   },
   {
     route: 'okapi-paths',
-    label: 'Okapi paths',
+    label: <FormattedMessage id="ui-developer.okapiPaths" />,
     component: OkapiPaths,
   },
   {
     route: 'can-i-use',
-    label: 'Can I Use',
+    label: <FormattedMessage id="ui-developer.canIUse" />,
     component: CanIUse,
   },
 ];
