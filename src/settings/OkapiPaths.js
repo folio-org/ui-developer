@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { Link } from 'react-router-dom';
 
 import { stripesConnect } from '@folio/stripes/core';
 import {
@@ -64,7 +63,7 @@ class OkapiPaths extends React.Component {
               paths[handler.pathPattern] = {
                 iface,
                 impl,
-                ramlsLink: <Link to={`//github.com/folio-org/${iface}/tree/master/ramls`}>{iface}</Link>,
+                ramlsLink: <a href={`//github.com/folio-org/${iface}/tree/master/ramls`}>{iface}</a>,
               };
             });
           });
