@@ -5,6 +5,8 @@
   "sessionLocale": "Session locale",
   "setToken": "Set token",
   "folioBabies": "Folio babies",
+  "canIUse": "I can haz endpoint?",
+  "okapiPaths": "Okapi path mapper",
 
   "configuration.loggingCategories": "Logging categories",
   "configuration.loggingDocumentationLink": "See <a>the documentation</a> for available levels.",
