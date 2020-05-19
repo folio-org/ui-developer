@@ -5,7 +5,7 @@
     "sessionLocale": "Langue et paramètres régionaux de la session",
     "setToken": "Définir le jeton",
     "configuration.loggingCategories": "Catégories",
-    "configuration.loggingDocumentationLink": "Voir <a href=\"{linkHref}\"> {linkText} </a> pour les niveaux disponibles.",
+    "configuration.loggingDocumentationLink": "Voir <a> la documentation </a> pour les niveaux disponibles.",
     "configuration.autoLoginUsername": "Nom d'utilisateur pour connexion automatique",
     "configuration.autoLoginPassword": "Mot de passe de connexion automatique",
     "configuration.showPermissionsInMenu": "Afficher les autorisations dans le menu utilisateur?",
@@ -38,5 +38,8 @@
     "sessionLocale.fr-FR": "French - France / Français – France",
     "sessionLocale.": "Ourdou",
     "configuration.showHomeLink": "Show home link in top-right menu",
-    "configuration.showDevInfo": "Show developer info"
+    "configuration.showDevInfo": "Show developer info",
+    "folioBabies": "Folio babies",
+    "canIUse": "I can haz endpoint?",
+    "okapiPaths": "Okapi path mapper"
 }

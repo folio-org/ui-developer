@@ -5,7 +5,7 @@
     "sessionLocale": "Idioma da sessão",
     "setToken": "Definir token",
     "configuration.loggingCategories": "Categorias de login",
-    "configuration.loggingDocumentationLink": "Consulte <a href=\"{linkHref}\">{linkText}</a> para os níveis disponíveis.",
+    "configuration.loggingDocumentationLink": "Veja <a>a documentação</a> para níveis disponíveis.",
     "configuration.autoLoginUsername": "Nome de usuário de login automático",
     "configuration.autoLoginPassword": "Senha de login automático",
     "configuration.showPermissionsInMenu": "Mostrar permissões no menu do usuário?",
@@ -38,5 +38,8 @@
     "sessionLocale.fr-FR": "Francês - França / Français - France",
     "sessionLocale.": "Urdu / اُردُو",
     "configuration.showHomeLink": "Mostrar link inicial no menu superior direito",
-    "configuration.showDevInfo": "Mostrar informações do desenvolvedor"
+    "configuration.showDevInfo": "Mostrar informações do desenvolvedor",
+    "folioBabies": "Bebês do Folio",
+    "canIUse": "Eu posso usar um endpoint?",
+    "okapiPaths": "Mapeador de caminhos do Okapi"
 }

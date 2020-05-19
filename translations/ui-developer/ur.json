@@ -5,7 +5,7 @@
     "sessionLocale": "Session locale",
     "setToken": "Set token",
     "configuration.loggingCategories": "Logging categories",
-    "configuration.loggingDocumentationLink": "See <a href=\"{linkHref}\">{linkText}</a> for available levels.",
+    "configuration.loggingDocumentationLink": "See <a>the documentation</a> for available levels.",
     "configuration.autoLoginUsername": "Auto-login username",
     "configuration.autoLoginPassword": "Auto-login password",
     "configuration.showPermissionsInMenu": "Show permissions in user menu?",
@@ -38,5 +38,8 @@
     "sessionLocale.fr-FR": "French - France / Français – France",
     "sessionLocale.": "Urdu / اُردُو‎",
     "configuration.showHomeLink": "اوپر دائیں مینو میں ہوم لنک دکھائیں",
-    "configuration.showDevInfo": "ڈویلپر کی معلومات دکھائیں"
+    "configuration.showDevInfo": "ڈویلپر کی معلومات دکھائیں",
+    "folioBabies": "Folio babies",
+    "canIUse": "I can haz endpoint?",
+    "okapiPaths": "Okapi path mapper"
 }

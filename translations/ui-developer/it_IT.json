@@ -38,5 +38,8 @@
     "sessionLocale.fr-FR": "Francese – Francia",
     "sessionLocale.": "Urdu / اُردُو‎",
     "configuration.showHomeLink": "Show home link in top-right menu",
-    "configuration.showDevInfo": "Show developer info"
+    "configuration.showDevInfo": "Show developer info",
+    "folioBabies": "Folio babies",
+    "canIUse": "I can haz endpoint?",
+    "okapiPaths": "Okapi path mapper"
 }
