@@ -18,6 +18,8 @@ const FolioBabies = () => {
     'Shreya',
   ];
 
+  babies.sort();
+
   return (
     <Pane
       defaultWidth="fill"
