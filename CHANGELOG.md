@@ -6,6 +6,7 @@
 * Provide checkboxes for two more config settings: `showHomeLink` and `showDevInfo`. From v2.0.1.
 * Increment `stripes` to `v4.0`, `react-intl` to `v4.5`, `react-intl-safe-html` to `v2.0`. Refs STRIPES-672.
 * Use `intl.formatDisplayName` to display locale labels.
+* Fix checkboxes in Configuration settings to correctly display initial values.
 
 ## [2.0.0](https://github.com/folio-org/ui-developer/tree/v2.0.0.0) (2020-03-12)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v1.11.0...v2.0.0)
