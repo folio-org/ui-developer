@@ -25,5 +25,5 @@
 
   "setToken.authenticationToken": "Authentication token (JWT)",
 
-  "sessionLocale.temporarySessionLocale": "TEMPORARY Session locale",
+  "sessionLocale.temporarySessionLocale": "TEMPORARY Session locale"
 }
