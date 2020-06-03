@@ -88,6 +88,7 @@ class Configuration extends React.Component {
               <Field
                 htmlFor="4"
                 component={Checkbox}
+                type="checkbox"
                 name="config.showPerms"
                 id="config.showPerms"
                 label={<FormattedMessage id="ui-developer.configuration.showPermissionsInMenu" />}
@@ -95,6 +96,7 @@ class Configuration extends React.Component {
               <Field
                 htmlFor="5"
                 component={Checkbox}
+                type="checkbox"
                 name="config.listInvisiblePerms"
                 id="config.listInvisiblePerms"
                 label={<FormattedMessage id="ui-developer.configuration.listInvisiblePermissions" />}
@@ -102,6 +104,7 @@ class Configuration extends React.Component {
               <Field
                 htmlFor="6"
                 component={Checkbox}
+                type="checkbox"
                 name="config.hasAllPerms"
                 id="config.hasAllPerms"
                 label={<FormattedMessage id="ui-developer.configuration.actAsRoot" />}
@@ -109,6 +112,7 @@ class Configuration extends React.Component {
               <Field
                 htmlFor="7"
                 component={Checkbox}
+                type="checkbox"
                 name="config.showHomeLink"
                 id="config.showHomeLink"
                 label={<FormattedMessage id="ui-developer.configuration.showHomeLink" />}
@@ -116,6 +120,7 @@ class Configuration extends React.Component {
               <Field
                 htmlFor="8"
                 component={Checkbox}
+                type="checkbox"
                 name="config.showDevInfo"
                 id="config.showDevInfo"
                 label={<FormattedMessage id="ui-developer.configuration.showDevInfo" />}
