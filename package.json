@@ -1,6 +1,6 @@
 {
   "name": "@folio/developer",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Developer settings",
   "repository": "folio-org/ui-developer",
   "publishConfig": {
@@ -79,6 +79,7 @@
     "eslint": "^6.8.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
+    "react-intl": "^4.5.3",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.0.0",
     "redux": "^4.0.0"
