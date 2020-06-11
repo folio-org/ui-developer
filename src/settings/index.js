@@ -11,6 +11,7 @@ import CanIUse from './CanIUse';
 import TestHotkeys from './TestHotkeys';
 import Token from './Token';
 import FolioBabies from './FolioBabies';
+import OkapiConfiguration from './OkapiConfiguration';
 
 const pages = [
   {
@@ -52,14 +53,15 @@ const pages = [
     label: <FormattedMessage id="ui-developer.folioBabies" />,
     component: FolioBabies,
   },
+  {
+    route: 'okapi-configuration',
+    label: <FormattedMessage id="ui-developer.okapiConfigurationEntries" />,
+    component: OkapiConfiguration,
+  },
 ];
 
-class DeveloperSettings extends React.Component {
-  static actionNames = ['stripesHome', 'stripesAbout'];
-
-  render() {
-    return <Settings {...this.props} pages={pages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
-  }
-}
+const DeveloperSettings = (props) => {
+  return <Settings {...props} pages={pages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
+};
 
 export default hot(module)(DeveloperSettings);
