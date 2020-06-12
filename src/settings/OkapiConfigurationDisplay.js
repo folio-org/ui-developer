@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import JSONPretty from 'react-json-pretty';
-
 import { FormattedMessage, useIntl } from 'react-intl';
-import { Checkbox, Col, MultiColumnList, Pane, Row, Select, TextField } from '@folio/stripes/components';
-import { ConfigForm } from '@folio/stripes/smart-components';
+
+import { Button, Icon, MultiColumnList, Pane, Row, Select } from '@folio/stripes/components';
 
 const OkapiConfigurationDisplay = (props) => {
   const intl = useIntl();
@@ -15,11 +13,18 @@ const OkapiConfigurationDisplay = (props) => {
   };
 
   const formatter = {
-    value: o => o.value // <JSONPretty data={o.value} />
+    value: o => o.value, // <JSONPretty data={o.value} />
+    action: (o) => (
+      <Button onClick={() => props.handleDelete(o)}>
+        <Icon icon="trash">
+          <FormattedMessage id="stripes-smart-components.settings.common.delete" />
+        </Icon>
+      </Button>
+    ),
   };
 
   const modules = [...new Set(props.entries.map(e => e.module))].map(o => ({ label: o, value: o }));
-  modules.unshift({ label: intl.formatMessage({ id: 'ui-developer.okapiConfigurationEntries.noFilter' }), value: '' });
+  modules.unshift({ label: intl.formatMessage({ id: 'ui-developer.okapiConfigurationEntries.filterByModule.noFilter' }), value: '' });
   const filteredEntries = filter ? props.entries.filter(e => e.module === filter) : props.entries;
 
   return (
@@ -38,12 +43,18 @@ const OkapiConfigurationDisplay = (props) => {
       <Row>
         <MultiColumnList
           contentData={filteredEntries}
-          visibleColumns={['module', 'configName', 'code', 'value']}
+          visibleColumns={['module', 'configName', 'code', 'value', 'action']}
           formatter={formatter}
         />
       </Row>
     </Pane>
   );
-}
+};
+
+OkapiConfigurationDisplay.propTypes = {
+  entries: PropTypes.arrayOf(PropTypes.object),
+  handleDelete: PropTypes.func,
+  handleUpdate: PropTypes.func,
+};
 
 export default OkapiConfigurationDisplay;

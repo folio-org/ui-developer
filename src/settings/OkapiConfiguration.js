@@ -1,20 +1,18 @@
-import { merge } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form';
-import { FormattedMessage } from 'react-intl';
-import { Checkbox, Col, Row, TextField, MultiColumnList } from '@folio/stripes/components';
-import { ConfigForm } from '@folio/stripes/smart-components';
-import { stripesShape } from '@folio/stripes/core';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import OkapiConfigurationDisplay from './OkapiConfigurationDisplay';
 
 class OkapiConfiguration extends React.Component {
   static propTypes = {
-    label: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-    ]).isRequired,
-    stripes: stripesShape.isRequired,
+    intl: PropTypes.object,
+    resources: PropTypes.shape({
+      entries: PropTypes.object,
+    }).isRequired,
+    mutator: PropTypes.shape({
+      entries: PropTypes.object,
+      recordId: PropTypes.object,
+    }),
   };
 
   static manifest = Object.freeze({
@@ -22,7 +20,7 @@ class OkapiConfiguration extends React.Component {
     entries: {
       type: 'okapi',
       records: 'configs',
-      path: 'configurations/entries?query=(module=!{moduleName} and configName=!{configName})',
+      path: 'configurations/entries',
       GET: {
         path: 'configurations/entries',
         params: {
@@ -33,18 +31,45 @@ class OkapiConfiguration extends React.Component {
       PUT: {
         path: 'configurations/entries/%{recordId}',
       },
+      DELETE: {
+        path: 'configurations/entries/%{recordId}',
+      },
     },
   });
+
+
+  handleDelete = (item) => {
+    const message = this.props.intl.formatMessage({ id: 'ui-developer.okapiConfigurationEntries.confirm' }, {
+      module: item.module,
+      configName: item.configName,
+      code: item.code,
+      value: item.value,
+    });
+
+    if (confirm(message)) {
+      this.props.mutator.recordId.replace(item.id);
+      this.props.mutator.entries.DELETE(item);
+    }
+  }
+
+  handleUpdate = (item) => {
+    this.props.mutator.recordId.replace(item.id);
+    this.props.mutator.entries.PUT(item);
+  }
 
   render() {
     const entries = (this.props.resources.entries || {}).records || [];
 
     if (entries.length) {
-      return <OkapiConfigurationDisplay entries={entries} />;
+      return <OkapiConfigurationDisplay
+        entries={entries}
+        handleDelete={this.handleDelete}
+        handleUpdate={this.handleUpdate}
+      />;
     } else {
-      return <div>Loading configurations...</div>;
+      return <div><FormattedMessage id="ui-developer.okapiConfigurationEntries.loading" /></div>;
     }
   }
 }
 
-export default OkapiConfiguration;
+export default injectIntl(OkapiConfiguration);

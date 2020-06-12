@@ -57,6 +57,7 @@ const pages = [
     route: 'okapi-configuration',
     label: <FormattedMessage id="ui-developer.okapiConfigurationEntries" />,
     component: OkapiConfiguration,
+    perm: 'ui-developer.settings.okapiConfiguration',
   },
 ];
 
