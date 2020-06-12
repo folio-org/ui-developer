@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import { Button, Icon, MultiColumnList, Pane, Row, Select } from '@folio/stripes/components';
+import { MultiColumnList, Pane, Row, Select } from '@folio/stripes/components';
 
 const OkapiConfigurationDisplay = (props) => {
   const intl = useIntl();
@@ -14,13 +14,13 @@ const OkapiConfigurationDisplay = (props) => {
 
   const formatter = {
     value: o => o.value, // <JSONPretty data={o.value} />
-    action: (o) => (
-      <Button onClick={() => props.handleDelete(o)}>
-        <Icon icon="trash">
-          <FormattedMessage id="stripes-smart-components.settings.common.delete" />
-        </Icon>
-      </Button>
-    ),
+    // action: (o) => (
+    //   <Button onClick={() => props.handleDelete(o)}>
+    //     <Icon icon="trash">
+    //       <FormattedMessage id="stripes-smart-components.settings.common.delete" />
+    //     </Icon>
+    //   </Button>
+    // ),
   };
 
   const modules = [...new Set(props.entries.map(e => e.module))].map(o => ({ label: o, value: o }));
@@ -43,7 +43,7 @@ const OkapiConfigurationDisplay = (props) => {
       <Row>
         <MultiColumnList
           contentData={filteredEntries}
-          visibleColumns={['module', 'configName', 'code', 'value', 'action']}
+          visibleColumns={['module', 'configName', 'code', 'value']}
           formatter={formatter}
         />
       </Row>
@@ -53,8 +53,8 @@ const OkapiConfigurationDisplay = (props) => {
 
 OkapiConfigurationDisplay.propTypes = {
   entries: PropTypes.arrayOf(PropTypes.object),
-  handleDelete: PropTypes.func,
-  handleUpdate: PropTypes.func,
+  // handleDelete: PropTypes.func,
+  // handleUpdate: PropTypes.func,
 };
 
 export default OkapiConfigurationDisplay;

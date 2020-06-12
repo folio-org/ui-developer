@@ -5,7 +5,6 @@ import OkapiConfigurationDisplay from './OkapiConfigurationDisplay';
 
 class OkapiConfiguration extends React.Component {
   static propTypes = {
-    intl: PropTypes.object,
     resources: PropTypes.shape({
       entries: PropTypes.object,
     }).isRequired,
@@ -28,34 +27,33 @@ class OkapiConfiguration extends React.Component {
           limit: '1000',
         },
       },
-      PUT: {
-        path: 'configurations/entries/%{recordId}',
-      },
-      DELETE: {
-        path: 'configurations/entries/%{recordId}',
-      },
+      // PUT: {
+      //   path: 'configurations/entries/%{recordId}',
+      // },
+      // DELETE: {
+      //   path: 'configurations/entries/%{recordId}',
+      // },
     },
   });
 
-
-  handleDelete = (item) => {
-    const message = this.props.intl.formatMessage({ id: 'ui-developer.okapiConfigurationEntries.confirm' }, {
-      module: item.module,
-      configName: item.configName,
-      code: item.code,
-      value: item.value,
-    });
-
-    if (confirm(message)) {
-      this.props.mutator.recordId.replace(item.id);
-      this.props.mutator.entries.DELETE(item);
-    }
-  }
-
-  handleUpdate = (item) => {
-    this.props.mutator.recordId.replace(item.id);
-    this.props.mutator.entries.PUT(item);
-  }
+  // handleDelete = (item) => {
+  //   const message = this.props.intl.formatMessage({ id: 'ui-developer.okapiConfigurationEntries.confirm' }, {
+  //     module: item.module,
+  //     configName: item.configName,
+  //     code: item.code,
+  //     value: item.value,
+  //   });
+  //
+  //   if (confirm(message)) {
+  //     this.props.mutator.recordId.replace(item.id);
+  //     this.props.mutator.entries.DELETE(item);
+  //   }
+  // }
+  //
+  // handleUpdate = (item) => {
+  //   this.props.mutator.recordId.replace(item.id);
+  //   this.props.mutator.entries.PUT(item);
+  // }
 
   render() {
     const entries = (this.props.resources.entries || {}).records || [];
@@ -63,8 +61,8 @@ class OkapiConfiguration extends React.Component {
     if (entries.length) {
       return <OkapiConfigurationDisplay
         entries={entries}
-        handleDelete={this.handleDelete}
-        handleUpdate={this.handleUpdate}
+        // handleDelete={this.handleDelete}
+        // handleUpdate={this.handleUpdate}
       />;
     } else {
       return <div><FormattedMessage id="ui-developer.okapiConfigurationEntries.loading" /></div>;
