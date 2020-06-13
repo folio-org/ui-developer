@@ -63,6 +63,15 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.okapiConfiguration",
+        "displayName": "Settings (developer): Can edit tenant configuration values",
+        "subPermissions": [
+          "configuration.all",
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },
