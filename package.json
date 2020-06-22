@@ -1,6 +1,6 @@
 {
   "name": "@folio/developer",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Developer settings",
   "repository": "folio-org/ui-developer",
   "publishConfig": {
@@ -35,6 +35,14 @@
       {
         "permissionName": "ui-developer.settings.configuration",
         "displayName": "Settings (Developer): configuration",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.perms",
+        "displayName": "Settings (Developer): perms",
         "subPermissions": [
           "settings.developer.enabled"
         ],

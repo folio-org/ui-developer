@@ -1,5 +1,10 @@
 # Change history for ui-developer
 
+## [3.1.0](https://github.com/folio-org/ui-developer/tree/v3.1.0) (IN PROGRESS)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v3.0.0...v3.1.0)
+
+* New developer-setting page "Current Permissions", shows an alphabetically sorted list of the logged-in user's permissons.
+
 ## [3.0.0](https://github.com/folio-org/ui-developer/tree/v3.0.0) (2020-06-10)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v2.0.0...v3.0.0)
 

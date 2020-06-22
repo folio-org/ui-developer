@@ -5,6 +5,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { Settings } from '@folio/stripes/smart-components';
 
 import Configuration from './Configuration';
+import ShowPermissions from './ShowPermissions';
 import Locale from './Locale';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
@@ -19,6 +20,12 @@ const pages = [
     labelId: 'ui-developer.configuration',
     component: Configuration,
     perm: 'ui-developer.settings.configuration',
+  },
+  {
+    route: 'perms',
+    labelId: 'ui-developer.perms',
+    component: ShowPermissions,
+    perm: 'ui-developer.settings.perms',
   },
   {
     route: 'hotkeys',

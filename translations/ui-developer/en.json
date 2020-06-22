@@ -1,6 +1,7 @@
 {
   "meta.title": "Developer",
   "configuration": "Configuration",
+  "perms": "Current permissions",
   "hotkeys": "Hotkeys test",
   "sessionLocale": "Session locale",
   "setToken": "Set token",
