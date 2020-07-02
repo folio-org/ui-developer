@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { Form, Field } from 'react-final-form';
 
-import { stripesConnect } from '@folio/stripes/core';
+import { stripesConnect, CalloutContext } from '@folio/stripes/core';
+
 import {
   Button,
-  Callout,
   Headline,
   Pane,
   TextField
@@ -21,7 +21,6 @@ class Passwd extends React.Component {
       type: 'okapi',
       path: 'authn/credentials',
       fetch: false,
-      accumulate: true,
     },
     userExists: {
       type: 'okapi',
@@ -35,7 +34,6 @@ class Passwd extends React.Component {
       fetch: false,
       accumulate: true,
     },
-    moduleId: '',
   });
 
   static propTypes = {
@@ -50,6 +48,8 @@ class Passwd extends React.Component {
       passwd: PropTypes.object,
     }),
   };
+
+  static contextType = CalloutContext;
 
   constructor(props) {
     super(props);
@@ -124,14 +124,14 @@ class Passwd extends React.Component {
         }
       })
       .then(() => {
-        this.callout.current.sendCallout({
+        this.context.sendCallout({
           type: 'success',
           message: (<FormattedMessage id="ui-developer.passwd.success" values={{ username: values.username }} />)
         });
         form.restart();
       })
       .catch(e => {
-        this.callout.current.sendCallout({
+        this.context.sendCallout({
           type: 'error',
           message: e.message,
         });
@@ -183,7 +183,6 @@ class Passwd extends React.Component {
             </form>
           )}
         />
-        <Callout ref={this.callout} />
       </Pane>
     );
   }
@@ -191,7 +190,11 @@ class Passwd extends React.Component {
 
 Passwd.propTypes = {
   intl: PropTypes.object.isRequired,
-  mutator: PropTypes.object.isRequired,
+  mutator: PropTypes.shape({
+    isLocalPasswordSet: PropTypes.object,
+    passwd: PropTypes.object,
+    userExists: PropTypes.object,
+  }).isRequired,
   stripes: PropTypes.object.isRequired,
 };
 
