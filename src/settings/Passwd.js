@@ -190,11 +190,9 @@ class Passwd extends React.Component {
 }
 
 Passwd.propTypes = {
-  intl: PropTypes.object,
-  mutator: PropTypes.object,
-  stripes: PropTypes.shape({
-    setLocale: PropTypes.func,
-  }).isRequired,
+  intl: PropTypes.object.isRequired,
+  mutator: PropTypes.object.isRequired,
+  stripes: PropTypes.object.isRequired,
 };
 
 export default injectIntl(stripesConnect(Passwd));
