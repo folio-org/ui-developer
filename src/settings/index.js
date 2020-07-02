@@ -13,6 +13,7 @@ import TestHotkeys from './TestHotkeys';
 import Token from './Token';
 import FolioBabies from './FolioBabies';
 import OkapiConfiguration from './OkapiConfiguration';
+import Passwd from './Passwd';
 
 const pages = [
   {
@@ -65,6 +66,12 @@ const pages = [
     labelId: 'ui-developer.okapiConfigurationEntries',
     component: OkapiConfiguration,
     perm: 'ui-developer.settings.okapiConfiguration',
+  },
+  {
+    route: 'passwd',
+    labelId: 'ui-developer.passwd',
+    component: Passwd,
+    perm: 'ui-developer.settings.passwd',
   },
 ];
 

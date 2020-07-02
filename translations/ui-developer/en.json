@@ -36,5 +36,14 @@
 
   "setToken.authenticationToken": "Authentication token (JWT)",
 
-  "sessionLocale.temporarySessionLocale": "TEMPORARY Session locale"
+  "sessionLocale.temporarySessionLocale": "TEMPORARY Session locale",
+  "passwd": "Passwd",
+  "passwd.setUserPassword": "Set a user's password",
+  "passwd.username": "Username",
+  "passwd.password": "Password",
+  "passwd.confirmPassword": "Confirm password",
+  "passwd.error.confirm": "Passwords must match",
+  "passwd.error.missingUser": "Error: Could not find the username \"{username}\"",
+  "passwd.error": "Sorry, there was an error: {error}",
+  "passwd.success": "Successfully reset password for {username}"
 }
