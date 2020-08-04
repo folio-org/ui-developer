@@ -31,5 +31,14 @@
     "okapiConfigurationEntries.code": "رمز",
     "okapiConfigurationEntries.value": "القيمة",
     "okapiConfigurationEntries.confirm": "هل أنت متأكد من أنك تريد حذف إدخال التهيئة؟\nالوحدة: {module}\nاسم التهيئة: {configName}\nالرمز: {code}",
-    "perms": "الصلاحيات الحالية"
+    "perms": "الصلاحيات الحالية",
+    "passwd": "كلمة المرور",
+    "passwd.setUserPassword": "تعيين كلمة مرور المستخدم",
+    "passwd.username": "اسم المستخدم",
+    "passwd.password": "كلمة المرور",
+    "passwd.confirmPassword": "تأكيد كلمة المرور",
+    "passwd.error.confirm": "يجب أن تتطابق كلمات المرور",
+    "passwd.error.missingUser": "خطأ: تعذر الحصول على اسم المستخدم \"{username}\"",
+    "passwd.error": "عذراً، لقد حدث خطأ: {error}",
+    "passwd.success": "تمت إعادة تعيين كلمة المرور بنجاح لـ {username}"
 }

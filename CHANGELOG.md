@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## 4.0.0 (IN PROGRESS)
+
+* Increment `@folio/stripes` to `v5`, `react-router` to `v5.2`.
+
 ## [3.1.0](https://github.com/folio-org/ui-developer/tree/v3.1.0) (IN PROGRESS)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v3.0.0...v3.1.0)
 

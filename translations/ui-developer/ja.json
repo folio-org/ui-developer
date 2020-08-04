@@ -31,5 +31,14 @@
     "okapiConfigurationEntries.code": "Code",
     "okapiConfigurationEntries.value": "Value",
     "okapiConfigurationEntries.confirm": "Are you certain you want to delete this config entry?\nModule: {module}\nConfig name: {configName}\nCode: {code}",
-    "perms": "Current permissions"
+    "perms": "Current permissions",
+    "passwd": "Passwd",
+    "passwd.setUserPassword": "Set a user's password",
+    "passwd.username": "Username",
+    "passwd.password": "Password",
+    "passwd.confirmPassword": "Confirm password",
+    "passwd.error.confirm": "Passwords must match",
+    "passwd.error.missingUser": "Error: Could not find the username \"{username}\"",
+    "passwd.error": "Sorry, there was an error: {error}",
+    "passwd.success": "Successfully reset password for {username}"
 }
