@@ -45,5 +45,11 @@
   "passwd.error.confirm": "Passwords must match",
   "passwd.error.missingUser": "Error: Could not find the username \"{username}\"",
   "passwd.error": "Sorry, there was an error: {error}",
-  "passwd.success": "Successfully reset password for {username}"
+  "passwd.success": "Successfully reset password for {username}",
+
+  "okapiQuery": "Okapi query",
+  "okapiQuery.queryPath": "Query path",
+  "okapiQuery.runQuery": "Run query",
+  "okapiQuery.running": "Querying …",
+  "okapiQuery.limitWarning": "Results are capped at 100 records"
 }

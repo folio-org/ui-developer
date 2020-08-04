@@ -92,6 +92,15 @@
           "login.item.delete"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.okapiQuery",
+        "displayName": "Settings (developer): Can run queries",
+        "subPermissions": [
+          "configuration.all",
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },
