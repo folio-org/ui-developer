@@ -44,7 +44,7 @@ class OkapiQuery extends React.Component {
   constructor() {
     super();
     this.state = {
-      buttonValue: 'ui-developer.okapi-query.runQuery',
+      buttonValue: 'ui-developer.okapiQuery.runQuery',
       limitWarning: '',
       query: '',
       results: {},
@@ -67,7 +67,7 @@ class OkapiQuery extends React.Component {
     const { mutator } = this.props;
 
     this.setState({
-      buttonValue: 'ui-developer.okapi-query.running',
+      buttonValue: 'ui-developer.okapiQuery.running',
       limitWarning: '',
     });
 
