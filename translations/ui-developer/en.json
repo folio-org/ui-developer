@@ -51,7 +51,7 @@
   "okapiQuery.queryPath": "Query path",
   "okapiQuery.runQuery": "Run query",
   "okapiQuery.running": "Querying …",
-  "okapiQuery.limitWarning": "Results are capped at 100 records"
+  "okapiQuery.limitWarning": "Results are capped at 100 records",
 
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
