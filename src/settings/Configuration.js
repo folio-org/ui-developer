@@ -63,7 +63,7 @@ class Configuration extends React.Component {
               <FormattedMessage
                 id="ui-developer.configuration.loggingDocumentationLink"
                 values={{
-                  a: (...chunks) => (
+                  a: chunks => (
                     <a href="https://github.com/folio-org/stripes/blob/master/doc/dev-guide.md#configuring-the-logger">
                       {chunks}
                     </a>
