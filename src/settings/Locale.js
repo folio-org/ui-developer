@@ -7,32 +7,11 @@ import {
   Button,
   List,
 } from '@folio/stripes/components';
+import { supportedLocales } from '@folio/stripes/core';
 
 const Locale = (props) => {
   const intl = useIntl();
-
-  const locales = [
-    { value: 'ar', label: '' },
-    { value: 'zh-CN', label: '' },
-    { value: 'zh-TW', label: '' },
-    { value: 'da-DK', label: '' },
-    { value: 'en-GB', label: '' },
-    { value: 'en-SE', label: '' },
-    { value: 'en-US', label: '' },
-    { value: 'fr-FR', label: '' },
-    { value: 'de-DE', label: '' },
-    { value: 'he', label: '' },
-    { value: 'hu-HU', label: '' },
-    { value: 'ja', label: '' },
-    { value: 'it-IT', label: '' },
-    { value: 'pt-BR', label: '' },
-    { value: 'pt-PT', label: '' },
-    { value: 'ru', label: '' },
-    { value: 'es', label: '' },
-    { value: 'es-419', label: '' },
-    { value: 'es-ES', label: '' },
-    { value: 'ur', label: '' },
-  ];
+  const locales = supportedLocales.map(l => ({ value: l, label: '' }));
 
   // This is optional but highly recommended
   // since it prevents memory leak
