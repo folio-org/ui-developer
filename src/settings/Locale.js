@@ -22,7 +22,7 @@ const Locale = (props) => {
     { value: 'fr-FR', label: '' },
     { value: 'de-DE', label: '' },
     { value: 'he', label: '' },
-    { value: 'hi_IN', label: '' },
+    { value: 'hi-IN', label: '' },
     { value: 'hu-HU', label: '' },
     { value: 'ja', label: '' },
     { value: 'ka', label: '' },
