@@ -125,8 +125,11 @@
     "redux": "^4.0.0"
   },
   "dependencies": {
+    "graphiql": "^1.0.5",
+    "graphql": "^15.0.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
+    "query-string": "^5.0.0",
     "react-hot-loader": "^4.3.12",
     "redux-form": "^7.0.3"
   },
