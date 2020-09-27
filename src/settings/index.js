@@ -85,7 +85,7 @@ const pages = [
     route: 'okapi-graphql-query',
     labelId: 'ui-developer.okapiGraphQLQuery',
     component: OkapiGraphQLQuery,
-    perm: 'ui-developer.settings.okapiQuery',
+    perm: 'ui-developer.settings.okapiGraphQLQuery',
   },
 ];
 
