@@ -101,17 +101,7 @@
           "settings.developer.enabled"
         ],
         "visible": true
-      },
-      {
-        "permissionName": "ui-developer.settings.okapiGraphQLQuery",
-        "displayName": "Settings (developer): Can run GraphQL queries",
-        "subPermissions": [
-          "configuration.all",
-          "settings.developer.enabled"
-        ],
-        "visible": true
       }
-
     ]
   },
   "scripts": {
@@ -129,24 +119,21 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-final-form": "^6.3.0",
-    "react-intl": "^5.8.0",
+    "react-intl": "^4.5.3",
     "react-redux": "^5.0.7",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.0"
   },
   "dependencies": {
-    "graphiql": "^1.0.5",
-    "graphql": "^15.0.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
-    "query-string": "^5.0.0",
     "react-hot-loader": "^4.3.12",
     "redux-form": "^7.0.3"
   },
   "peerDependencies": {
     "@folio/stripes": "^5.0.0",
     "react": "*",
-    "react-intl": "^5.8.0",
+    "react-intl": "^4.5.3",
     "react-router-dom": "^5.2.0"
   }
 }

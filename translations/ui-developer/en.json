@@ -53,8 +53,6 @@
   "okapiQuery.running": "Querying …",
   "okapiQuery.limitWarning": "Results are capped at 100 records",
 
-  "okapiGraphQLQuery": "Okapi GraphQL query",
-
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
