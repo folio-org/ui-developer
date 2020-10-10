@@ -28,6 +28,7 @@
   "configuration.actAsRoot": "Act as though user has all permissions?",
   "configuration.showHomeLink": "Show home link in top-right menu",
   "configuration.showDevInfo": "Show developer info",
+  "configuration.suppressIntlErrors": "Suppress intl errors",
 
   "hotkeys.instructions": "When this area is focused, type:",
   "hotkeys.home": "to go to the Home page",

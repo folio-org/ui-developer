@@ -41,6 +41,7 @@ class Configuration extends React.Component {
         hasAllPerms: stripes.config.hasAllPerms || false,
         showHomeLink: stripes.config.showHomeLink || false,
         showDevInfo: stripes.config.showDevInfo || false,
+        suppressIntlErrors: stripes.config.suppressIntlErrors || false,
         autoLogin: {
           username: stripes.config.autoLogin.username,
           password: stripes.config.autoLogin.password,
@@ -124,6 +125,14 @@ class Configuration extends React.Component {
                 name="config.showDevInfo"
                 id="config.showDevInfo"
                 label={<FormattedMessage id="ui-developer.configuration.showDevInfo" />}
+              />
+              <Field
+                htmlFor="9"
+                component={Checkbox}
+                type="checkbox"
+                name="config.suppressIntlErrors"
+                id="config.suppressIntlErrors"
+                label={<FormattedMessage id="ui-developer.configuration.suppressIntlErrors" />}
               />
             </Col>
           </Row>
