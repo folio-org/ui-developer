@@ -53,5 +53,6 @@
     "okapiQuery.runQuery": "Exécuter la requête",
     "okapiQuery.running": "Requête en cours...",
     "okapiQuery.limitWarning": "Les résultats sont plafonnés à 100 enregistrements",
-    "permission.settings.okapiQuery": "Settings (developer): Can run queries"
+    "permission.settings.okapiQuery": "Settings (developer): Can run queries",
+    "DO_NOT_TRANSLATE": "This translation is a playground"
 }

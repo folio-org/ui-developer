@@ -53,5 +53,6 @@
     "okapiQuery.runQuery": "Run query",
     "okapiQuery.running": "クエリ中…",
     "okapiQuery.limitWarning": "Results are capped at 100 records",
-    "permission.settings.okapiQuery": "Settings (developer): Can run queries"
+    "permission.settings.okapiQuery": "Settings (developer): Can run queries",
+    "DO_NOT_TRANSLATE": "This translation is a playground"
 }

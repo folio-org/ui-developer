@@ -53,5 +53,6 @@
     "okapiQuery.runQuery": "تشغيل الاستعلام",
     "okapiQuery.running": "جاري الاستعلام ...",
     "okapiQuery.limitWarning": "تم وضع حد أقصى للنتائج من 100 تسجيلة",
-    "permission.settings.okapiQuery": "الإعدادات (المطور): إمكانية تشغيل الاستعلامات"
+    "permission.settings.okapiQuery": "الإعدادات (المطور): إمكانية تشغيل الاستعلامات",
+    "DO_NOT_TRANSLATE": "This translation is a playground"
 }

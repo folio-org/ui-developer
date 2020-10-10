@@ -53,5 +53,6 @@
     "okapiQuery.runQuery": "Executar consulta",
     "okapiQuery.running": "Consultando…",
     "okapiQuery.limitWarning": "Os resultados são limitados a 100 registros",
-    "permission.settings.okapiQuery": "Configurações (desenvolvedor): pode executar consultas"
+    "permission.settings.okapiQuery": "Configurações (desenvolvedor): pode executar consultas",
+    "DO_NOT_TRANSLATE": "This translation is a playground"
 }

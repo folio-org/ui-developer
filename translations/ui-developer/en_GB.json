@@ -53,5 +53,6 @@
     "okapiQuery.runQuery": "Run query",
     "okapiQuery.running": "Querying …",
     "okapiQuery.limitWarning": "Results are capped at 100 records",
-    "permission.settings.okapiQuery": "Settings (developer): Can run queries"
+    "permission.settings.okapiQuery": "Settings (developer): Can run queries",
+    "DO_NOT_TRANSLATE": "<p>Affects: Supply</p>\n<p>The auto-responder will respond to new requests based on a real-time availability check of your local ILS. If there is at least one available item, the auto-responder will respond “expects to supply.” If there are no available items, it will respond “Cannot supply.”</p>\n<ul>\n  <li><b>On for found items</b>: If there is at least one available item, the auto-responder will respond “expects to supply.”</li>\n  <li><b>On auto not found</b>: If there is at least one available item, the auto-responder will respond “expects to supply.”  AND if there are no available items, it will respond “Cannot supply.”</li>\n</ul>"
 }

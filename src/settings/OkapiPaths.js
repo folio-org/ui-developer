@@ -49,28 +49,41 @@ class OkapiPaths extends React.Component {
    * paths supported by each implementation and store the result in state.
    */
   componentDidMount() {
-    const { mutator } = this.props;
-
-    const modules = get(this.props.stripes, ['discovery', 'modules']) || {};
+    const { stripes } = this.props;
 
     const paths = this.state.paths;
-    Object.keys(modules).forEach(impl => {
-      mutator.moduleDetails.GET({ path: `_/proxy/modules/${impl}` }).then(res => {
-        const iface = this.implToInterface(impl);
-        if (res.provides) {
-          res.provides.forEach(i => {
-            i.handlers.forEach(handler => {
-              paths[handler.pathPattern] = {
-                iface,
-                impl,
-                ramlsLink: <a href={`//github.com/folio-org/${iface}/tree/master/ramls`}>{iface}</a>,
-              };
+
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-Okapi-Tenant': stripes.okapi.tenant,
+        'X-Okapi-Token': stripes.store.getState().okapi.token,
+        'Content-Type': 'application/json',
+      },
+    };
+
+    fetch(`${stripes.okapi.url}/_/proxy/tenants/${stripes.okapi.tenant}/modules?full=true `, options)
+      .then((res) => {
+        if (res.ok) {
+          res.json().then((modules => {
+            modules.forEach(impl => {
+              const iface = this.implToInterface(impl.id);
+              if (impl.provides) {
+                impl.provides.forEach(i => {
+                  i.handlers.forEach(handler => {
+                    paths[handler.pathPattern] = {
+                      iface,
+                      impl,
+                      ramlsLink: <a href={`//github.com/folio-org/${iface}/tree/master/ramls`}>{iface}</a>,
+                    };
+                  });
+                });
+              }
             });
-          });
+            this.setState({ paths });
+          }));
         }
-        this.setState({ paths });
       });
-    });
   }
 
   /**
@@ -128,7 +141,13 @@ class OkapiPaths extends React.Component {
 
 OkapiPaths.propTypes = {
   stripes: PropTypes.shape({
-    setLocale: PropTypes.func,
+    okapi: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      tenant: PropTypes.string.isRequired,
+    }).isRequired,
+    store: PropTypes.shape({
+      getState: PropTypes.func,
+    }),
   }).isRequired,
 };
 

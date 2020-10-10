@@ -1,17 +1,15 @@
 # Change history for ui-developer
 
-## 4.0.0 (IN PROGRESS)
+## [4.0.0](https://github.com/folio-org/ui-developer/tree/v4.0.0) (2020-10-09)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v3.0.0...v4.0.0)
 
+* New developer-setting page "Current Permissions", shows an alphabetically sorted list of the logged-in user's permissions.
 * Increment `@folio/stripes` to `v5`, `react-router` to `v5.2`.
 * New developer-setting page: "Okapi query" lets you, you know, query Okapi.
 * Update to react-intl v5. UID-25.
 * Fix calls to `FormatDisplayName()` to work with `react-intl`. Fixes UID-30.
 * Import supported locales from `@folio/stripes/core`.
-
-## [3.1.0](https://github.com/folio-org/ui-developer/tree/v3.1.0) (IN PROGRESS)
-[Full Changelog](https://github.com/folio-org/ui-developer/compare/v3.0.0...v3.1.0)
-
-* New developer-setting page "Current Permissions", shows an alphabetically sorted list of the logged-in user's permissons.
+* Update queries related to OKAPI-863, OKAPI-835. Fixes UID-34.
 * Add `suppressIntlErrors` toggle to configuration page.
 
 ## [3.0.0](https://github.com/folio-org/ui-developer/tree/v3.0.0) (2020-06-10)

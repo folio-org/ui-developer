@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 import { FormattedMessage } from 'react-intl';
 
 import { stripesConnect } from '@folio/stripes/core';
@@ -60,23 +59,34 @@ class CanIUse extends React.Component {
 
   /**
    * read the list of modules from props.stripes.discovery.modules, then
-   * request /_/proxy/modules/$i and parse the result to find the list of
+   * request /_/proxy/tenants/${tenant}/modules/$i and parse the result to find the list of
    * paths supported by each implementation and store the result in state.
    */
   componentDidMount() {
-    const { mutator } = this.props;
+    const { mutator, stripes } = this.props;
 
-    const modules = get(this.props.stripes, ['discovery', 'modules']) || {};
-
-    const paths = this.state.paths;
-    const permissionSets = this.state.permissionSets;
-    Object.keys(modules).forEach(impl => {
-      mutator.moduleDetails.GET({ path: `_/proxy/modules/${impl}` }).then(res => {
-        this.mapPathToImpl(res, impl, paths);
-        this.mapPermissionSetToPermissions(res, permissionSets);
-        this.setState({ paths, permissionSets });
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-Okapi-Tenant': stripes.okapi.tenant,
+        'X-Okapi-Token': stripes.store.getState().okapi.token,
+        'Content-Type': 'application/json',
+      },
+    };
+    fetch(`${stripes.okapi.url}/_/proxy/tenants/${stripes.okapi.tenant}/modules?full=true `, options)
+      .then((res) => {
+        if (res.ok) {
+          res.json().then((modules => {
+            const paths = this.state.paths;
+            const permissionSets = this.state.permissionSets;
+            modules.forEach(impl => {
+              this.mapPathToImpl(impl, paths);
+              this.mapPermissionSetToPermissions(impl, permissionSets);
+              this.setState({ paths, permissionSets });
+            });
+          }));
+        }
       });
-    });
   }
 
   /**
@@ -90,7 +100,7 @@ class CanIUse extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.desiredPermission && this.state.desiredPermission !== prevState.desiredPermission) {
       const { mutator } = this.props;
-      mutator.permissions.GET({ params: { query: `(subPermissions=(${this.state.desiredPermission}))` } }).then(subRes => {
+      mutator.permissions.GET({ params: { query: `(subPermissions=${this.state.desiredPermission})` } }).then(subRes => {
         const parents = {};
         subRes.permissions.forEach(p => {
           if (p.childOf) {
@@ -104,7 +114,7 @@ class CanIUse extends React.Component {
         });
 
         if (Object.keys(parents).length) {
-          mutator.permissions.GET({ params: { query: `(permissionName=(${Object.keys(parents).join(' or ')}) and visible=true)` } }).then(pRes => {
+          mutator.permissions.GET({ params: { query: `(permissionName=(${Object.keys(parents).map(i => `"${i}"`).join(' or ')}) and visible=true)` } }).then(pRes => {
             this.setState({ publicPermissions: pRes.permissions });
           });
         }
@@ -112,10 +122,10 @@ class CanIUse extends React.Component {
     }
   }
 
-  mapPathToImpl = (res, impl, paths) => {
-    const iface = this.implToInterface(impl);
-    if (res.provides) {
-      res.provides.forEach(i => {
+  mapPathToImpl = (impl, paths) => {
+    const iface = this.implToInterface(impl.id);
+    if (impl.provides) {
+      impl.provides.forEach(i => {
         i.handlers.forEach(handler => {
           if (!paths[handler.pathPattern]) {
             paths[handler.pathPattern] = {
@@ -255,6 +265,13 @@ class CanIUse extends React.Component {
 
 CanIUse.propTypes = {
   stripes: PropTypes.shape({
+    okapi: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      tenant: PropTypes.string.isRequired,
+    }).isRequired,
+    store: PropTypes.shape({
+      getState: PropTypes.func,
+    }),
     setLocale: PropTypes.func,
   }).isRequired,
 };
