@@ -30,7 +30,7 @@
     "okapiConfigurationEntries.configName": "Nome da configuração",
     "okapiConfigurationEntries.code": "Código",
     "okapiConfigurationEntries.value": "Valor",
-    "okapiConfigurationEntries.confirm": "Tem certeza de que deseja excluir esta entrada de configuração? \n Módulo: {module} \n Nome da configuração: {configName} \n Código: {code}",
+    "okapiConfigurationEntries.confirm": "Tem certeza de que deseja excluir esta entrada de configuração? \\n Módulo: {module} \\n Nome da configuração: {configName} \\n Código: {code}",
     "perms": "Permissões atuais",
     "passwd": "Senha",
     "passwd.setUserPassword": "Definir senha do usuário",

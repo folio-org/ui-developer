@@ -30,7 +30,7 @@
     "okapiConfigurationEntries.configName": "اسم التهيئة",
     "okapiConfigurationEntries.code": "رمز",
     "okapiConfigurationEntries.value": "القيمة",
-    "okapiConfigurationEntries.confirm": "هل أنت متأكد من أنك تريد حذف إدخال التهيئة؟\nالوحدة: {module}\nاسم التهيئة: {configName}\nالرمز: {code}",
+    "okapiConfigurationEntries.confirm": "هل أنت متأكد من أنك تريد حذف إدخال التهيئة؟\\nالوحدة: {module}\\nاسم التهيئة: {configName}\\nالرمز: {code}",
     "perms": "الصلاحيات الحالية",
     "passwd": "كلمة المرور",
     "passwd.setUserPassword": "تعيين كلمة مرور المستخدم",

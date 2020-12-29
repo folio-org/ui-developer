@@ -30,7 +30,7 @@
     "okapiConfigurationEntries.configName": "Nom de la configuration",
     "okapiConfigurationEntries.code": "Code",
     "okapiConfigurationEntries.value": "Valeur",
-    "okapiConfigurationEntries.confirm": "Are you certain you want to delete this config entry?\nModule: {module}\nConfig name: {configName}\nCode: {code}",
+    "okapiConfigurationEntries.confirm": "Are you certain you want to delete this config entry?\\nModule: {module}\\nConfig name: {configName}\\nCode: {code}",
     "perms": "Autorisations actuelles",
     "passwd": "Mot de passe",
     "passwd.setUserPassword": "Définir le mot de passe utilisateur",
