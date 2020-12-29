@@ -30,7 +30,7 @@
     "okapiConfigurationEntries.configName": "配置名称",
     "okapiConfigurationEntries.code": "代码",
     "okapiConfigurationEntries.value": "值",
-    "okapiConfigurationEntries.confirm": "确定要删除此配置条目吗？ \n模块： {module} \n配置名称： {configName} \n代码： {code}",
+    "okapiConfigurationEntries.confirm": "确定要删除此配置条目吗？ \\n模块： {module} \\n配置名称： {configName} \\n代码： {code}",
     "perms": "当前权限",
     "passwd": "密码",
     "passwd.setUserPassword": "设置用户密码",
