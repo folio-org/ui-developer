@@ -9,6 +9,7 @@ import {
 const FolioBabies = () => {
   const babies = [
     'Alina',
+    'Anton & Fiete',
     'Benjamin',
     'Ethan',
     'Filip',
