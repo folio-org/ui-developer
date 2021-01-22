@@ -46,7 +46,7 @@
     "permission.settings.hotkeys": "Settings (Developer): hot keys test",
     "permission.settings.token": "Settings (Developer): manage JWT authentication token",
     "permission.settings.locale": "Settings (Developer): set session locale",
-    "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
+    "permission.settings.okapiConfiguration": "Indstillinger (Udvikler): Rediger konfigurering af valuta for en biblioteksorganisation",
     "permission.settings.passwd": "Settings (developer): Can change users' passwords",
     "okapiQuery": "Okapi query",
     "okapiQuery.queryPath": "Query path",
