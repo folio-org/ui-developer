@@ -1,5 +1,5 @@
 {
-    "meta.title": "Developer",
+    "meta.title": "Desarrollador",
     "configuration": "Configuration",
     "hotkeys": "Hotkeys test",
     "sessionLocale": "Session locale",
@@ -46,7 +46,7 @@
     "permission.settings.hotkeys": "Settings (Developer): hot keys test",
     "permission.settings.token": "Settings (Developer): manage JWT authentication token",
     "permission.settings.locale": "Settings (Developer): set session locale",
-    "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
+    "permission.settings.okapiConfiguration": "Configuración (desarrollador): Puede editar los valores de configuración del tenant",
     "permission.settings.passwd": "Settings (developer): Can change users' passwords",
     "okapiQuery": "Okapi query",
     "okapiQuery.queryPath": "Query path",
