@@ -45,7 +45,7 @@
     "permission.settings.perms": "Settings (Developer): perms",
     "permission.settings.hotkeys": "Settings (Developer): hot keys test",
     "permission.settings.token": "Settings (Developer): manage JWT authentication token",
-    "permission.settings.locale": "Settings (Developer): set session locale",
+    "permission.settings.locale": "Impostazioni (Sviluppatore): impostare il la lingua temporanea di sessione",
     "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
     "permission.settings.passwd": "Impostazioni (sviluppatore): può modificare le password degli utenti",
     "okapiQuery": "Okapi query",
