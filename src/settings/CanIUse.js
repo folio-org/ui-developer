@@ -63,7 +63,7 @@ class CanIUse extends React.Component {
    * paths supported by each implementation and store the result in state.
    */
   componentDidMount() {
-    const { mutator, stripes } = this.props;
+    const { stripes } = this.props;
 
     const options = {
       method: 'GET',
