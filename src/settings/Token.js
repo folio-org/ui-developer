@@ -4,7 +4,7 @@ import { Field } from 'redux-form';
 import { FormattedMessage } from 'react-intl';
 
 import { stripesShape } from '@folio/stripes/core';
-import { ConfigForm } from '@folio/stripes/smart-components';
+import { ConfigReduxForm } from '@folio/stripes/smart-components';
 import { Col, Row, TextField } from '@folio/stripes/components';
 
 /**
@@ -76,7 +76,7 @@ class Token extends React.Component {
 
     return (
       <div style={{ width: '100%' }}>
-        <ConfigForm onSubmit={this.onSave} label={this.props.label} initialValues={{ token }}>
+        <ConfigReduxForm onSubmit={this.onSave} label={this.props.label} initialValues={{ token }}>
           <Row>
             <Col xs={12}>
               <Field
@@ -101,7 +101,7 @@ class Token extends React.Component {
               {this.state.error && <div>{this.state.error}</div>}
             </Col>
           </Row>
-        </ConfigForm>
+        </ConfigReduxForm>
       </div>
     );
   }

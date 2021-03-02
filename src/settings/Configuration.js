@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Field } from 'redux-form';
 import { FormattedMessage } from 'react-intl';
 import { Checkbox, Col, Row, TextField } from '@folio/stripes/components';
-import { ConfigForm } from '@folio/stripes/smart-components';
+import { ConfigReduxForm } from '@folio/stripes/smart-components';
 import { stripesShape } from '@folio/stripes/core';
 
 class Configuration extends React.Component {
@@ -51,7 +51,7 @@ class Configuration extends React.Component {
 
     return (
       <div style={{ width: '100%' }}>
-        <ConfigForm onSubmit={this.onSave} label={this.props.label} initialValues={initialValues}>
+        <ConfigReduxForm onSubmit={this.onSave} label={this.props.label} initialValues={initialValues}>
           <Row>
             <Col xs={12}>
               <Field
@@ -136,10 +136,11 @@ class Configuration extends React.Component {
               />
             </Col>
           </Row>
-        </ConfigForm>
+        </ConfigReduxForm>
       </div>
     );
   }
 }
 
 export default Configuration;
+
