@@ -55,7 +55,7 @@
   "okapiQuery.running": "Querying …",
   "okapiQuery.limitWarning": "Results are capped at 100 records",
 
-  "charting": "Charting",
+  "dependencies": "Dependencies",
 
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
@@ -65,5 +65,5 @@
   "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
   "permission.settings.passwd": "Settings (developer): Can change users' passwords",
   "permission.settings.okapiQuery": "Settings (developer): Can run queries",
-  "permission.settings.charting": "Settings (developer): Can display charts"
+  "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
 }

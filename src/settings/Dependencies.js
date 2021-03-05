@@ -58,7 +58,7 @@ function chartModules(records) {
   );
 }
 
-const Charting = ({ resources }) => {
+const Dependencies = ({ resources }) => {
   const { modules } = resources;
 
   if (!modules.hasLoaded) return <LoadingPane />;
@@ -69,14 +69,14 @@ const Charting = ({ resources }) => {
   return (
     <Pane
       defaultWidth="fill"
-      paneTitle={<FormattedMessage id="ui-developer.charting" />}
+      paneTitle={<FormattedMessage id="ui-developer.dependencies" />}
     >
       {chartModules(modules.records)}
     </Pane>
   );
 };
 
-Charting.manifest = {
+Dependencies.manifest = {
   modules: {
     type: 'okapi',
     path: '_/proxy/tenants/diku/modules',
@@ -84,10 +84,10 @@ Charting.manifest = {
   },
 };
 
-Charting.propTypes = {
+Dependencies.propTypes = {
   resources: PropTypes.shape({
     modules: PropTypes.object,
   }).isRequired,
 };
 
-export default stripesConnect(Charting);
+export default stripesConnect(Dependencies);
