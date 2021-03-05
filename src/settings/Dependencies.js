@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { HorizontalBar } from 'react-chartjs-2';
 import { stripesConnect } from '@folio/stripes/core';
 import { LoadingPane, Pane } from '@folio/stripes/components';
 
-function chartModules(records) {
+function chartModules(intl, records) {
   const names = records.map(r => r.name);
   const required = records.map(r => (r.requires || []).length);
   const provided = records.map(r => (r.provides || []).length);
@@ -14,12 +14,12 @@ function chartModules(records) {
     labels: names,
     datasets: [
       {
-        label: '# interfaces required',
+        label: intl.formatMessage({ id: 'ui-developer.dependencies.interfacesRequired' }),
         data: required,
         backgroundColor: 'red',
       },
       {
-        label: '# interfaces provided',
+        label: intl.formatMessage({ id: 'ui-developer.dependencies.interfacesProvided' }),
         data: provided,
         backgroundColor: 'blue',
       },
@@ -40,7 +40,7 @@ function chartModules(records) {
 
   return (
     <>
-      <h3>{records.length} modules</h3>
+      <h3><FormattedMessage id="ui-developer.dependencies.moduleCount" values={{ count: records.length }} /></h3>
       <HorizontalBar
         height={records.length * 15}
         data={data}
@@ -60,6 +60,7 @@ function chartModules(records) {
 
 const Dependencies = ({ resources }) => {
   const { modules } = resources;
+  const intl = useIntl();
 
   if (!modules.hasLoaded) return <LoadingPane />;
 
@@ -71,7 +72,7 @@ const Dependencies = ({ resources }) => {
       defaultWidth="fill"
       paneTitle={<FormattedMessage id="ui-developer.dependencies" />}
     >
-      {chartModules(modules.records)}
+      {chartModules(intl, modules.records)}
     </Pane>
   );
 };

@@ -56,6 +56,9 @@
   "okapiQuery.limitWarning": "Results are capped at 100 records",
 
   "dependencies": "Dependencies",
+  "dependencies.moduleCount": "{count} modules",
+  "dependencies.interfacesRequired": "# interfaces required",
+  "dependencies.interfacesProvided": "# interfaces provided",
 
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
