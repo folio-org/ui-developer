@@ -15,6 +15,7 @@ import FolioBabies from './FolioBabies';
 import OkapiConfiguration from './OkapiConfiguration';
 import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
+import Charting from './Charting';
 
 const pages = [
   {
@@ -79,6 +80,12 @@ const pages = [
     labelId: 'ui-developer.okapiQuery',
     component: OkapiQuery,
     perm: 'ui-developer.settings.okapiQuery',
+  },
+  {
+    route: 'charting',
+    labelId: 'ui-developer.charting',
+    component: Charting,
+    // perm: 'ui-developer.settings.charting',
   },
 ];
 

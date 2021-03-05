@@ -101,6 +101,14 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.charting",
+        "displayName": "Settings (developer): Can display charts",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },
@@ -127,11 +135,13 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
+    "react-chartjs-2": "^2.11.1",
     "react-hot-loader": "^4.3.12",
     "redux-form": "^8.0.3"
   },
   "peerDependencies": {
     "@folio/stripes": "^6.0.0",
+    "chart.js": "^2.9.4",
     "react": "*",
     "react-intl": "^5.7.0",
     "react-router-dom": "^5.2.0"

@@ -55,6 +55,8 @@
   "okapiQuery.running": "Querying …",
   "okapiQuery.limitWarning": "Results are capped at 100 records",
 
+  "charting": "Charting",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
@@ -62,6 +64,6 @@
   "permission.settings.locale": "Settings (Developer): set session locale",
   "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
   "permission.settings.passwd": "Settings (developer): Can change users' passwords",
-  "permission.settings.okapiQuery": "Settings (developer): Can run queries"
-
+  "permission.settings.okapiQuery": "Settings (developer): Can run queries",
+  "permission.settings.charting": "Settings (developer): Can display charts"
 }
