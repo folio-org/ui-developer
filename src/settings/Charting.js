@@ -47,6 +47,7 @@ function chartModules(records) {
         and is not necessarily expected to be of much use to anyone. It presents a graph of all currently loaded FOLIO modules, in alphabetical order, showing how many interfaces they require (red) and provide (blue).
       </p>
       <HorizontalBar
+        height={records.length * 15}
         data={data}
         options={options}
       />
