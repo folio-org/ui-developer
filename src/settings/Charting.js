@@ -40,18 +40,20 @@ function chartModules(records) {
 
   return (
     <>
-      <p>
-        This is a proof of concept for the use of
-        {' '}
-        <a href="https://www.chartjs.org/">ChartJS</a>,
-        and is not necessarily expected to be of much use to anyone. It presents a graph of all currently loaded FOLIO modules, in alphabetical order, showing how many interfaces they require (red) and provide (blue).
-      </p>
       <h3>{records.length} modules</h3>
       <HorizontalBar
         height={records.length * 15}
         data={data}
         options={options}
       />
+      <p>
+        <b>Note.</b>
+        {' '}
+        This is a proof of concept for the use of
+        {' '}
+        <a href="https://www.chartjs.org/">ChartJS</a>,
+        and is not necessarily expected to be of much use to anyone. It presents a graph of all currently loaded FOLIO modules, in alphabetical order, showing how many interfaces they require (red) and provide (blue).
+      </p>
     </>
   );
 }
