@@ -34,14 +34,13 @@ function chartModules(intl, records) {
   };
 
   const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
+    tooltips: {
+      callbacks: {
+        title: t => {
+          const record = records[t[0].index];
+          return `${record.name} (${record.id})`;
+        }
+      }
     },
   };
 
