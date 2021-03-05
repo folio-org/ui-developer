@@ -5,6 +5,13 @@ import { HorizontalBar } from 'react-chartjs-2';
 import { stripesConnect } from '@folio/stripes/core';
 import { LoadingPane, Pane } from '@folio/stripes/components';
 
+
+// By inspection, module type can be determined from ID. Four types:
+//      /folio_(.*)-([0-9].)*/    UI module $1, version $2
+//      /mod-(.*)-([0-9].)*/      Back-end module $1, version $2
+//      /edge-(.*)-([0-9].)*/     Edge module $1, version $2
+//      /(.*)-([0-9].)*/          Other module $1, version $2 -- e.g. okapi
+
 function chartModules(intl, records) {
   const names = records.map(r => r.name);
   const required = records.map(r => (r.requires || []).length);
