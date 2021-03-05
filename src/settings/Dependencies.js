@@ -39,8 +39,18 @@ function chartModules(intl, records) {
         title: t => {
           const record = records[t[0].index];
           return `${record.name} (${record.id})`;
-        }
-      }
+        },
+        label: t => {
+          const record = records[t.index];
+          const elementName = ['requires', 'provides'][t.datasetIndex];
+          const list = record[elementName] || [];
+          const emdash = '—';
+          return [
+            `${emdash} ${elementName} ${list.length} interfaces ${emdash}`,
+            ...list.map(x => `${x.id} v${x.version}`),
+          ];
+        },
+      },
     },
   };
 
