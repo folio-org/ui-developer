@@ -28,6 +28,8 @@ function chartModules(intl, records) {
   };
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: true,
     tooltips: {
       callbacks: {
         title: t => {
@@ -52,6 +54,7 @@ function chartModules(intl, records) {
     <>
       <h3><FormattedMessage id="ui-developer.dependencies.moduleCount" values={{ count: records.length }} /></h3>
       <HorizontalBar
+        redraw
         height={records.length * 15}
         data={data}
         options={options}
