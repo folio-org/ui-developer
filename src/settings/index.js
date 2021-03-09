@@ -15,6 +15,7 @@ import FolioBabies from './FolioBabies';
 import OkapiConfiguration from './OkapiConfiguration';
 import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
+import Dependencies from './Dependencies';
 
 const pages = [
   {
@@ -79,6 +80,12 @@ const pages = [
     labelId: 'ui-developer.okapiQuery',
     component: OkapiQuery,
     perm: 'ui-developer.settings.okapiQuery',
+  },
+  {
+    route: 'dependencies',
+    labelId: 'ui-developer.dependencies',
+    component: Dependencies,
+    // perm: 'ui-developer.settings.dependencies',
   },
 ];
 

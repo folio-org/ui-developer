@@ -101,6 +101,14 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.dependencies",
+        "displayName": "Settings (developer): Can display dependency charts",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },
@@ -125,8 +133,10 @@
     "redux": "^4.0.0"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
+    "react-chartjs-2": "^2.11.1",
     "react-hot-loader": "^4.3.12",
     "redux-form": "^8.0.3"
   },

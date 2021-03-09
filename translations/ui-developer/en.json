@@ -55,6 +55,15 @@
   "okapiQuery.running": "Querying …",
   "okapiQuery.limitWarning": "Results are capped at 100 records",
 
+  "dependencies": "Dependencies",
+  "dependencies.moduleCount": "{count} modules selected",
+  "dependencies.interfacesRequired": "# interfaces required",
+  "dependencies.interfacesProvided": "# interfaces provided",
+  "dependencies.ui-modules": "UI modules",
+  "dependencies.backend-modules": "Backend modules",
+  "dependencies.edge-modules": "Edge modules",
+  "dependencies.other-modules": "Other modules",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
@@ -62,6 +71,6 @@
   "permission.settings.locale": "Settings (Developer): set session locale",
   "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
   "permission.settings.passwd": "Settings (developer): Can change users' passwords",
-  "permission.settings.okapiQuery": "Settings (developer): Can run queries"
-
+  "permission.settings.okapiQuery": "Settings (developer): Can run queries",
+  "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
 }
