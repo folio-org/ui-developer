@@ -50,7 +50,7 @@ function chartModules(intl, records) {
   };
 
   return (
-    <div style={{ height: 65 + records.length * 18 }}>
+    <div style={{ height: 68 + records.length * 18 }}>
       <HorizontalBar
         redraw
         data={data}
