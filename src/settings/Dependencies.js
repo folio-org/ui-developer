@@ -125,16 +125,6 @@ const Dependencies = ({ resources }) => {
         <FormattedMessage id="ui-developer.dependencies.moduleCount" values={{ count: active.length }} />
       </h3>
       {chartModules(intl, active)}
-      <br />
-      <hr />
-      <p>
-        <b>Note.</b>
-        {' '}
-        This is a proof of concept for the use of
-        {' '}
-        <a href="https://www.chartjs.org/">ChartJS</a>,
-        and is not necessarily expected to be of much use to anyone. It presents a graph of all currently loaded FOLIO modules, in alphabetical order, showing how many interfaces they require (red) and provide (blue).
-      </p>
     </Pane>
   );
 };
