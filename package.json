@@ -103,8 +103,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.charting",
-        "displayName": "Settings (developer): Can display charts",
+        "permissionName": "ui-developer.settings.dependencies",
+        "displayName": "Settings (developer): Can display dependency charts",
         "subPermissions": [
           "settings.developer.enabled"
         ],
