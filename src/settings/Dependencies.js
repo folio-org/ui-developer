@@ -28,7 +28,6 @@ function chartModules(intl, records) {
   };
 
   const options = {
-    responsive: true,
     maintainAspectRatio: false,
     tooltips: {
       callbacks: {
