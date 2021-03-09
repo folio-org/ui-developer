@@ -51,7 +51,6 @@ function chartModules(intl, records) {
 
   return (
     <>
-      <h3><FormattedMessage id="ui-developer.dependencies.moduleCount" values={{ count: records.length }} /></h3>
       <div style={{ height: 65 + records.length * 18 }}>
         <HorizontalBar
           redraw
@@ -124,6 +123,9 @@ const Dependencies = ({ resources }) => {
         label={<FormattedMessage id="ui-developer.dependencies.other-modules" />}
         onChange={e => setIncludeOther(e.target.checked)}
       />
+      <h3>
+        <FormattedMessage id="ui-developer.dependencies.moduleCount" values={{ count: active.length }} />
+      </h3>
       {chartModules(intl, active)}
       <br />
       <hr />
