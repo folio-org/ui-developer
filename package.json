@@ -133,6 +133,7 @@
     "redux": "^4.0.0"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^2.11.1",
@@ -141,7 +142,6 @@
   },
   "peerDependencies": {
     "@folio/stripes": "^6.0.0",
-    "chart.js": "^2.9.4",
     "react": "*",
     "react-intl": "^5.7.0",
     "react-router-dom": "^5.2.0"
