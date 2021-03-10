@@ -55,5 +55,14 @@
     "okapiQuery.limitWarning": "结果上限为100条记录",
     "permission.settings.okapiQuery": "设置（开发者）：可以运行查询",
     "DO_NOT_TRANSLATE": "本翻译是个游乐场",
-    "configuration.suppressIntlErrors": "隐藏国际错误"
+    "configuration.suppressIntlErrors": "隐藏国际错误",
+    "dependencies": "Dependencies",
+    "dependencies.moduleCount": "{count} modules selected",
+    "dependencies.interfacesRequired": "# interfaces required",
+    "dependencies.interfacesProvided": "# interfaces provided",
+    "dependencies.ui-modules": "UI modules",
+    "dependencies.backend-modules": "Backend modules",
+    "dependencies.edge-modules": "Edge modules",
+    "dependencies.other-modules": "Other modules",
+    "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
 }

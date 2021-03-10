@@ -55,5 +55,14 @@
     "okapiQuery.limitWarning": "تم وضع حد أقصى للنتائج من 100 تسجيلة",
     "permission.settings.okapiQuery": "الإعدادات (المطور): إمكانية تشغيل الاستعلامات",
     "DO_NOT_TRANSLATE": "هذه الترجمة هي ملعب",
-    "configuration.suppressIntlErrors": "حجب أخطاء intl"
+    "configuration.suppressIntlErrors": "حجب أخطاء intl",
+    "dependencies": "التبعيات",
+    "dependencies.moduleCount": "تم تحديد {count} وحدة",
+    "dependencies.interfacesRequired": "مطلوب # واجهة",
+    "dependencies.interfacesProvided": "تم توفير # واجهة",
+    "dependencies.ui-modules": "وحدات واجهة المستخدم",
+    "dependencies.backend-modules": "وحدات الواجهة الخلفية",
+    "dependencies.edge-modules": "وحدات الحافة",
+    "dependencies.other-modules": "وحدات أخرى",
+    "permission.settings.dependencies": "الإعدادات (المطور): إمكانية عرض مخططات التبعية"
 }
