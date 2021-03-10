@@ -55,5 +55,14 @@
     "okapiQuery.limitWarning": "Results are capped at 100 records",
     "permission.settings.okapiQuery": "Settings (developer): Can run queries",
     "DO_NOT_TRANSLATE": "This translation is a playground",
-    "configuration.suppressIntlErrors": "Suprimir errores intl"
+    "configuration.suppressIntlErrors": "Suprimir errores intl",
+    "dependencies": "Dependencies",
+    "dependencies.moduleCount": "{count} modules selected",
+    "dependencies.interfacesRequired": "# interfaces required",
+    "dependencies.interfacesProvided": "# interfaces provided",
+    "dependencies.ui-modules": "UI modules",
+    "dependencies.backend-modules": "Backend modules",
+    "dependencies.edge-modules": "Edge modules",
+    "dependencies.other-modules": "Other modules",
+    "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
 }
