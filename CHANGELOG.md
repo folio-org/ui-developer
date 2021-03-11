@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## 5.0.0 IN PROGRESS
+## [5.0.0](https://github.com/folio-org/ui-developer/tree/v5.0.0) (2021-03-11)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v4.0.0...v5.0.0)
 
 * Increment `react-redux` to `v7`, `redux-form` to `v8`, `@folio/stripes` to `v6`. Refs UID-38.
 * Increment `@folio/stripes-cli` to `v2`. Refs UID-47.
