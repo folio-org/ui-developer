@@ -56,13 +56,13 @@
     "permission.settings.okapiQuery": "Ustawienia (programista): Może uruchamiać zapytania",
     "DO_NOT_TRANSLATE": "This translation is a playground",
     "configuration.suppressIntlErrors": "Pomiń błędy intl",
-    "dependencies": "Dependencies",
-    "dependencies.moduleCount": "{count} modules selected",
+    "dependencies": "Zależności",
+    "dependencies.moduleCount": "Wybrane moduły {count}",
     "dependencies.interfacesRequired": "# interfaces required",
     "dependencies.interfacesProvided": "# interfaces provided",
-    "dependencies.ui-modules": "UI modules",
+    "dependencies.ui-modules": "Moduły UI",
     "dependencies.backend-modules": "Backend modules",
     "dependencies.edge-modules": "Edge modules",
-    "dependencies.other-modules": "Other modules",
+    "dependencies.other-modules": "Inne moduły",
     "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
 }
