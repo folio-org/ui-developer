@@ -11,7 +11,7 @@
     "configuration.showPermissionsInMenu": "Pokazać uprawnienia w menu użytkownika?",
     "configuration.listInvisiblePermissions": "Wyświetlić uprawnienia „niewidoczne” w menu uprawnień?",
     "configuration.actAsRoot": "Zachowywać się tak, jakby użytkownik miał wszystkie uprawnienia?",
-    "hotkeys.instructions": "When this area is focused, type:",
+    "hotkeys.instructions": "Gdy skupia się na tym obszarze, wpisz:",
     "hotkeys.home": "aby przejść do strony głównej",
     "hotkeys.about": "aby przejść do strony Informacje",
     "hotkeys.undefined": "nieokreślony",
@@ -58,11 +58,11 @@
     "configuration.suppressIntlErrors": "Pomiń błędy intl",
     "dependencies": "Zależności",
     "dependencies.moduleCount": "Wybrane moduły {count}",
-    "dependencies.interfacesRequired": "# interfaces required",
-    "dependencies.interfacesProvided": "# interfaces provided",
+    "dependencies.interfacesRequired": "# wymaganych interfejsów",
+    "dependencies.interfacesProvided": "# udostępnionych interfejsów",
     "dependencies.ui-modules": "Moduły UI",
-    "dependencies.backend-modules": "Backend modules",
-    "dependencies.edge-modules": "Edge modules",
+    "dependencies.backend-modules": "Moduły backendowe",
+    "dependencies.edge-modules": "Moduły edge",
     "dependencies.other-modules": "Inne moduły",
-    "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
+    "permission.settings.dependencies": "Ustawienia (programista): może wyświetlać wykresy zależności"
 }
