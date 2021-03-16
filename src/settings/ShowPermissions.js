@@ -1,28 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { stripesConnect } from '@folio/stripes/core';
-import { Pane, List } from '@folio/stripes/components';
+import { Pane, Checkbox, List } from '@folio/stripes/components';
 
 const ShowPermissions = (props) => {
+  const [visibleOnly, setVisibleOnly] = useState(true);
   const { stripes, resources } = props;
   const currentPerms = stripes.user ? stripes.user.perms : {};
 
-  const id2name = {};
+  const id2perm = {};
   resources.permissions.records.forEach(perm => {
-    id2name[perm.permissionName] = perm.displayName;
+    id2perm[perm.permissionName] = perm;
   });
 
-  const perms = Object.keys(currentPerms).sort().map(key => (
-    <><b>{key}</b> ({id2name[key]})</>
-  ));
+  const perms = Object.keys(currentPerms).sort()
+    .filter(key => !visibleOnly || id2perm[key]?.visible)
+    .map(key => (
+      <><b>{key}</b> &mdash; {id2perm[key]?.displayName}</>
+    )
+  );
 
   return (
     <Pane
       defaultWidth="fill"
       paneTitle={<FormattedMessage id="ui-developer.perms" />}
     >
+      <div>
+        <Checkbox
+          checked={visibleOnly}
+          data-test-checkbox-visible-only
+          label={<FormattedMessage id="ui-developer.perms.visibleOnly" />}
+          onChange={e => setVisibleOnly(e.target.checked)}
+        />
+      </div>
+      <h3>
+        <FormattedMessage id="ui-developer.perms.permissionCount" values={{ count: perms.length }} />
+      </h3>
       <List
         listStyle="bullets"
         items={perms}
