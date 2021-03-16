@@ -6,7 +6,8 @@ import { stripesConnect } from '@folio/stripes/core';
 import { Pane, Checkbox, List } from '@folio/stripes/components';
 
 const ShowPermissions = (props) => {
-  const [visibleOnly, setVisibleOnly] = useState(true);
+  const [visibleOnly, setVisibleOnly] = useState(false);
+  const [showDisplayName, setShowDisplayName] = useState(true);
   const { stripes, resources } = props;
   const currentPerms = stripes.user ? stripes.user.perms : {};
 
@@ -18,9 +19,10 @@ const ShowPermissions = (props) => {
   const perms = Object.keys(currentPerms).sort()
     .filter(key => !visibleOnly || id2perm[key]?.visible)
     .map(key => (
-      <><b>{key}</b> &mdash; {id2perm[key]?.displayName}</>
-    )
-  );
+      showDisplayName ?
+        <><b>{key}</b> &mdash; {id2perm[key]?.displayName}</> :
+        <b>{key}</b>
+    ));
 
   return (
     <Pane
@@ -33,6 +35,12 @@ const ShowPermissions = (props) => {
           data-test-checkbox-visible-only
           label={<FormattedMessage id="ui-developer.perms.visibleOnly" />}
           onChange={e => setVisibleOnly(e.target.checked)}
+        />
+        <Checkbox
+          checked={showDisplayName}
+          data-test-checkbox-visible-only
+          label={<FormattedMessage id="ui-developer.perms.showDisplayName" />}
+          onChange={e => setShowDisplayName(e.target.checked)}
         />
       </div>
       <h3>

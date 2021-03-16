@@ -4,6 +4,7 @@
   "configuration": "Configuration",
   "perms": "Current permissions",
   "perms.visibleOnly": "Show visible permissions only",
+  "perms.showDisplayName": "Show display name as well as true name",
   "perms.permissionCount": "{count} permissions:",
   "hotkeys": "Hotkeys test",
   "sessionLocale": "Session locale",
