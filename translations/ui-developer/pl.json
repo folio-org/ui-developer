@@ -64,5 +64,8 @@
     "dependencies.backend-modules": "Moduły backendowe",
     "dependencies.edge-modules": "Moduły edge",
     "dependencies.other-modules": "Inne moduły",
-    "permission.settings.dependencies": "Ustawienia (programista): może wyświetlać wykresy zależności"
+    "permission.settings.dependencies": "Ustawienia (programista): może wyświetlać wykresy zależności",
+    "perms.visibleOnly": "Show visible permissions only",
+    "perms.showDisplayName": "Show display name as well as true name",
+    "perms.permissionCount": "{count} permissions:"
 }

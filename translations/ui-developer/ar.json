@@ -64,5 +64,8 @@
     "dependencies.backend-modules": "وحدات الواجهة الخلفية",
     "dependencies.edge-modules": "وحدات الحافة",
     "dependencies.other-modules": "وحدات أخرى",
-    "permission.settings.dependencies": "الإعدادات (المطور): إمكانية عرض مخططات التبعية"
+    "permission.settings.dependencies": "الإعدادات (المطور): إمكانية عرض مخططات التبعية",
+    "perms.visibleOnly": "إظهار الصلاحيات المرئية فقط",
+    "perms.showDisplayName": "إظهار اسم العرض بالإضافة إلى الاسم الحقيقي",
+    "perms.permissionCount": "{count} صلاحية:"
 }
