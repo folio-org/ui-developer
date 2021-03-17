@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## IN PROGRESS
+
+* Add human-readable permission name to "Current permissions" list. Fixes UID-73.
+
 ## [5.0.0](https://github.com/folio-org/ui-developer/tree/v5.0.0) (2021-03-11)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v4.0.0...v5.0.0)
 
