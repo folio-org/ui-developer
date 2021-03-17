@@ -64,5 +64,8 @@
     "dependencies.backend-modules": "Backend modules",
     "dependencies.edge-modules": "Edge modules",
     "dependencies.other-modules": "Otros módulos",
-    "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
+    "permission.settings.dependencies": "Settings (developer): Can display dependency charts",
+    "perms.visibleOnly": "Show visible permissions only",
+    "perms.showDisplayName": "Show display name as well as true name",
+    "perms.permissionCount": "{count} permissions:"
 }

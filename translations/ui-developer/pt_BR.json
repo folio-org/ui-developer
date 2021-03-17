@@ -57,12 +57,15 @@
     "DO_NOT_TRANSLATE": "Esta tradução é um teste",
     "configuration.suppressIntlErrors": "Suprimir erros intl",
     "dependencies": "Dependências",
-    "dependencies.moduleCount": "{count} modules selected",
-    "dependencies.interfacesRequired": "# interfaces required",
-    "dependencies.interfacesProvided": "# interfaces provided",
-    "dependencies.ui-modules": "UI modules",
+    "dependencies.moduleCount": "{count} módulos selecionados",
+    "dependencies.interfacesRequired": "núm. de interfaces obrigatórias",
+    "dependencies.interfacesProvided": "núm. de interfaces fornecidas",
+    "dependencies.ui-modules": "Módulos de IU",
     "dependencies.backend-modules": "Módulos de back-end",
     "dependencies.edge-modules": "Edge modules",
     "dependencies.other-modules": "Outros módulos",
-    "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
+    "permission.settings.dependencies": "Configurações (desenvolvedor): Pode exibir gráficos de dependência",
+    "perms.visibleOnly": "Show visible permissions only",
+    "perms.showDisplayName": "Show display name as well as true name",
+    "perms.permissionCount": "{count} permissions:"
 }
