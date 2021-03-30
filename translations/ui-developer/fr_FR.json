@@ -62,7 +62,7 @@
     "dependencies.interfacesProvided": "# interfaces fournies",
     "dependencies.ui-modules": "Modules d'interface utilisateur",
     "dependencies.backend-modules": "Modules backend",
-    "dependencies.edge-modules": "Edge modules",
+    "dependencies.edge-modules": "Modules Edge",
     "dependencies.other-modules": "Autres modules",
     "permission.settings.dependencies": "Settings (developer): Can display dependency charts",
     "perms.visibleOnly": "Afficher uniquement les autorisations visibles",

@@ -67,5 +67,5 @@
     "permission.settings.dependencies": "Configurações (desenvolvedor): Pode exibir gráficos de dependência",
     "perms.visibleOnly": "Show visible permissions only",
     "perms.showDisplayName": "Show display name as well as true name",
-    "perms.permissionCount": "{count} permissions:"
+    "perms.permissionCount": "{count} permissões:"
 }
