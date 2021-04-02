@@ -65,7 +65,7 @@
     "dependencies.edge-modules": "Edge modules",
     "dependencies.other-modules": "Other modules",
     "permission.settings.dependencies": "Settings (developer): Can display dependency charts",
-    "perms.visibleOnly": "Show visible permissions only",
-    "perms.showDisplayName": "Show display name as well as true name",
-    "perms.permissionCount": "{count} permissions:"
+    "perms.visibleOnly": "僅顯示可見權限",
+    "perms.showDisplayName": "顯示顯示名稱和真實名稱",
+    "perms.permissionCount": "{count}權限："
 }

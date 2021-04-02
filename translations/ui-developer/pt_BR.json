@@ -65,7 +65,7 @@
     "dependencies.edge-modules": "Edge modules",
     "dependencies.other-modules": "Outros módulos",
     "permission.settings.dependencies": "Configurações (desenvolvedor): Pode exibir gráficos de dependência",
-    "perms.visibleOnly": "Show visible permissions only",
-    "perms.showDisplayName": "Show display name as well as true name",
+    "perms.visibleOnly": "Mostrar apenas permissões visíveis",
+    "perms.showDisplayName": "Mostra o nome de exibição, bem como o nome verdadeiro",
     "perms.permissionCount": "{count} permissões:"
 }
