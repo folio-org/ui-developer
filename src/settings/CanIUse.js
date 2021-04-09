@@ -125,7 +125,9 @@ class CanIUse extends React.Component {
   mapPathToImpl = (impl, paths) => {
     const iface = this.implToInterface(impl.id);
     if (impl.provides) {
-      impl.provides.forEach(i => {
+      // not all interfaces actually implement routes, e.g. edge-connexion
+      // so those must be filtered out
+      impl.provides.filter(i => i.handlers).forEach(i => {
         i.handlers.forEach(handler => {
           if (!paths[handler.pathPattern]) {
             paths[handler.pathPattern] = {

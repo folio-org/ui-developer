@@ -68,7 +68,9 @@ class OkapiPaths extends React.Component {
             modules.forEach(impl => {
               const iface = this.implToInterface(impl.id);
               if (impl.provides) {
-                impl.provides.forEach(i => {
+                // not all interfaces actually implement routes, e.g. edge-connexion
+                // so those must be filtered out
+                impl.provides.filter(i => i.handlers).forEach(i => {
                   i.handlers.forEach(handler => {
                     paths[handler.pathPattern] = {
                       iface,

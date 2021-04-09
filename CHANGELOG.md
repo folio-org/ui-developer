@@ -1,5 +1,10 @@
 # Change history for ui-developer
 
+## [5.0.1](https://github.com/folio-org/ui-developer/tree/v5.0.1) (2021-04-21)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.0.0...v5.0.1)
+
+* Recover from missing `handlers` attribute in Okapi interfaces. Fixes UID-74.
+
 ## [5.0.0](https://github.com/folio-org/ui-developer/tree/v5.0.0) (2021-03-11)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v4.0.0...v5.0.0)
 
