@@ -17,6 +17,7 @@ import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
 import Dependencies from './Dependencies';
 import Translations from './Translations';
+import StripesInspector from './StripesInspector';
 
 const pages = [
   {
@@ -93,6 +94,12 @@ const pages = [
     labelId: 'ui-developer.translations',
     component: Translations,
     // perm: 'ui-developer.settings.translations',
+  },
+  {
+    route: 'stripes-inspector',
+    labelId: 'ui-developer.stripesInspector',
+    component: StripesInspector,
+    // perm: 'ui-developer.settings.stripesInsepctor',
   },
 ];
 

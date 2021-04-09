@@ -68,6 +68,7 @@
   "dependencies.other-modules": "Other modules",
 
   "translations": "Translations",
+  "stripesInspector": "Stripes inspector",
 
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
@@ -78,5 +79,6 @@
   "permission.settings.passwd": "Settings (developer): Can change users' passwords",
   "permission.settings.okapiQuery": "Settings (developer): Can run queries",
   "permission.settings.dependencies": "Settings (developer): Can display dependency charts",
-  "permission.settings.translations": "Settings (developer): Can display list of loaded translations"
+  "permission.settings.translations": "Settings (developer): Can display list of loaded translations",
+  "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object"
 }

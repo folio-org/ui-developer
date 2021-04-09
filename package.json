@@ -12,7 +12,9 @@
   },
   "main": "src/index.js",
   "stripes": {
-    "actsAs": ["settings"],
+    "actsAs": [
+      "settings"
+    ],
     "displayName": "ui-developer.meta.title",
     "route": "/developer",
     "actionNames": [
@@ -117,6 +119,14 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.stripesInspector",
+        "displayName": "Settings (developer): Can display the contents of the stripes object",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },
@@ -146,6 +156,7 @@
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^2.11.1",
     "react-hot-loader": "^4.3.12",
+    "react-inspector": "^5.1.0",
     "redux-form": "^8.0.3"
   },
   "peerDependencies": {
