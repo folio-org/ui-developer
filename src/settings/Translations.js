@@ -21,7 +21,7 @@ const Translations = ({ stripes }) => {
     >
       <ul>
         {Object.keys(translations).sort().map(key => (
-          <li>
+          <li key={key}>
             {key}
             {': '}
             {renderTranslation(translations[key])}
