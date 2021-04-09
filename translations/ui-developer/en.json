@@ -67,6 +67,8 @@
   "dependencies.edge-modules": "Edge modules",
   "dependencies.other-modules": "Other modules",
 
+  "translations": "Translations",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
@@ -75,5 +77,6 @@
   "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
   "permission.settings.passwd": "Settings (developer): Can change users' passwords",
   "permission.settings.okapiQuery": "Settings (developer): Can run queries",
-  "permission.settings.dependencies": "Settings (developer): Can display dependency charts"
+  "permission.settings.dependencies": "Settings (developer): Can display dependency charts",
+  "permission.settings.translations": "Settings (developer): Can display list of loaded translations"
 }
