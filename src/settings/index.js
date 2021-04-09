@@ -16,6 +16,7 @@ import OkapiConfiguration from './OkapiConfiguration';
 import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
 import Dependencies from './Dependencies';
+import Translations from './Translations';
 
 const pages = [
   {
@@ -85,7 +86,13 @@ const pages = [
     route: 'dependencies',
     labelId: 'ui-developer.dependencies',
     component: Dependencies,
-    // perm: 'ui-developer.settings.dependencies',
+    perm: 'ui-developer.settings.dependencies',
+  },
+  {
+    route: 'translations',
+    labelId: 'ui-developer.translations',
+    component: Translations,
+    // perm: 'ui-developer.settings.translations',
   },
 ];
 

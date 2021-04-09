@@ -109,6 +109,14 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.translations",
+        "displayName": "Settings (developer): Can display list of loaded translations",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },
