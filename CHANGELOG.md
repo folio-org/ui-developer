@@ -3,6 +3,7 @@
 ## IN PROGRESS
 
 * Add human-readable permission name to "Current permissions" list. Fixes UID-73.
+* Recover from missing `handlers` attribute in Okapi interfaces. Fixes UID-74.
 
 ## [5.0.0](https://github.com/folio-org/ui-developer/tree/v5.0.0) (2021-03-11)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v4.0.0...v5.0.0)
