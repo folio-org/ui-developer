@@ -70,6 +70,8 @@
   "translations": "Translations",
   "stripesInspector": "Stripes inspector",
 
+  "plugin-surface": "Plugin surface",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
@@ -80,5 +82,6 @@
   "permission.settings.okapiQuery": "Settings (developer): Can run queries",
   "permission.settings.dependencies": "Settings (developer): Can display dependency charts",
   "permission.settings.translations": "Settings (developer): Can display list of loaded translations",
+  "permission.settings.plugin-surface": "Settings (developer): plugin surface for developing plugins",
   "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object"
 }

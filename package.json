@@ -121,6 +121,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.plugin-surface",
+        "displayName": "Settings (developer): plugin surface for developing plugins",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.stripesInspector",
         "displayName": "Settings (developer): Can display the contents of the stripes object",
         "subPermissions": [
