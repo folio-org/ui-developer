@@ -117,6 +117,14 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.plugin-surface",
+        "displayName": "Settings (developer): plugin surface for developing plugins",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
       }
     ]
   },

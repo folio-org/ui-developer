@@ -17,6 +17,7 @@ import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
 import Dependencies from './Dependencies';
 import Translations from './Translations';
+import PluginSurface from './PluginSurface';
 
 const pages = [
   {
@@ -93,6 +94,12 @@ const pages = [
     labelId: 'ui-developer.translations',
     component: Translations,
     // perm: 'ui-developer.settings.translations',
+  },
+  {
+    route: 'plugin-surface',
+    labelId: 'ui-developer.plugin-surface',
+    component: PluginSurface,
+    // perm: 'ui-developer.settings.plugin-surface',
   },
 ];
 
