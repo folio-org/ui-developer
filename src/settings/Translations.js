@@ -4,17 +4,34 @@ import { FormattedMessage } from 'react-intl';
 import { Pane } from '@folio/stripes/components';
 
 function renderArray(a) {
+  // types gleaned from manually inspecting AST values in the console.
+  // this is totally unscientific, but seems to be accurate-ish.
+  // do you wanna know what 3-7 are? Yeah, me too.
+  const TYPES = {
+    // simple values without placeholders, e.g. foo
+    CONSTANT: 0,
+
+    // placeholders for strings, e.g. {foo}
+    PLACEHOLDER: 1,
+
+    // placeholders with types, e.g. {foo, number}
+    TYPED_PLACEHOLDER: 2,
+
+    // html elements, e.g. <strong>foo</strong>
+    HTML_ELEMENT: 8,
+  };
+
   return a.map(t => {
     let str;
     switch (t.type) {
-      case 1: // placeholders for strings, e.g. {foo}
-      case 2: // placeholders with types, e.g. {foo, number}
+      case TYPES.PLACEHOLDER:
+      case TYPES.TYPED_PLACEHOLDER:
         str = `{${t.value}}`;
         break;
-      case 8: // html elements, e.g. <strong>foo</strong>
+      case TYPES.HTML_ELEMENT:
         str = `<${t.value}>${renderArray(t.children)}</${t.value}>`;
         break;
-      case 0: // simple values without placeholders, e.g. foo
+      case TYPES.CONSTANT:
       default:
         str = t.value;
         break;
@@ -30,8 +47,8 @@ function renderArray(a) {
  *
  * @see https://formatjs.io/docs/guides/advanced-usage#pre-compiling-messages
  *
- * @param {*} t
- * @returns
+ * @param {*} t a translation value; maybe a string, maybe an array
+ * @returns string
  */
 function renderTranslation(t) {
   if (typeof t === 'string') {
