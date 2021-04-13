@@ -6,6 +6,7 @@
 * Recover from missing `handlers` attribute in Okapi interfaces. Fixes UID-74.
 * Add page to list all currently loaded translations. Fixes UID-75.
 * Add configurable plugin-surface page. Fixes UID-78.
+* Show serialized `stripes` object. Refs UID-77.
 
 ## [5.0.0](https://github.com/folio-org/ui-developer/tree/v5.0.0) (2021-03-11)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v4.0.0...v5.0.0)

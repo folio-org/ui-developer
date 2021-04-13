@@ -106,7 +106,7 @@ const pages = [
     route: 'stripes-inspector',
     labelId: 'ui-developer.stripesInspector',
     component: StripesInspector,
-    perm: 'ui-developer.settings.stripesInsepctor',
+    perm: 'ui-developer.settings.stripesInspector',
   },
 ];
 
