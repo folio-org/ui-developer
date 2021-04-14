@@ -5,6 +5,7 @@
 * Add human-readable permission name to "Current permissions" list. Fixes UID-73.
 * Recover from missing `handlers` attribute in Okapi interfaces. Fixes UID-74.
 * Add page to list all currently loaded translations. Fixes UID-75.
+* Display the current contents of the stripes object. Fixes UID-77.
 * Add configurable plugin-surface page. Fixes UID-78.
 * Show serialized `stripes` object. Refs UID-77.
 
