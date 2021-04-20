@@ -62,7 +62,7 @@
     "dependencies.interfacesProvided": "núm. de interfaces fornecidas",
     "dependencies.ui-modules": "Módulos de IU",
     "dependencies.backend-modules": "Módulos de back-end",
-    "dependencies.edge-modules": "Edge modules",
+    "dependencies.edge-modules": "Módulos Edge",
     "dependencies.other-modules": "Outros módulos",
     "permission.settings.dependencies": "Configurações (desenvolvedor): Pode exibir gráficos de dependência",
     "perms.visibleOnly": "Mostrar apenas permissões visíveis",
