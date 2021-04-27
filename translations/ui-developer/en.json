@@ -71,6 +71,9 @@
   "stripesInspector": "Stripes inspector",
 
   "plugin-surface": "Plugin surface",
+  "plugin-surface.type": "Plugin type:",
+  "plugin-surface.forExample": "(For example, \"{pluginType}\".)",
+  "plugin-surface.noPlugin": "(No plugin of type \"{pluginType}\".)",
 
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
