@@ -4,8 +4,13 @@ import { FormattedMessage } from 'react-intl';
 import { HandlerManager } from '@folio/stripes/core';
 import { Pane } from '@folio/stripes/components';
 
+// We need to pass a `key` prop to <HandlerManager> to force a remount
+// whenever the handlerEvent changes; otherwise we just re-render the
+// existing <HandlerManager>, which has already cached the set of
+// relevant handlers in its constructor.
+
 const HandlerSurface = ({ stripes }) => {
-  const [handlerEvent, setHandlerEvent] = useState('ui-agreements-extension');
+  const [handlerEvent, setHandlerEvent] = useState('');
 
   return (
     <Pane
@@ -19,7 +24,7 @@ const HandlerSurface = ({ stripes }) => {
         <FormattedMessage id="ui-developer.handler-surface.forExample" values={{ handlerEvent: 'ui-agreements-extension' }} />
       </p>
       <hr />
-      <HandlerManager event={handlerEvent} id="handler-surface" stripes={stripes} />
+      <HandlerManager key={handlerEvent} event={handlerEvent} id="handler-surface" stripes={stripes} />
     </Pane>
   );
 };
