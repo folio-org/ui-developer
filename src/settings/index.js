@@ -18,6 +18,7 @@ import OkapiQuery from './OkapiQuery';
 import Dependencies from './Dependencies';
 import Translations from './Translations';
 import PluginSurface from './PluginSurface';
+import HandlerSurface from './HandlerSurface';
 import StripesInspector from './StripesInspector';
 
 const pages = [
@@ -101,6 +102,12 @@ const pages = [
     labelId: 'ui-developer.plugin-surface',
     component: PluginSurface,
     perm: 'ui-developer.settings.plugin-surface',
+  },
+  {
+    route: 'handler-surface',
+    labelId: 'ui-developer.handler-surface',
+    component: HandlerSurface,
+    perm: 'ui-developer.settings.handler-surface',
   },
   {
     route: 'stripes-inspector',

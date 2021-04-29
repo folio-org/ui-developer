@@ -129,6 +129,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.handler-surface",
+        "displayName": "Settings (developer): handler surface for developing handlers",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.stripesInspector",
         "displayName": "Settings (developer): Can display the contents of the stripes object",
         "subPermissions": [
