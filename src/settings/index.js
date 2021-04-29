@@ -107,7 +107,7 @@ const pages = [
     route: 'handler-surface',
     labelId: 'ui-developer.handler-surface',
     component: HandlerSurface,
-    // perm: 'ui-developer.settings.handler-surface',
+    perm: 'ui-developer.settings.handler-surface',
   },
   {
     route: 'stripes-inspector',
