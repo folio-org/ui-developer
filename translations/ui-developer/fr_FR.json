@@ -67,5 +67,18 @@
     "permission.settings.dependencies": "Paramètres (développeur): peut afficher des graphiques de dépendance",
     "perms.visibleOnly": "Afficher uniquement les autorisations visibles",
     "perms.showDisplayName": "Afficher le nom d'affichage ainsi que le vrai nom",
-    "perms.permissionCount": "{count} autorisations:"
+    "perms.permissionCount": "{count} autorisations:",
+    "translations": "Translations",
+    "stripesInspector": "Stripes inspector",
+    "plugin-surface": "Plugin surface",
+    "plugin-surface.type": "Plugin type:",
+    "plugin-surface.forExample": "(For example, \"{pluginType}\".)",
+    "plugin-surface.noPlugin": "(No plugin of type \"{pluginType}\".)",
+    "handler-surface": "Handler surface",
+    "handler-surface.event": "Event to handle:",
+    "handler-surface.forExample": "(For example, \"{handlerEvent}\".)",
+    "permission.settings.translations": "Settings (developer): Can display list of loaded translations",
+    "permission.settings.plugin-surface": "Settings (developer): plugin surface for developing plugins",
+    "permission.settings.handler-surface": "Settings (developer): handler surface for developing handlers",
+    "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object"
 }
