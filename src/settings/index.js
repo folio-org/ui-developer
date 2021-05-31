@@ -120,7 +120,7 @@ const pages = [
     route: 'user-locale',
     labelId: 'ui-developer.userLocale',
     component: UserLocale,
-    // perm: 'ui-developer.settings.userLocale',
+    perm: 'ui-developer.settings.userLocale',
   },
 ];
 

@@ -143,6 +143,17 @@
           "settings.developer.enabled"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.userLocale",
+        "displayName": "Settings (developer): Can edit user configuration values",
+        "subPermissions": [
+          "settings.developer.enabled",
+          "configuration.entries.collection.get",
+          "configuration.entries.item.post",
+          "configuration.entries.item.put"
+        ],
+        "visible": true
       }
     ]
   },
