@@ -98,5 +98,6 @@
   "permission.settings.translations": "Settings (developer): Can display list of loaded translations",
   "permission.settings.plugin-surface": "Settings (developer): plugin surface for developing plugins",
   "permission.settings.handler-surface": "Settings (developer): handler surface for developing handlers",
-  "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object"
+  "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object",
+  "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user"
 }
