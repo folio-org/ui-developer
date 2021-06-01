@@ -9,7 +9,7 @@ import {
   supportedLocales,
   userLocaleConfig,
 } from '@folio/stripes/core';
-import { Button, Col, Pane, Row, Select, TextField, CurrencySelect } from '@folio/stripes/components';
+import { Button, Pane, Select, TextField, CurrencySelect } from '@folio/stripes/components';
 import timezones from '../util/timezones';
 
 const timeZonesOptions = timezones.map(timezone => (
@@ -24,10 +24,21 @@ const localesList = (intl) => {
   // since it prevents memory leak
   const cache = createIntlCache();
 
+  // error handler if an intl context cannot be created,
+  // i.e. if the browser is missing support for the requested locale
+  const logLocaleError = (locale) => {
+    console.warn(`monkey: ${locale}`); // eslint-disable-line
+  };
+
   // iterate through the locales list to build an array of { value, label } objects
   const locales = supportedLocales.map(l => {
     // intl instance with locale of current iteree
-    const lIntl = createIntl({ locale: l, messages: {} }, cache);
+    const lIntl = createIntl({
+      locale: l,
+      messages: {},
+      onError: logLocaleError,
+    },
+    cache);
 
     return {
       value: l,
@@ -137,63 +148,43 @@ class UserLocale extends React.Component {
           onSubmit={this.submit}
           render={({ handleSubmit, submitting, pristine }) => (
             <form onSubmit={handleSubmit}>
-              <Row>
-                <Col xs={12} id="select-user">
-                  <Field
-                    component={TextField}
-                    id="username"
-                    name="username"
-                    label={<FormattedMessage id="ui-developer.userLocale.username" />}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} id="select-locale">
-                  <Field
-                    component={Select}
-                    id="locale"
-                    name="locale"
-                    placeholder="---"
-                    dataOptions={this.localesOptions}
-                    label={<FormattedMessage id="ui-developer.userLocale.locale" />}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} id="select-timezone">
-                  <Field
-                    component={Select}
-                    id="timezone"
-                    name="timezone"
-                    placeholder="---"
-                    dataOptions={timeZonesOptions}
-                    label={<FormattedMessage id="ui-developer.userLocale.timeZone" />}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} id="select-currency">
-                  <Field
-                    component={CurrencySelect}
-                    id="currency"
-                    name="currency"
-                    placeholder="---"
-                    label={<FormattedMessage id="ui-developer.userLocale.currency" />}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} id="select-currency">
-                  <Button
-                    id="clickable-save-instance"
-                    buttonStyle="primary mega"
-                    type="submit"
-                    disabled={(pristine || submitting)}
-                  >
-                    <FormattedMessage id="stripes-core.button.save" />
-                  </Button>
-                </Col>
-              </Row>
+              <Field
+                component={TextField}
+                id="username"
+                name="username"
+                label={<FormattedMessage id="ui-developer.userLocale.username" />}
+              />
+              <Field
+                component={Select}
+                id="locale"
+                name="locale"
+                placeholder="---"
+                dataOptions={this.localesOptions}
+                label={<FormattedMessage id="ui-developer.userLocale.locale" />}
+              />
+              <Field
+                component={Select}
+                id="timezone"
+                name="timezone"
+                placeholder="---"
+                dataOptions={timeZonesOptions}
+                label={<FormattedMessage id="ui-developer.userLocale.timeZone" />}
+              />
+              <Field
+                component={CurrencySelect}
+                id="currency"
+                name="currency"
+                placeholder="---"
+                label={<FormattedMessage id="ui-developer.userLocale.currency" />}
+              />
+              <Button
+                id="clickable-save-instance"
+                buttonStyle="primary mega"
+                type="submit"
+                disabled={(pristine || submitting)}
+              >
+                <FormattedMessage id="stripes-core.button.save" />
+              </Button>
             </form>
           )}
         />
