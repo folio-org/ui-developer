@@ -6,7 +6,7 @@ import { Settings } from '@folio/stripes/smart-components';
 
 import Configuration from './Configuration';
 import ShowPermissions from './ShowPermissions';
-import Locale from './Locale';
+import SessionLocale from './SessionLocale';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
 import TestHotkeys from './TestHotkeys';
@@ -20,6 +20,7 @@ import Translations from './Translations';
 import PluginSurface from './PluginSurface';
 import HandlerSurface from './HandlerSurface';
 import StripesInspector from './StripesInspector';
+import UserLocale from './UserLocale';
 
 const pages = [
   {
@@ -49,7 +50,7 @@ const pages = [
   {
     route: 'locale',
     labelId: 'ui-developer.sessionLocale',
-    component: Locale,
+    component: SessionLocale,
     perm: 'ui-developer.settings.locale',
   },
   {
@@ -114,6 +115,12 @@ const pages = [
     labelId: 'ui-developer.stripesInspector',
     component: StripesInspector,
     perm: 'ui-developer.settings.stripesInspector',
+  },
+  {
+    route: 'user-locale',
+    labelId: 'ui-developer.userLocale',
+    component: UserLocale,
+    perm: 'ui-developer.settings.userLocale',
   },
 ];
 
