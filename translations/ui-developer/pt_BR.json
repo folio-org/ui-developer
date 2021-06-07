@@ -80,5 +80,5 @@
     "permission.settings.translations": "Configurações (desenvolvedor): pode exibir uma lista de traduções carregadas",
     "permission.settings.plugin-surface": "Configurações (desenvolvedor): superfície de plug-in para desenvolver plug-ins",
     "permission.settings.handler-surface": "Configurações (desenvolvedor): superfície do hanlder para desenvolver hanlder",
-    "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object"
+    "permission.settings.stripesInspector": "Configurações (desenvolvedor): pode exibir o conteúdo do objeto Stripes"
 }
