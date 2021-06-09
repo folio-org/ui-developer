@@ -71,12 +71,14 @@
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
-  "plugin-surface.forExample": "(For example, \"{pluginType}\".)",
+  "plugin-surface.exampleType": "(Example: <code>{pluginType}</code>)",
+  "plugin-surface.data": "Data object (optional):",
+  "plugin-surface.exampleData": "(Example: <code>{data}</code>)",
   "plugin-surface.noPlugin": "(No plugin of type \"{pluginType}\".)",
 
   "handler-surface": "Handler surface",
   "handler-surface.event": "Event to handle:",
-  "handler-surface.forExample": "(For example, \"{handlerEvent}\".)",
+  "handler-surface.forExample": "(Example, \"{handlerEvent}\".)",
 
   "userLocale": "User locale",
   "userLocale.setUserLocale": "Save per-user language and localization",
