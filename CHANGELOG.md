@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## IN PROGRESS
+## [5.1.0](https://github.com/folio-org/ui-developer/tree/v5.1.0) (2021-06-17)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.0.0...v5.1.0)
 
 * Add human-readable permission name to "Current permissions" list. Fixes UID-73.
 * Recover from missing `handlers` attribute in Okapi interfaces. Fixes UID-74.
