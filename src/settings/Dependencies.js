@@ -132,7 +132,7 @@ const Dependencies = ({ resources }) => {
 Dependencies.manifest = {
   modules: {
     type: 'okapi',
-    path: '_/proxy/tenants/diku/modules',
+    path: '_/proxy/tenants/!{stripes.okapi.tenant}/modules',
     params: { full: true },
   },
 };
