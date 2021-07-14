@@ -160,12 +160,14 @@
   "scripts": {
     "start": "stripes serve",
     "lint": "eslint .",
-    "test": "echo 'placeholder. no tests implemented'"
+    "test": "echo 'placeholder. no tests implemented'",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-developer ./translations/ui-developer/compiled"
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^5.2.0",
     "@folio/stripes": "^6.2.0",
     "@folio/stripes-cli": "^2.0.0",
+    "@formatjs/cli": "^4.2.27",
     "babel-eslint": "^9.0.0",
     "eslint": "^6.8.0",
     "final-form": "^4.18.2",
