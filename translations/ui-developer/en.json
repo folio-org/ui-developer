@@ -86,7 +86,8 @@
   "userLocale.locale": "Locale (for language display, date format etc.)",
   "userLocale.timeZone": "Time zone (time zone used when showing date time information)",
   "userLocale.currency": "Primary currency (for currency symbol to display)",
-  "userLocale.success": "Successfully stored locale settings for {usesrname}",
+  "userLocale.success": "Successfully stored locale settings for {username}",
+  "userLocale.numberingSystem": "Numbering system (override locale's default; <a>details</a>)",
 
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
