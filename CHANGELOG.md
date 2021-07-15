@@ -3,6 +3,7 @@
 ## 5.2.0 (IN PROGRESS)
 
 * Use dynamic tenant-id. Fixes UID-88.
+* Set user numbering system independent of locale. Fixes UID-89.
 
 ## [5.1.0](https://github.com/folio-org/ui-developer/tree/v5.1.0) (2021-06-17)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.0.0...v5.1.0)
