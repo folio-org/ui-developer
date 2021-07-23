@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## 5.2.0 (IN PROGRESS)
+## [5.2.0](https://github.com/folio-org/ui-developer/tree/v5.2.0) (2021-07-23)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.1.0...v5.2.0)
 
 * Use dynamic tenant-id. Fixes UID-88.
 * Set user numbering system independent of locale. Fixes UID-89.
