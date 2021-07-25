@@ -1,5 +1,11 @@
 # Change history for ui-developer
 
+## [5.2.1](https://github.com/folio-org/ui-developer/tree/v5.2.1) (2021-07-25)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.0...v5.2.1)
+
+* Remove TestHotKeys cruft. Refs UID-90, UTEN-65.
+* Include necessary permissions for okapi dependencies. Fixes UID-91.
+
 ## [5.2.0](https://github.com/folio-org/ui-developer/tree/v5.2.0) (2021-07-23)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.1.0...v5.2.0)
 
