@@ -9,7 +9,6 @@ import ShowPermissions from './ShowPermissions';
 import SessionLocale from './SessionLocale';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
-import TestHotkeys from './TestHotkeys';
 import Token from './Token';
 import FolioBabies from './FolioBabies';
 import OkapiConfiguration from './OkapiConfiguration';
@@ -34,12 +33,6 @@ const pages = [
     labelId: 'ui-developer.perms',
     component: ShowPermissions,
     perm: 'ui-developer.settings.perms',
-  },
-  {
-    route: 'hotkeys',
-    labelId: 'ui-developer.hotkeys',
-    component: TestHotkeys,
-    perm: 'ui-developer.settings.hotkeys',
   },
   {
     route: 'token',

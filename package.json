@@ -51,14 +51,6 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.hotkeys",
-        "displayName": "Settings (Developer): hot keys test",
-        "subPermissions": [
-          "settings.developer.enabled"
-        ],
-        "visible": true
-      },
-      {
         "permissionName": "ui-developer.settings.token",
         "displayName": "Settings (Developer): manage JWT authentication token",
         "subPermissions": [
