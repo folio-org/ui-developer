@@ -101,7 +101,7 @@
         "displayName": "Settings (developer): Can display dependency charts",
         "subPermissions": [
           "settings.developer.enabled",
-          "okapi.proxy.tenants.modules.list",
+          "okapi.proxy.tenants.modules.list"
         ],
         "visible": true
       },
