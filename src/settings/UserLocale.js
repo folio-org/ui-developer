@@ -7,7 +7,6 @@ import {
   CalloutContext,
   stripesConnect,
   supportedLocales,
-  supportedNumberingSystems,
   userLocaleConfig,
 } from '@folio/stripes/core';
 import { Button, Pane, Select, TextField, CurrencySelect } from '@folio/stripes/components';
@@ -62,6 +61,13 @@ const localesList = (intl) => {
 
   return locales;
 };
+
+// supported numbering systems, i.e. the systems tenants may chose
+// for numeral display
+const supportedNumberingSystems = [
+  'latn',  // Arabic (0 1 2 3 4 5 6 7 8 9)
+  'arab',  // Arabic-Hindi (٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩)
+];
 
 /**
  * numberingSystemsList: list of available systems, suitable for a Select

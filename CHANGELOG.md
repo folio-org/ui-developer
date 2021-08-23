@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## 5.2.2 IN PROGRESS
+
+* Define `supportedNumberingSystems` locally; it is not available from `@folio/stripes`. Refs UID-93.
+
 ## [5.2.1](https://github.com/folio-org/ui-developer/tree/v5.2.1) (2021-07-25)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.0...v5.2.1)
 
