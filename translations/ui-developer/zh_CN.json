@@ -69,7 +69,7 @@
     "perms.showDisplayName": "显示显示名称和真实名称",
     "perms.permissionCount": "{count}权限：",
     "translations": "翻译",
-    "stripesInspector": "条纹检查器",
+    "stripesInspector": "磁条检查器",
     "plugin-surface": "插件界面",
     "plugin-surface.type": "插件类型：",
     "plugin-surface.forExample": "（例如，“ {pluginType} ”。）",
@@ -80,5 +80,5 @@
     "permission.settings.translations": "设置（开发人员）：可以显示已加载翻译的列表",
     "permission.settings.plugin-surface": "设置（开发人员）：用于开发插件的插件界面",
     "permission.settings.handler-surface": "设置（开发人员）：用于开发处理程序的处理程序界面",
-    "permission.settings.stripesInspector": "设置（开发人员）：可以显示条纹对象的内容"
+    "permission.settings.stripesInspector": "设置（开发人员）：可以显示磁条对象的内容"
 }
