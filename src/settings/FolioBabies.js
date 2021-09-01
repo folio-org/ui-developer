@@ -21,6 +21,7 @@ const FolioBabies = () => {
     'Julian',
     'Nathaniel',
     'Blair',
+    'Camille',
   ];
 
   babies.sort();
