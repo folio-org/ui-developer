@@ -1,5 +1,10 @@
 # Change history for ui-developer
 
+## [6.0.0] (IN PROGRESS)
+
+* Remove unnecessarily permissive permissions. Refs UID-87.
+* Increment `stripes` to `v7`. Refs UID-92.
+
 ## [5.2.1](https://github.com/folio-org/ui-developer/tree/v5.2.1) (2021-07-25)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.0...v5.2.1)
 
