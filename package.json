@@ -79,7 +79,6 @@
         "permissionName": "ui-developer.settings.passwd",
         "displayName": "Settings (developer): Can change users' passwords",
         "subPermissions": [
-          "configuration.all",
           "settings.developer.enabled",
           "login.credentials-existence.get",
           "login.item.post",
@@ -91,7 +90,6 @@
         "permissionName": "ui-developer.settings.okapiQuery",
         "displayName": "Settings (developer): Can run queries",
         "subPermissions": [
-          "configuration.all",
           "settings.developer.enabled"
         ],
         "visible": true
