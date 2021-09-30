@@ -67,7 +67,7 @@
     "permission.settings.dependencies": "Ajustes (desarrollador): Puede mostrar gráficos de dependencia",
     "perms.visibleOnly": "Mostrar solo permisos visibles",
     "perms.showDisplayName": "Mostrar nombre para mostrar, así como nombre verdadero",
-    "perms.permissionCount": "{cuenta} permisos:",
+    "perms.permissionCount": "{count} permisos:",
     "translations": "Traducciones",
     "stripesInspector": "Inspector de rayas",
     "plugin-surface": "Superficie del plugin",
