@@ -72,7 +72,6 @@
     "stripesInspector": "Inspetor de stripes",
     "plugin-surface": "Superfície plugin",
     "plugin-surface.type": "Tipo de plug-in:",
-    "plugin-surface.forExample": "(Por exemplo, \" {pluginType} \".)",
     "plugin-surface.noPlugin": "(Nenhum plugin do tipo \" {pluginType} \".)",
     "handler-surface": "Superfície do handler",
     "handler-surface.event": "Evento para tratar:",
@@ -80,5 +79,17 @@
     "permission.settings.translations": "Configurações (desenvolvedor): pode exibir uma lista de traduções carregadas",
     "permission.settings.plugin-surface": "Configurações (desenvolvedor): superfície de plug-in para desenvolver plug-ins",
     "permission.settings.handler-surface": "Configurações (desenvolvedor): superfície do hanlder para desenvolver hanlder",
-    "permission.settings.stripesInspector": "Configurações (desenvolvedor): pode exibir o conteúdo do objeto Stripes"
+    "permission.settings.stripesInspector": "Configurações (desenvolvedor): pode exibir o conteúdo do objeto Stripes",
+    "plugin-surface.exampleType": "(Example: <code>{pluginType}</code>)",
+    "plugin-surface.data": "Data object (optional):",
+    "plugin-surface.exampleData": "(Example: <code>{data}</code>)",
+    "userLocale": "User locale",
+    "userLocale.setUserLocale": "Save per-user language and localization",
+    "userLocale.username": "Username",
+    "userLocale.locale": "Locale (for language display, date format etc.)",
+    "userLocale.timeZone": "Time zone (time zone used when showing date time information)",
+    "userLocale.currency": "Primary currency (for currency symbol to display)",
+    "userLocale.success": "Successfully stored locale settings for {username}",
+    "userLocale.numberingSystem": "Numbering system (override locale's default; <a>details</a>)",
+    "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user"
 }
