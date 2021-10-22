@@ -15,29 +15,30 @@ function permNameCmp(a, b) {
   return 0;
 }
 
-function permCmp(a, b) {
-  return permNameCmp(a.permissionName, b.permissionName);
-}
-
 function compilePermissions(list) {
   const name2perm = {};
   list.forEach(perm => {
-    name2perm[perm.permissionName] = perm;
+    name2perm[perm.permissionName] = {
+      // XXX This is a clumsy way to get the permissions rendered the way we want
+      constructor: {
+        name: (
+          <span>
+            <b>{perm.permissionName}</b>
+            {' '}
+            ({perm.displayName || <NoValue />})
+          </span>
+        ),
+      },
+      subPermissions: perm.subPermissions,
+    };
   });
 
-  return list.sort(permCmp).map(perm => ({
-    // XXX This is a clumsy way to get the permissions rendered the way we want
-    constructor: {
-      name: (
-        <span>
-          <b>{perm.permissionName}</b>
-          {' '}
-          ({perm.displayName || <NoValue />})
-        </span>
-      ),
-    },
-    subPermissions: perm.subPermissions.sort(permNameCmp).map(name => name2perm[name]),
-  }));
+  Object.keys(name2perm).forEach(permName => {
+    const perm = name2perm[permName];
+    perm.subPermissions = perm.subPermissions.sort(permNameCmp).map(name => name2perm[name]);
+  });
+
+  return Object.keys(name2perm).sort(permNameCmp).map(name => name2perm[name]);
 }
 
 
