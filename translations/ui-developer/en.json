@@ -6,6 +6,7 @@
   "perms.visibleOnly": "Show visible permissions only",
   "perms.showDisplayName": "Show display name as well as true name",
   "perms.permissionCount": "{count} permissions:",
+  "perms-inspector.counts": "{allCount} permissions ({visibleCount} visible)",
   "hotkeys": "Hotkeys test",
   "sessionLocale": "Session locale",
   "setToken": "Set token",
