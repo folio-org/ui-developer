@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { stripesConnect } from '@folio/stripes/core';
-import { LoadingPane, Pane } from '@folio/stripes/components';
+import { LoadingPane, Pane, Checkbox } from '@folio/stripes/components';
 
 
 // Alphabetical sort, but with items beginning 'SYS#' at the end
@@ -88,6 +88,7 @@ PermissionsList.propTypes = {
 
 
 const PermissionsInspector = ({ resources }) => {
+  const [includeInvisible, setIncludeInvisible] = useState(false);
   const { perms } = resources;
   if (!perms.hasLoaded) return <LoadingPane />;
 
@@ -96,19 +97,28 @@ const PermissionsInspector = ({ resources }) => {
     name2perm[perm.permissionName] = perm;
   });
 
-  const permNames = Object.keys(name2perm).sort(permNameCmp).filter(permName => name2perm[permName].visible);
+  const permNames = Object.keys(name2perm)
+    .sort(permNameCmp)
+    .filter(permName => includeInvisible || name2perm[permName].visible);
 
   return (
     <Pane
       defaultWidth="fill"
       paneTitle={<FormattedMessage id="ui-developer.permissionsInspector" />}
     >
+      <Checkbox
+        checked={includeInvisible}
+        data-test-checkbox-include-invisible
+        label={<FormattedMessage id="ui-developer.perms-inspector.showInvisible" />}
+        onChange={e => setIncludeInvisible(e.target.checked)}
+      />
       <h3>
         <FormattedMessage
           id="ui-developer.perms-inspector.counts"
           values={{
             allCount: perms.other.totalRecords,
             visibleCount: perms.records.filter(perm => perm.visible).length,
+            invisibleCount: perms.records.filter(perm => !perm.visible).length,
           }}
         />
       </h3>
