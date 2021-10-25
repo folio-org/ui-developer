@@ -42,25 +42,17 @@ function SinglePermission({ permName, name2perm }) {
         {perm.displayName && (
           <>{' '}(<i>{perm.displayName}</i>)</>
         )}
-        {expanded &&
-          <span>
-            {perm.description &&
-              <div style={{ margin: '0.5em 1em' }}>{perm.description}</div>
-            }
-            {perm.subPermissions.length > 0 &&
-              <ul style={{ listStyleType: 'none' }}>
-                {perm.subPermissions.sort(permNameCmp).map(subPerm => {
-                  return (
-                    <li key={subPerm}>
-                      {subPerm}
-                    </li>
-                  );
-                })}
-              </ul>
-            }
-          </span>
-        }
       </span>
+      {expanded &&
+        <span>
+          {perm.description &&
+            <div style={{ margin: '0.5em 1.5em' }}>{perm.description}</div>
+          }
+          {perm.subPermissions.length > 0 &&
+            <PermissionsList permNames={perm.subPermissions.sort(permNameCmp)} name2perm={name2perm} />
+          }
+        </span>
+      }
     </span>
   );
 }
