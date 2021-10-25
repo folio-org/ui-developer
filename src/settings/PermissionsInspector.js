@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { stripesConnect } from '@folio/stripes/core';
-import { Pane, LoadingPane, NoValue } from '@folio/stripes/components';
-import ObjectInspector from 'react-inspector';
+import { LoadingPane, Pane } from '@folio/stripes/components';
 
 
 // Alphabetical sort, but with items beginning 'SYS#' at the end
@@ -15,38 +14,97 @@ function permNameCmp(a, b) {
   return 0;
 }
 
-function compilePermissions(list) {
-  const name2perm = {};
-  list.forEach(perm => {
-    name2perm[perm.permissionName] = {
-      // XXX This is a clumsy way to get the permissions rendered the way we want
-      constructor: {
-        name: (
+
+function SinglePermission({ permName, name2perm }) {
+  const perm = name2perm[permName];
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <span>
+      <span
+        style={{
+          cursor: 'pointer',
+          color: perm.visible ? 'black' : '#888',
+        }}
+        onClick={() => setExpanded(!expanded)}
+      >
+        <span
+          style={{
+            fontSize: '12px',
+            marginRight: '3px',
+            color: 'rgb(110, 110, 110)',
+          }}
+        >
+          {expanded ? '▼' : '▶'}
+        </span>
+        {' '}
+        {perm.permissionName}
+        {perm.displayName && (
+          <>{' '}(<i>{perm.displayName}</i>)</>
+        )}
+        {expanded &&
           <span>
-            <b>{perm.permissionName}</b>
-            {' '}
-            ({perm.displayName || <NoValue />})
+            {perm.description &&
+              <div style={{ margin: '0.5em 1em' }}>{perm.description}</div>
+            }
+            {perm.subPermissions.length > 0 &&
+              <ul style={{ listStyleType: 'none' }}>
+                {perm.subPermissions.sort(permNameCmp).map(subPerm => {
+                  return (
+                    <li key={subPerm}>
+                      {subPerm}
+                    </li>
+                  );
+                })}
+              </ul>
+            }
           </span>
-        ),
-      },
-      subPermissions: perm.subPermissions,
-    };
-  });
-
-  Object.keys(name2perm).forEach(permName => {
-    const perm = name2perm[permName];
-    perm.subPermissions = perm.subPermissions.sort(permNameCmp).map(name => name2perm[name]);
-  });
-
-  return Object.keys(name2perm).sort(permNameCmp).map(name => name2perm[name]);
+        }
+      </span>
+    </span>
+  );
 }
+
+SinglePermission.propTypes = {
+  permName: PropTypes.string.isRequired,
+  name2perm: PropTypes.objectOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
+};
+
+
+function PermissionsList({ permNames, name2perm }) {
+  return (
+    <ul style={{ listStyleType: 'none' }}>
+      {permNames.map(permName => (
+        <li key={permName}>
+          <SinglePermission permName={permName} name2perm={name2perm} />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+PermissionsList.propTypes = {
+  permNames: PropTypes.arrayOf(
+    PropTypes.string.isRequired
+  ).isRequired,
+  name2perm: PropTypes.objectOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
+};
 
 
 const PermissionsInspector = ({ resources }) => {
   const { perms } = resources;
   if (!perms.hasLoaded) return <LoadingPane />;
 
-  const data = compilePermissions(perms.records);
+  const name2perm = {};
+  perms.records.forEach(perm => {
+    name2perm[perm.permissionName] = perm;
+  });
+
+  const permNames = Object.keys(name2perm).sort(permNameCmp).filter(permName => name2perm[permName].visible);
 
   return (
     <Pane
@@ -54,12 +112,15 @@ const PermissionsInspector = ({ resources }) => {
       paneTitle={<FormattedMessage id="ui-developer.permissionsInspector" />}
     >
       <h3>
-        <FormattedMessage id="ui-developer.perms.permissionCount" values={{ count: perms.other.totalRecords }} />
+        <FormattedMessage
+          id="ui-developer.perms-inspector.counts"
+          values={{
+            allCount: perms.other.totalRecords,
+            visibleCount: perms.records.filter(perm => perm.visible).length,
+          }}
+        />
       </h3>
-      <ObjectInspector
-        data={data}
-        expandLevel={1}
-      />
+      <PermissionsList permNames={permNames} name2perm={name2perm} />
     </Pane>
   );
 };
