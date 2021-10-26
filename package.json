@@ -138,6 +138,15 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.permissionsInspector",
+        "displayName": "Settings (developer): Can display the system's permissions",
+        "subPermissions": [
+          "settings.developer.enabled",
+          "perms.permissions.get"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.userLocale",
         "displayName": "Settings (developer): Can edit user configuration values",
         "subPermissions": [

@@ -6,6 +6,8 @@
   "perms.visibleOnly": "Show visible permissions only",
   "perms.showDisplayName": "Show display name as well as true name",
   "perms.permissionCount": "{count} permissions:",
+  "perms-inspector.showInvisible": "Show invisible permissions (gray)?",
+  "perms-inspector.counts": "{allCount, number} permissions ({visibleCount, number} visible, {invisibleCount, number} invisible)",
   "hotkeys": "Hotkeys test",
   "sessionLocale": "Session locale",
   "setToken": "Set token",
@@ -68,6 +70,7 @@
 
   "translations": "Translations",
   "stripesInspector": "Stripes inspector",
+  "permissionsInspector": "Permissions inspector",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
@@ -102,5 +105,6 @@
   "permission.settings.plugin-surface": "Settings (developer): plugin surface for developing plugins",
   "permission.settings.handler-surface": "Settings (developer): handler surface for developing handlers",
   "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object",
+  "permission.settings.permissionsInspector": "Settings (developer): Can display the system's permissions",
   "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user"
 }

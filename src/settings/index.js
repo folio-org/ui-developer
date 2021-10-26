@@ -19,6 +19,7 @@ import Translations from './Translations';
 import PluginSurface from './PluginSurface';
 import HandlerSurface from './HandlerSurface';
 import StripesInspector from './StripesInspector';
+import PermissionsInspector from './PermissionsInspector';
 import UserLocale from './UserLocale';
 
 const pages = [
@@ -108,6 +109,12 @@ const pages = [
     labelId: 'ui-developer.stripesInspector',
     component: StripesInspector,
     perm: 'ui-developer.settings.stripesInspector',
+  },
+  {
+    route: 'permissions-inspector',
+    labelId: 'ui-developer.permissionsInspector',
+    component: PermissionsInspector,
+    perm: 'ui-developer.settings.permissionsInspector',
   },
   {
     route: 'user-locale',
