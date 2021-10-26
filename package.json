@@ -46,6 +46,7 @@
         "permissionName": "ui-developer.settings.perms",
         "displayName": "Settings (Developer): perms",
         "subPermissions": [
+          "perms.permissions.get",
           "settings.developer.enabled"
         ],
         "visible": true
@@ -162,6 +163,7 @@
     "start": "stripes serve",
     "lint": "eslint .",
     "test": "echo 'placeholder. no tests implemented'",
+    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-developer ./translations/ui-developer/compiled"
   },
   "devDependencies": {
