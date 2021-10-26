@@ -46,6 +46,7 @@
         "permissionName": "ui-developer.settings.perms",
         "displayName": "Settings (Developer): perms",
         "subPermissions": [
+          "perms.permissions.get",
           "settings.developer.enabled"
         ],
         "visible": true
