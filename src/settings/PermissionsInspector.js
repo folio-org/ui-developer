@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { stripesConnect } from '@folio/stripes/core';
 import { LoadingPane, Pane, Checkbox } from '@folio/stripes/components';
+import { getPermissionLabelString } from '../util/permission';
 
 
 // Alphabetical sort, but with items beginning 'SYS#' at the end
@@ -16,8 +17,10 @@ function permNameCmp(a, b) {
 
 
 function SinglePermission({ permName, name2perm }) {
+  const intl = useIntl();
   const perm = name2perm[permName];
   const [expanded, setExpanded] = useState(false);
+  const displayName = getPermissionLabelString(perm, intl.formatMessage);
 
   return (
     <span>
@@ -39,8 +42,8 @@ function SinglePermission({ permName, name2perm }) {
         </span>
         {' '}
         {perm.permissionName}
-        {perm.displayName && (
-          <>{' '}(<i>{perm.displayName}</i>)</>
+        {displayName && (
+          <>{' '}(<i>{displayName}</i>)</>
         )}
       </button>
       {expanded &&
