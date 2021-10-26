@@ -114,7 +114,7 @@ const pages = [
     route: 'permissions-inspector',
     labelId: 'ui-developer.permissionsInspector',
     component: PermissionsInspector,
-    // perm: 'ui-developer.settings.permissionsInspector',
+    perm: 'ui-developer.settings.permissionsInspector',
   },
   {
     route: 'user-locale',
