@@ -21,9 +21,9 @@ function SinglePermission({ permName, name2perm }) {
 
   return (
     <span>
-      <span
+      <button
+        type="button"
         style={{
-          cursor: 'pointer',
           color: perm.visible ? 'black' : '#888',
         }}
         onClick={() => setExpanded(!expanded)}
@@ -42,7 +42,7 @@ function SinglePermission({ permName, name2perm }) {
         {perm.displayName && (
           <>{' '}(<i>{perm.displayName}</i>)</>
         )}
-      </span>
+      </button>
       {expanded &&
         <span>
           {perm.description &&
