@@ -49,6 +49,17 @@ function SinglePermission({ permName, name2perm }) {
       </button>
       {expanded &&
         <span>
+          {perm.moduleName &&
+            <div style={{ margin: '0.5em 1.5em' }}>
+              <FormattedMessage
+                id="ui-developer.permissionsInspector.fromModule"
+                values={{
+                  name: perm.moduleName,
+                  code: chunks => <code>{chunks}</code>,
+                }}
+              />
+            </div>
+          }
           {perm.description &&
             <div style={{ margin: '0.5em 1.5em' }}>{perm.description}</div>
           }
