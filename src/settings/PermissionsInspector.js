@@ -151,7 +151,7 @@ PermissionsInspector.propTypes = {
           permissionName: PropTypes.string.isRequired,
           displayName: PropTypes.string,
           description: PropTypes.string,
-          moduleName: PropTypes.string.isRequired,
+          moduleName: PropTypes.string,
           subPermissions: PropTypes.arrayOf(
             PropTypes.string.isRequired,
           ).isRequired,
