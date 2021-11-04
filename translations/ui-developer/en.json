@@ -71,6 +71,7 @@
   "translations": "Translations",
   "stripesInspector": "Stripes inspector",
   "permissionsInspector": "Permissions inspector",
+  "permissionsInspector.fromModule": "From module <code>{name}</code>",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",

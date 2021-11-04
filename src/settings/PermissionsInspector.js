@@ -27,6 +27,7 @@ function SinglePermission({ permName, name2perm }) {
       <button
         type="button"
         style={{
+          textAlign: 'left',
           color: perm.visible ? 'black' : '#888',
         }}
         onClick={() => setExpanded(!expanded)}
@@ -48,6 +49,17 @@ function SinglePermission({ permName, name2perm }) {
       </button>
       {expanded &&
         <span>
+          {perm.moduleName &&
+            <div style={{ margin: '0.5em 1.5em' }}>
+              <FormattedMessage
+                id="ui-developer.permissionsInspector.fromModule"
+                values={{
+                  name: perm.moduleName,
+                  code: chunks => <code>{chunks}</code>,
+                }}
+              />
+            </div>
+          }
           {perm.description &&
             <div style={{ margin: '0.5em 1.5em' }}>{perm.description}</div>
           }
@@ -151,7 +163,7 @@ PermissionsInspector.propTypes = {
           permissionName: PropTypes.string.isRequired,
           displayName: PropTypes.string,
           description: PropTypes.string,
-          moduleName: PropTypes.string.isRequired,
+          moduleName: PropTypes.string,
           subPermissions: PropTypes.arrayOf(
             PropTypes.string.isRequired,
           ).isRequired,
