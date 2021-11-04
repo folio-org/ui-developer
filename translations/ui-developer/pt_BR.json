@@ -91,5 +91,9 @@
     "userLocale.currency": "Moeda primária (para o símbolo da moeda exibir)",
     "userLocale.success": "Configurações de localidade armazenadas com sucesso para {username}",
     "userLocale.numberingSystem": "Sistema de numeração (substituir o padrão da localidade; <a> detalhes </a> )",
-    "permission.settings.userLocale": "Configurações (desenvolvedor): Pode editar entradas de localidade para qualquer usuário"
+    "permission.settings.userLocale": "Configurações (desenvolvedor): Pode editar entradas de localidade para qualquer usuário",
+    "perms-inspector.showInvisible": "Show invisible permissions (gray)?",
+    "perms-inspector.counts": "{allCount, number} permissions ({visibleCount, number} visible, {invisibleCount, number} invisible)",
+    "permissionsInspector": "Permissions inspector",
+    "permission.settings.permissionsInspector": "Settings (developer): Can display the system's permissions"
 }
