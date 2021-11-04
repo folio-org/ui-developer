@@ -27,6 +27,7 @@ function SinglePermission({ permName, name2perm }) {
       <button
         type="button"
         style={{
+          textAlign: 'left',
           color: perm.visible ? 'black' : '#888',
         }}
         onClick={() => setExpanded(!expanded)}
