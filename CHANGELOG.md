@@ -3,6 +3,7 @@
 ## (IN PROGRESS)
 
 * Add Permissions Inspector page. Fixes UID-97.
+* In the Permissions Inspector, show which module permissions are from. Fixes UID-99.
 
 ## [6.0.0](https://github.com/folio-org/ui-developer/tree/v6.0.0) (2021-10-05)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.1...v6.0.0
