@@ -91,5 +91,9 @@
     "userLocale.currency": "Primary currency (for currency symbol to display)",
     "userLocale.success": "Successfully stored locale settings for {username}",
     "userLocale.numberingSystem": "Numbering system (override locale's default; <a>details</a>)",
-    "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user"
+    "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user",
+    "perms-inspector.showInvisible": "Show invisible permissions (gray)?",
+    "perms-inspector.counts": "{allCount, number} permissions ({visibleCount, number} visible, {invisibleCount, number} invisible)",
+    "permissionsInspector": "Permissions inspector",
+    "permission.settings.permissionsInspector": "Settings (developer): Can display the system's permissions"
 }
