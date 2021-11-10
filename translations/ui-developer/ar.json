@@ -91,5 +91,9 @@
     "userLocale.currency": "العملة الرئيسية (لعرض رمز العملة)",
     "userLocale.success": "تم تخزين الإعدادات المحلية لـ {username} بنجاح",
     "userLocale.numberingSystem": "نظام الترقيم (تخطي الإعدادات المحلية الافتراضية؛ <a> تفاصيل </a>)",
-    "permission.settings.userLocale": "الإعدادات (المطور): إمكانية تحرير إدخالات الإعدادات المحلية لأي مستخدم"
+    "permission.settings.userLocale": "الإعدادات (المطور): إمكانية تحرير إدخالات الإعدادات المحلية لأي مستخدم",
+    "perms-inspector.showInvisible": "إظهار الصلاحيات غير المرئية (باللون الرمادي)؟",
+    "perms-inspector.counts": "{allCount, number} صلاحية ({visibleCount, number} مرئية، {invisibleCount, number} غير مرئية)",
+    "permissionsInspector": "فاحص الصلاحيات",
+    "permission.settings.permissionsInspector": "الإعدادات (المطور): إمكانية عرض صلاحيات النظام"
 }
