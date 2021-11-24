@@ -1,0 +1,5 @@
+.keyValueTable tbody tr td:first-child {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 1em;
+}

@@ -20,6 +20,7 @@ import PluginSurface from './PluginSurface';
 import HandlerSurface from './HandlerSurface';
 import StripesInspector from './StripesInspector';
 import PermissionsInspector from './PermissionsInspector';
+import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
 
 const pages = [
@@ -115,6 +116,12 @@ const pages = [
     labelId: 'ui-developer.permissionsInspector',
     component: PermissionsInspector,
     perm: 'ui-developer.settings.permissionsInspector',
+  },
+  {
+    route: 'okapi-console',
+    labelId: 'ui-developer.okapiConsole',
+    component: OkapiConsole,
+    // perm: 'ui-developer.settings.okapiConsole',
   },
   {
     route: 'user-locale',

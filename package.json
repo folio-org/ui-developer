@@ -147,6 +147,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.okapiConsole",
+        "displayName": "Settings (developer): Can display the Okapi console",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.userLocale",
         "displayName": "Settings (developer): Can edit user configuration values",
         "subPermissions": [
