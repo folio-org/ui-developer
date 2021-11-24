@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { useStripes, useOkapiKy } from '@folio/stripes/core';
-import { Pane } from '@folio/stripes/components';
-import css from './OkapiConsole.css';
+import { useOkapiKy } from '@folio/stripes/core';
+import { Pane, ButtonGroup, Button } from '@folio/stripes/components';
+import Parameters from './Parameters';
+
+
+const pages = [
+  { tab: 'parameters', component: Parameters },
+];
 
 
 function OkapiConsole() {
   const [version, setVersion] = useState();
-  const stripes = useStripes();
-  const { okapi } = stripes;
+  const [tab, setTab] = useState('parameters');
   const okapiKy = useOkapiKy();
+  const Component = pages.find(p => p.tab === tab).component;
 
   useEffect(() => {
     okapiKy('_/version').then(async res => {
@@ -24,32 +29,21 @@ function OkapiConsole() {
       paneTitle={<FormattedMessage id="ui-developer.okapiConsole" />}
     >
       <h3>Okapi version {version}</h3>
-      <table className={css.keyValueTable}>
-        <tbody>
-          <tr>
-            <td><FormattedMessage id="ui-developer.okapiConsole.url" /></td>
-            <td><code>{okapi.url}</code></td>
-          </tr>
-          <tr>
-            <td><FormattedMessage id="ui-developer.okapiConsole.tenant" /></td>
-            <td><code>{okapi.tenant}</code></td>
-          </tr>
-          <tr>
-            <td><FormattedMessage id="ui-developer.okapiConsole.user" /></td>
-            <td>
-              <code>{okapi.currentUser.username}</code>
-              {' '}
-              ({okapi.currentUser.firstName}
-              {' '}
-              {okapi.currentUser.lastName})
-            </td>
-          </tr>
-          <tr>
-            <td><FormattedMessage id="ui-developer.okapiConsole.locale" /></td>
-            <td><code>{okapi.locale}</code></td>
-          </tr>
-        </tbody>
-      </table>
+      <ButtonGroup>
+        {
+          pages.map(page => (
+            <Button
+              key={page.tab}
+              buttonStyle={`${page.tab === tab ? 'primary' : 'default'}`}
+              id={`segment-page-${page.tab}`}
+              onClick={() => setTab(page.tab)}
+            >
+              <FormattedMessage id={`ui-developer.okapiConsole.${page.tab}`} />
+            </Button>
+          ))
+        }
+      </ButtonGroup>
+      <Component />
     </Pane>
   );
 }
