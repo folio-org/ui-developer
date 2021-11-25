@@ -3,10 +3,12 @@ import { FormattedMessage } from 'react-intl';
 import { useOkapiKy } from '@folio/stripes/core';
 import { Pane, ButtonGroup, Button } from '@folio/stripes/components';
 import Parameters from './Parameters';
+import Environment from './Environment';
 
 
 const pages = [
   { tab: 'parameters', component: Parameters },
+  { tab: 'environment', component: Environment },
 ];
 
 

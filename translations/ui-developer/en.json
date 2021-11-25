@@ -78,6 +78,7 @@
   "okapiConsole.parameters.tenant": "Tenant",
   "okapiConsole.parameters.user": "User",
   "okapiConsole.parameters.locale": "Locale",
+  "okapiConsole.environment": "Environment",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
