@@ -80,6 +80,7 @@
   "okapiConsole.parameters.locale": "Locale",
   "okapiConsole.environment": "Environment",
   "okapiConsole.modules": "Modules",
+  "okapiConsole.modules.showDescription": "Show description?",
   "okapiConsole.modules.module": "Module",
   "okapiConsole.modules.version": "Version",
   "okapiConsole.modules.description": "Description",

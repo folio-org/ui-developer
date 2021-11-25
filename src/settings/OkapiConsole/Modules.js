@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useStripes, useOkapiKy } from '@folio/stripes/core';
-import { Loading } from '@folio/stripes/components';
+import { Loading, Checkbox } from '@folio/stripes/components';
 import css from './OkapiConsole.css';
 
 
 function Modules() {
+  const [showDesc, setShowDesc] = useState(false);
   const [modules, setModules] = useState();
   const [enabled, setEnabled] = useState();
   const [error, setError] = useState();
@@ -50,40 +51,52 @@ function Modules() {
 
   const parsed = JSON.parse(modules);
   return (
-    <table className={css.moduleTable}>
-      <thead>
-        <tr>
-          {/* eslint-disable jsx-a11y/control-has-associated-label */}
-          <th><FormattedMessage id="ui-developer.okapiConsole.modules.module" /></th>
-          <th><FormattedMessage id="ui-developer.okapiConsole.modules.version" /></th>
-          <th><FormattedMessage id="ui-developer.okapiConsole.modules.description" /></th>
-          <th><FormattedMessage id="ui-developer.okapiConsole.modules.enabled" /></th>
-          {/* eslint-enable jsx-a11y/control-has-associated-label */}
-        </tr>
-      </thead>
-      <tbody>
-        {parsed.map(({ id, name }) => {
-          const m = id.match(/(.*?)-(\d.*)/);
-          const [, module, version] = m;
-          return (
-            <tr key={id}>
-              <td>
-                {module}
-              </td>
-              <td>
-                {version}
-              </td>
-              <td>
-                {name}
-              </td>
-              <td>
-                {register[id] ? 'Y' : ''}
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+    <>
+      <Checkbox
+        checked={showDesc}
+        data-test-checkbox-show-description
+        label={<FormattedMessage id="ui-developer.okapiConsole.modules.showDescription" />}
+        onChange={e => setShowDesc(e.target.checked)}
+      />
+      <table className={css.moduleTable}>
+        <thead>
+          <tr>
+            {/* eslint-disable jsx-a11y/control-has-associated-label */}
+            <th><FormattedMessage id="ui-developer.okapiConsole.modules.module" /></th>
+            <th><FormattedMessage id="ui-developer.okapiConsole.modules.version" /></th>
+            {showDesc &&
+            <th><FormattedMessage id="ui-developer.okapiConsole.modules.description" /></th>
+            }
+            <th><FormattedMessage id="ui-developer.okapiConsole.modules.enabled" /></th>
+            {/* eslint-enable jsx-a11y/control-has-associated-label */}
+          </tr>
+        </thead>
+        <tbody>
+          {parsed.map(({ id, name }) => {
+            const m = id.match(/(.*?)-(\d.*)/);
+            const [, module, version] = m;
+            return (
+              <tr key={id}>
+                <td>
+                  {module}
+                </td>
+                <td>
+                  {version}
+                </td>
+                {showDesc &&
+                <td>
+                  {name}
+                </td>
+                }
+                <td>
+                  {register[id] ? 'Y' : ''}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
   );
 }
 
