@@ -8,7 +8,7 @@ import css from './OkapiConsole.css';
 function Modules() {
   const [showDesc, setShowDesc] = useState(false);
   const [modules, setModules] = useState();
-  const [enabled, setEnabled] = useState();
+  const [register, setRegister] = useState();
   const [error, setError] = useState();
   const stripes = useStripes();
   const okapiKy = useOkapiKy();
@@ -27,7 +27,9 @@ function Modules() {
   useEffect(() => {
     okapiKy(`_/proxy/tenants/${stripes.okapi.tenant}/modules`).then(async res => {
       const text = await res.text();
-      setEnabled(text);
+      const tmp = {};
+      JSON.parse(text).forEach(entry => { tmp[entry.id] = true; });
+      setRegister(tmp);
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
@@ -44,10 +46,12 @@ function Modules() {
     );
   }
 
-  if (!modules || !enabled) return <Loading />;
+  if (!modules || !register) return <Loading />;
 
-  const register = {};
-  JSON.parse(enabled).forEach(entry => { register[entry.id] = true; });
+  function enableOrDisable(id, enable) {
+    console.log((enable ? 'Enabling' : 'Disabling'), id);
+    setRegister({ ...register, [id]: enable });
+  }
 
   const parsed = JSON.parse(modules);
   return (
@@ -89,7 +93,10 @@ function Modules() {
                 </td>
                 }
                 <td>
-                  {register[id] ? 'Y' : ''}
+                  <Checkbox
+                    checked={register[id] || false}
+                    onChange={e => enableOrDisable(id, e.target.checked)}
+                  />
                 </td>
               </tr>
             );
