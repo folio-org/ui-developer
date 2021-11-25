@@ -53,10 +53,12 @@ function Modules() {
     <table className={css.moduleTable}>
       <thead>
         <tr>
+          {/* eslint-disable jsx-a11y/control-has-associated-label */}
           <th><FormattedMessage id="ui-developer.okapiConsole.modules.module" /></th>
           <th><FormattedMessage id="ui-developer.okapiConsole.modules.version" /></th>
           <th><FormattedMessage id="ui-developer.okapiConsole.modules.description" /></th>
           <th><FormattedMessage id="ui-developer.okapiConsole.modules.enabled" /></th>
+          {/* eslint-enable jsx-a11y/control-has-associated-label */}
         </tr>
       </thead>
       <tbody>
