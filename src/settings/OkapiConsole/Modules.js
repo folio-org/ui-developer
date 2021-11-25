@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { useOkapiKy } from '@folio/stripes/core';
+import { useStripes, useOkapiKy } from '@folio/stripes/core';
 import { Loading } from '@folio/stripes/components';
 import css from './OkapiConsole.css';
 
 
 function Modules() {
-  const [data, setData] = useState();
+  const [modules, setModules] = useState();
+  const [enabled, setEnabled] = useState();
   const [error, setError] = useState();
+  const stripes = useStripes();
   const okapiKy = useOkapiKy();
 
   useEffect(() => {
     okapiKy('_/proxy/modules?latest=1').then(async res => {
       const text = await res.text();
-      setData(text);
+      setModules(text);
+    }).catch(async e => {
+      setError({ summary: e.toString(), detail: await e.response.text() });
+    });
+  },
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  []);
+
+  useEffect(() => {
+    okapiKy(`_/proxy/tenants/${stripes.okapi.tenant}/modules`).then(async res => {
+      const text = await res.text();
+      setEnabled(text);
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
@@ -30,9 +43,12 @@ function Modules() {
     );
   }
 
-  if (!data) return <Loading />;
-  const parsed = JSON.parse(data);
+  if (!modules || !enabled) return <Loading />;
 
+  const register = {};
+  JSON.parse(enabled).forEach(entry => { register[entry.id] = true; });
+
+  const parsed = JSON.parse(modules);
   return (
     <table className={css.moduleTable}>
       <thead>
@@ -48,7 +64,7 @@ function Modules() {
           const m = id.match(/(.*?)-(\d.*)/);
           const [, module, version] = m;
           return (
-            <tr>
+            <tr key={id}>
               <td>
                 {module}
               </td>
@@ -59,7 +75,7 @@ function Modules() {
                 {name}
               </td>
               <td>
-                XXX
+                {register[id] ? 'Y' : ''}
               </td>
             </tr>
           );
