@@ -25,7 +25,7 @@ function OkapiConsole() {
       const text = await res.text();
       setVersion(text);
     });
-  }, [okapiKy]);
+  });
 
   return (
     <Pane
