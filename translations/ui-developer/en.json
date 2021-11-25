@@ -79,6 +79,11 @@
   "okapiConsole.parameters.user": "User",
   "okapiConsole.parameters.locale": "Locale",
   "okapiConsole.environment": "Environment",
+  "okapiConsole.modules": "Modules",
+  "okapiConsole.modules.module": "Module",
+  "okapiConsole.modules.version": "Version",
+  "okapiConsole.modules.description": "Description",
+  "okapiConsole.modules.enabled": "Enabled?",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
