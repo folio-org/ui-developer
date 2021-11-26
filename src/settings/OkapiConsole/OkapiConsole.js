@@ -5,12 +5,14 @@ import { Pane, ButtonGroup, Button } from '@folio/stripes/components';
 import Parameters from './Parameters';
 import Environment from './Environment';
 import Modules from './Modules';
+import Interfaces from './Interfaces';
 
 
 const pages = [
   { tab: 'parameters', component: Parameters },
   { tab: 'environment', component: Environment },
   { tab: 'modules', component: Modules },
+  { tab: 'interfaces', component: Interfaces },
 ];
 
 
