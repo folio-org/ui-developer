@@ -85,6 +85,10 @@
   "okapiConsole.modules.version": "Version",
   "okapiConsole.modules.description": "Description",
   "okapiConsole.modules.enabled": "Enabled?",
+  "okapiConsole.modules.enable.success": "Enabled module {id}",
+  "okapiConsole.modules.disable.success": "Disabled module {id}",
+  "okapiConsole.modules.enable.failure": "Cannot enable module {id}: {error}: {detail}",
+  "okapiConsole.modules.disable.failure": "Cannot disable module {id}: {error}: {detail}",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",

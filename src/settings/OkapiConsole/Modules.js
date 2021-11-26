@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { useStripes, useOkapiKy } from '@folio/stripes/core';
+import { useStripes, useOkapiKy, CalloutContext } from '@folio/stripes/core';
 import { Loading, Checkbox } from '@folio/stripes/components';
 import css from './OkapiConsole.css';
 
@@ -12,6 +12,7 @@ function Modules() {
   const [error, setError] = useState();
   const stripes = useStripes();
   const okapiKy = useOkapiKy();
+  const callout = useContext(CalloutContext);
 
   useEffect(() => {
     okapiKy('_/proxy/modules?latest=1').then(async res => {
@@ -50,7 +51,27 @@ function Modules() {
 
   function enableOrDisable(id, enable) {
     console.log((enable ? 'Enabling' : 'Disabling'), id);
-    setRegister({ ...register, [id]: enable });
+    if (enable) {
+      okapiKy.post(`_/proxy/tenants/${stripes.okapi.tenant}/modules`, { json: { id } }).then(async res => {
+        setRegister({ ...register, [id]: enable });
+        console.log('Enabled', id, '--', res);
+        callout.sendCallout({
+          message: <FormattedMessage
+            id={`ui-developer.okapiConsole.modules.${enable ? 'enable' : 'disable'}.success`}
+            values={{ id }}
+          />
+        });
+      }).catch(async e => {
+        console.log('Could not enable', id, '--', e);
+        callout.sendCallout({
+          type: 'error',
+          message: <FormattedMessage
+            id={`ui-developer.okapiConsole.modules.${enable ? 'enable' : 'disable'}.failure`}
+            values={{ id, error: e.toString(), detail: await e.response.text() }}
+          />
+        });
+      });
+    }
   }
 
   const parsed = JSON.parse(modules);
