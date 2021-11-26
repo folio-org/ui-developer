@@ -1,16 +1,17 @@
 # Change history for ui-developer
 
-## (IN PROGRESS)
+## 6.1.0 (IN PROGRESS)
 
 * Add Permissions Inspector page. Fixes UID-97.
 * In the Permissions Inspector, show which module permissions are from. Fixes UID-99.
+* Add rudimentary Okapi Console. Fixes UID-104.
 
 ## [6.0.0](https://github.com/folio-org/ui-developer/tree/v6.0.0) (2021-10-05)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.1...v6.0.0
 
 * Remove unnecessarily permissive permissions. Refs UID-87.
 * Increment `stripes` to `v7`. Refs UID-92.
-* Release for Kiwi R3. Fixes UID-94.
+* Release for Kiwi R3. Fixes UID-94
 
 ## [5.2.1](https://github.com/folio-org/ui-developer/tree/v5.2.1) (2021-07-25)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.0...v5.2.1)
