@@ -50,14 +50,12 @@ function Modules() {
   if (!modules || !register) return <Loading />;
 
   function enableOrDisable(id, enable) {
-    console.log((enable ? 'Enabling' : 'Disabling'), id);
     const p = enable ?
       okapiKy.post(`_/proxy/tenants/${stripes.okapi.tenant}/modules`, { json: { id } }) :
       okapiKy.delete(`_/proxy/tenants/${stripes.okapi.tenant}/modules/${id}`);
 
-    p.then(async res => {
+    p.then(async () => {
       setRegister({ ...register, [id]: enable });
-      console.log('Enabled', id, '--', res);
       callout.sendCallout({
         message: <FormattedMessage
           id={`ui-developer.okapiConsole.modules.${enable ? 'enable' : 'disable'}.success`}
@@ -65,7 +63,6 @@ function Modules() {
         />
       });
     }).catch(async e => {
-      console.log('Could not enable', id, '--', e);
       callout.sendCallout({
         type: 'error',
         message: <FormattedMessage
