@@ -1,0 +1,13 @@
+.keyValueTable tbody tr td:first-child {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.moduleTable th {
+    text-align: left;
+}
+
+.error {
+    color: #800;
+}

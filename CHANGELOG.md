@@ -1,15 +1,17 @@
 # Change history for ui-developer
 
-## (IN PROGRESS)
+## 6.1.0 (IN PROGRESS)
 
 * Add Permissions Inspector page. Fixes UID-97.
 * In the Permissions Inspector, show which module permissions are from. Fixes UID-99.
+* Add rudimentary Okapi Console. Fixes UID-104.
 
 ## [6.0.0](https://github.com/folio-org/ui-developer/tree/v6.0.0) (2021-10-05)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.1...v6.0.0
 
 * Remove unnecessarily permissive permissions. Refs UID-87.
 * Increment `stripes` to `v7`. Refs UID-92.
+* Release for Kiwi R3. Fixes UID-94
 
 ## [5.2.1](https://github.com/folio-org/ui-developer/tree/v5.2.1) (2021-07-25)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.0...v5.2.1)
@@ -22,6 +24,7 @@
 
 * Use dynamic tenant-id. Fixes UID-88.
 * Set user numbering system independent of locale. Fixes UID-89.
+* Compile translation files into AST format. Fixes UID-76.
 
 ## [5.1.0](https://github.com/folio-org/ui-developer/tree/v5.1.0) (2021-06-17)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.0.0...v5.1.0)
@@ -31,8 +34,9 @@
 * Add page to list all currently loaded translations. Fixes UID-75.
 * Display the current contents of the stripes object. Fixes UID-77.
 * Add configurable plugin-surface page. Fixes UID-78.
-* Show serialized `stripes` object. Refs UID-77.
 * Pluggable-surface page now supports optional data object. Fixes UID-86.
+* Add configurable handler-surface page. Fixes UID-79.
+* Provide UI for user-locale condifg. Fixes UID-82.
 
 ## [5.0.0](https://github.com/folio-org/ui-developer/tree/v5.0.0) (2021-03-11)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v4.0.0...v5.0.0)
