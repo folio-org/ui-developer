@@ -7,3 +7,7 @@
 .moduleTable th {
     text-align: left;
 }
+
+.error {
+    color: #800;
+}

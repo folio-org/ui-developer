@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useOkapiKy } from '@folio/stripes/core';
 import { Loading } from '@folio/stripes/components';
+import Error from './Error';
 import KeyValueList from './KeyValueList';
 
 
@@ -11,8 +12,7 @@ function Environment() {
 
   useEffect(() => {
     okapiKy('_/env').then(async res => {
-      const text = await res.text();
-      setData(text);
+      setData(await res.text());
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
@@ -25,18 +25,10 @@ function Environment() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   []);
 
-  if (error) {
-    return (
-      <>
-        <h4>{error.summary}</h4>
-        <p>{error.detail}</p>
-      </>
-    );
-  }
-
+  if (error) return <Error error={error} />;
   if (!data) return <Loading />;
-  const parsed = JSON.parse(data);
 
+  const parsed = JSON.parse(data);
   // XXX In future we could add facilities for adding, editing and removing entries
   // But for now, listing is sufficient
   return <KeyValueList dataList={parsed.map(e => [e.name, e.value])} />;

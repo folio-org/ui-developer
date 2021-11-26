@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useStripes, useOkapiKy, CalloutContext } from '@folio/stripes/core';
 import { Loading, Checkbox } from '@folio/stripes/components';
+import Error from './Error';
 import css from './OkapiConsole.css';
 
 
@@ -16,8 +17,7 @@ function Modules() {
 
   useEffect(() => {
     okapiKy('_/proxy/modules?latest=1').then(async res => {
-      const text = await res.text();
-      setModules(text);
+      setModules(await res.text());
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
@@ -38,15 +38,7 @@ function Modules() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   []);
 
-  if (error) {
-    return (
-      <>
-        <h4>{error.summary}</h4>
-        <p>{error.detail}</p>
-      </>
-    );
-  }
-
+  if (error) return <Error error={error} />;
   if (!modules || !register) return <Loading />;
 
   function enableOrDisable(id, enable) {
