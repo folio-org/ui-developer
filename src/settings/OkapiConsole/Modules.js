@@ -7,6 +7,11 @@ import css from './OkapiConsole.css';
 
 
 function Modules() {
+  const [includeUI, setIncludeUI] = useState(true);
+  const [includeBackend, setIncludeBackend] = useState(true);
+  const [includeEdge, setIncludeEdge] = useState(true);
+  const [includeOther, setIncludeOther] = useState(true);
+
   const [showDesc, setShowDesc] = useState(false);
   const [modules, setModules] = useState();
   const [srvc2url, setSrvc2url] = useState();
@@ -81,14 +86,51 @@ function Modules() {
   }
 
   const parsed = JSON.parse(modules);
+  const active = [];
+  parsed.forEach(module => {
+    const { id } = module;
+    if ((!includeUI && !includeBackend && !includeEdge && !includeOther) ||
+        (includeUI && id.startsWith('folio_')) ||
+        (includeBackend && id.startsWith('mod-')) ||
+        (includeEdge && id.startsWith('edge-')) ||
+        (includeOther && (!id.startsWith('folio_') && !id.startsWith('mod-') && !id.startsWith('edge-')))) {
+      active.push(module);
+    }
+  });
+
   return (
     <>
+      <Checkbox
+        checked={includeUI}
+        data-test-checkbox-include-ui-modules
+        label={<FormattedMessage id="ui-developer.dependencies.ui-modules" />}
+        onChange={e => setIncludeUI(e.target.checked)}
+      />
+      <Checkbox
+        checked={includeBackend}
+        data-test-checkbox-include-backend-modules
+        label={<FormattedMessage id="ui-developer.dependencies.backend-modules" />}
+        onChange={e => setIncludeBackend(e.target.checked)}
+      />
+      <Checkbox
+        checked={includeEdge}
+        data-test-checkbox-include-edge-modules
+        label={<FormattedMessage id="ui-developer.dependencies.edge-modules" />}
+        onChange={e => setIncludeEdge(e.target.checked)}
+      />
+      <Checkbox
+        checked={includeOther}
+        data-test-checkbox-include-other-modules
+        label={<FormattedMessage id="ui-developer.dependencies.other-modules" />}
+        onChange={e => setIncludeOther(e.target.checked)}
+      />
       <Checkbox
         checked={showDesc}
         data-test-checkbox-show-description
         label={<FormattedMessage id="ui-developer.okapiConsole.modules.showDescription" />}
         onChange={e => setShowDesc(e.target.checked)}
       />
+      <hr />
       <table className={css.moduleTable}>
         <thead>
           <tr>
@@ -104,7 +146,7 @@ function Modules() {
           </tr>
         </thead>
         <tbody>
-          {parsed.map(({ id, name }) => {
+          {active.map(({ id, name }) => {
             const m = id.match(/(.*?)-(\d.*)/);
             const [, module, version] = m;
             return (
