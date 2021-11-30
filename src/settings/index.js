@@ -121,7 +121,7 @@ const pages = [
     route: 'okapi-console',
     labelId: 'ui-developer.okapiConsole',
     component: OkapiConsole,
-    // perm: 'ui-developer.settings.okapiConsole',
+    perm: 'ui-developer.settings.okapiConsole',
   },
   {
     route: 'user-locale',

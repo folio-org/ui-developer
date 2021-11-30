@@ -8,6 +8,14 @@
     text-align: left;
 }
 
+.moduleTable tbody tr td:nth-child(2) {
+    padding-right: 1em;
+}
+
+.moduleTable tbody tr td:nth-child(3) {
+    padding-right: 1em;
+}
+
 .error {
     color: #800;
 }

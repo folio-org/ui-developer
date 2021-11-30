@@ -9,6 +9,7 @@ import css from './OkapiConsole.css';
 function Modules() {
   const [showDesc, setShowDesc] = useState(false);
   const [modules, setModules] = useState();
+  const [srvc2url, setSrvc2url] = useState();
   const [register, setRegister] = useState();
   const [error, setError] = useState();
   const stripes = useStripes();
@@ -18,6 +19,20 @@ function Modules() {
   useEffect(() => {
     okapiKy('_/proxy/modules?latest=1').then(async res => {
       setModules(await res.text());
+    }).catch(async e => {
+      setError({ summary: e.toString(), detail: await e.response.text() });
+    });
+  },
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  []);
+
+  useEffect(() => {
+    // This gives us far more detail than we need, but the RAML suggests that are no parameters to prevent this
+    okapiKy('_/discovery/modules').then(async res => {
+      const text = await res.text();
+      const tmp = {};
+      JSON.parse(text).forEach(entry => { tmp[entry.srvcId] = entry.url; });
+      setSrvc2url(tmp);
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
@@ -39,7 +54,7 @@ function Modules() {
   []);
 
   if (error) return <Error error={error} />;
-  if (!modules || !register) return <Loading />;
+  if (!modules || !srvc2url || !register) return <Loading />;
 
   function enableOrDisable(id, enable) {
     const p = enable ?
@@ -83,6 +98,7 @@ function Modules() {
             {showDesc &&
             <th><FormattedMessage id="ui-developer.okapiConsole.modules.description" /></th>
             }
+            <th><FormattedMessage id="ui-developer.okapiConsole.modules.url" /></th>
             <th><FormattedMessage id="ui-developer.okapiConsole.modules.enabled" /></th>
             {/* eslint-enable jsx-a11y/control-has-associated-label */}
           </tr>
@@ -104,6 +120,9 @@ function Modules() {
                   {name}
                 </td>
                 }
+                <td>
+                  {srvc2url[id]}
+                </td>
                 <td>
                   <Checkbox
                     checked={register[id] || false}
