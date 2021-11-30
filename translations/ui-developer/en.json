@@ -84,7 +84,7 @@
   "okapiConsole.modules.module": "Module",
   "okapiConsole.modules.version": "Version",
   "okapiConsole.modules.description": "Description",
-  "okapiConsole.modules.node": "Node",
+  "okapiConsole.modules.url": "URL",
   "okapiConsole.modules.enabled": "Enabled?",
   "okapiConsole.modules.enable.success": "Enabled module {id}",
   "okapiConsole.modules.disable.success": "Disabled module {id}",
