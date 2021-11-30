@@ -33,7 +33,6 @@ function Modules() {
       const tmp = {};
       JSON.parse(text).forEach(entry => { tmp[entry.srvcId] = entry.nodeId; });
       setSrvc2node(tmp);
-      console.log('srvc2node =', tmp);
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
