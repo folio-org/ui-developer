@@ -18,6 +18,7 @@ To use these facilities, you need the following permissions. At present, only th
 * `okapi.proxy.modules.list` (Okapi - list modules)
 * `okapi.proxy.tenants.modules.post` (Okapi - Enable a module for tenant)
 * `okapi.proxy.tenants.modules.enabled.delete` (Okapi - Disable a module for tenant)
+* `okapi.discovery.get` (Okapi - get discovery info)
 
 
 ## How to assign permissions
