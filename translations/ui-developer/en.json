@@ -93,6 +93,7 @@
   "okapiConsole.modules.dependencyError": "Some dependencies would not not be satisifed",
   "okapiConsole.interfaces": "Interfaces",
   "okapiConsole.interfaces.includeSystem": "Include system interfaces?",
+  "okapiConsole.interfaces.count": "{count} interfaces",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",

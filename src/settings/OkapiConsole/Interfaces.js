@@ -39,6 +39,12 @@ function Interfaces() {
         label={<FormattedMessage id="ui-developer.okapiConsole.interfaces.includeSystem" />}
         onChange={e => setIncludeSystem(e.target.checked)}
       />
+      <h4>
+        <FormattedMessage
+          id="ui-developer.okapiConsole.interfaces.count"
+          values={{ count: dataList.length }}
+        />
+      </h4>
       <KeyValueList dataList={dataList} />;
     </>
   );
