@@ -127,5 +127,7 @@
   "permission.settings.stripesInspector": "Settings (developer): Can display the contents of the stripes object",
   "permission.settings.permissionsInspector": "Settings (developer): Can display the system's permissions",
   "permission.settings.okapiConsole": "Settings (developer): Can display the Okapi console",
+  "permission.settings.okapiConsole.environment": "Settings (developer): Can use the Okapi console's Environment tab",
+  "permission.settings.okapiConsole.modules": "Settings (developer): Can use the Okapi console's Modules tab",
   "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user"
 }

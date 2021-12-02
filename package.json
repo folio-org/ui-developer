@@ -150,7 +150,29 @@
         "permissionName": "ui-developer.settings.okapiConsole",
         "displayName": "Settings (developer): Can display the Okapi console",
         "subPermissions": [
-          "settings.developer.enabled"
+          "settings.developer.enabled",
+          "okapi.version.get"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.okapiConsole.environment",
+        "displayName": "Settings (developer): Can use the Okapi console's Environment tab",
+        "subPermissions": [
+          "ui-developer.settings.okapiConsole",
+          "okapi.env.list"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.okapiConsole.modules",
+        "displayName": "Settings (developer): Can use the Okapi console's Modules tab",
+        "subPermissions": [
+          "ui-developer.settings.okapiConsole",
+          "okapi.proxy.modules.list",
+          "okapi.proxy.tenants.modules.list",
+          "okapi.proxy.tenants.modules.post",
+          "okapi.proxy.tenants.modules.enabled.delete"
         ],
         "visible": true
       },
