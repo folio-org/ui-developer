@@ -152,7 +152,12 @@ function Modules() {
         label={<FormattedMessage id="ui-developer.okapiConsole.modules.showDescription" />}
         onChange={e => setShowDesc(e.target.checked)}
       />
-      <hr />
+      <h4>
+        <FormattedMessage
+          id="ui-developer.okapiConsole.modules.count"
+          values={{ count: active.length, total: parsed.length }}
+        />
+      </h4>
       <table className={css.moduleTable}>
         <thead>
           <tr>

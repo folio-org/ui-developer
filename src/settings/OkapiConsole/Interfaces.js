@@ -54,7 +54,8 @@ function Interfaces() {
   if (error) return <Error error={error} />;
   if (!data || !providers) return <Loading />;
 
-  const dataList = JSON.parse(data)
+  const parsed = JSON.parse(data);
+  const dataList = parsed
     .filter(e => includeSystem || !e.id.startsWith('_'))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 
@@ -69,7 +70,7 @@ function Interfaces() {
       <h4>
         <FormattedMessage
           id="ui-developer.okapiConsole.interfaces.count"
-          values={{ count: dataList.length }}
+          values={{ count: dataList.length, total: parsed.length }}
         />
       </h4>
       <table className={css.interfaceTable}>
