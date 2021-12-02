@@ -1,9 +1,32 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { useStripes, useOkapiKy, CalloutContext } from '@folio/stripes/core';
 import { Loading, Checkbox } from '@folio/stripes/components';
 import Error from './Error';
 import css from './OkapiConsole.css';
+
+
+function formatError(intl, id, tag, rawError, rawDetail) {
+  let error;
+  let detail;
+
+  if (!rawDetail.match(/^ ?Missing dependency/)) {
+    error = rawError;
+    detail = rawDetail;
+  } else {
+    error = intl.formatMessage({ id: 'ui-developer.okapiConsole.modules.dependencyError' });
+    detail = (
+      <ul>
+        {rawDetail.split('\n').map((line, key) => <li key={key}>{line.replace(/^ ?Missing dependency: /, '')}</li>)}
+      </ul>
+    );
+  }
+
+  return <FormattedMessage
+    id={`ui-developer.okapiConsole.modules.${tag}.failure`}
+    values={{ id, error, detail }}
+  />;
+}
 
 
 function Modules() {
@@ -20,6 +43,7 @@ function Modules() {
   const stripes = useStripes();
   const okapiKy = useOkapiKy();
   const callout = useContext(CalloutContext);
+  const intl = useIntl();
 
   useEffect(() => {
     okapiKy('_/proxy/modules?latest=1').then(async res => {
@@ -77,10 +101,8 @@ function Modules() {
     }).catch(async e => {
       callout.sendCallout({
         type: 'error',
-        message: <FormattedMessage
-          id={`ui-developer.okapiConsole.modules.${enable ? 'enable' : 'disable'}.failure`}
-          values={{ id, error: e.toString(), detail: await e.response.text() }}
-        />
+        timeout: 0,
+        message: formatError(intl, id, enable ? 'enable' : 'disable', e.toString(), await e.response.text()),
       });
     });
   }

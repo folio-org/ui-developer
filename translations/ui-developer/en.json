@@ -90,6 +90,7 @@
   "okapiConsole.modules.disable.success": "Disabled module {id}",
   "okapiConsole.modules.enable.failure": "Cannot enable module {id}: {error}: {detail}",
   "okapiConsole.modules.disable.failure": "Cannot disable module {id}: {error}: {detail}",
+  "okapiConsole.modules.dependencyError": "Some dependencies would not not be satisifed",
   "okapiConsole.interfaces": "Interfaces",
 
   "plugin-surface": "Plugin surface",
