@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useStripes, useOkapiKy } from '@folio/stripes/core';
-import { Loading } from '@folio/stripes/components';
+import { Loading, Checkbox } from '@folio/stripes/components';
 import Error from './Error';
 import KeyValueList from './KeyValueList';
 
 
 function Interfaces() {
+  const [includeSystem, setIncludeSystem] = useState(false);
   const [data, setData] = useState();
   const [error, setError] = useState();
   const stripes = useStripes();
@@ -24,9 +26,22 @@ function Interfaces() {
   if (error) return <Error error={error} />;
   if (!data) return <Loading />;
 
-  const parsed = JSON.parse(data);
-  const interfaceCmp = (a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
-  return <KeyValueList dataList={parsed.sort(interfaceCmp).map(e => [e.id, e.version])} />;
+  const dataList = JSON.parse(data)
+    .filter(e => includeSystem || !e.id.startsWith('_'))
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
+    .map(e => [e.id, e.version]);
+
+  return (
+    <>
+      <Checkbox
+        checked={includeSystem}
+        data-test-checkbox-include-system-interfaces
+        label={<FormattedMessage id="ui-developer.okapiConsole.interfaces.includeSystem" />}
+        onChange={e => setIncludeSystem(e.target.checked)}
+      />
+      <KeyValueList dataList={dataList} />;
+    </>
+  );
 }
 
 
