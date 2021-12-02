@@ -4,11 +4,15 @@
     padding-right: 1em;
 }
 
-.moduleTable th {
+.moduleTable th,
+.interfaceTable th {
     text-align: left;
 }
 
-.moduleTable tbody tr td:nth-child(2) {
+.moduleTable thead tr th:nth-child(2),
+.moduleTable tbody tr td:nth-child(2),
+.interfaceTable thead tr th:nth-child(2),
+.interfaceTable tbody tr td:nth-child(2) {
     padding-right: 1em;
 }
 
