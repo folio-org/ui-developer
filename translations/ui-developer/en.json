@@ -92,6 +92,11 @@
   "okapiConsole.modules.disable.failure": "Cannot disable module {id}: {error}: {detail}",
   "okapiConsole.modules.dependencyError": "Some dependencies would not not be satisifed",
   "okapiConsole.interfaces": "Interfaces",
+  "okapiConsole.interfaces.includeSystem": "Include system interfaces?",
+  "okapiConsole.interfaces.count": "{count} interfaces",
+  "okapiConsole.interfaces.id": "ID",
+  "okapiConsole.interfaces.version": "Version",
+  "okapiConsole.interfaces.providers": "Provided by",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
