@@ -8,7 +8,7 @@ To use these facilities, you need the following permissions. At present, only th
 **Top level:**
 * `okapi.version.get` (Okapi - Get version)
 
-**Parameters tab:**
+**Configuration tab:**
 * (None)
 
 **Environment tab:**
