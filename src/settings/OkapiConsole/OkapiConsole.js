@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useOkapiKy } from '@folio/stripes/core';
 import { Pane, ButtonGroup, Button } from '@folio/stripes/components';
-import Parameters from './Parameters';
+import Configuration from './Configuration';
 import Environment from './Environment';
 import Modules from './Modules';
 import Interfaces from './Interfaces';
 
 
 const pages = [
-  { tab: 'parameters', component: Parameters },
+  { tab: 'configuration', component: Configuration },
   { tab: 'environment', component: Environment },
   { tab: 'modules', component: Modules },
   { tab: 'interfaces', component: Interfaces },
@@ -18,7 +18,7 @@ const pages = [
 
 function OkapiConsole() {
   const [version, setVersion] = useState();
-  const [tab, setTab] = useState('parameters');
+  const [tab, setTab] = useState('configuration');
   const okapiKy = useOkapiKy();
   const Component = pages.find(p => p.tab === tab).component;
 
