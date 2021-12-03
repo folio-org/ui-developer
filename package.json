@@ -172,7 +172,8 @@
           "okapi.proxy.modules.list",
           "okapi.proxy.tenants.modules.list",
           "okapi.proxy.tenants.modules.post",
-          "okapi.proxy.tenants.modules.enabled.delete"
+          "okapi.proxy.tenants.modules.enabled.delete",
+          "okapi.discovery.get"
         ],
         "visible": true
       },
