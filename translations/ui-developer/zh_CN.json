@@ -92,8 +92,8 @@
     "userLocale.success": "已成功存储区域设置{username}",
     "userLocale.numberingSystem": "编号系统（覆盖区域设置的默认值； <a>详情</a> ）",
     "permission.settings.userLocale": "设置（开发者）：可以为任何用户编辑区域设置条目",
-    "perms-inspector.showInvisible": "Show invisible permissions (gray)?",
-    "perms-inspector.counts": "{allCount, number} permissions ({visibleCount, number} visible, {invisibleCount, number} invisible)",
-    "permissionsInspector": "Permissions inspector",
-    "permission.settings.permissionsInspector": "Settings (developer): Can display the system's permissions"
+    "perms-inspector.showInvisible": "显示不可见权限（灰色）？",
+    "perms-inspector.counts": "{allCount, number}权限（ {visibleCount, number}可见， {invisibleCount, number}不可见）",
+    "permissionsInspector": "权限检查员",
+    "permission.settings.permissionsInspector": "设置（开发者）：可显示系统权限"
 }
