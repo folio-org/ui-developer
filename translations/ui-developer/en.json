@@ -74,6 +74,7 @@
   "permissionsInspector.fromModule": "From module <code>{name}</code>",
   "okapiConsole": "Okapi console",
   "okapiConsole.configuration": "Configuration",
+  "okapiConsole.configuration.version": "Okapi version",
   "okapiConsole.configuration.url": "URL",
   "okapiConsole.configuration.tenant": "Tenant",
   "okapiConsole.configuration.user": "User",
