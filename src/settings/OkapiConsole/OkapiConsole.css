@@ -20,6 +20,31 @@
     padding-right: 1em;
 }
 
+.moduleTable button {
+    color: #008;
+}
+
 .error {
     color: #800;
+}
+
+.moduleDetail {
+    background-color: #eee;
+    margin-left: 2em;
+    padding: 0em 1em ;
+    border: 1px solid #ccc;
+}
+
+.moduleDetail h5 {
+    font-size: 120%;
+}
+
+.moduleDetail h6 {
+    font-size: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.moduleDetail code {
+    font-size: 90%;
 }
