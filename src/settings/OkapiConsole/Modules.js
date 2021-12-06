@@ -1,9 +1,64 @@
 import React, { useState, useContext, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useStripes, useOkapiKy, CalloutContext } from '@folio/stripes/core';
 import { Loading, Checkbox } from '@folio/stripes/components';
 import Error from './Error';
 import css from './OkapiConsole.css';
+
+
+function maybeRenderInterfaces(detail, tag, isPermissions) {
+  const list = detail[tag];
+  if (!list || list.length === 0) return null;
+
+  return (
+    <>
+      <h6>
+        <FormattedMessage
+          id={`ui-developer.okapiConsole.modules.${tag}`}
+          values={{ count: list.length }}
+        />
+      </h6>
+      <ul>
+        {list.map((entry, i) => (
+          <li key={i}>
+            {isPermissions ?
+              <><code>{entry.permissionName}</code> ({entry.displayName})</> :
+              <>{entry.id} {entry.version}</>
+            }
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function ModuleDetail({ detail }) {
+  const { id } = detail;
+  const m = id.match(/(.*?)-(\d.*)/);
+  const [, module, version] = m;
+
+  return (
+    <div className={css.moduleDetail}>
+      <h5>
+        <FormattedMessage
+          id="ui-developer.okapiConsole.modules.detailFor"
+          values={{ module, version }}
+        />
+      </h5>
+      {detail.name && <p>{detail.name}</p>}
+      {maybeRenderInterfaces(detail, 'requires')}
+      {maybeRenderInterfaces(detail, 'optional')}
+      {maybeRenderInterfaces(detail, 'provides')}
+      {maybeRenderInterfaces(detail, 'permissionSets', true)}
+    </div>
+  );
+}
+
+
+ModuleDetail.propTypes = {
+  detail: PropTypes.object.isRequired,
+};
 
 
 function formatError(intl, id, tag, rawError, rawDetail) {
@@ -39,6 +94,7 @@ function Modules() {
   const [modules, setModules] = useState();
   const [srvc2url, setSrvc2url] = useState();
   const [register, setRegister] = useState();
+  const [detailsVisible, setDetailsVisible] = useState({});
   const [error, setError] = useState();
   const stripes = useStripes();
   const okapiKy = useOkapiKy();
@@ -46,7 +102,7 @@ function Modules() {
   const intl = useIntl();
 
   useEffect(() => {
-    okapiKy('_/proxy/modules?latest=1').then(async res => {
+    okapiKy('_/proxy/modules?latest=1&full=true').then(async res => {
       setModules(await res.text());
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
@@ -120,6 +176,8 @@ function Modules() {
     }
   });
 
+  function togglePopup(id) { setDetailsVisible({ ...detailsVisible, [id]: !detailsVisible[id] }); }
+
   return (
     <>
       <Checkbox
@@ -173,32 +231,48 @@ function Modules() {
           </tr>
         </thead>
         <tbody>
-          {active.map(({ id, name }) => {
+          {active.map((detail) => {
+            const { id, name } = detail;
             const m = id.match(/(.*?)-(\d.*)/);
             const [, module, version] = m;
             return (
-              <tr key={id}>
-                <td>
-                  {module}
-                </td>
-                <td>
-                  {version}
-                </td>
-                {showDesc &&
-                <td>
-                  {name}
-                </td>
+              <React.Fragment key={id}>
+                <tr>
+                  <td>
+                    <button
+                      type="button"
+                      style={{ textAlign: 'left' }}
+                      onClick={() => togglePopup(id)}
+                    >
+                      {module}
+                    </button>
+                  </td>
+                  <td>
+                    {version}
+                  </td>
+                  {showDesc &&
+                  <td>
+                    {name}
+                  </td>
+                  }
+                  <td>
+                    {srvc2url[id]}
+                  </td>
+                  <td>
+                    <Checkbox
+                      checked={register[id] || false}
+                      onChange={e => enableOrDisable(id, e.target.checked)}
+                    />
+                  </td>
+                </tr>
+                {detailsVisible[id] &&
+                  <tr>
+                    <td colSpan={showDesc ? 5 : 4}>
+                      <ModuleDetail detail={detail} />
+                    </td>
+                  </tr>
                 }
-                <td>
-                  {srvc2url[id]}
-                </td>
-                <td>
-                  <Checkbox
-                    checked={register[id] || false}
-                    onChange={e => enableOrDisable(id, e.target.checked)}
-                  />
-                </td>
-              </tr>
+              </React.Fragment>
             );
           })}
         </tbody>
