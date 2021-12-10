@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
+import { stripesConnect } from '@folio/stripes/core';
 import { Pane, ButtonGroup, Button } from '@folio/stripes/components';
 import Configuration from './Configuration';
 import Environment from './Environment';
@@ -15,8 +17,8 @@ const pages = [
 ];
 
 
-function OkapiConsole() {
-  const [tab, setTab] = useState('configuration');
+function OkapiConsole({ resources, mutator }) {
+  const tab = resources.query.tab || 'configuration';
   const Component = pages.find(p => p.tab === tab).component;
 
   return (
@@ -31,7 +33,7 @@ function OkapiConsole() {
               key={page.tab}
               buttonStyle={`${page.tab === tab ? 'primary' : 'default'}`}
               id={`segment-page-${page.tab}`}
-              onClick={() => setTab(page.tab)}
+              onClick={() => mutator.query.update({ tab: page.tab })}
             >
               <FormattedMessage id={`ui-developer.okapiConsole.${page.tab}`} />
             </Button>
@@ -44,4 +46,23 @@ function OkapiConsole() {
 }
 
 
-export default OkapiConsole;
+OkapiConsole.manifest = {
+  query: {},
+};
+
+
+OkapiConsole.propTypes = {
+  resources: PropTypes.shape({
+    query: PropTypes.shape({
+      tab: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+  mutator: PropTypes.shape({
+    query: PropTypes.shape({
+      update: PropTypes.func.isRequired,
+    }).isRequired,
+  }),
+};
+
+
+export default stripesConnect(OkapiConsole);
