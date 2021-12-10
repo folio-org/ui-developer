@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useStripes, useOkapiKy, CalloutContext } from '@folio/stripes/core';
-import { Loading, Checkbox } from '@folio/stripes/components';
+import { Loading, Row, Col, Checkbox } from '@folio/stripes/components';
 import Error from './Error';
 import css from './OkapiConsole.css';
 
@@ -90,6 +90,7 @@ function Modules() {
   const [includeEdge, setIncludeEdge] = useState(true);
   const [includeOther, setIncludeOther] = useState(true);
 
+  const [restrictToLatest, setRestrictToLatest] = useState(true);
   const [showDesc, setShowDesc] = useState(false);
   const [modules, setModules] = useState();
   const [srvc2url, setSrvc2url] = useState();
@@ -102,14 +103,15 @@ function Modules() {
   const intl = useIntl();
 
   useEffect(() => {
-    okapiKy('_/proxy/modules?latest=1&full=true').then(async res => {
+    const url = `_/proxy/modules?full=true${restrictToLatest ? '&latest=1' : ''}`;
+    okapiKy(url).then(async res => {
       setModules(await res.text());
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
   },
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  []);
+  [restrictToLatest]);
 
   useEffect(() => {
     // This gives us far more detail than we need, but the RAML suggests that are no parameters to prevent this
@@ -180,36 +182,50 @@ function Modules() {
 
   return (
     <>
-      <Checkbox
-        checked={includeUI}
-        data-test-checkbox-include-ui-modules
-        label={<FormattedMessage id="ui-developer.dependencies.ui-modules" />}
-        onChange={e => setIncludeUI(e.target.checked)}
-      />
-      <Checkbox
-        checked={includeBackend}
-        data-test-checkbox-include-backend-modules
-        label={<FormattedMessage id="ui-developer.dependencies.backend-modules" />}
-        onChange={e => setIncludeBackend(e.target.checked)}
-      />
-      <Checkbox
-        checked={includeEdge}
-        data-test-checkbox-include-edge-modules
-        label={<FormattedMessage id="ui-developer.dependencies.edge-modules" />}
-        onChange={e => setIncludeEdge(e.target.checked)}
-      />
-      <Checkbox
-        checked={includeOther}
-        data-test-checkbox-include-other-modules
-        label={<FormattedMessage id="ui-developer.dependencies.other-modules" />}
-        onChange={e => setIncludeOther(e.target.checked)}
-      />
-      <Checkbox
-        checked={showDesc}
-        data-test-checkbox-show-description
-        label={<FormattedMessage id="ui-developer.okapiConsole.modules.showDescription" />}
-        onChange={e => setShowDesc(e.target.checked)}
-      />
+      <Row>
+        <Col xs={6}>
+          <Checkbox
+            checked={includeUI}
+            data-test-checkbox-include-ui-modules
+            label={<FormattedMessage id="ui-developer.dependencies.ui-modules" />}
+            onChange={e => setIncludeUI(e.target.checked)}
+          />
+          <Checkbox
+            checked={includeBackend}
+            data-test-checkbox-include-backend-modules
+            label={<FormattedMessage id="ui-developer.dependencies.backend-modules" />}
+            onChange={e => setIncludeBackend(e.target.checked)}
+          />
+          <Checkbox
+            checked={includeEdge}
+            data-test-checkbox-include-edge-modules
+            label={<FormattedMessage id="ui-developer.dependencies.edge-modules" />}
+            onChange={e => setIncludeEdge(e.target.checked)}
+          />
+          <Checkbox
+            checked={includeOther}
+            data-test-checkbox-include-other-modules
+            label={<FormattedMessage id="ui-developer.dependencies.other-modules" />}
+            onChange={e => setIncludeOther(e.target.checked)}
+          />
+        </Col>
+        <Col xs={6}>
+          <Checkbox
+            checked={restrictToLatest}
+            data-test-checkbox-show-description
+            label={<FormattedMessage id="ui-developer.okapiConsole.modules.restrictToLatest" />}
+            onChange={e => setRestrictToLatest(e.target.checked)}
+          />
+          <hr />
+          <Checkbox
+            checked={showDesc}
+            data-test-checkbox-show-description
+            label={<FormattedMessage id="ui-developer.okapiConsole.modules.showDescription" />}
+            onChange={e => setShowDesc(e.target.checked)}
+          />
+        </Col>
+      </Row>
+
       <h4>
         <FormattedMessage
           id="ui-developer.okapiConsole.modules.count"
