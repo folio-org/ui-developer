@@ -79,6 +79,7 @@ function Interfaces() {
             {/* eslint-disable jsx-a11y/control-has-associated-label */}
             <th><FormattedMessage id="ui-developer.okapiConsole.interfaces.id" /></th>
             <th><FormattedMessage id="ui-developer.okapiConsole.interfaces.version" /></th>
+            <th><FormattedMessage id="ui-developer.okapiConsole.interfaces.providerCount" /></th>
             <th><FormattedMessage id="ui-developer.okapiConsole.interfaces.providers" /></th>
             {/* eslint-enable jsx-a11y/control-has-associated-label */}
           </tr>
@@ -93,6 +94,11 @@ function Interfaces() {
                 </td>
                 <td>
                   {version}
+                </td>
+                <td>
+                  <div className={(providers[s] || []).length > 1 ? css.multipleInterfaces : undefined}>
+                    {(providers[s] || []).length}
+                  </div>
                 </td>
                 <td>
                   {(providers[s] || []).map(m => m.id).join(', ')}

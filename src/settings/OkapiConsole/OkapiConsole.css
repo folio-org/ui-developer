@@ -11,17 +11,21 @@
 
 .moduleTable thead tr th:nth-child(2),
 .moduleTable tbody tr td:nth-child(2),
+.moduleTable tbody tr td:nth-child(3),
 .interfaceTable thead tr th:nth-child(2),
-.interfaceTable tbody tr td:nth-child(2) {
-    padding-right: 1em;
-}
-
-.moduleTable tbody tr td:nth-child(3) {
+.interfaceTable tbody tr td:nth-child(2),
+.interfaceTable tbody tr td:nth-child(3) {
     padding-right: 1em;
 }
 
 .moduleTable button {
     color: #008;
+}
+
+.multipleInterfaces {
+    background-color: #80e080;
+    border-radius: 1em;
+    padding: 0.25em;
 }
 
 .error {
