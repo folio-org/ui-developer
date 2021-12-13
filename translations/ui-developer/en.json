@@ -105,6 +105,7 @@
   "okapiConsole.interfaces.count": "{count} of {total} interfaces",
   "okapiConsole.interfaces.id": "ID",
   "okapiConsole.interfaces.version": "Version",
+  "okapiConsole.interfaces.providerCount": "#",
   "okapiConsole.interfaces.providers": "Provided by",
 
   "plugin-surface": "Plugin surface",
