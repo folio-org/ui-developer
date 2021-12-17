@@ -47,7 +47,7 @@
     "permission.settings.token": "Settings (Developer): manage JWT authentication token",
     "permission.settings.locale": "Einstellungen (Entwickler): kann Session-Gebietsschema ändern",
     "permission.settings.okapiConfiguration": "Einstellungen (Entwickler): Kann Mandantenkonfigurationswerte bearbeiten",
-    "permission.settings.passwd": "Einstellungen (Entwickler): Kann Ihr lokales Passwort ändern",
+    "permission.settings.passwd": "Einstellungen (Entwickler): Kann Passwörter der Benutzenden ändern",
     "okapiQuery": "Okapi query",
     "okapiQuery.queryPath": "Query path",
     "okapiQuery.runQuery": "Run query",
