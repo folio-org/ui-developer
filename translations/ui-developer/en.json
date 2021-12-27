@@ -33,7 +33,7 @@
   "configuration.actAsRoot": "Act as though user has all permissions?",
   "configuration.showHomeLink": "Show home link in top-right menu",
   "configuration.showDevInfo": "Show developer info",
-  "configuration.suppressIntlErrors": "Suppress intl errors",
+  "configuration.suppressIntlErrors": "Suppress intl errors. Note: This must be configured in stripes.config.js because the IntlProvider that reads this value does not re-render once stripes has loaded, but re-loading clears the transient settings configured here.",
 
   "hotkeys.instructions": "When this area is focused, type:",
   "hotkeys.home": "to go to the Home page",
