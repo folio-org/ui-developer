@@ -55,7 +55,7 @@
     "okapiQuery.limitWarning": "Results are capped at 100 records",
     "permission.settings.okapiQuery": "Settings (developer): Can run queries",
     "DO_NOT_TRANSLATE": "This translation is a playground",
-    "configuration.suppressIntlErrors": "Suppress intl errors. Note: This must be configured in stripes.config.js because the IntlProvider that reads this value does not re-render once stripes has loaded, but re-loading clears the transient settings configured here.",
+    "configuration.suppressIntlErrors": "Suppress intl errors",
     "dependencies": "Dependencies",
     "dependencies.moduleCount": "{count} modules selected",
     "dependencies.interfacesRequired": "# interfaces required",

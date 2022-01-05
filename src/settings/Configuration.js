@@ -24,6 +24,11 @@ class Configuration extends React.Component {
   onSave(data) {
     const stripes = this.props.stripes;
     merge(stripes, data);
+
+    // dispatch locale to force the stripes-intl context to re-render,
+    // allowing the suppressIntlErrors setting to take effect
+    stripes.setLocale(stripes.locale);
+
     this.forceUpdate();
   }
 
