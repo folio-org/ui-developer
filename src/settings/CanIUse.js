@@ -122,6 +122,16 @@ class CanIUse extends React.Component {
     }
   }
 
+  githubLink = (iface) => (
+    <a target="_new" href={`//github.com/folio-org/${iface}`}>github</a>
+  );
+
+  apiLink = (iface) => {
+    // dear eslint: FormattedMessage renders a string
+    // eslint-disable-next-line jsx-a11y/control-has-associated-label
+    return <a target="_new" href={`//dev.folio.org/reference/api/#${iface}`}><FormattedMessage id="ui-developer.canIUse.api" /></a>;
+  };
+
   mapPathToImpl = (impl, paths) => {
     const iface = this.implToInterface(impl.id);
     if (impl.provides) {
@@ -133,7 +143,7 @@ class CanIUse extends React.Component {
             paths[handler.pathPattern] = {
               iface,
               impl,
-              ramlsLink: <a href={`//github.com/folio-org/${iface}/tree/master/ramls`}>{iface}</a>,
+              docLink: (<span>{iface} ({ this.githubLink(iface) } | { this.apiLink(iface) } )</span>),
               permissions: [],
             };
           }
@@ -193,19 +203,27 @@ class CanIUse extends React.Component {
       });
     }
 
-    return <div>requires one of: {this.linkFormatter(this.state.paths[path].permissions)}</div>;
+    return <div><FormattedMessage id="ui-developer.canIUse.requiresOneOf" />: {this.linkFormatter(this.state.paths[path].permissions)}</div>;
   }
 
-  linkFormatter = (l) => <ul>{l.map(i => <li key={i}><tt><button type="button" onClick={() => this.handlePermissionClick(i)}>{i}</button></tt></li>)}</ul>;
+  publicPsetFormatter = (pset) => {
+    if (this.state.desiredPermission === pset) {
+      return (
+        <div>
+          <b><FormattedMessage id="ui-developer.canIUse.availableIn" />:</b>
+          <ul>
+            {this.state.publicPermissions.map(p => <li key={p.permissionName}>{this.formatPermissionName(p.permissionName)} ({p.permissionName})</li>)}
+          </ul>
+        </div>
+      );
+    }
 
-  showPublicPermissions = () => {
-    return (
-      <div>
-        <h4>{this.state.desiredPermission} is available in the following public permission sets:</h4>
-        <ul>{this.state.publicPermissions.map(p => <li key={p.permissionName}>{this.formatPermissionName(p.permissionName)} ({p.permissionName})</li>)}</ul>
-      </div>
-    );
-  }
+    return null;
+  };
+
+  linkFormatter = (l) => {
+    return (<ul>{l.map(i => (<li key={i}><code><button type="button" onClick={() => this.handlePermissionClick(i)}>{i}</button></code>{this.publicPsetFormatter(i)}</li>))}</ul>);
+  };
 
   formatPermissionName = (name) => {
     const [id, ...rest] = name.split('.');
@@ -218,12 +236,12 @@ class CanIUse extends React.Component {
    */
   showPaths = () => {
     // dear ESLint: I just want you to know that
-    //   <li key={path}>{path} = {this.state.paths[path].ramlsLink}</li>);
+    //   <li key={path}>{path} = {this.state.paths[path].docLink}</li>);
     // is SO MUCH CLEARER than
     //         <li key={path}>
     //            {path}
     //            =
-    //            {this.state.paths[path].ramlsLink}
+    //            {this.state.paths[path].docLink}
     //          </li>
     // AND it actually formats the way I want, with spaces around the equals.
     // Sometimes, and I hate to tell it to you this way, you suck at your job.
@@ -231,7 +249,7 @@ class CanIUse extends React.Component {
       .keys(this.state.paths)
       .sort()
       .filter(path => path.indexOf(this.state.filter) >= 0)
-      .map(path => <li key={path}>{path} = {this.state.paths[path].ramlsLink}{this.showPublicPsetsFor(path)}</li>); // eslint-disable-line
+      .map(path => <li key={path}>{path} = {this.state.paths[path].docLink}{this.showPublicPsetsFor(path)}</li>); // eslint-disable-line
   }
 
 
@@ -253,7 +271,6 @@ class CanIUse extends React.Component {
           <h3>resource path to permission-set mapper</h3>
           <input type="text" name="" onChange={this.handleFilter} />
         </div>
-        <div>{this.showPublicPermissions()}</div>
         <div>
           <h4>matched paths</h4>
           <ul>

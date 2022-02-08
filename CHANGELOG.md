@@ -5,6 +5,7 @@
 * Add Permissions Inspector page. Fixes UID-97.
 * In the Permissions Inspector, show which module permissions are from. Fixes UID-99.
 * Add rudimentary Okapi Console. Fixes UID-104, UID-105.
+* Link to GitHub and API doc instead of assuming `/ramls` exists. Refs UID-106.
 
 ## [6.0.0](https://github.com/folio-org/ui-developer/tree/v6.0.0) (2021-10-05)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.1...v6.0.0
