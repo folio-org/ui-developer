@@ -22,6 +22,7 @@ import StripesInspector from './StripesInspector';
 import PermissionsInspector from './PermissionsInspector';
 import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
+import BoomChakalaka from './BoomChakalaka';
 
 const pages = [
   {
@@ -128,6 +129,11 @@ const pages = [
     labelId: 'ui-developer.userLocale',
     component: UserLocale,
     perm: 'ui-developer.settings.userLocale',
+  },
+  {
+    route: 'boom',
+    labelId: 'Boom chakalaka',
+    component: BoomChakalaka,
   },
 ];
 
