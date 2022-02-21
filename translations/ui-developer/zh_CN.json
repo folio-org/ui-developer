@@ -134,5 +134,8 @@
     "okapiConsole.interfaces.providers": "提供者",
     "permission.settings.okapiConsole": "设置（开发者）：可以显示 Okapi 控制台",
     "permission.settings.okapiConsole.environment": "设置（开发者）：可以使用 Okapi 控制台的环境选项卡",
-    "permission.settings.okapiConsole.modules": "设置（开发者）：可以使用 Okapi 控制台的模块选项卡"
+    "permission.settings.okapiConsole.modules": "设置（开发者）：可以使用 Okapi 控制台的模块选项卡",
+    "canIUse.api": "API",
+    "canIUse.requiresOneOf": "requires one of",
+    "canIUse.availableIn": "Available in these public permission sets"
 }
