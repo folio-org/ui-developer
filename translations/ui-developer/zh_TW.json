@@ -134,5 +134,8 @@
     "okapiConsole.interfaces.providers": "Provided by",
     "permission.settings.okapiConsole": "Settings (developer): Can display the Okapi console",
     "permission.settings.okapiConsole.environment": "Settings (developer): Can use the Okapi console's Environment tab",
-    "permission.settings.okapiConsole.modules": "Settings (developer): Can use the Okapi console's Modules tab"
+    "permission.settings.okapiConsole.modules": "Settings (developer): Can use the Okapi console's Modules tab",
+    "canIUse.api": "API",
+    "canIUse.requiresOneOf": "requires one of",
+    "canIUse.availableIn": "Available in these public permission sets"
 }

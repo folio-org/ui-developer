@@ -134,5 +134,8 @@
     "okapiConsole.interfaces.providers": "مقدمة من",
     "permission.settings.okapiConsole": "الإعدادات (المطور): إمكانية عرض وحدة تحكم أوكابي",
     "permission.settings.okapiConsole.environment": "الإعدادات (المطور): إمكانية استخدام تبويب بيئة وحدة تحكم أوكابي",
-    "permission.settings.okapiConsole.modules": "الإعدادات (المطور): إمكانية استخدام تبويب وحدات وحدة تحكم أوكابي"
+    "permission.settings.okapiConsole.modules": "الإعدادات (المطور): إمكانية استخدام تبويب وحدات وحدة تحكم أوكابي",
+    "canIUse.api": "واجهة برمجة التطبيقات",
+    "canIUse.requiresOneOf": "يتطلب واحدًا من",
+    "canIUse.availableIn": "متاح في مجموعات الصلاحيات العامة هذه"
 }
