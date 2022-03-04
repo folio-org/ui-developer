@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## 6.1.0 (IN PROGRESS)
+## [6.1.0](https://github.com/folio-org/ui-developer/tree/v6.1.0) (2022-03-03)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.0.0...v6.1.0)
 
 * Add Permissions Inspector page. Fixes UID-97.
 * In the Permissions Inspector, show which module permissions are from. Fixes UID-99.
@@ -8,7 +9,7 @@
 * Link to GitHub and API doc instead of assuming `/ramls` exists. Refs UID-106.
 
 ## [6.0.0](https://github.com/folio-org/ui-developer/tree/v6.0.0) (2021-10-05)
-[Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.1...v6.0.0
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v5.2.1...v6.0.0)
 
 * Remove unnecessarily permissive permissions. Refs UID-87.
 * Increment `stripes` to `v7`. Refs UID-92.
