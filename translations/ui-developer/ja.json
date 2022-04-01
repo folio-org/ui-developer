@@ -68,7 +68,7 @@
     "perms.visibleOnly": "Show visible permissions only",
     "perms.showDisplayName": "Show display name as well as true name",
     "perms.permissionCount": "{count} permissions:",
-    "translations": "Translations",
+    "translations": "翻訳",
     "stripesInspector": "Stripes inspector",
     "plugin-surface": "Plugin surface",
     "plugin-surface.type": "Plugin type:",
