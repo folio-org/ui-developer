@@ -89,7 +89,7 @@
     "userLocale.locale": "Impostazioni locali (per la visualizzazione della lingua, il formato della data e così via)",
     "userLocale.timeZone": "Fuso orario (fuso orario utilizzato per visualizzare le informazioni sulla data e l'ora)",
     "userLocale.currency": "Valuta principale (per visualizzare il simbolo della valuta)",
-    "userLocale.success": "Impostazioni locali memorizzate correttamente per {nomeutente}",
+    "userLocale.success": "Impostazioni locali memorizzate correttamente per {username}",
     "userLocale.numberingSystem": "Numbering system (override locale's default; <a>details</a>)",
     "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user",
     "perms-inspector.showInvisible": "Show invisible permissions (gray)?",
