@@ -75,7 +75,7 @@
     "plugin-surface.noPlugin": "(No plugin of type \"{pluginType}\".)",
     "handler-surface": "Handler surface",
     "handler-surface.event": "Event to handle:",
-    "handler-surface.forExample": "(Example, \"{handlerEvent}\".)",
+    "handler-surface.forExample": "(Příklad \"{handlerEvent}\".)",
     "permission.settings.translations": "Settings (developer): Can display list of loaded translations",
     "permission.settings.plugin-surface": "Settings (developer): plugin surface for developing plugins",
     "permission.settings.handler-surface": "Settings (developer): handler surface for developing handlers",
