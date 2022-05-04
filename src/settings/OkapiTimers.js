@@ -15,11 +15,11 @@ const OkapiTimers = (props) => {
   const { data, isLoading } = useOkapiTimers(props.stripes.okapi.tenant);
 
   const columnMapping = {
+    delay: <FormattedMessage id="ui-developer.okapiTimers.delay" />,
     id: <FormattedMessage id="ui-developer.okapiTimers.id" />,
     method: <FormattedMessage id="ui-developer.okapiTimers.method" />,
     path: <FormattedMessage id="ui-developer.okapiTimers.path" />,
     unit: <FormattedMessage id="ui-developer.okapiTimers.unit" />,
-    delay: <FormattedMessage id="ui-developer.okapiTimers.delay" />,
   };
 
   const formatter = {
@@ -34,7 +34,7 @@ const OkapiTimers = (props) => {
   return (
     <Pane
       defaultWidth="fill"
-      paneTitle="Okapi timers"
+      paneTitle={<FormattedMessage id="ui-developer.okapiTimers" />}
     >
       <Row>
         <MultiColumnList

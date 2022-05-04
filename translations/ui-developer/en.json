@@ -111,7 +111,7 @@
   "okapiConsole.interfaces.providerCount": "#",
   "okapiConsole.interfaces.providers": "Provided by",
 
-  "okapiTimers": "Okapi Timers",
+  "okapiTimers": "Okapi timers",
   "okapiTimers.id": "ID",
   "okapiTimers.method": "Method",
   "okapiTimers.path": "Path",
