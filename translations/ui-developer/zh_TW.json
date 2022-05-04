@@ -71,7 +71,7 @@
     "translations": "Translations",
     "stripesInspector": "Stripes inspector",
     "plugin-surface": "Plugin surface",
-    "plugin-surface.type": "Plugin type:",
+    "plugin-surface.type": "插件類型:",
     "plugin-surface.noPlugin": "(No plugin of type \"{pluginType}\".)",
     "handler-surface": "Handler surface",
     "handler-surface.event": "Event to handle:",
