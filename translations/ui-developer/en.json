@@ -111,6 +111,13 @@
   "okapiConsole.interfaces.providerCount": "#",
   "okapiConsole.interfaces.providers": "Provided by",
 
+  "okapiTimers": "Okapi Timers",
+  "okapiTimers.id": "ID",
+  "okapiTimers.method": "Method",
+  "okapiTimers.path": "Path",
+  "okapiTimers.unit": "Unit",
+  "okapiTimers.delay": "Delay",
+
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
   "plugin-surface.exampleType": "(Example: <code>{pluginType}</code>)",
@@ -148,5 +155,7 @@
   "permission.settings.okapiConsole": "Settings (developer): Can display the Okapi console",
   "permission.settings.okapiConsole.environment": "Settings (developer): Can use the Okapi console's Environment tab",
   "permission.settings.okapiConsole.modules": "Settings (developer): Can use the Okapi console's Modules tab",
-  "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user"
+  "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user",
+  "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
+
 }

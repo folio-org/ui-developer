@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage, FormattedNumber } from 'react-intl';
 
 import {
   LoadingPane,
@@ -13,11 +14,19 @@ import useOkapiTimers from '../hooks/useOkapiTimers';
 const OkapiTimers = (props) => {
   const { data, isLoading } = useOkapiTimers(props.stripes.okapi.tenant);
 
+  const columnMapping = {
+    id: <FormattedMessage id="ui-developer.okapiTimers.id" />,
+    method: <FormattedMessage id="ui-developer.okapiTimers.method" />,
+    path: <FormattedMessage id="ui-developer.okapiTimers.path" />,
+    unit: <FormattedMessage id="ui-developer.okapiTimers.unit" />,
+    delay: <FormattedMessage id="ui-developer.okapiTimers.delay" />,
+  };
+
   const formatter = {
     method: o => o.routingEntry.methods.join(', '),
     path: o => o.routingEntry.pathPattern,
     unit: o => o.routingEntry.unit,
-    delay: o => o.routingEntry.delay,
+    delay: o => <FormattedNumber value={o.routingEntry.delay} />,
   };
 
   if (isLoading) return <LoadingPane />;
@@ -29,9 +38,10 @@ const OkapiTimers = (props) => {
     >
       <Row>
         <MultiColumnList
+          columnMapping={columnMapping}
           contentData={data}
-          visibleColumns={['id', 'method', 'path', 'unit', 'delay']}
           formatter={formatter}
+          visibleColumns={['id', 'unit', 'delay', 'method', 'path']}
         />
       </Row>
     </Pane>
