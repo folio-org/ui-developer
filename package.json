@@ -188,6 +188,13 @@
           "configuration.entries.item.put"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.okapiTimers",
+        "displayName": "Settings (developer): Can view Okapi timers",
+        "subPermissions": [
+        ],
+        "visible": true
       }
     ]
   },
@@ -218,11 +225,13 @@
   },
   "dependencies": {
     "chart.js": "^2.9.4",
+    "ky": "^0.23.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^2.11.1",
     "react-hot-loader": "^4.3.12",
     "react-inspector": "^5.1.0",
+    "react-query": "^3.38.1",
     "redux-form": "^8.0.3"
   },
   "peerDependencies": {
