@@ -222,8 +222,7 @@
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^2.11.1",
     "react-hot-loader": "^4.3.12",
-    "react-inspector": "^5.1.0",
-    "redux-form": "^8.0.3"
+    "react-inspector": "^5.1.0"
   },
   "peerDependencies": {
     "@folio/stripes": "^7.0.0",
