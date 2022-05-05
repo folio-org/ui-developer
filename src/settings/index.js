@@ -21,6 +21,7 @@ import StripesInspector from './StripesInspector';
 import PermissionsInspector from './PermissionsInspector';
 import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
+import OkapiTimers from './OkapiTimers';
 
 const pages = [
   {
@@ -127,6 +128,12 @@ const pages = [
     labelId: 'ui-developer.userLocale',
     component: UserLocale,
     perm: 'ui-developer.settings.userLocale',
+  },
+  {
+    route: 'okapi-timers',
+    labelId: 'ui-developer.okapiTimers',
+    component: OkapiTimers,
+    perm: 'ui-developer.settings.okapiTimers',
   },
 ];
 
