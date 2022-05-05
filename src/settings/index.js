@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import { Settings } from '@folio/stripes/smart-components';
@@ -145,4 +144,4 @@ const DeveloperSettings = (props) => {
   return <Settings {...props} pages={pages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
 };
 
-export default hot(module)(DeveloperSettings);
+export default DeveloperSettings;
