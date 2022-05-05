@@ -193,7 +193,6 @@
         "permissionName": "ui-developer.settings.okapiTimers",
         "displayName": "Settings (developer): Can view Okapi timers",
         "subPermissions": [
-          "okapi.proxy.tenants.timers.list"
         ],
         "visible": true
       }
