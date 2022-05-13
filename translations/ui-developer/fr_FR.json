@@ -108,7 +108,7 @@
     "okapiConsole.modules": "Modules",
     "okapiConsole.modules.restrictToLatest": "Restrict to latest?",
     "okapiConsole.modules.showDescription": "Afficher la description ?",
-    "okapiConsole.modules.count": "{count} } modules sur {total}",
+    "okapiConsole.modules.count": "{count} modules sur {total}",
     "okapiConsole.modules.module": "Module",
     "okapiConsole.modules.version": "Version",
     "okapiConsole.modules.description": "Description",
