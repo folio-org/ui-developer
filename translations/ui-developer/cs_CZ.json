@@ -3,7 +3,7 @@
     "configuration": "Configuration",
     "hotkeys": "Hotkeys test",
     "sessionLocale": "Session locale",
-    "setToken": "Set token",
+    "setToken": "Nastavení tokenu",
     "configuration.loggingCategories": "Logging categories",
     "configuration.loggingDocumentationLink": "See <a>the documentation</a> for available levels.",
     "configuration.autoLoginUsername": "Auto-login username",
