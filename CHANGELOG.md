@@ -5,6 +5,7 @@
 * Replace `babel-eslint` with `@babel/eslint-parser`. Refs UID-111.
 * Refactor forms to use final-form. Refs UID-39.
 * Remove `react-hot-loader`. Refs UID-110.
+* update NodeJS to v16 in CI. Refs UID-115.
 
 ## [6.1.0](https://github.com/folio-org/ui-developer/tree/v6.1.0) (2022-03-03)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.0.0...v6.1.0)
