@@ -50,7 +50,7 @@
     "permission.settings.passwd": "Settings (developer): Can change users' passwords",
     "okapiQuery": "Okapi query",
     "okapiQuery.queryPath": "Query path",
-    "okapiQuery.runQuery": "Run query",
+    "okapiQuery.runQuery": "Ejecutar consulta",
     "okapiQuery.running": "Querying …",
     "okapiQuery.limitWarning": "Results are capped at 100 records",
     "permission.settings.okapiQuery": "Settings (developer): Can run queries",
