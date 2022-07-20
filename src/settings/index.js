@@ -22,6 +22,7 @@ import PermissionsInspector from './PermissionsInspector';
 import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
+import AppManager from './AppManager';
 
 const pages = [
   {
@@ -134,6 +135,12 @@ const pages = [
     labelId: 'ui-developer.okapiTimers',
     component: OkapiTimers,
     perm: 'ui-developer.settings.okapiTimers',
+  },
+  {
+    route: 'app-manager',
+    labelId: 'ui-developer.app-manager',
+    component: AppManager,
+    // perm: 'ui-developer.settings.app-manager',
   },
 ];
 

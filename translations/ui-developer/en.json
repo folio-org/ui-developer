@@ -118,6 +118,10 @@
   "okapiTimers.unit": "Unit",
   "okapiTimers.delay": "Delay",
 
+  "app-manager": "App manager",
+  "app-manager.front": "Front of store",
+  "app-manager.config": "Configuration",
+
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
   "plugin-surface.exampleType": "(Example: <code>{pluginType}</code>)",
