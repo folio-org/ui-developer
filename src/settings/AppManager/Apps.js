@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { useOkapiKy } from '@folio/stripes/core';
 import { Loading } from '@folio/stripes/components';
 
-const AppManager = () => {
+const Apps = () => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   const okapiKy = useOkapiKy();
@@ -63,4 +63,4 @@ const AppManager = () => {
   );
 };
 
-export default AppManager;
+export default Apps;
