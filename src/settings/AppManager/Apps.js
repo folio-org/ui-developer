@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useOkapiKy } from '@folio/stripes/core';
 import { Loading } from '@folio/stripes/components';
 
@@ -26,11 +27,25 @@ const AppManager = () => {
   if (!data) return <Loading />;
 
   const parsed = JSON.parse(data);
+  const length = Object.keys(parsed).length;
 
   return (
-    <pre>
-      {JSON.stringify(parsed, null, 2)}
-    </pre>
+    <>
+      <h2>
+        <FormattedMessage
+          id="ui-developer.app-manager.apps.count"
+          values={{ count: length }}
+        />
+      </h2>
+      {Object.keys(parsed).sort().map(key => (
+        <>
+          <h3>{parsed[key].displayName || parsed[key].name}</h3>
+          <pre>
+            {JSON.stringify(parsed[key], null, 2)}
+          </pre>
+        </>
+      ))}
+    </>
   );
 };
 

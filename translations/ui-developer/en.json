@@ -120,7 +120,9 @@
 
   "app-manager": "App manager",
   "app-manager.apps": "Applications",
+  "app-manager.apps.count": "{count} {count, plural, one {application} other {applications}}",
   "app-manager.sources": "Sources",
+  "app-manager.sources.count": "{count} {count, plural, one {source} other {sources}}",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
