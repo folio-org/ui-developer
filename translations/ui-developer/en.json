@@ -119,8 +119,8 @@
   "okapiTimers.delay": "Delay",
 
   "app-manager": "App manager",
-  "app-manager.front": "Front of store",
-  "app-manager.config": "Configuration",
+  "app-manager.apps": "Applications",
+  "app-manager.sources": "Sources",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",

@@ -1,43 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { useOkapiKy } from '@folio/stripes/core';
-import { Pane, LoadingPane } from '@folio/stripes/components';
+import { stripesConnect } from '@folio/stripes/core';
+import { Pane, ButtonGroup, Button } from '@folio/stripes/components';
+import Apps from './Apps';
+import Sources from './Sources';
 
-const AppManager = () => {
-  const [data, setData] = useState();
-  const [error, setError] = useState();
-  const okapiKy = useOkapiKy();
 
-  useEffect(() => {
-    okapiKy('app-manager/apps').then(async res => {
-      setData(await res.text());
-    }).catch(async e => {
-      setError(e);
-    });
-  },
-  // ESLint wants okapiKy to be included as a dependency in the array
-  // on the next non-comment line. For reasons that I do not
-  // understand, including it causes useEffect to fire repeatedly,
-  // re-issuing the failed request over and over.
-  //
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  []);
+const pages = [
+  { tab: 'apps', component: Apps },
+  { tab: 'sources', component: Sources },
+];
 
-  if (error) throw Error(error.toString());
-  if (!data) return <LoadingPane />;
 
-  const parsed = JSON.parse(data);
+function AppManager({ resources, mutator }) {
+  const tab = resources.query.tab || 'apps';
+  const Component = pages.find(p => p.tab === tab).component;
 
   return (
     <Pane
       defaultWidth="fill"
       paneTitle={<FormattedMessage id="ui-developer.app-manager" />}
     >
-      <pre>
-{JSON.stringify(parsed, null, 2)}
-      </pre>
+      <ButtonGroup>
+        {
+          pages.map(page => (
+            <Button
+              key={page.tab}
+              buttonStyle={`${page.tab === tab ? 'primary' : 'default'}`}
+              id={`segment-page-${page.tab}`}
+              onClick={() => mutator.query.update({ tab: page.tab })}
+            >
+              <FormattedMessage id={`ui-developer.app-manager.${page.tab}`} />
+            </Button>
+          ))
+        }
+      </ButtonGroup>
+      <Component />
     </Pane>
   );
+}
+
+
+AppManager.manifest = {
+  query: {},
 };
 
-export default AppManager;
+
+AppManager.propTypes = {
+  resources: PropTypes.shape({
+    query: PropTypes.shape({
+      tab: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+  mutator: PropTypes.shape({
+    query: PropTypes.shape({
+      update: PropTypes.func.isRequired,
+    }).isRequired,
+  }),
+};
+
+
+export default stripesConnect(AppManager);
