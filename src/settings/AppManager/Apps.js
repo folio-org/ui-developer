@@ -40,9 +40,23 @@ const AppManager = () => {
       {Object.keys(parsed).sort().map(key => (
         <>
           <h3>{parsed[key].displayName || parsed[key].name}</h3>
-          <pre>
-            {JSON.stringify(parsed[key], null, 2)}
-          </pre>
+          <ul style={{ listStyleType: 'none' }}>
+            <li>
+              <b>Description:</b>
+              &nbsp;
+              {parsed[key].description}
+            </li>
+            <li>
+              <b>Published by:</b>
+              &nbsp;
+              {parsed[key].publisher}
+            </li>
+            <li>
+              <pre>
+                {JSON.stringify(parsed[key], null, 2)}
+              </pre>
+            </li>
+          </ul>
         </>
       ))}
     </>
