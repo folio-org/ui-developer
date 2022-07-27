@@ -137,5 +137,12 @@
     "permission.settings.okapiConsole.modules": "الإعدادات (المطور): إمكانية استخدام تبويب وحدات وحدة تحكم أوكابي",
     "canIUse.api": "واجهة برمجة التطبيقات",
     "canIUse.requiresOneOf": "يتطلب واحدًا من",
-    "canIUse.availableIn": "متاح في مجموعات الصلاحيات العامة هذه"
+    "canIUse.availableIn": "متاح في مجموعات الصلاحيات العامة هذه",
+    "okapiTimers": "Okapi timers",
+    "okapiTimers.id": "ID",
+    "okapiTimers.method": "الطريقة",
+    "okapiTimers.path": "Path",
+    "okapiTimers.unit": "Unit",
+    "okapiTimers.delay": "تأخير",
+    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
 }
