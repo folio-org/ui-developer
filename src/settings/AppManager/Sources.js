@@ -1,66 +1,60 @@
-import React, { useState, useEffect } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { useOkapiKy } from '@folio/stripes/core';
-import { Loading } from '@folio/stripes/components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl } from 'react-intl';
+import { withStripes } from '@folio/stripes/core';
+import { Paneset } from '@folio/stripes/components';
+import { ControlledVocab } from '@folio/stripes/smart-components';
 
-const Sources = () => {
-  const [data, setData] = useState();
-  const [error, setError] = useState();
-  const okapiKy = useOkapiKy();
 
-  useEffect(() => {
-    okapiKy('app-manager/config/sources').then(async res => {
-      setData(await res.text());
-    }).catch(async e => {
-      setError(e);
-    });
-  },
-  // ESLint wants okapiKy to be included as a dependency in the array
-  // on the next non-comment line. For reasons that I do not
-  // understand, including it causes useEffect to fire repeatedly,
-  // re-issuing the failed request over and over.
-  //
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  []);
+// Below, we pass the prop clientGeneratePk="" into <ControlledVocab>
+// to prevent stripes-connected from generating its own `id` on the
+// client side, because we want the back-end module to generate the
+// key. Passing the value {false} is no good, because that doesn't
+// register as sufficiently set to be passed through into
+// stripes-connect in a string context.
 
-  if (error) throw Error(error.toString());
-  if (!data) return <Loading />;
+class Sources extends React.Component {
+  static propTypes = {
+    stripes: PropTypes.shape({
+      connect: PropTypes.func.isRequired,
+    }).isRequired,
+    intl: PropTypes.shape({
+      formatMessage: PropTypes.func.isRequired,
+    }),
+  };
 
-  const parsed = JSON.parse(data);
-  const length = Object.keys(parsed).length;
+  constructor(props) {
+    super(props);
+    this.connectedControlledVocab = props.stripes.connect(ControlledVocab);
+  }
 
-  return (
-    <>
-      <h2>
-        <FormattedMessage
-          id="ui-developer.app-manager.sources.count"
-          values={{ count: length }}
+  render() {
+    const { stripes, intl } = this.props;
+
+    return (
+      <Paneset isRoot>
+        <this.connectedControlledVocab
+          stripes={stripes}
+          baseUrl="app-manager/config/sources"
+          label={intl.formatMessage({ id: 'ui-developer.app-manager.sources.plural' })}
+          listFormLabel=" "
+          labelSingular={intl.formatMessage({ id: 'ui-developer.app-manager.sources.singular' })}
+          objectLabel={intl.formatMessage({ id: 'ui-developer.app-manager.sources.objectLabel' })}
+          visibleFields={['owner', 'repo', 'tokenStart', 'tokenEnd']}
+          columnMapping={{
+            owner: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.owner' }),
+            repo: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.repo' }),
+            tokenStart: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.tokenStart' }),
+            tokenEnd: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.tokenEnd' }),
+          }}
+          id="app-sources"
+          sortby="owner,repo"
+          hiddenFields={['lastUpdated', 'numberOfObjects']}
+          clientGeneratePk=""
         />
-      </h2>
-      {Object.keys(parsed).sort().map(key => (
-        <>
-          <h3>{parsed[key].displayName || parsed[key].name}</h3>
-          <ul style={{ listStyleType: 'none' }}>
-            <li>
-              <b>Owner:</b>
-              &nbsp;
-              {parsed[key].owner}
-            </li>
-            <li>
-              <b>Repo:</b>
-              &nbsp;
-              {parsed[key].repo}
-            </li>
-            <li>
-              <pre>
-                {JSON.stringify(parsed[key], null, 2)}
-              </pre>
-            </li>
-          </ul>
-        </>
-      ))}
-    </>
-  );
-};
+      </Paneset>
+    );
+  }
+}
 
-export default Sources;
+export default injectIntl(withStripes(Sources));
