@@ -37,8 +37,8 @@ const Apps = () => {
           values={{ count: length }}
         />
       </h2>
-      {Object.keys(parsed).sort().map(key => (
-        <>
+      {Object.keys(parsed).sort().map((key, index) => (
+        <div key={index}>
           <h3>{parsed[key].displayName || parsed[key].name}</h3>
           <ul style={{ listStyleType: 'none' }}>
             <li>
@@ -57,7 +57,7 @@ const Apps = () => {
               </pre>
             </li>
           </ul>
-        </>
+        </div>
       ))}
     </>
   );
