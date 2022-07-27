@@ -137,5 +137,12 @@
     "permission.settings.okapiConsole.modules": "设置（开发者）：可以使用 Okapi 控制台的模块选项卡",
     "canIUse.api": "API",
     "canIUse.requiresOneOf": "需要其中之一",
-    "canIUse.availableIn": "在这些公共权限集中可用"
+    "canIUse.availableIn": "在这些公共权限集中可用",
+    "okapiTimers": "Okapi timers",
+    "okapiTimers.id": "ID",
+    "okapiTimers.method": "Method",
+    "okapiTimers.path": "Path",
+    "okapiTimers.unit": "Unit",
+    "okapiTimers.delay": "Delay",
+    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
 }
