@@ -128,6 +128,7 @@
   "app-manager.sources.objectLabel": "Entries",
   "app-manager.sources.heading.owner": "Owner",
   "app-manager.sources.heading.repo": "Repo",
+  "app-manager.sources.heading.token": "GitHub token",
   "app-manager.sources.heading.tokenStart": "Token start",
   "app-manager.sources.heading.tokenEnd": "Token end",
 

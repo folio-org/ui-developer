@@ -40,10 +40,11 @@ class Sources extends React.Component {
           listFormLabel=" "
           labelSingular={intl.formatMessage({ id: 'ui-developer.app-manager.sources.singular' })}
           objectLabel={intl.formatMessage({ id: 'ui-developer.app-manager.sources.objectLabel' })}
-          visibleFields={['owner', 'repo', 'tokenStart', 'tokenEnd']}
+          visibleFields={['owner', 'repo', 'token']}
           columnMapping={{
             owner: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.owner' }),
             repo: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.repo' }),
+            token: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.token' }),
             tokenStart: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.tokenStart' }),
             tokenEnd: intl.formatMessage({ id: 'ui-developer.app-manager.sources.heading.tokenEnd' }),
           }}
