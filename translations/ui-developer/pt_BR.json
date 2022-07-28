@@ -137,5 +137,12 @@
     "permission.settings.okapiConsole.modules": "Configurações (desenvolvedor): Pode usar a guia Módulos do console Okapi",
     "canIUse.api": "API",
     "canIUse.requiresOneOf": "requer um dos",
-    "canIUse.availableIn": "Disponível nestes conjuntos de permissões públicas"
+    "canIUse.availableIn": "Disponível nestes conjuntos de permissões públicas",
+    "okapiTimers": "Okapi timers",
+    "okapiTimers.id": "ID",
+    "okapiTimers.method": "Method",
+    "okapiTimers.path": "Path",
+    "okapiTimers.unit": "Unit",
+    "okapiTimers.delay": "Delay",
+    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
 }
