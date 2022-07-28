@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+import { useStripes } from '@folio/stripes/core';
 import { Settings } from '@folio/stripes/smart-components';
 
 import Configuration from './Configuration';
@@ -136,24 +137,33 @@ const pages = [
     component: OkapiTimers,
     perm: 'ui-developer.settings.okapiTimers',
   },
-  {
-    route: 'app-manager',
-    labelId: 'ui-developer.app-manager',
-    component: AppManager,
-    // perm: 'ui-developer.settings.app-manager',
-  },
 ];
 
 const DeveloperSettings = (props) => {
+  const [initialized, setInitialized] = useState(false);
+  const stripes = useStripes();
   const intl = useIntl();
 
-  pages.forEach(p => {
-    p.label = intl.formatMessage({ id: p.labelId });
-  });
+  if (!initialized) {
+    if (stripes.hasInterface('app-manager')) {
+      pages.push({
+        route: 'app-manager',
+        labelId: 'ui-developer.app-manager',
+        component: AppManager,
+        // perm: 'ui-developer.settings.app-manager',
+      });
+    }
 
-  pages.sort((a, b) => {
-    return a.label.localeCompare(b.label);
-  });
+    pages.forEach(p => {
+      p.label = intl.formatMessage({ id: p.labelId });
+    });
+
+    pages.sort((a, b) => {
+      return a.label.localeCompare(b.label);
+    });
+
+    setInitialized(true);
+  }
 
   return <Settings {...props} pages={pages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
 };
