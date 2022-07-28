@@ -20,6 +20,9 @@
       "stripesAbout"
     ],
     "okapiInterfaces": {},
+    "optionalOkapiInterfaces": {
+      "app-manager": "1.0"
+    },
     "permissionSets": [
       {
         "permissionName": "module.developer.enabled",
