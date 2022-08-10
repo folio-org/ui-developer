@@ -141,8 +141,8 @@
     "okapiTimers": "Okapi timers",
     "okapiTimers.id": "ID",
     "okapiTimers.method": "الطريقة",
-    "okapiTimers.path": "Path",
-    "okapiTimers.unit": "Unit",
+    "okapiTimers.path": "المسار",
+    "okapiTimers.unit": "وحدة",
     "okapiTimers.delay": "تأخير",
     "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
 }
