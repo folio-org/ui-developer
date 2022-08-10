@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { useStripes, useOkapiKy, CalloutContext } from '@folio/stripes/core';
-import { Loading, Row, Col, Checkbox } from '@folio/stripes/components';
+import { useStripes, IfPermission, useOkapiKy, CalloutContext } from '@folio/stripes/core';
+import { Loading, Row, Col, Checkbox, Button } from '@folio/stripes/components';
 import Error from './Error';
 import css from './OkapiConsole.css';
 
@@ -33,7 +33,88 @@ function maybeRenderInterfaces(detail, tag, isPermissions) {
   );
 }
 
-function ModuleDetail({ detail }) {
+
+function undeploy(okapiKy, callout, id, instId) {
+  return okapiKy.delete(`_/discovery/modules/${id}/${instId}`)
+    .then(() => {
+      callout.sendCallout({
+        message: <FormattedMessage
+          id="ui-developer.okapiConsole.modules.deployments.undeploy.success"
+          values={{ id, instId }}
+        />
+      });
+    })
+    .catch(err => {
+      callout.sendCallout({
+        type: 'error',
+        timeout: 0,
+        message: <FormattedMessage
+          id="ui-developer.okapiConsole.modules.deployments.undeploy.error"
+          values={{ id, instId, error: err.toString() }}
+        />
+      });
+    });
+}
+
+
+function ModuleDeployments({ id, deployments, forceRender }) {
+  const okapiKy = useOkapiKy();
+  const callout = useContext(CalloutContext);
+
+  return (
+    <>
+      <h6>
+        <FormattedMessage
+          id="ui-developer.okapiConsole.modules.deployments"
+          values={{ count: deployments.length }}
+        />
+      </h6>
+      <ul>
+        {deployments.map(d => (
+          <li key={d.instId}>
+            {d.instId}
+            <br />
+            <b>{d.url}</b>
+            {d.descriptor?.dockerImage && (
+              <>
+                <br />
+                <span style={{ color: 'grey' }}>
+                  Docker: {d.descriptor?.dockerImage}
+                </span>
+              </>
+            )}
+            <IfPermission perm="okapi.discovery.delete">
+              <br />
+              <Button
+                onClick={() => undeploy(okapiKy, callout, id, d.instId).then(forceRender)}
+              >
+                <FormattedMessage id="ui-developer.okapiConsole.modules.deployments.undeploy" />
+              </Button>
+            </IfPermission>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+
+ModuleDeployments.propTypes = {
+  id: PropTypes.string.isRequired,
+  deployments: PropTypes.arrayOf(
+    PropTypes.shape({
+      instId: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      descriptor: PropTypes.shape({
+        dockerImage: PropTypes.string,
+      }),
+    }).isRequired,
+  ).isRequired,
+  forceRender: PropTypes.func.isRequired,
+};
+
+
+function ModuleDetail({ detail, deployments, forceRender }) {
   const { id } = detail;
   const m = id.match(/(.*?)-(\d.*)/);
   const [, module, version] = m;
@@ -51,13 +132,21 @@ function ModuleDetail({ detail }) {
       {maybeRenderInterfaces(detail, 'optional')}
       {maybeRenderInterfaces(detail, 'provides')}
       {maybeRenderInterfaces(detail, 'permissionSets', true)}
+      <ModuleDeployments id={id} deployments={deployments} forceRender={forceRender} />
     </div>
   );
 }
 
 
 ModuleDetail.propTypes = {
-  detail: PropTypes.object.isRequired,
+  detail: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string,
+  }).isRequired,
+  deployments: PropTypes.arrayOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
+  forceRender: PropTypes.func.isRequired,
 };
 
 
@@ -93,10 +182,12 @@ function Modules() {
   const [restrictToLatest, setRestrictToLatest] = useState(true);
   const [showDesc, setShowDesc] = useState(false);
   const [modules, setModules] = useState();
-  const [srvc2url, setSrvc2url] = useState();
+  const [srvc2deployments, setSrvc2deployments] = useState();
   const [register, setRegister] = useState();
   const [detailsVisible, setDetailsVisible] = useState({});
   const [error, setError] = useState();
+  const [booleanToForceReRender, setBooleanToForceReRender] = useState();
+
   const stripes = useStripes();
   const okapiKy = useOkapiKy();
   const callout = useContext(CalloutContext);
@@ -114,18 +205,20 @@ function Modules() {
   [restrictToLatest]);
 
   useEffect(() => {
-    // This gives us far more detail than we need, but the RAML suggests that are no parameters to prevent this
     okapiKy('_/discovery/modules').then(async res => {
       const text = await res.text();
       const tmp = {};
-      JSON.parse(text).forEach(entry => { tmp[entry.srvcId] = entry.url; });
-      setSrvc2url(tmp);
+      JSON.parse(text).forEach(entry => {
+        if (!tmp[entry.srvcId]) tmp[entry.srvcId] = [];
+        tmp[entry.srvcId].push(entry);
+      });
+      setSrvc2deployments(tmp);
     }).catch(async e => {
       setError({ summary: e.toString(), detail: await e.response.text() });
     });
   },
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  []);
+  [booleanToForceReRender]);
 
   useEffect(() => {
     okapiKy(`_/proxy/tenants/${stripes.okapi.tenant}/modules`).then(async res => {
@@ -141,7 +234,7 @@ function Modules() {
   []);
 
   if (error) return <Error error={error} />;
-  if (!modules || !srvc2url || !register) return <Loading />;
+  if (!modules || !srvc2deployments || !register) return <Loading />;
 
   function enableOrDisable(id, enable) {
     const p = enable ?
@@ -272,7 +365,7 @@ function Modules() {
                   </td>
                   }
                   <td>
-                    {srvc2url[id]}
+                    {(srvc2deployments[id] || []).map(x => x.url).join(', ')}
                   </td>
                   <td>
                     <Checkbox
@@ -284,7 +377,11 @@ function Modules() {
                 {detailsVisible[id] &&
                   <tr>
                     <td colSpan={showDesc ? 5 : 4}>
-                      <ModuleDetail detail={detail} />
+                      <ModuleDetail
+                        detail={detail}
+                        deployments={srvc2deployments[id] || []}
+                        forceRender={() => setBooleanToForceReRender(!booleanToForceReRender)}
+                      />
                     </td>
                   </tr>
                 }
