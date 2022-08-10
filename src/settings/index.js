@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import { useStripes } from '@folio/stripes/core';
@@ -140,32 +140,28 @@ const pages = [
 ];
 
 const DeveloperSettings = (props) => {
-  const [initialized, setInitialized] = useState(false);
   const stripes = useStripes();
   const intl = useIntl();
 
-  if (!initialized) {
-    if (stripes.hasInterface('app-manager')) {
-      pages.push({
-        route: 'app-manager',
-        labelId: 'ui-developer.app-manager',
-        component: AppManager,
-        // perm: 'ui-developer.settings.app-manager',
-      });
-    }
-
-    pages.forEach(p => {
-      p.label = intl.formatMessage({ id: p.labelId });
+  const allPages = [...pages];
+  if (stripes.hasInterface('app-manager')) {
+    allPages.push({
+      route: 'app-manager',
+      labelId: 'ui-developer.app-manager',
+      component: AppManager,
+      // perm: 'ui-developer.settings.app-manager',
     });
-
-    pages.sort((a, b) => {
-      return a.label.localeCompare(b.label);
-    });
-
-    setInitialized(true);
   }
 
-  return <Settings {...props} pages={pages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
+  allPages.forEach(p => {
+    p.label = intl.formatMessage({ id: p.labelId });
+  });
+
+  allPages.sort((a, b) => {
+    return a.label.localeCompare(b.label);
+  });
+
+  return <Settings {...props} pages={allPages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
 };
 
 export default DeveloperSettings;
