@@ -138,11 +138,11 @@
     "canIUse.api": "API",
     "canIUse.requiresOneOf": "需要其中之一",
     "canIUse.availableIn": "在这些公共权限集中可用",
-    "okapiTimers": "Okapi timers",
+    "okapiTimers": "Okapi计时器",
     "okapiTimers.id": "ID",
-    "okapiTimers.method": "Method",
-    "okapiTimers.path": "Path",
-    "okapiTimers.unit": "Unit",
-    "okapiTimers.delay": "Delay",
-    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
+    "okapiTimers.method": "方式",
+    "okapiTimers.path": "路径",
+    "okapiTimers.unit": "单位",
+    "okapiTimers.delay": "延迟",
+    "permission.settings.okapiTimers": "设置（开发者）：可以查看 okapi 计时器"
 }
