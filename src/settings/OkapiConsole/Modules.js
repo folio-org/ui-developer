@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useStripes, IfPermission, useOkapiKy, CalloutContext } from '@folio/stripes/core';
-import { Loading, Row, Col, Checkbox, Button } from '@folio/stripes/components';
+import { Loading, Row, Col, Checkbox, Button, ConfirmationModal } from '@folio/stripes/components';
 import Error from './Error';
 import css from './OkapiConsole.css';
 
@@ -60,6 +60,7 @@ function undeploy(okapiKy, callout, id, instId) {
 function ModuleDeployments({ id, deployments, forceRender }) {
   const okapiKy = useOkapiKy();
   const callout = useContext(CalloutContext);
+  const [confirming, setConfirming] = useState();
 
   return (
     <>
@@ -86,10 +87,19 @@ function ModuleDeployments({ id, deployments, forceRender }) {
             <IfPermission perm="okapi.discovery.delete">
               <br />
               <Button
-                onClick={() => undeploy(okapiKy, callout, id, d.instId).then(forceRender)}
+                style={{ marginTop: '0.5em', marginLeft: '1em' }}
+                onClick={() => setConfirming(d.instId)}
               >
                 <FormattedMessage id="ui-developer.okapiConsole.modules.deployments.undeploy" />
               </Button>
+              {confirming && (
+                <ConfirmationModal
+                  open
+                  heading={<FormattedMessage id="ui-developer.okapiConsole.modules.deployments.undeploy.confirm" />}
+                  onConfirm={() => { setConfirming(false); undeploy(okapiKy, callout, id, d.instId).then(forceRender); }}
+                  onCancel={() => setConfirming(false)}
+                />
+              )}
             </IfPermission>
           </li>
         ))}

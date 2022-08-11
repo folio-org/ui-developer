@@ -99,6 +99,7 @@
   "okapiConsole.modules.permissionSets": "Defines {count} {count, plural, one {permission} other {permissions}}",
   "okapiConsole.modules.deployments": "Has {count} {count, plural, one {deployment} other {deployments}}",
   "okapiConsole.modules.deployments.undeploy": "Undeploy",
+  "okapiConsole.modules.deployments.undeploy.confirm": "Are you absolutely sure that you know what you're doing, and want to undeploy?",
   "okapiConsole.modules.deployments.undeploy.success": "Undeployed instance {instId} (module {id})",
   "okapiConsole.modules.deployments.undeploy.error": "Could not undeploy instance {instId} (module {id}): {error}",
   "okapiConsole.modules.enabled": "Enabled?",
