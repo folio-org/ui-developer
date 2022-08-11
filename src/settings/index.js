@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+import { useStripes } from '@folio/stripes/core';
 import { Settings } from '@folio/stripes/smart-components';
 
 import Configuration from './Configuration';
@@ -22,6 +23,7 @@ import PermissionsInspector from './PermissionsInspector';
 import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
+import AppManager from './AppManager';
 
 const pages = [
   {
@@ -138,17 +140,28 @@ const pages = [
 ];
 
 const DeveloperSettings = (props) => {
+  const stripes = useStripes();
   const intl = useIntl();
 
-  pages.forEach(p => {
+  const allPages = [...pages];
+  if (stripes.hasInterface('app-manager')) {
+    allPages.push({
+      route: 'app-manager',
+      labelId: 'ui-developer.app-manager',
+      component: AppManager,
+      // perm: 'ui-developer.settings.app-manager',
+    });
+  }
+
+  allPages.forEach(p => {
     p.label = intl.formatMessage({ id: p.labelId });
   });
 
-  pages.sort((a, b) => {
+  allPages.sort((a, b) => {
     return a.label.localeCompare(b.label);
   });
 
-  return <Settings {...props} pages={pages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
+  return <Settings {...props} pages={allPages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
 };
 
 export default DeveloperSettings;
