@@ -144,5 +144,10 @@
     "okapiTimers.path": "路径",
     "okapiTimers.unit": "单位",
     "okapiTimers.delay": "延迟",
-    "permission.settings.okapiTimers": "设置（开发者）：可以查看 okapi 计时器"
+    "permission.settings.okapiTimers": "设置（开发者）：可以查看 okapi 计时器",
+    "okapiConsole.modules.deployments": "Has {count} {count, plural, one {deployment} other {deployments}}",
+    "okapiConsole.modules.deployments.undeploy": "Undeploy",
+    "okapiConsole.modules.deployments.undeploy.success": "Undeployed instance {instId} (module {id})",
+    "okapiConsole.modules.deployments.undeploy.error": "Could not undeploy instance {instId} (module {id}): {error}",
+    "okapiConsole.modules.deployments.undeploy.confirm": "Are you absolutely sure that you know what you're doing, and want to undeploy?"
 }

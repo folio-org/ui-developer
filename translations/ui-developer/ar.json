@@ -138,11 +138,16 @@
     "canIUse.api": "واجهة برمجة التطبيقات",
     "canIUse.requiresOneOf": "يتطلب واحدًا من",
     "canIUse.availableIn": "متاح في مجموعات الصلاحيات العامة هذه",
-    "okapiTimers": "Okapi timers",
-    "okapiTimers.id": "ID",
+    "okapiTimers": "مؤقتات أوكابي",
+    "okapiTimers.id": "المعرّف",
     "okapiTimers.method": "الطريقة",
     "okapiTimers.path": "المسار",
     "okapiTimers.unit": "وحدة",
     "okapiTimers.delay": "تأخير",
-    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
+    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers",
+    "okapiConsole.modules.deployments": "Has {count} {count, plural, one {deployment} other {deployments}}",
+    "okapiConsole.modules.deployments.undeploy": "Undeploy",
+    "okapiConsole.modules.deployments.undeploy.success": "Undeployed instance {instId} (module {id})",
+    "okapiConsole.modules.deployments.undeploy.error": "Could not undeploy instance {instId} (module {id}): {error}",
+    "okapiConsole.modules.deployments.undeploy.confirm": "Are you absolutely sure that you know what you're doing, and want to undeploy?"
 }

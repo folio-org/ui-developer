@@ -144,5 +144,10 @@
     "okapiTimers.path": "Pfad",
     "okapiTimers.unit": "Unit",
     "okapiTimers.delay": "Delay",
-    "permission.settings.okapiTimers": "Einstellungen (Entwickler): Kann Okapi-Timer anzeigen"
+    "permission.settings.okapiTimers": "Einstellungen (Entwickler): Kann Okapi-Timer anzeigen",
+    "okapiConsole.modules.deployments": "Has {count} {count, plural, one {deployment} other {deployments}}",
+    "okapiConsole.modules.deployments.undeploy": "Undeploy",
+    "okapiConsole.modules.deployments.undeploy.success": "Undeployed instance {instId} (module {id})",
+    "okapiConsole.modules.deployments.undeploy.error": "Could not undeploy instance {instId} (module {id}): {error}",
+    "okapiConsole.modules.deployments.undeploy.confirm": "Are you absolutely sure that you know what you're doing, and want to undeploy?"
 }
