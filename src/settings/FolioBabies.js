@@ -26,7 +26,7 @@ const FolioBabies = () => {
     'Kiaan',
     'Owen',
     'Allie',
-    'Lucas', 
+    'Lucas',
     'Casey',
     'Madeline',
   ];
