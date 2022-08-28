@@ -18,6 +18,7 @@ const FolioBabies = () => {
     'Aahana',
     'Shreya',
     'Maria',
+    'Joshua',
     'Julian',
     'Evangeline',
     'Nathaniel',
