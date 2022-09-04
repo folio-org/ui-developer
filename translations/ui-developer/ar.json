@@ -144,7 +144,7 @@
     "okapiTimers.path": "المسار",
     "okapiTimers.unit": "وحدة",
     "okapiTimers.delay": "تأخير",
-    "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers",
+    "permission.settings.okapiTimers": "الإعدادات (المطور): إمكانية عرض مؤقتات أوكابي",
     "okapiConsole.modules.deployments": "Has {count} {count, plural, one {deployment} other {deployments}}",
     "okapiConsole.modules.deployments.undeploy": "إلغاء النشر",
     "okapiConsole.modules.deployments.undeploy.success": "Undeployed instance {instId} (module {id})",
