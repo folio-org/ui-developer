@@ -15,7 +15,8 @@ const pages = [
 
 function AppManager({ resources, mutator }) {
   const tab = resources.query.tab || 'apps';
-  const Component = pages.find(p => p.tab === tab).component;
+  const thisPage = pages.find(p => p.tab === tab) || pages[0];
+  const Component = thisPage.component;
 
   return (
     <Pane
