@@ -30,7 +30,7 @@
     "okapiConfigurationEntries.configName": "Název konfigurace",
     "okapiConfigurationEntries.code": "Kód",
     "okapiConfigurationEntries.value": "Hodnota",
-    "okapiConfigurationEntries.confirm": "Opravdu chcete odstranit tuto konfigurační jednotku?\nModul: {module}\nNázev konfigurace: {configName}\nKód: {code}",
+    "okapiConfigurationEntries.confirm": "Opravdu chcete smazat tuto konfigurační jednotku?\nModul: {module}\nNázev konfigurace: {configName}\nKód: {code}",
     "perms": "Aktuální oprávnění",
     "passwd": "Heslo",
     "passwd.setUserPassword": "Nastavte heslo uživatele",
