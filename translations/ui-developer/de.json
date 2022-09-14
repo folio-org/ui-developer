@@ -30,7 +30,7 @@
     "okapiConfigurationEntries.configName": "Konfigurationsname",
     "okapiConfigurationEntries.code": "Code",
     "okapiConfigurationEntries.value": "Wert",
-    "okapiConfigurationEntries.confirm": "Diesen Konfigurationseintrag  sicher löschen?\nModul: {Modul}\nKonfigurationsname: {KonfigName}\nCode: {code}",
+    "okapiConfigurationEntries.confirm": "Diesen Konfigurationseintrag  sicher löschen?\nModul: {module}\nKonfigurationsname: {configName}\nCode: {code}",
     "perms": "Aktuelle Berechtigungen",
     "passwd": "Passwd",
     "passwd.setUserPassword": "Systempasswort festlegen",
