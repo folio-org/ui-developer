@@ -5,7 +5,7 @@
     "sessionLocale": "Lingua della sessione",
     "setToken": "Imposta token",
     "configuration.loggingCategories": "Categorie di registrazione",
-    "configuration.loggingDocumentationLink": "See <a>the documentation</a> for available levels.",
+    "configuration.loggingDocumentationLink": "Consulta <a> la documentazione </a> per i livelli disponibili.",
     "configuration.autoLoginUsername": "Nome utente di accesso automatico",
     "configuration.autoLoginPassword": "Password di accesso automatico",
     "configuration.showPermissionsInMenu": "Mostra le autorizzazioni nel menu utente?",
