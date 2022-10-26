@@ -85,7 +85,7 @@
     "plugin-surface.exampleData": "(Example: <code>{data}</code>)",
     "userLocale": "User locale",
     "userLocale.setUserLocale": "Save per-user language and localization",
-    "userLocale.username": "Username",
+    "userLocale.username": "使用者名稱",
     "userLocale.locale": "Locale (for language display, date format etc.)",
     "userLocale.timeZone": "Time zone (time zone used when showing date time information)",
     "userLocale.currency": "Primary currency (for currency symbol to display)",
