@@ -150,7 +150,7 @@
     "okapiConsole.modules.deployments.undeploy.success": "Nenasazený titul {instId} (modul {id})",
     "okapiConsole.modules.deployments.undeploy.error": "Nelze zrušit nasazení titulu {instId} (modul {id}): {error}",
     "okapiConsole.modules.deployments.undeploy.confirm": "Jste si naprosto jisti, že víte, co děláte, a chcete zrušit nasazení?",
-    "app-manager": "Správce aplikací",
+    "app-manager": "Správa aplikací",
     "app-manager.apps": "Aplikace",
     "app-manager.apps.count": "{count} {count, plural, one {aplikace} other {aplikací}}",
     "app-manager.sources": "Zdroje",
