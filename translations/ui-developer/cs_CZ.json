@@ -104,7 +104,7 @@
     "okapiConsole.configuration.tenant": "Nájemce",
     "okapiConsole.configuration.user": "Uživatel",
     "okapiConsole.configuration.locale": "Lokální",
-    "okapiConsole.environment": "Životní prostředí",
+    "okapiConsole.environment": "Prostředí",
     "okapiConsole.modules": "Moduly",
     "okapiConsole.modules.restrictToLatest": "Omezit na nejnovější?",
     "okapiConsole.modules.showDescription": "Zobrazit popis?",
