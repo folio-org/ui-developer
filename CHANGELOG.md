@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## 6.4.0 IN PROGRESS
+## 7.0.0 IN PROGRESS
+* Increment `stripes` to `v8` and remove unneeded `react-redux`. Refs UID-123.
 
 ## [6.3.0](https://github.com/folio-org/ui-developer/tree/v6.3.0) (2022-10-23)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.2.0...v6.3.0)
