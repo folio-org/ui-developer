@@ -1,5 +1,7 @@
 # Change history for ui-developer
 
+## 7.1.0 IN PROGESS
+
 ## [7.0.0](https://github.com/folio-org/ui-developer/tree/v7.0.0) (2023-02-24)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.3.0...v7.0.0)
 
