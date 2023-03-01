@@ -46,7 +46,7 @@
     "permission.settings.hotkeys": "Settings (Developer): hot keys test",
     "permission.settings.token": "Settings (Developer): manage JWT authentication token",
     "permission.settings.locale": "Settings (Developer): set session locale",
-    "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
+    "permission.settings.okapiConfiguration": "設定 (開発者): テナント構成値を編集できます",
     "permission.settings.passwd": "Settings (developer): Can change users' passwords",
     "okapiQuery": "Okapiクエリ",
     "okapiQuery.queryPath": "Query path",
