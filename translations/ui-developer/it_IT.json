@@ -114,7 +114,7 @@
     "okapiConsole.modules.description": "Descrizione",
     "okapiConsole.modules.url": "URL",
     "okapiConsole.modules.detailFor": "Detail for {module} version {version}",
-    "okapiConsole.modules.versionNumber": "Versione",
+    "okapiConsole.modules.versionNumber": "Versione {version}",
     "okapiConsole.modules.requires": "Requires {count} {count, plural, one {interface} other {interfaces}}",
     "okapiConsole.modules.optional": "{count} optional {count, plural, one {interface} other {interfaces}}",
     "okapiConsole.modules.provides": "Provides {count} {count, plural, one {interface} other {interfaces}}",
