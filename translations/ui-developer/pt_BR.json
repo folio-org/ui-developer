@@ -46,7 +46,7 @@
     "permission.settings.hotkeys": "Configurações (desenvolvedor): teste de teclas de atalho",
     "permission.settings.token": "Configurações (desenvolvedor): gerenciar token de autenticação JWT",
     "permission.settings.locale": "Configurações (desenvolvedor): definir o idioma da sessão",
-    "permission.settings.okapiConfiguration": "Configurações (desenvolvedor): pode editar valores de configuração do tenant",
+    "permission.settings.okapiConfiguration": "Configurações (desenvolvedor): pode editar valores de configuração do inquilino",
     "permission.settings.passwd": "Configurações (desenvolvedor): pode alterar as senhas dos usuários",
     "okapiQuery": "Consulta Okapi",
     "okapiQuery.queryPath": "Caminho da consulta",
