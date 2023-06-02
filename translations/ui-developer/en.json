@@ -135,7 +135,7 @@
   "app-manager.sources.heading.repo": "Repo",
   "app-manager.sources.heading.token": "GitHub token",
   "app-manager.sources.heading.tokenStart": "Token start",
-  "app-manager.sources.heading.tokenEnd": "Token end",
+  "app-manager.sources.heading.tokenEnd": "Token end test",
 
   "plugin-surface": "Plugin surface",
   "plugin-surface.type": "Plugin type:",
