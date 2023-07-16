@@ -137,7 +137,7 @@
     "permission.settings.okapiConsole.modules": "Nastavení (vývojář): Můžete použít kartu Moduly konzole Okapi",
     "canIUse.api": "API",
     "canIUse.requiresOneOf": "vyžaduje jednu z",
-    "canIUse.availableIn": "Dostupné v těchto setech veřejných oprávnění",
+    "canIUse.availableIn": "Dostupné v těchto sadách veřejných oprávnění",
     "okapiTimers": "Časovače Okapi",
     "okapiTimers.id": "ID",
     "okapiTimers.method": "Metoda",
