@@ -4,6 +4,7 @@
 
 * *BREAKING* Upgrade `react` to `v18`. Refs UID-131.
 * Bump `react-inspector` to `v6` for react 18 compatibility.
+* Bump `@formatjs/cli` to `^6.1.3`.
 
 ## [7.0.0](https://github.com/folio-org/ui-developer/tree/v7.0.0) (2023-02-24)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.3.0...v7.0.0)
