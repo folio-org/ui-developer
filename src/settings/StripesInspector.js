@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { Pane } from '@folio/stripes/components';
-import ObjectInspector from 'react-inspector';
+import { ObjectInspector } from 'react-inspector';
 
 const StripesInspector = ({ stripes }) => {
   return (
