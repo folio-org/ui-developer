@@ -236,7 +236,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^2.11.1",
-    "react-inspector": "^5.1.0",
+    "react-inspector": "^6.0.0",
     "react-query": "^3.38.1"
   },
   "peerDependencies": {
