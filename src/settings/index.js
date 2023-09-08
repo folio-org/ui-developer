@@ -9,7 +9,6 @@ import ShowPermissions from './ShowPermissions';
 import SessionLocale from './SessionLocale';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
-import Token from './Token';
 import FolioBabies from './FolioBabies';
 import OkapiConfiguration from './OkapiConfiguration';
 import Passwd from './Passwd';
@@ -37,12 +36,6 @@ const pages = [
     labelId: 'ui-developer.perms',
     component: ShowPermissions,
     perm: 'ui-developer.settings.perms',
-  },
-  {
-    route: 'token',
-    labelId: 'ui-developer.setToken',
-    component: Token,
-    perm: 'ui-developer.settings.token',
   },
   {
     route: 'locale',
