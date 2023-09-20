@@ -1,10 +1,28 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { HorizontalBar } from 'react-chartjs-2';
+import {
+  BarElement,
+  Chart as ChartJS,
+  CategoryScale,
+  Legend,
+  LinearScale,
+  Title,
+  Tooltip,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
 import { stripesConnect } from '@folio/stripes/core';
 import { Checkbox, LoadingPane, Pane } from '@folio/stripes/components';
 
+ChartJS.register(
+  BarElement,
+  CategoryScale,
+  Legend,
+  LinearScale,
+  Title,
+  Tooltip,
+);
 
 function chartModules(intl, records) {
   const names = records.map(r => r.name);
@@ -28,30 +46,33 @@ function chartModules(intl, records) {
   };
 
   const options = {
+    indexAxis: 'y',
     maintainAspectRatio: false,
-    tooltips: {
-      callbacks: {
-        title: t => {
-          const record = records[t[0].index];
-          return `${record.name} (${record.id})`;
-        },
-        label: t => {
-          const record = records[t.index];
-          const elementName = ['requires', 'provides'][t.datasetIndex];
-          const list = record[elementName] || [];
-          const emdash = '—';
-          return [
-            `${emdash} ${elementName} ${list.length} interfaces ${emdash}`,
-            ...list.map(x => `${x.id} v${x.version}`),
-          ];
+    plugins: {
+      tooltip: {
+        callbacks: {
+          title: t => {
+            const record = records[t[0].dataIndex];
+            return `${record.name} (${record.id})`;
+          },
+          label: t => {
+            const record = records[t.dataIndex];
+            const elementName = ['requires', 'provides'][t.datasetIndex];
+            const list = record[elementName] || [];
+            const emdash = '—';
+            return [
+              `${emdash} ${elementName} ${list.length} interfaces ${emdash}`,
+              ...list.map(x => `${x.id} v${x.version}`),
+            ];
+          },
         },
       },
-    },
+    }
   };
 
   return (
     <div style={{ height: 68 + records.length * 18 }}>
-      <HorizontalBar
+      <Bar
         redraw
         data={data}
         options={options}
@@ -72,6 +93,8 @@ const Dependencies = ({ resources }) => {
   const { modules } = resources;
   if (!modules.hasLoaded) return <LoadingPane />;
 
+  modules.records.sort((a, b) => a.name.localeCompare(b.name));
+
   // By inspection, module type can be determined from ID. Four types:
   //      /folio_(.*)-([0-9].)*/    UI module $1, version $2
   //      /mod-(.*)-([0-9].)*/      Back-end module $1, version $2
@@ -89,8 +112,6 @@ const Dependencies = ({ resources }) => {
     }
   });
 
-  const lcn = (x) => x.name.toLowerCase();
-  modules.records.sort((a, b) => (lcn(a) < lcn(b) ? -1 : lcn(a) > lcn(b) ? 1 : 0));
 
   return (
     <Pane
