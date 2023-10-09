@@ -7,6 +7,7 @@
 * Bump `@formatjs/cli` to `^6.1.3`.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs UID-137.
 * Bump react-chartjs-2 from 2.11.1 to 5.2.0.
+* Provide tools to expire AT, RT. Refs UID-138.
 
 ## [7.0.0](https://github.com/folio-org/ui-developer/tree/v7.0.0) (2023-02-24)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.3.0...v7.0.0)

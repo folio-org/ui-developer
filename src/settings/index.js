@@ -24,6 +24,7 @@ import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
 import AppManager from './AppManager';
+import RefreshTokenRotation from './RefreshTokenRotation';
 
 const pages = [
   {
@@ -137,6 +138,14 @@ const pages = [
     component: OkapiTimers,
     perm: 'ui-developer.settings.okapiTimers',
   },
+  {
+    route: 'rtr',
+    labelId: 'ui-developer.rtr',
+    component: RefreshTokenRotation,
+    // FIXME use permissions for rtr
+    // perm: 'ui-developer.settings.rtr',
+  },
+
 ];
 
 const DeveloperSettings = (props) => {
