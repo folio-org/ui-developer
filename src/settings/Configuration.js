@@ -34,6 +34,21 @@ class Configuration extends React.Component {
     // allowing the suppressIntlErrors setting to take effect
     stripes.setLocale(stripes.locale);
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistration()
+        .then(reg => {
+          const sw = reg.installing || reg.waiting || reg.active;
+          if (sw) {
+            stripes.logger.log('rtr', 'sending LOGGER_CONFIG');
+            sw.postMessage({ source: '@folio/stripes-core', type: 'LOGGER_CONFIG', value: { categories: data.logger.categories } });
+          } else {
+            console.error('error sending LOGGER; sw not registered');
+          }
+        });
+    } else {
+      console.error('error sending LOGGER; serviceWorker not found in navigator');
+    }
+
     this.forceUpdate();
   }
 
