@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## 8.0.0 IN PROGESS
+## [8.0.0](https://github.com/folio-org/ui-developer/tree/v8.0.0) (2023-10-19)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v7.0.0...v8.0.0)
 
 * *BREAKING* Upgrade `react` to `v18`. Refs UID-131.
 * Bump `react-inspector` to `v6` for react 18 compatibility.
