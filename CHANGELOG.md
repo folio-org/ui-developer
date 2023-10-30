@@ -1,11 +1,17 @@
 # Change history for ui-developer
 
-## 8.0.0 IN PROGESS
+# 8.1.0 IN PROGRESS
+
+* Handle access-control via cookies instead of `X-Okapi-Token` header. Refs UID-121.
+
+## [8.0.0](https://github.com/folio-org/ui-developer/tree/v8.0.0) (2023-10-19)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v7.0.0...v8.0.0)
 
 * *BREAKING* Upgrade `react` to `v18`. Refs UID-131.
 * Bump `react-inspector` to `v6` for react 18 compatibility.
 * Bump `@formatjs/cli` to `^6.1.3`.
-* Handle access-control via cookies instead of `X-Okapi-Token` header. Refs UID-121.
+* *BREAKING* bump `react-intl` to `v6.4.4`. Refs UID-137.
+* Bump react-chartjs-2 from 2.11.1 to 5.2.0.
 
 ## [7.0.0](https://github.com/folio-org/ui-developer/tree/v7.0.0) (2023-02-24)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v6.3.0...v7.0.0)
