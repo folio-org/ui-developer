@@ -226,23 +226,23 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-final-form": "^6.3.0",
-    "react-intl": "^5.7.0",
+    "react-intl": "^6.4.4",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.0"
   },
   "dependencies": {
-    "chart.js": "^2.9.4",
+    "chart.js": "^4.4.0",
     "ky": "^0.23.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
-    "react-chartjs-2": "^2.11.1",
+    "react-chartjs-2": "^5.2.0",
     "react-inspector": "^6.0.0",
     "react-query": "^3.38.1"
   },
   "peerDependencies": {
     "@folio/stripes": "^9.0.0",
     "react": "^18.2.0",
-    "react-intl": "^5.7.0",
+    "react-intl": "^6.4.4",
     "react-router-dom": "^5.2.0"
   }
 }
