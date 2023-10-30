@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import localforage from 'localforage';
 
-import { useStripes } from '@folio/stripes/core';
+import {
+  registerServiceWorker,
+  unregisterServiceWorker,
+  useStripes,
+} from '@folio/stripes/core';
 
 import {
   Button,
@@ -24,7 +28,6 @@ const RefreshTokenRotation = () => {
 
   localforage.getItem('okapiSess')
     .then((data) => {
-      console.log(data);
       tokenExpiration = {
         atExpires: data.tokenExpiration?.accessTokenExpiration ? new Date(data.tokenExpiration.accessTokenExpiration).getTime() : -1,
         rtExpires: data.tokenExpiration?.refreshTokenExpiration ? new Date(data.tokenExpiration.refreshTokenExpiration).getTime() : Date.now() + (10 * 60 * 1000),
@@ -44,7 +47,7 @@ const RefreshTokenRotation = () => {
           stripes.logger.log('rtr', '@folio/developer sending', message);
           sw.postMessage(message);
         } else {
-          console.warn('could not dispatch message; no active registration');
+          console.warn('could not dispatch message; no active registration'); // eslint-disable-line no-console
         }
       });
   };
@@ -69,7 +72,22 @@ const RefreshTokenRotation = () => {
     dispatchTokenExpiration();
   };
 
-  console.log('tokenexpieration', tokenExpiration);
+  /**
+   * registerSW
+   * Call the service-worker registration function.
+   */
+  const registerSW = () => {
+    registerServiceWorker(stripes.okapi, stripes.logger.categories, stripes.logger);
+  };
+
+  /**
+   * unregisterSW
+   * Call the service-worker remove-registration function. This has the same effect
+   * as using the browser's developer-tools to disable an active service worker.
+   */
+  const unregisterSW = () => {
+    unregisterServiceWorker();
+  };
 
   if (!isLoading) {
     return (
@@ -77,9 +95,18 @@ const RefreshTokenRotation = () => {
         defaultWidth="fill"
         renderHeader={renderProps => <PaneHeader {...renderProps} paneTitle={<FormattedMessage id="ui-developer.rtr" />} />}
       >
-        <Button onClick={invalidateAT}><FormattedMessage id="ui-developer.rtr.invalidateAT" /></Button>
-        <Button onClick={invalidateRT}><FormattedMessage id="ui-developer.rtr.invalidateRT" /></Button>
-        <pre>{JSON.stringify(tokenExpiration, null, 2)}</pre>
+        <ul>
+          <li>service-worker logs RTR events in the category <code>rtr-sw</code></li>
+          <li>stripes logs RTR events in the category <code>rtr</code></li>
+        </ul>
+        <div>
+          <Button onClick={invalidateAT}><FormattedMessage id="ui-developer.rtr.invalidateAT" /></Button>
+          <Button onClick={invalidateRT}><FormattedMessage id="ui-developer.rtr.invalidateRT" /></Button>
+        </div>
+        <div>
+          <Button onClick={registerSW}><FormattedMessage id="ui-developer.rtr.registerServiceWorker" /></Button>
+          <Button onClick={unregisterSW}><FormattedMessage id="ui-developer.rtr.unregisterServiceWorker" /></Button>
+        </div>
       </Pane>
     );
   } else {
