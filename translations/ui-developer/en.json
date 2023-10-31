@@ -157,6 +157,12 @@
   "userLocale.success": "Successfully stored locale settings for {username}",
   "userLocale.numberingSystem": "Numbering system (override locale's default; <a>details</a>)",
 
+  "rtr": "Refresh token rotation",
+  "rtr.invalidateAT": "Invalidate access token",
+  "rtr.invalidateRT": "Invalidate refresh token",
+  "rtr.registerServiceWorker": "Register the service worker",
+  "rtr.unregisterServiceWorker": "Unregister the service worker",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",

@@ -203,6 +203,12 @@
           "app-manager.config.sources.all"
         ],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.rtr",
+        "displayName": "Settings (developer): Can dicker with token expirations in redux",
+        "subPermissions": [],
+        "visible": true
       }
     ]
   },
@@ -233,6 +239,7 @@
   "dependencies": {
     "chart.js": "^4.4.0",
     "ky": "^0.23.0",
+    "localforage": "^1.10.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^5.2.0",
