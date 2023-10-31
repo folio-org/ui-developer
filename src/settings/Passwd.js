@@ -110,10 +110,10 @@ class Passwd extends React.Component {
           // a request like /foo/bar?id=someValue
           // it expects only /foo/bar/someValue
           const options = {
+            credentials: 'include',
             method: 'DELETE',
             headers: {
               'X-Okapi-Tenant': stripes.okapi.tenant,
-              'X-Okapi-Token': stripes.store.getState().okapi.token,
               'Content-Type': 'application/json',
             },
           };
