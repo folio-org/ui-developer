@@ -142,8 +142,7 @@ const pages = [
     route: 'rtr',
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
-    // FIXME use permissions for rtr
-    // perm: 'ui-developer.settings.rtr',
+    perm: 'ui-developer.settings.rtr',
   },
 
 ];
