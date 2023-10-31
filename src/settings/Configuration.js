@@ -42,10 +42,12 @@ class Configuration extends React.Component {
             stripes.logger.log('rtr', 'sending LOGGER_CONFIG');
             sw.postMessage({ source: '@folio/stripes-core', type: 'LOGGER_CONFIG', value: { categories: data.logger.categories } });
           } else {
+            // eslint-disable-next-line no-console
             console.error('error sending LOGGER; sw not registered');
           }
         });
     } else {
+      // eslint-disable-next-line no-console
       console.error('error sending LOGGER; serviceWorker not found in navigator');
     }
 
