@@ -168,4 +168,4 @@
     "rtr.invalidateRT": "Invalidate refresh token",
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker"
- }
+}

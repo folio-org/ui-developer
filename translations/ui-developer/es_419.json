@@ -162,5 +162,10 @@
     "app-manager.sources.heading.repo": "Repo",
     "app-manager.sources.heading.token": "ficha de GitHub",
     "app-manager.sources.heading.tokenStart": "Inicio de fichas",
-    "app-manager.sources.heading.tokenEnd": "Fin de la ficha"
+    "app-manager.sources.heading.tokenEnd": "Fin de la ficha",
+    "rtr": "Refresh token rotation",
+    "rtr.invalidateAT": "Invalidate access token",
+    "rtr.invalidateRT": "Invalidate refresh token",
+    "rtr.registerServiceWorker": "Register the service worker",
+    "rtr.unregisterServiceWorker": "Unregister the service worker"
 }
