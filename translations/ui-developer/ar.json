@@ -162,5 +162,10 @@
     "app-manager.sources.heading.repo": "المستودع",
     "app-manager.sources.heading.token": "رمز GitHub",
     "app-manager.sources.heading.tokenStart": "بداية الرمز",
-    "app-manager.sources.heading.tokenEnd": "نهاية الرمز"
+    "app-manager.sources.heading.tokenEnd": "نهاية الرمز",
+    "rtr": "Refresh token rotation",
+    "rtr.invalidateAT": "Invalidate access token",
+    "rtr.invalidateRT": "Invalidate refresh token",
+    "rtr.registerServiceWorker": "Register the service worker",
+    "rtr.unregisterServiceWorker": "Unregister the service worker"
 }
