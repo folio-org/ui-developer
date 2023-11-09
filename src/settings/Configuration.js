@@ -73,6 +73,7 @@ class Configuration extends React.Component {
           username: stripes.config.autoLogin.username,
           password: stripes.config.autoLogin.password,
         },
+        preserveConsole: stripes.config.preserveConsole || false,
       },
     };
 
@@ -164,6 +165,14 @@ class Configuration extends React.Component {
                 name="config.suppressIntlErrors"
                 id="config.suppressIntlErrors"
                 label={<FormattedMessage id="ui-developer.configuration.suppressIntlErrors" />}
+              />
+              <Field
+                htmlFor="10"
+                component={Checkbox}
+                type="checkbox"
+                name="config.preserveConsole"
+                id="config.preserveConsole"
+                label={<FormattedMessage id="ui-developer.configuration.preserveConsole" />}
               />
             </Col>
           </Row>
