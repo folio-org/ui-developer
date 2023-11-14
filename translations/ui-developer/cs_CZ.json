@@ -163,9 +163,10 @@
     "app-manager.sources.heading.token": "Token GitHubu",
     "app-manager.sources.heading.tokenStart": "Start tokenu",
     "app-manager.sources.heading.tokenEnd": "Konec tokenu",
-    "rtr": "Refresh token rotation",
-    "rtr.invalidateAT": "Invalidate access token",
-    "rtr.invalidateRT": "Invalidate refresh token",
-    "rtr.registerServiceWorker": "Register the service worker",
-    "rtr.unregisterServiceWorker": "Unregister the service worker"
+    "rtr": "Obnovit rotaci tokenu",
+    "rtr.invalidateAT": "Zneplatnit přístupový token",
+    "rtr.invalidateRT": "Zneplatnit tokenu obnovení",
+    "rtr.registerServiceWorker": "Zaregistrovat servisního pracovníka",
+    "rtr.unregisterServiceWorker": "Zrušit registraci servisního pracovníka",
+    "configuration.preserveConsole": "Preserve console on logout"
 }
