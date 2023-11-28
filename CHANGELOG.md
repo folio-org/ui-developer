@@ -4,6 +4,7 @@
 
 * Handle access-control via cookies instead of `X-Okapi-Token` header. Refs UID-121.
 * Configuration: expose `preserveConsole` to toggle `console.clear()` on logout. Refs UID-139.
+* Optionally suppress react-intl warnings. Refs UID-140.
 
 ## [8.0.0](https://github.com/folio-org/ui-developer/tree/v8.0.0) (2023-10-19)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v7.0.0...v8.0.0)

@@ -69,6 +69,7 @@ class Configuration extends React.Component {
         showHomeLink: stripes.config.showHomeLink || false,
         showDevInfo: stripes.config.showDevInfo || false,
         suppressIntlErrors: stripes.config.suppressIntlErrors || false,
+        suppressIntlWarnings: stripes.config.suppressIntlWarningss || false,
         autoLogin: {
           username: stripes.config.autoLogin.username,
           password: stripes.config.autoLogin.password,
@@ -168,6 +169,14 @@ class Configuration extends React.Component {
               />
               <Field
                 htmlFor="10"
+                component={Checkbox}
+                type="checkbox"
+                name="config.suppressIntlWarnings"
+                id="config.suppressIntlWarnings"
+                label={<FormattedMessage id="ui-developer.configuration.suppressIntlWarnings" />}
+              />
+              <Field
+                htmlFor="11"
                 component={Checkbox}
                 type="checkbox"
                 name="config.preserveConsole"
