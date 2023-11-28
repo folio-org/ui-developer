@@ -102,6 +102,7 @@ class Passwd extends React.Component {
           password: values.password,
           userId,
         };
+        const token = stripes.store.getState().okapi.token;
 
         if (!res.credentialsExist) {
           return mutator.passwd.POST(credentials);
@@ -114,6 +115,7 @@ class Passwd extends React.Component {
             method: 'DELETE',
             headers: {
               'X-Okapi-Tenant': stripes.okapi.tenant,
+              ...(token && { 'X-Okapi-Token': token }),
               'Content-Type': 'application/json',
             },
           };
