@@ -121,7 +121,7 @@
     "okapiConsole.modules.permissionSets": "Definuje {count} {count, plural, one {povolení} other {povolení}}",
     "okapiConsole.modules.enabled": "Zprovozněno?",
     "okapiConsole.modules.enable.success": "Povolený modul {id}",
-    "okapiConsole.modules.disable.success": "Zakázaný modul {id}",
+    "okapiConsole.modules.disable.success": "Deaktivovaný modul {id}",
     "okapiConsole.modules.enable.failure": "Nelze povolit modul {id}: {error}: {detail}",
     "okapiConsole.modules.disable.failure": "Nelze zakázat modul {id}: {error}: {detail}",
     "okapiConsole.modules.dependencyError": "Některé závislosti by nebyly uspokojeny",
@@ -163,9 +163,10 @@
     "app-manager.sources.heading.token": "Token GitHubu",
     "app-manager.sources.heading.tokenStart": "Start tokenu",
     "app-manager.sources.heading.tokenEnd": "Konec tokenu",
-    "rtr": "Refresh token rotation",
-    "rtr.invalidateAT": "Invalidate access token",
-    "rtr.invalidateRT": "Invalidate refresh token",
-    "rtr.registerServiceWorker": "Register the service worker",
-    "rtr.unregisterServiceWorker": "Unregister the service worker"
+    "rtr": "Obnovit rotaci tokenu",
+    "rtr.invalidateAT": "Zneplatnit přístupový token",
+    "rtr.invalidateRT": "Zneplatnit tokenu obnovení",
+    "rtr.registerServiceWorker": "Zaregistrovat servisního pracovníka",
+    "rtr.unregisterServiceWorker": "Zrušit registraci servisního pracovníka",
+    "configuration.preserveConsole": "Zachovat konzoly při odhlášení"
 }
