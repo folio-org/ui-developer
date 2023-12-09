@@ -68,7 +68,7 @@
     "perms.visibleOnly": "Show visible permissions only",
     "perms.showDisplayName": "Show display name as well as true name",
     "perms.permissionCount": "{count} permissions:",
-    "translations": "Translations",
+    "translations": "Tłumaczenia",
     "stripesInspector": "Stripes inspector",
     "plugin-surface": "Plugin surface",
     "plugin-surface.type": "Plugin type:",
@@ -141,7 +141,7 @@
     "okapiTimers": "Okapi timers",
     "okapiTimers.id": "ID",
     "okapiTimers.method": "Method",
-    "okapiTimers.path": "Path",
+    "okapiTimers.path": "Ścieżka",
     "okapiTimers.unit": "Unit",
     "okapiTimers.delay": "Delay",
     "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers",
@@ -155,7 +155,7 @@
     "app-manager.apps.count": "{count} {count, plural, one {application} other {applications}}",
     "app-manager.sources": "Sources",
     "app-manager.sources.count": "{count} {count, plural, one {source} other {sources}}",
-    "app-manager.sources.singular": "Source",
+    "app-manager.sources.singular": "Źródło",
     "app-manager.sources.plural": "Sources",
     "app-manager.sources.objectLabel": "Entries",
     "app-manager.sources.heading.owner": "Owner",
@@ -168,5 +168,6 @@
     "rtr.invalidateRT": "Invalidate refresh token",
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker",
-    "configuration.preserveConsole": "Preserve console on logout"
+    "configuration.preserveConsole": "Preserve console on logout",
+    "configuration.suppressIntlWarnings": "Suppress intl warnings"
 }
