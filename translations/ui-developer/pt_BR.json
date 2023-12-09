@@ -168,5 +168,6 @@
     "rtr.invalidateRT": "Invalidar token de atualização",
     "rtr.registerServiceWorker": "Registre o trabalhador de serviço",
     "rtr.unregisterServiceWorker": "Cancelar o registro do trabalhador de serviço",
-    "configuration.preserveConsole": "Preservar console ao sair"
+    "configuration.preserveConsole": "Preservar console ao sair",
+    "configuration.suppressIntlWarnings": "Suprimir avisos internacionais"
 }

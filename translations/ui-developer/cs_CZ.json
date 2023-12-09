@@ -168,5 +168,6 @@
     "rtr.invalidateRT": "Zneplatnit tokenu obnovení",
     "rtr.registerServiceWorker": "Zaregistrovat servisního pracovníka",
     "rtr.unregisterServiceWorker": "Zrušit registraci servisního pracovníka",
-    "configuration.preserveConsole": "Zachovat konzoly při odhlášení"
+    "configuration.preserveConsole": "Zachovat konzoly při odhlášení",
+    "configuration.suppressIntlWarnings": "Potlačení intl varování"
 }

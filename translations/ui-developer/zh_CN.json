@@ -163,10 +163,11 @@
     "app-manager.sources.heading.token": "GitHub令牌",
     "app-manager.sources.heading.tokenStart": "令牌开始",
     "app-manager.sources.heading.tokenEnd": "令牌结束",
-    "rtr": "Refresh token rotation",
-    "rtr.invalidateAT": "Invalidate access token",
-    "rtr.invalidateRT": "Invalidate refresh token",
-    "rtr.registerServiceWorker": "Register the service worker",
-    "rtr.unregisterServiceWorker": "Unregister the service worker",
-    "configuration.preserveConsole": "Preserve console on logout"
+    "rtr": "刷新令牌轮换",
+    "rtr.invalidateAT": "使访问令牌无效",
+    "rtr.invalidateRT": "使刷新令牌无效",
+    "rtr.registerServiceWorker": "注册服务人员",
+    "rtr.unregisterServiceWorker": "注销服务人员",
+    "configuration.preserveConsole": "注销时保留控制台",
+    "configuration.suppressIntlWarnings": "隐藏国际警告"
 }
