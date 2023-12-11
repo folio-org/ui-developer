@@ -115,6 +115,7 @@ class Configuration extends React.Component {
               <Field
                 htmlFor="3"
                 component={TextField}
+                type="password"
                 name="config.autoLogin.password"
                 label={<FormattedMessage id="ui-developer.configuration.autoLoginPassword" />}
               />
