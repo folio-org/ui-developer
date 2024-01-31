@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
@@ -26,14 +26,9 @@ const RefreshTokenRotation = () => {
     getTokenExpiry()
       .then(te => {
         setTokenExpiration(te ?? { atExpires: -1, rtExpires: -1 });
-        // console.log('te', tokenExpiration)
-        // console.log('at type', typeof tokenExpiration.current.atExpires)
-        // console.log('rt type', typeof tokenExpiration.current.rtExpires)
         setIsLoading(false);
       });
   }, []);
-
-
 
   /**
    * invalidateAT
