@@ -164,7 +164,7 @@
     "app-manager.sources.heading.tokenStart": "Token start",
     "app-manager.sources.heading.tokenEnd": "Token end",
     "rtr": "Refresh token rotation",
-    "rtr.invalidateAT": "Invalidate access token",
+    "rtr.invalidateAT": "Unieważnij token dostępu",
     "rtr.invalidateRT": "Invalidate refresh token",
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker",
