@@ -10,8 +10,7 @@ import {
   supportedNumberingSystems,
   userLocaleConfig,
 } from '@folio/stripes/core';
-import { Button, Pane, Select, TextField, CurrencySelect } from '@folio/stripes/components';
-import timezones from '../util/timezones';
+import { Button, CurrencySelect, Pane, Select, TextField, timezones } from '@folio/stripes/components';
 
 const timeZonesOptions = timezones.map(timezone => (
   {
