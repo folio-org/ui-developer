@@ -7,6 +7,7 @@
 * Optionally suppress react-intl warnings. Refs UID-140.
 * Use type=password for auto login password field. Refs UID-147.
 * *BREAKING* Purge service-worker cruft; leverage new STCOR functions for RTR display.
+* Provide Session-event tools. Refs UID-149.
 
 ## [8.0.0](https://github.com/folio-org/ui-developer/tree/v8.0.0) (2023-10-19)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v7.0.0...v8.0.0)
