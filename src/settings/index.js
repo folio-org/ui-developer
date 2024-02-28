@@ -25,6 +25,7 @@ import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
+import IdleSessionTimeout from './IdleSessionTimeout';
 
 const pages = [
   {
@@ -144,7 +145,12 @@ const pages = [
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
   },
-
+  {
+    route: 'idle-session-timeout',
+    labelId: 'ui-developer.idle-session-timeout',
+    component: IdleSessionTimeout,
+    perm: 'ui-developer.settings.idleSessionTimeout',
+  },
 ];
 
 const DeveloperSettings = (props) => {

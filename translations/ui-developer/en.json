@@ -165,6 +165,10 @@
   "rtr.registerServiceWorker": "Register the service worker",
   "rtr.unregisterServiceWorker": "Unregister the service worker",
 
+  "idleSession": "Emit session-related events",
+  "idleSession.emitIdleSessionWarning": "Emit IDLE_SESSION_WARNING",
+  "idleSession.emitRTRSuccess": "Emit RTR_SUCCESS",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",

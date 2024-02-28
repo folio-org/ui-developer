@@ -209,6 +209,12 @@
         "displayName": "Settings (developer): Can dicker with token expirations in redux",
         "subPermissions": [],
         "visible": true
+      },
+      {
+        "permissionName": "ui-developer.settings.idleSessionTimeout",
+        "displayName": "Settings (developer): Can emit session-related events",
+        "subPermissions": [],
+        "visible": true
       }
     ]
   },
@@ -223,7 +229,7 @@
     "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.17.0",
     "@folio/eslint-config-stripes": "^7.0.0",
-    "@folio/stripes": "^9.1.0",
+    "@folio/stripes": "^9.0.0",
     "@folio/stripes-cli": "^3.0.0",
     "@formatjs/cli": "^6.1.3",
     "eslint": "^7.32.0",
@@ -247,7 +253,7 @@
     "react-query": "^3.38.1"
   },
   "peerDependencies": {
-    "@folio/stripes": "^9.1.0",
+    "@folio/stripes": "^9.0.0",
     "react": "^18.2.0",
     "react-intl": "^6.4.4",
     "react-router-dom": "^5.2.0"
