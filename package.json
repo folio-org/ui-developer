@@ -1,6 +1,6 @@
 {
   "name": "@folio/developer",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "description": "Developer settings",
   "repository": "folio-org/ui-developer",
   "publishConfig": {
