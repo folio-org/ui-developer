@@ -51,12 +51,13 @@ class OkapiPaths extends React.Component {
     const { stripes } = this.props;
 
     const paths = this.state.paths;
+    const token = stripes.store.getState().okapi.token;
 
     const options = {
       method: 'GET',
       headers: {
         'X-Okapi-Tenant': stripes.okapi.tenant,
-        'X-Okapi-Token': stripes.store.getState().okapi.token,
+        ...(token && { 'X-Okapi-Token': token }),
         'Content-Type': 'application/json',
       },
     };

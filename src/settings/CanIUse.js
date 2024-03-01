@@ -65,11 +65,14 @@ class CanIUse extends React.Component {
   componentDidMount() {
     const { stripes } = this.props;
 
+    const token = stripes.store.getState().okapi.token;
+
     const options = {
+      credentials: 'include',
       method: 'GET',
       headers: {
         'X-Okapi-Tenant': stripes.okapi.tenant,
-        'X-Okapi-Token': stripes.store.getState().okapi.token,
+        ...(token && { 'X-Okapi-Token': token }),
         'Content-Type': 'application/json',
       },
     };
