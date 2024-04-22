@@ -52,7 +52,7 @@ class Configuration extends React.Component {
         showHomeLink: stripes.config.showHomeLink || false,
         showDevInfo: stripes.config.showDevInfo || false,
         suppressIntlErrors: stripes.config.suppressIntlErrors || false,
-        suppressIntlWarnings: stripes.config.suppressIntlWarningss || false,
+        suppressIntlWarnings: stripes.config.suppressIntlWarnings || false,
         autoLogin: {
           username: stripes.config.autoLogin.username,
           password: stripes.config.autoLogin.password,
