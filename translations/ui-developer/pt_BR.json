@@ -55,7 +55,7 @@
     "okapiQuery.limitWarning": "Os resultados são limitados a 100 registros",
     "permission.settings.okapiQuery": "Configurações (desenvolvedor): pode executar consultas",
     "DO_NOT_TRANSLATE": "Esta tradução é um teste",
-    "configuration.suppressIntlErrors": "Suprimir erros intl",
+    "configuration.suppressIntlErrors": "Ocultar erros intl",
     "dependencies": "Dependências",
     "dependencies.moduleCount": "{count} módulos selecionados",
     "dependencies.interfacesRequired": "núm. de interfaces obrigatórias",
@@ -169,5 +169,5 @@
     "rtr.registerServiceWorker": "Registre o trabalhador de serviço",
     "rtr.unregisterServiceWorker": "Cancelar o registro do trabalhador de serviço",
     "configuration.preserveConsole": "Preservar console ao sair",
-    "configuration.suppressIntlWarnings": "Suprimir avisos internacionais"
+    "configuration.suppressIntlWarnings": "Ocultar avisos intl"
 }
