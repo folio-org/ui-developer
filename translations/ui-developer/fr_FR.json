@@ -38,7 +38,7 @@
     "passwd.password": "Mot de passe",
     "passwd.confirmPassword": "Confirmer le mot de passe",
     "passwd.error.confirm": "Les mots de passe doivent correspondre",
-    "passwd.error.missingUser": "Erreur: impossible de trouver le nom d'utilisateur \" {username} \"",
+    "passwd.error.missingUser": "Erreur : impossible de trouver le nom d'utilisateur \"{username}\"",
     "passwd.error": "Désolé, une erreur s'est produite: {error}",
     "passwd.success": "Réinitialisation réussie du mot de passe pour {username}",
     "permission.settings.configuration": "Paramètres (développeur): configuration",
