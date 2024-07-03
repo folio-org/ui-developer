@@ -25,8 +25,15 @@ import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
+import ShowCapabilities from './ShowCapabilities';
 
 const pages = [
+  {
+    route: 'capabilities',
+    labelId: 'ui-developer.capabilities',
+    component: ShowCapabilities,
+    perm: 'ui-developer.settings.configuration',
+  },
   {
     route: 'configuration',
     labelId: 'ui-developer.configuration',

@@ -1,6 +1,9 @@
 {
   "DO_NOT_TRANSLATE": "This translation is a playground",
   "meta.title": "Developer",
+  "capabilities": "Capabilities",
+  "capabilitiesTitle": "Capabilities Lookup",
+  "capabilitySets": "Capability Sets",
   "configuration": "Configuration",
   "perms": "Current permissions",
   "perms.visibleOnly": "Show visible permissions only",
