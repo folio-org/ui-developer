@@ -29,12 +29,6 @@ import ShowCapabilities from './ShowCapabilities';
 
 const pages = [
   {
-    route: 'capabilities',
-    labelId: 'ui-developer.capabilities',
-    component: ShowCapabilities,
-    perm: 'ui-developer.settings.configuration',
-  },
-  {
     route: 'configuration',
     labelId: 'ui-developer.configuration',
     component: Configuration,
@@ -62,6 +56,12 @@ const pages = [
     route: 'okapi-paths',
     labelId: 'ui-developer.okapiPaths',
     component: OkapiPaths,
+  },
+  {
+    route: 'capabilities',
+    labelId: 'ui-developer.canIUseCapabilities',
+    component: ShowCapabilities,
+    perm: 'ui-developer.settings.configuration',
   },
   {
     route: 'can-i-use',

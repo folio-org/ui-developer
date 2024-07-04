@@ -1,7 +1,9 @@
 {
   "DO_NOT_TRANSLATE": "This translation is a playground",
   "meta.title": "Developer",
+  "canIUseCapabilities": "I can haz capabilities?",
   "capabilities": "Capabilities",
+  "capabilitiesSubtitle": "Permission name/displayName to capabilities mapper",
   "capabilitiesTitle": "Capabilities Lookup",
   "capabilitySets": "Capability Sets",
   "configuration": "Configuration",
@@ -47,6 +49,9 @@
   "hotkeys.home": "to go to the Home page",
   "hotkeys.about": "to go to the About page",
   "hotkeys.undefined": "undefined",
+
+  "search": "Search",
+  "searchBy": "Search by",
 
   "setToken.authenticationToken": "Authentication token (JWT)",
 
