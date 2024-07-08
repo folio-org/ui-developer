@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { stripesConnect, useOkapiKy } from '@folio/stripes/core';
+import { stripesConnect, useOkapiKy, useStripes } from '@folio/stripes/core';
 import { Button, Pane, Row, Col, SearchField } from '@folio/stripes/components';
 
 const ShowCapabilities = () => {
   const ky = useOkapiKy();
+  const stripes = useStripes();
   const [capabilitiesResults, setCapabilitiesResults] = useState({});
   const [capabilitySetsResults, setCapabilitySetsResults] = useState({});
   const [query, setQuery] = useState('');
 
   const searchParams = {
-    limit: 1000,
-    offset: 0,
+    limit: stripes.config.maxUnpagedResourceCount,
     query: `name=*${query}*`,
   };
 
@@ -34,7 +34,6 @@ const ShowCapabilities = () => {
           <li><strong>resource:</strong> {value.resource}</li>
           <li><strong>action:</strong> {value.action}</li>
           <li><strong>permissionName:</strong> {value.name}</li>
-          <li><strong>permissionDisplayName:</strong> {value.description}</li>
         </ul>
       </ul>
     ));
