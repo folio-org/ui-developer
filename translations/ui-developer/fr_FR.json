@@ -8,7 +8,7 @@
     "configuration.loggingDocumentationLink": "Voir <a>la documentation</a> pour les niveaux disponibles.",
     "configuration.autoLoginUsername": "Nom d'utilisateur pour connexion automatique",
     "configuration.autoLoginPassword": "Mot de passe de connexion automatique",
-    "configuration.showPermissionsInMenu": "Afficher les autorisations dans le menu utilisateur?",
+    "configuration.showPermissionsInMenu": "Afficher les autorisations dans le menu utilisateur ?",
     "configuration.listInvisiblePermissions": "Lister les autorisations \"invisibles\" dans les menus d'ajout de permissions?",
     "configuration.actAsRoot": "Agir comme si l'utilisateur a toutes les autorisations?",
     "hotkeys.instructions": "Lorsque cette zone est ciblée, tapez:",
@@ -169,5 +169,12 @@
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker",
     "configuration.preserveConsole": "Preserve console on logout",
-    "configuration.suppressIntlWarnings": "Suppress intl warnings"
+    "configuration.suppressIntlWarnings": "Suppress intl warnings",
+    "canIUseCapabilities": "I can haz capabilities?",
+    "capabilities": "Capabilities",
+    "capabilitiesSubtitle": "Permission name/displayName to capabilities mapper",
+    "capabilitiesTitle": "Capabilities Lookup",
+    "capabilitySets": "Capability Sets",
+    "search": "Search",
+    "searchBy": "Search by"
 }

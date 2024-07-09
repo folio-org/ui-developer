@@ -169,5 +169,12 @@
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker",
     "configuration.preserveConsole": "Preserve console on logout",
-    "configuration.suppressIntlWarnings": "Suppress intl warnings"
+    "configuration.suppressIntlWarnings": "Suppress intl warnings",
+    "canIUseCapabilities": "I can haz capabilities?",
+    "capabilities": "Capabilities",
+    "capabilitiesSubtitle": "Permission name/displayName to capabilities mapper",
+    "capabilitiesTitle": "Capabilities Lookup",
+    "capabilitySets": "Capability Sets",
+    "search": "Search",
+    "searchBy": "Search by"
 }
