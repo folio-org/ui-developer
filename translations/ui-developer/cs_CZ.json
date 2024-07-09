@@ -9,7 +9,7 @@
     "configuration.autoLoginUsername": "Uživatelské jméno pro automatické přihlášení",
     "configuration.autoLoginPassword": "Heslo pro automatické přihlášení",
     "configuration.showPermissionsInMenu": "Zobrazit oprávnění v uživatelském menu?",
-    "configuration.listInvisiblePermissions": "Vypsat \"neviditelná\" oprávnění v nabídkách add-perm?",
+    "configuration.listInvisiblePermissions": "Vypsat \"neviditelná\" oprávnění v menu add-perm?",
     "configuration.actAsRoot": "Chovat se, jako by uživatel měl všechna oprávnění?",
     "hotkeys.instructions": "Když je tato oblast zaměřena, zadejte:",
     "hotkeys.home": "přejít na domovskou stránku",
@@ -17,7 +17,7 @@
     "hotkeys.undefined": "nedefinováno",
     "setToken.authenticationToken": "Autentizační token (JWT)",
     "sessionLocale.temporarySessionLocale": "DOČASNÁ místní relace",
-    "configuration.showHomeLink": "Zobrazit odkaz na domovskou stránku v nabídce vpravo nahoře",
+    "configuration.showHomeLink": "Zobrazit odkaz na domovskou stránku v menu vpravo nahoře",
     "configuration.showDevInfo": "Zobrazit informace pro vývojáře",
     "folioBabies": "Děti FOLIO",
     "canIUse": "Mohu ohrozit koncový bod?",
@@ -169,5 +169,12 @@
     "rtr.registerServiceWorker": "Zaregistrovat servisního pracovníka",
     "rtr.unregisterServiceWorker": "Zrušit registraci servisního pracovníka",
     "configuration.preserveConsole": "Zachovat konzoly při odhlášení",
-    "configuration.suppressIntlWarnings": "Potlačení intl varování"
+    "configuration.suppressIntlWarnings": "Potlačení intl varování",
+    "canIUseCapabilities": "I can haz capabilities?",
+    "capabilities": "Capabilities",
+    "capabilitiesSubtitle": "Permission name/displayName to capabilities mapper",
+    "capabilitiesTitle": "Capabilities Lookup",
+    "capabilitySets": "Capability Sets",
+    "search": "Search",
+    "searchBy": "Search by"
 }
