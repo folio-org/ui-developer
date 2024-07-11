@@ -13,7 +13,7 @@ const ShowCapabilities = () => {
 
   const searchParams = {
     limit: stripes.config.maxUnpagedResourceCount,
-    query: `name=*${query}*`,
+    query: `permission=*${query}*`,
   };
 
   const submit = async () => {
