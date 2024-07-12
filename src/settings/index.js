@@ -26,6 +26,7 @@ import OkapiTimers from './OkapiTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
+import Dashboard from './Dashboard';
 
 const pages = [
   {
@@ -150,6 +151,13 @@ const pages = [
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
+  },
+
+  {
+    route: 'dashboard',
+    labelId: 'ui-developer.dashboard',
+    component: Dashboard,
+    // perm: 'ui-developer.settings.rtr',
   },
 
 ];
