@@ -13,7 +13,7 @@ const ShowCapabilities = () => {
 
   const searchParams = {
     limit: stripes.config.maxUnpagedResourceCount,
-    query: `name=*${query}*`,
+    query: `permission=*${query}*`,
   };
 
   const submit = async () => {
@@ -27,13 +27,13 @@ const ShowCapabilities = () => {
   const displayList = (resultList, listType) => {
     return resultList[listType]?.map((value) => (
       <ul>
-        <li>{value.permission}</li>
+        <li>{value.name}</li>
         <ul>
           <li><strong>type:</strong> {value.type}</li>
           <li><strong>applicationId:</strong> {value.applicationId}</li>
           <li><strong>resource:</strong> {value.resource}</li>
           <li><strong>action:</strong> {value.action}</li>
-          <li><strong>permissionName:</strong> {value.name}</li>
+          <li><strong>permissionName:</strong> {value.permission}</li>
         </ul>
       </ul>
     ));
