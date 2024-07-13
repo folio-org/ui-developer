@@ -170,7 +170,7 @@
     "rtr.unregisterServiceWorker": "Cancelar o registro do trabalhador de serviço",
     "configuration.preserveConsole": "Preservar console ao sair",
     "configuration.suppressIntlWarnings": "Ocultar avisos intl",
-    "canIUseCapabilities": "I can haz capabilities?",
+    "canIUseCapabilities": "Posso usar recursos?",
     "capabilities": "Capacidades",
     "capabilitiesSubtitle": "Nome da permissão/nome de exibição para mapeador de capacidades",
     "capabilitiesTitle": "Consultar capacidades",
