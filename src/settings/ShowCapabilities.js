@@ -87,14 +87,14 @@ const ShowCapabilities = () => {
         <h3><FormattedMessage id="ui-developer.capabilitiesSubtitle" /></h3>
       </Row>
       <Row>
-        <SearchField name="query" id="query" value={query} onInput={e => setQuery(e.target.value)} />
+        <SearchField name="query" id="query" value={query} style={{ width: '50vw' }} onInput={e => setQuery(e.target.value)} />
         &nbsp;&nbsp;
         <Button onClick={submit}><FormattedMessage id="ui-developer.search" /></Button>
       </Row>
       <Row>
         <Select
           name="searchBy"
-          label={<FormattedMessage id="ui-developer.okapiConfigurationEntries.filterByModule" />}
+          label={<FormattedMessage id="ui-developer.searchBy" />}
           dataOptions={searchByOptions}
           onChange={handleSearchByChange}
         />
