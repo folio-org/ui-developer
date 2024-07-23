@@ -29,6 +29,12 @@ const ShowCapabilities = () => {
     setSearchBy(e.target.value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      submit();
+    }
+  }
+
   const submit = async () => {
     if (searchBy === SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME) {
       const searchIds = searchForPermissionDisplayName(query);
@@ -87,7 +93,7 @@ const ShowCapabilities = () => {
         <h3><FormattedMessage id="ui-developer.capabilitiesSubtitle" /></h3>
       </Row>
       <Row>
-        <SearchField name="query" id="query" value={query} style={{ width: '50vw' }} onInput={e => setQuery(e.target.value)} />
+        <SearchField name="query" id="query" value={query} style={{ width: '50vw' }} onInput={e => setQuery(e.target.value)} onKeyDown={handleKeyDown} />
         &nbsp;&nbsp;
         <Button onClick={submit}><FormattedMessage id="ui-developer.search" /></Button>
       </Row>
