@@ -29,11 +29,23 @@ const ShowCapabilities = () => {
     setSearchBy(e.target.value);
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      submit();
+  const searchForPermissionDisplayName = (displayNameQuery) => {
+    const searchIds = [];
+
+    if (stripes.discovery?.permissionDisplayNames) {
+      for (const [key, value] of Object.entries(stripes.discovery.permissionDisplayNames)) {
+        if (value?.toUpperCase().trim().includes(displayNameQuery?.toUpperCase().trim())) {
+          searchIds.push(key);
+        }
+      }
     }
-  }
+
+    return searchIds;
+  };
+
+  const lookUpPermissionDisplayNameById = (permissionName) => {
+    return stripes.discovery?.permissionDisplayNames?.[permissionName];
+  };
 
   const submit = async () => {
     if (searchBy === SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME) {
@@ -50,22 +62,10 @@ const ShowCapabilities = () => {
     setCapabilitySetsResults(capabilitySetsResponse);
   };
 
-  const searchForPermissionDisplayName = (displayNameQuery) => {
-    let searchIds = [];
-
-    if (stripes.discovery?.permissionDisplayNames) {
-      for (const [key, value] of Object.entries(stripes.discovery.permissionDisplayNames)) {
-        if (value?.toUpperCase().trim().includes(displayNameQuery?.toUpperCase().trim())) {
-          searchIds.push(key);
-        }
-      }
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      submit();
     }
-    
-    return searchIds;
-  };
-
-  const lookUpPermissionDisplayNameById = (permissionName) => {
-    return stripes.discovery?.permissionDisplayNames?.[permissionName];
   };
 
   const displayList = (resultList, listType) => {
