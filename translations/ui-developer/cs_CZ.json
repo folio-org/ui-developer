@@ -172,7 +172,7 @@
     "configuration.suppressIntlWarnings": "Potlačení intl varování",
     "canIUseCapabilities": "Mohu ohrozit schopnosti?",
     "capabilities": "Schopnosti",
-    "capabilitiesSubtitle": "Permission name/displayName to capabilities mapper",
+    "capabilitiesSubtitle": "Název oprávnění/zobrazený název pro mapovač schopností",
     "capabilitiesTitle": "Vyhledat schopnosti",
     "capabilitySets": "Sady schopností",
     "search": "Vyhledat",
