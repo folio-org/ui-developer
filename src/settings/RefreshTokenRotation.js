@@ -4,9 +4,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { Field, Form } from 'react-final-form';
 import { FormattedMessage } from 'react-intl';
 
-import { getTokenExpiry, setTokenExpiry } from '@folio/stripes/core';
+import { getTokenExpiry, RTR_CONSTANTS } from '@folio/stripes/core';
 import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes/components';
-import { RTR_FORCE_REFRESH_EVENT } from '../../../stripes-core/src/components/Root/constants';
 
 /**
  * manipulate AT/RT expiration dates in storage in order to test RTR.
@@ -25,37 +24,11 @@ const RefreshTokenRotation = ({ stripes }) => {
   }, []);
 
   /**
-   * invalidateAT
-   * return a promise to expire the AT in local storage
-   */
-  const invalidateAT = useCallback(() => {
-    return getTokenExpiry().then((te) => {
-      const expiration = { ...te };
-      expiration.atExpires = -1;
-
-      return setTokenExpiry(expiration);
-    });
-  }, []);
-
-  /**
-   * invalidateRT
-   * return a promise to expire the AT and RT in local storage
-   */
-  const invalidateRT = useCallback(() => {
-    const expiration = {
-      atExpires: -1,
-      rtExpires: -1,
-    };
-
-    return setTokenExpiry(expiration);
-  }, []);
-
-  /**
    * forceRefresh
    * dispatch an event to force a token rotation
    */
   const forceRefresh = useCallback(
-    () => window.dispatchEvent(new Event(RTR_FORCE_REFRESH_EVENT)),
+    () => window.dispatchEvent(new Event(RTR_CONSTANTS.RTR_FORCE_REFRESH_EVENT)),
     [],
   );
 
@@ -99,13 +72,6 @@ const RefreshTokenRotation = ({ stripes }) => {
           </dl>
         )}
         <div>
-          <Button onClick={invalidateAT}>
-            <FormattedMessage id="ui-developer.rtr.invalidateAT" />
-          </Button>
-          <Button onClick={invalidateRT}>
-            <FormattedMessage id="ui-developer.rtr.invalidateRT" />
-          </Button>
-
           <Button onClick={forceRefresh}>
             <FormattedMessage id="ui-developer.rtr.forceRefresh" />
           </Button>

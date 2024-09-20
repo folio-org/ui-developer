@@ -168,8 +168,6 @@
   "userLocale.numberingSystem": "Numbering system (override locale's default; <a>details</a>)",
 
   "rtr": "Refresh token rotation",
-  "rtr.invalidateAT": "Invalidate access token",
-  "rtr.invalidateRT": "Invalidate refresh token",
   "rtr.forceRefresh": "Force refresh",
   "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
   "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
