@@ -170,11 +170,11 @@
     "rtr.unregisterServiceWorker": "De servicemedewerker afmelden",
     "configuration.preserveConsole": "Console behouden bij afmelden",
     "configuration.suppressIntlWarnings": "Onderdruk intl waarschuwingen",
-    "canIUseCapabilities": "I can haz capabilities?",
-    "capabilities": "Capabilities",
-    "capabilitiesSubtitle": "Permission name/displayName to capabilities mapper",
-    "capabilitiesTitle": "Capabilities Lookup",
-    "capabilitySets": "Capability Sets",
+    "canIUseCapabilities": "Kan ik rechten gebruiken?",
+    "capabilities": "Rechten",
+    "capabilitiesSubtitle": "Machtigingsnaam/weergavenaam naar rechten koppelaar",
+    "capabilitiesTitle": "Rechten opzoeken",
+    "capabilitySets": "Rechtensets",
     "search": "Zoeken",
-    "searchBy": "Search by"
+    "searchBy": "Zoeken op"
 }
