@@ -41,6 +41,7 @@ const RefreshTokenRotation = ({ stripes }) => {
       merge(stripes.config.rtr, {
         idleSessionTTL: values.idleSessionTTL,
         idleModalTTL: values.idleModalTTL,
+        fixedLengthSessionWarningTTL: values.fixedLengthSessionWarningTTL,
         rotationIntervalFraction: Number(values.rotationIntervalFraction),
         activityEvents: values.activityEvents.split(',').map((e) => e.trim()),
       });
@@ -94,6 +95,11 @@ const RefreshTokenRotation = ({ stripes }) => {
                   component={TextField}
                   name="idleModalTTL"
                   label={<FormattedMessage id="ui-developer.rtr.idleModalTTL" />}
+                />
+                <Field
+                  component={TextField}
+                  name="fixedLengthSessionWarningTTL"
+                  label={<FormattedMessage id="ui-developer.rtr.fixedLengthSessionWarningTTL" />}
                 />
                 <Field
                   component={TextField}
