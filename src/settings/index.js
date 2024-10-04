@@ -58,12 +58,6 @@ const pages = [
     component: OkapiPaths,
   },
   {
-    route: 'capabilities',
-    labelId: 'ui-developer.canIUseCapabilities',
-    component: ShowCapabilities,
-    perm: 'ui-developer.settings.configuration',
-  },
-  {
     route: 'can-i-use',
     labelId: 'ui-developer.canIUse',
     component: CanIUse,
@@ -165,6 +159,14 @@ const DeveloperSettings = (props) => {
       labelId: 'ui-developer.app-manager',
       component: AppManager,
       // perm: 'ui-developer.settings.app-manager',
+    });
+  }
+
+  if (stripes.hasInterface('capabilities') || stripes.hasInterface('capability-sets')) {
+    allPages.push({
+      route: 'capabilities',
+      labelId: 'ui-developer.canIUseCapabilities',
+      component: ShowCapabilities,
     });
   }
 
