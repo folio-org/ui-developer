@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Field, Form } from 'react-final-form';
 import { FormattedMessage } from 'react-intl';
 
-import { getTokenExpiry, RTR_CONSTANTS } from '@folio/stripes/core';
+import { getTokenExpiry } from '@folio/stripes/core';
 import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes/components';
 
 /**
@@ -12,6 +12,17 @@ import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes
  * @returns
  */
 const RefreshTokenRotation = ({ stripes }) => {
+  // why WHY copy this string here instead of importing it from stripes-core?
+  //
+  // RTR_FORCE_REFRESH_EVENT will be present in stripes-core 10.2.0 (stripes
+  // 9.2.0). Importing it would force the stripes peer depedency to bump from
+  // ^9.1.0 to ^9.2.0.If we copy the string instead of importing it, we can
+  // remain compatible with 9.1.0.
+  //
+  // OK, compatibility is nice. But it's still gross, right? Yep, super gross.
+  // Aren't you nauseated? Yes, yes I am. 🤢🧼🛁
+  const RTR_FORCE_REFRESH_EVENT = '@folio/stripes/core::RTRForceRefresh';
+
   const [isLoading, setIsLoading] = useState(true);
   const [tokenExpiration, setTokenExpiration] = useState({});
 
@@ -28,7 +39,7 @@ const RefreshTokenRotation = ({ stripes }) => {
    * dispatch an event to force a token rotation
    */
   const forceRefresh = useCallback(
-    () => window.dispatchEvent(new Event(RTR_CONSTANTS.RTR_FORCE_REFRESH_EVENT)),
+    () => window.dispatchEvent(new Event(RTR_FORCE_REFRESH_EVENT)),
     [],
   );
 
