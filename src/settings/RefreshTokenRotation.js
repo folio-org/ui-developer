@@ -1,16 +1,14 @@
-import { merge } from 'lodash';
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useState } from 'react';
-import { Field, Form } from 'react-final-form';
 import { FormattedMessage } from 'react-intl';
 
-import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes/components';
+import { Button, LoadingPane, Pane, PaneHeader } from '@folio/stripes/components';
 import { getTokenExpiry, RTR_CONSTANTS } from '@folio/stripes/core';
 
 /**
  * manipulate AT/RT expiration dates in storage in order to test RTR.
  */
-const RefreshTokenRotation = ({ stripes }) => {
+const RefreshTokenRotation = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [tokenExpiration, setTokenExpiration] = useState({ atExpires: -1, rtExpires: -1 });
 
@@ -46,7 +44,7 @@ const RefreshTokenRotation = ({ stripes }) => {
    * saveRtrConfig
    * update stripes.config.rtr from form
    */
-  const saveRtrConfig = useCallback(
+  /* const saveRtrConfig = useCallback(
     (values) => {
       merge(stripes.config.rtr, {
         idleSessionTTL: values.idleSessionTTL,
@@ -59,7 +57,7 @@ const RefreshTokenRotation = ({ stripes }) => {
       forceRefresh();
     },
     [stripes, forceRefresh],
-  );
+  ); */
 
   if (!isLoading) {
     return (
@@ -87,7 +85,7 @@ const RefreshTokenRotation = ({ stripes }) => {
             <FormattedMessage id="ui-developer.rtr.forceRefresh" />
           </Button>
 
-          <Form
+          {/* <Form
             onSubmit={saveRtrConfig}
             initialValues={{
               ...stripes.config.rtr,
@@ -129,7 +127,7 @@ const RefreshTokenRotation = ({ stripes }) => {
                 </Button>
               </form>
             )}
-          </Form>
+          </Form> */}
         </div>
       </Pane>
     );
