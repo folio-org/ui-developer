@@ -4,8 +4,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { Field, Form } from 'react-final-form';
 import { FormattedMessage } from 'react-intl';
 
-import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes/components';
 import { getTokenExpiry, RTR_CONSTANTS } from '@folio/stripes/core';
+import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes/components';
 
 /**
  * manipulate AT/RT expiration dates in storage in order to test RTR.
