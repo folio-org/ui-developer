@@ -4,23 +4,33 @@ import { useCallback, useEffect, useState } from 'react';
 import { Field, Form } from 'react-final-form';
 import { FormattedMessage } from 'react-intl';
 
-import { getTokenExpiry, RTR_CONSTANTS } from '@folio/stripes/core';
 import { Button, LoadingPane, Pane, PaneHeader, TextField } from '@folio/stripes/components';
+import { getTokenExpiry, RTR_CONSTANTS } from '@folio/stripes/core';
 
 /**
  * manipulate AT/RT expiration dates in storage in order to test RTR.
- * @returns
  */
 const RefreshTokenRotation = ({ stripes }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [tokenExpiration, setTokenExpiration] = useState({});
+  const [tokenExpiration, setTokenExpiration] = useState({ atExpires: -1, rtExpires: -1 });
 
   useEffect(() => {
-    setIsLoading(true);
-    getTokenExpiry().then((te) => {
-      setTokenExpiration(te ?? { atExpires: -1, rtExpires: -1 });
-      setIsLoading(false);
-    });
+    const callback = () => {
+      setIsLoading(true);
+      getTokenExpiry().then((te) => {
+        setTokenExpiration({
+          atExpires: te.atExpires ?? te.accessTokenExpiration ?? -1,
+          rtExpires: te.rtExpires ?? te.refreshTokenExpiration ?? -1,
+        });
+        setIsLoading(false);
+      });
+    };
+
+    callback();
+
+    window.addEventListener(RTR_CONSTANTS.RTR_SUCCESS_EVENT, callback);
+
+    return () => window.removeEventListener(RTR_CONSTANTS.RTR_SUCCESS_EVENT, callback);
   }, []);
 
   /**
