@@ -164,8 +164,6 @@
     "app-manager.sources.heading.tokenStart": "Início do Token",
     "app-manager.sources.heading.tokenEnd": "Fim do Token",
     "rtr": "Atualizar rotação de token",
-    "rtr.invalidateAT": "Invalidar o token de acesso",
-    "rtr.invalidateRT": "Invalidar token de atualização",
     "rtr.registerServiceWorker": "Registre o trabalhador de serviço",
     "rtr.unregisterServiceWorker": "Cancelar o registro do trabalhador de serviço",
     "configuration.preserveConsole": "Preservar console ao sair",
@@ -176,5 +174,11 @@
     "capabilitiesTitle": "Consultar capacidades",
     "capabilitySets": "Conjuntos de capacidades",
     "search": "Busca",
-    "searchBy": "Buscar por"
+    "searchBy": "Buscar por",
+    "rtr.forceRefresh": "Forçar atualização",
+    "rtr.idleSessionTTL": "Tempo de vida da sessão ociosa: duração de uma sessão ociosa antes de ser encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
+    "rtr.idleModalTTL": "Tempo de vida do modal ocioso: duração que o modal ocioso deve ser exibido antes que a sessão seja encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
+    "rtr.fixedLengthSessionWarningTTL": "Tempo de vida do aviso de duração fixa da sessão: por quanto tempo o aviso \"sua sessão vai morrer!\" deve ser exibido antes que a sessão seja encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
+    "rtr.rotationIntervalFraction": "Fração de intervalo de rotação: fração decimal da antecedência com que o token de acesso deve ser atualizado (por exemplo, 0,6 corresponde a 60% da vida útil do token)",
+    "rtr.activityEvents": "Eventos de Atividade: quais eventos DOM constituem a atividade do usuário (separados por vírgulas, por exemplo, 'mousemove,keydown')"
 }
