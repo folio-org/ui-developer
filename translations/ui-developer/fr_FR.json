@@ -131,7 +131,7 @@
     "okapiConsole.interfaces.id": "ID",
     "okapiConsole.interfaces.version": "Version",
     "okapiConsole.interfaces.providerCount": "#",
-    "okapiConsole.interfaces.providers": "Provided by",
+    "okapiConsole.interfaces.providers": "Fourni par",
     "permission.settings.okapiConsole": "Settings (developer): Can display the Okapi console",
     "permission.settings.okapiConsole.environment": "Settings (developer): Can use the Okapi console's Environment tab",
     "permission.settings.okapiConsole.modules": "Settings (developer): Can use the Okapi console's Modules tab",
@@ -164,8 +164,6 @@
     "app-manager.sources.heading.tokenStart": "Token start",
     "app-manager.sources.heading.tokenEnd": "Token end",
     "rtr": "Refresh token rotation",
-    "rtr.invalidateAT": "Invalidate access token",
-    "rtr.invalidateRT": "Invalidate refresh token",
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker",
     "configuration.preserveConsole": "Preserve console on logout",
@@ -176,5 +174,11 @@
     "capabilitiesTitle": "Capabilities Lookup",
     "capabilitySets": "Capability Sets",
     "search": "Rechercher",
-    "searchBy": "Rechercher par"
+    "searchBy": "Rechercher par",
+    "rtr.forceRefresh": "Force refresh",
+    "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimal fraction of how early to refresh the access token (e.g. 0.6 is 60% into the lifetime of the token)",
+    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
 }

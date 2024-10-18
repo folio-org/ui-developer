@@ -164,8 +164,6 @@
     "app-manager.sources.heading.tokenStart": "令牌啟動",
     "app-manager.sources.heading.tokenEnd": "令牌結束",
     "rtr": "重新整理令牌輪換",
-    "rtr.invalidateAT": "使存取令牌無效",
-    "rtr.invalidateRT": "重新整理令牌無效",
     "rtr.registerServiceWorker": "註冊服務人員",
     "rtr.unregisterServiceWorker": "取消註冊服務工作人員",
     "configuration.preserveConsole": "登出時保留控制台",
@@ -176,5 +174,11 @@
     "capabilitiesTitle": "Capabilities Lookup",
     "capabilitySets": "Capability Sets",
     "search": "Search",
-    "searchBy": "Search by"
+    "searchBy": "Search by",
+    "rtr.forceRefresh": "Force refresh",
+    "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimal fraction of how early to refresh the access token (e.g. 0.6 is 60% into the lifetime of the token)",
+    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
 }
