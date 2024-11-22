@@ -8,6 +8,7 @@
 * Use type=password for auto login password field. Refs UID-147.
 * *BREAKING* Purge service-worker cruft; leverage new STCOR functions for RTR display.
 * Fence off ShowCapabilities behind IfInterface checks for capabilities, capability-sets. Refs UID-162.
+* Sort locales by label instead of locale-code. Refs UID-107.
 
 ## [8.0.0](https://github.com/folio-org/ui-developer/tree/v8.0.0) (2023-10-19)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v7.0.0...v8.0.0)
