@@ -2,6 +2,8 @@
 
 ## 9.1.0 IN PROGRESS
 
+* Sort locales by label instead of locale-code. Refs UID-107.
+
 ## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v8.0.0...v9.0.0)
 

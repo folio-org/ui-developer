@@ -35,6 +35,8 @@ const Locale = (props) => {
     };
   });
 
+  locales.sort((a, b) => a.label.localeCompare(b.label));
+
   const setLocale = (locale) => {
     if (locale) props.stripes.setLocale(locale.value);
   };
