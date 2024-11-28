@@ -3,6 +3,7 @@
 ## 9.1.0 IN PROGRESS
 
 * Sort locales by label instead of locale-code. Refs UID-107.
+* When the Permissions Inspector encounters an undefined permission (which should never happen) it now shows that permission's true name in bold red instead of crashing. Fixes UID-183.
 
 ## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v8.0.0...v9.0.0)

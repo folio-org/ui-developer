@@ -20,6 +20,21 @@ function SinglePermission({ permName, name2perm }) {
   const intl = useIntl();
   const perm = name2perm[permName];
   const [expanded, setExpanded] = useState(false);
+
+  if (!perm) {
+    // This should never happen
+    return (
+      <span
+        style={{
+          color: 'red',
+          fontWeight: 'bold',
+        }}
+      >
+        {permName}
+      </span>
+    );
+  }
+
   const displayName = getPermissionLabelString(perm, intl.formatMessage);
 
   return (
