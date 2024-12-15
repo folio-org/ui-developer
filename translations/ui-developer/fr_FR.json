@@ -45,7 +45,7 @@
     "permission.settings.perms": "Paramètres (développeur): permissions",
     "permission.settings.hotkeys": "Paramètres (développeur): test des raccourcis clavier",
     "permission.settings.token": "Paramètres (développeur): gérer le jeton d'authentification JWT",
-    "permission.settings.locale": "Paramètres (développeur): définir les paramètres régionaux de la session",
+    "permission.settings.locale": "Paramètres (développeur) : définir les paramètres régionaux de la session",
     "permission.settings.okapiConfiguration": "Paramètres (développeur): peut modifier les valeurs de configuration du client",
     "permission.settings.passwd": "Paramètres (développeur): peut modifier les mots de passe des utilisateurs",
     "okapiQuery": "Requête Okapi",
