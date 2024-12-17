@@ -144,7 +144,7 @@
     "okapiTimers.path": "路徑",
     "okapiTimers.unit": "單位",
     "okapiTimers.delay": "延遲",
-    "permission.settings.okapiTimers": "設定（開發者）：可以檢視okapi計時器",
+    "permission.settings.okapiTimers": "設定 ( 開發者 ) : 可以檢視 okapi 計時器",
     "okapiConsole.modules.deployments": "有{count} {count, plural, one {部署} other {部署}}",
     "okapiConsole.modules.deployments.undeploy": "取消部署",
     "okapiConsole.modules.deployments.undeploy.success": "未部署的實例{instId} （模組{id} ）",
