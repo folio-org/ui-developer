@@ -58,11 +58,6 @@ const pages = [
     component: OkapiPaths,
   },
   {
-    route: 'can-i-use',
-    labelId: 'ui-developer.canIUse',
-    component: CanIUse,
-  },
-  {
     route: 'folio-babies',
     labelId: 'ui-developer.folioBabies',
     component: FolioBabies,
@@ -116,12 +111,6 @@ const pages = [
     perm: 'ui-developer.settings.stripesInspector',
   },
   {
-    route: 'permissions-inspector',
-    labelId: 'ui-developer.permissionsInspector',
-    component: PermissionsInspector,
-    perm: 'ui-developer.settings.permissionsInspector',
-  },
-  {
     route: 'okapi-console',
     labelId: 'ui-developer.okapiConsole',
     component: OkapiConsole,
@@ -167,6 +156,20 @@ const DeveloperSettings = (props) => {
       route: 'capabilities',
       labelId: 'ui-developer.canIUseCapabilities',
       component: ShowCapabilities,
+    });
+  }
+
+  if (!stripes.hasInterface('roles')) {
+    allPages.push({
+      route: 'permissions-inspector',
+      labelId: 'ui-developer.permissionsInspector',
+      component: PermissionsInspector,
+      perm: 'ui-developer.settings.permissionsInspector',
+    });
+    allPages.push({
+      route: 'can-i-use',
+      labelId: 'ui-developer.canIUse',
+      component: CanIUse,
     });
   }
 
