@@ -1,6 +1,6 @@
 {
   "name": "@folio/developer",
-  "version": "9.1.0",
+  "version": "9.1.1",
   "description": "Developer settings",
   "repository": "folio-org/ui-developer",
   "publishConfig": {
@@ -187,7 +187,8 @@
           "settings.developer.enabled",
           "configuration.entries.collection.get",
           "configuration.entries.item.post",
-          "configuration.entries.item.put"
+          "configuration.entries.item.put",
+          "users.collection.get"
         ],
         "visible": true
       },
