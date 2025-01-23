@@ -26,6 +26,7 @@ import OkapiTimers from './OkapiTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
+import Stcor929 from './Stcor929';
 
 const pages = [
   {
@@ -133,6 +134,11 @@ const pages = [
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
+  },
+  {
+    route: 'stcor-929',
+    labelId: 'ui-developer.testComponent',
+    component: Stcor929,
   },
 
 ];
