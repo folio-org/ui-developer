@@ -19,7 +19,9 @@
       "stripesHome",
       "stripesAbout"
     ],
-    "okapiInterfaces": {},
+    "okapiInterfaces": {
+      "okapi": "1.9"
+    },
     "optionalOkapiInterfaces": {
       "app-manager": "1.0",
       "capabilities": "1.0",
