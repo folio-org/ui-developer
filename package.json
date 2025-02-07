@@ -222,7 +222,7 @@
     "lint": "eslint .",
     "test": "echo 'placeholder. no tests implemented'",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-developer ./translations/ui-developer/compiled"
+    "formatjs-compile": "stripes translate compile"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -230,14 +230,13 @@
     "@folio/eslint-config-stripes": "^7.0.0",
     "@folio/stripes": "^9.1.0",
     "@folio/stripes-cli": "^3.0.0",
-    "@formatjs/cli": "^6.1.3",
     "eslint": "^7.32.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "final-form": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-final-form": "^6.3.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.0"
   },
@@ -254,7 +253,7 @@
   "peerDependencies": {
     "@folio/stripes": "^9.1.0",
     "react": "^18.2.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-router-dom": "^5.2.0"
   }
 }
