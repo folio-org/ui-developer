@@ -7,6 +7,7 @@
 * Hide "I can haz endpoint" and "Permissions inspector" if the `roles` interface is present. Refs UID-151.
 * Include missing user-related permissions in `settings.userLocale`. Refs UID-126.
 * Add `okapi` interface to dependencies. (We have long depended on this.) Fixes UID-184.
+* *BREAKING* Update `react-intl` to v7. Refs UID-187.
 * *BREAKING* Update `@folio/stripes` to `v10`. Refs UID-186.
 
 ## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
