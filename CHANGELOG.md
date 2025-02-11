@@ -1,6 +1,6 @@
 # Change history for ui-developer
 
-## 9.1.0 IN PROGRESS
+## 10.0.0 IN PROGRESS
 
 * Sort locales by label instead of locale-code. Refs UID-107.
 * When the Permissions Inspector encounters an undefined permission (which should never happen) it now shows that permission's true name in bold red instead of crashing. Fixes UID-183.
