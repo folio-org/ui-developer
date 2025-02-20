@@ -175,7 +175,7 @@
     "capabilitySets": "Sady schopností",
     "search": "Vyhledat",
     "searchBy": "Vyhledat podle",
-    "rtr.forceRefresh": "Force refresh",
+    "rtr.forceRefresh": "Vynutit obnovení",
     "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
