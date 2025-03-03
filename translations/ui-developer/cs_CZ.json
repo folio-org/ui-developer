@@ -176,8 +176,8 @@
     "search": "Vyhledat",
     "searchBy": "Vyhledat podle",
     "rtr.forceRefresh": "Vynutit obnovení",
-    "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.idleSessionTTL": "idleSessionTTL: doba trvání nečinné relace před jejím ukončením (např. 1h, 1m, 5s, 10ms)",
+    "rtr.idleModalTTL": "idleModalTTL: doba před ukončením relace, po kterou by se měl zobrazit režim nečinnosti (např. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimal fraction of how early to refresh the access token (e.g. 0.6 is 60% into the lifetime of the token)",
     "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
