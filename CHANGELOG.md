@@ -9,6 +9,7 @@
 * Add `okapi` interface to dependencies. (We have long depended on this.) Fixes UID-184.
 * *BREAKING* Update `react-intl` to v7. Refs UID-187.
 * *BREAKING* Update `@folio/stripes` to `v10`. Refs UID-186.
+* Provide application icon. Refs UID-197.
 
 ## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v8.0.0...v9.0.0)
