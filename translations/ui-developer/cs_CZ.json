@@ -178,7 +178,7 @@
     "rtr.forceRefresh": "Vynutit obnovení",
     "rtr.idleSessionTTL": "idleSessionTTL: doba trvání nečinné relace před jejím ukončením (např. 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "idleModalTTL: doba před ukončením relace, po kterou by se měl zobrazit režim nečinnosti (např. 1h, 1m, 5s, 10ms)",
-    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimal fraction of how early to refresh the access token (e.g. 0.6 is 60% into the lifetime of the token)",
-    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
+    "rtr.fixedLengthSessionWarningTTL": "FixedLengthSessionWarningTTL: jak dlouho před ukončením relace (např. 1h, 1m, 5s, 10ms)  by se mělo zobrazit varování „dojde k ukončí vaší relace!“",
+    "rtr.rotationIntervalFraction": "rotationIntervalFraction: desetinný zlomek, který udává, jak brzy se má přístupový token obnovit (např. 0,6 je 60 % životnosti tokenu)",
+    "rtr.activityEvents": "activityEvents: které události DOM představují aktivitu uživatele (oddělené čárkou, např. \"mousemove,keydown\")"
 }
