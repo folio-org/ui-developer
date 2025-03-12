@@ -19,6 +19,13 @@
       "stripesHome",
       "stripesAbout"
     ],
+    "icons": [
+      {
+        "name": "app",
+        "alt": "Developer settings",
+        "title": "Developer settings"
+      }
+    ],
     "okapiInterfaces": {
       "okapi": "1.9"
     },
