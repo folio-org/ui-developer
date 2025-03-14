@@ -10,6 +10,7 @@
 * *BREAKING* Update `react-intl` to v7. Refs UID-187.
 * *BREAKING* Update `@folio/stripes` to `v10`. Refs UID-186.
 * Provide application icon. Refs UID-197.
+* Remove token display; tokens are no longer user-visible. Refs UID-114.
 
 ## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v8.0.0...v9.0.0)
