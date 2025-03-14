@@ -1,6 +1,19 @@
 # Change history for ui-developer
 
-# 9.0.0 IN PROGRESS
+## 10.0.0 IN PROGRESS
+
+* Sort locales by label instead of locale-code. Refs UID-107.
+* When the Permissions Inspector encounters an undefined permission (which should never happen) it now shows that permission's true name in bold red instead of crashing. Fixes UID-183.
+* Hide "I can haz endpoint" and "Permissions inspector" if the `roles` interface is present. Refs UID-151.
+* Include missing user-related permissions in `settings.userLocale`. Refs UID-126.
+* Add `okapi` interface to dependencies. (We have long depended on this.) Fixes UID-184.
+* *BREAKING* Update `react-intl` to v7. Refs UID-187.
+* *BREAKING* Update `@folio/stripes` to `v10`. Refs UID-186.
+* Provide application icon. Refs UID-197.
+* Remove token display; tokens are no longer user-visible. Refs UID-114.
+
+## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v8.0.0...v9.0.0)
 
 * Handle access-control via cookies instead of `X-Okapi-Token` header. Refs UID-121.
 * Configuration: expose `preserveConsole` to toggle `console.clear()` on logout. Refs UID-139.

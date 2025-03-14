@@ -59,6 +59,8 @@ const localesList = (intl) => {
     };
   });
 
+  locales.sort((a, b) => a.label.localeCompare(b.label));
+
   return locales;
 };
 

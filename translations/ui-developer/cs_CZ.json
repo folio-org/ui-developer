@@ -164,8 +164,6 @@
     "app-manager.sources.heading.tokenStart": "Start tokenu",
     "app-manager.sources.heading.tokenEnd": "Konec tokenu",
     "rtr": "Obnovit rotaci tokenu",
-    "rtr.invalidateAT": "Zneplatnit přístupový token",
-    "rtr.invalidateRT": "Zneplatnit tokenu obnovení",
     "rtr.registerServiceWorker": "Zaregistrovat servisního pracovníka",
     "rtr.unregisterServiceWorker": "Zrušit registraci servisního pracovníka",
     "configuration.preserveConsole": "Zachovat konzoly při odhlášení",
@@ -176,5 +174,11 @@
     "capabilitiesTitle": "Vyhledat schopnosti",
     "capabilitySets": "Sady schopností",
     "search": "Vyhledat",
-    "searchBy": "Vyhledat podle"
+    "searchBy": "Vyhledat podle",
+    "rtr.forceRefresh": "Vynutit obnovení",
+    "rtr.idleSessionTTL": "idleSessionTTL: doba trvání nečinné relace před jejím ukončením (např. 1h, 1m, 5s, 10ms)",
+    "rtr.idleModalTTL": "idleModalTTL: doba před ukončením relace, po kterou by se měl zobrazit režim nečinnosti (např. 1h, 1m, 5s, 10ms)",
+    "rtr.fixedLengthSessionWarningTTL": "FixedLengthSessionWarningTTL: jak dlouho před ukončením relace (např. 1h, 1m, 5s, 10ms)  by se mělo zobrazit varování „dojde k ukončí vaší relace!“",
+    "rtr.rotationIntervalFraction": "rotationIntervalFraction: desetinný zlomek, který udává, jak brzy se má přístupový token obnovit (např. 0,6 je 60 % životnosti tokenu)",
+    "rtr.activityEvents": "activityEvents: které události DOM představují aktivitu uživatele (oddělené čárkou, např. \"mousemove,keydown\")"
 }

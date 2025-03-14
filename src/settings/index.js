@@ -9,7 +9,6 @@ import ShowPermissions from './ShowPermissions';
 import SessionLocale from './SessionLocale';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
-import Token from './Token';
 import FolioBabies from './FolioBabies';
 import OkapiConfiguration from './OkapiConfiguration';
 import Passwd from './Passwd';
@@ -41,12 +40,6 @@ const pages = [
     perm: 'ui-developer.settings.perms',
   },
   {
-    route: 'token',
-    labelId: 'ui-developer.setToken',
-    component: Token,
-    perm: 'ui-developer.settings.token',
-  },
-  {
     route: 'locale',
     labelId: 'ui-developer.sessionLocale',
     component: SessionLocale,
@@ -56,11 +49,6 @@ const pages = [
     route: 'okapi-paths',
     labelId: 'ui-developer.okapiPaths',
     component: OkapiPaths,
-  },
-  {
-    route: 'can-i-use',
-    labelId: 'ui-developer.canIUse',
-    component: CanIUse,
   },
   {
     route: 'folio-babies',
@@ -116,12 +104,6 @@ const pages = [
     perm: 'ui-developer.settings.stripesInspector',
   },
   {
-    route: 'permissions-inspector',
-    labelId: 'ui-developer.permissionsInspector',
-    component: PermissionsInspector,
-    perm: 'ui-developer.settings.permissionsInspector',
-  },
-  {
     route: 'okapi-console',
     labelId: 'ui-developer.okapiConsole',
     component: OkapiConsole,
@@ -167,6 +149,20 @@ const DeveloperSettings = (props) => {
       route: 'capabilities',
       labelId: 'ui-developer.canIUseCapabilities',
       component: ShowCapabilities,
+    });
+  }
+
+  if (!stripes.hasInterface('roles')) {
+    allPages.push({
+      route: 'permissions-inspector',
+      labelId: 'ui-developer.permissionsInspector',
+      component: PermissionsInspector,
+      perm: 'ui-developer.settings.permissionsInspector',
+    });
+    allPages.push({
+      route: 'can-i-use',
+      labelId: 'ui-developer.canIUse',
+      component: CanIUse,
     });
   }
 
