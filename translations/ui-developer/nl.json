@@ -175,10 +175,10 @@
     "capabilitySets": "Rechtensets",
     "search": "Zoeken",
     "searchBy": "Zoeken op",
-    "rtr.forceRefresh": "Force refresh",
-    "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimal fraction of how early to refresh the access token (e.g. 0.6 is 60% into the lifetime of the token)",
-    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
+    "rtr.forceRefresh": "Forceer verversen",
+    "rtr.idleSessionTTL": "idleSessionTTL: duur dat een idle sessie duurt voordat deze wordt gedood (bijv. 1h, 1m, 5s, 10ms)",
+    "rtr.idleModalTTL": "idleModalTTL: duur dat de idle-modal moet worden getoond voordat de sessie wordt beëindigd (bijv. 1h, 1m, 5s, 10ms)",
+    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: hoe lang de waarschuwing \"uw sessie gaat dood!\" getoond moet worden voordat de sessie wordt beëindigd (bijv. 1h, 1m, 5s, 10ms)",
+    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimale fractie van hoe vroeg het toegangstoken vernieuwd moet worden (bijv. 0,6 is 60% van de levensduur van het token)",
+    "rtr.activityEvents": "activityEvents: welke DOM-events gebruikersactiviteit vormen (door komma's gescheiden, bijv. 'mousemove,keydown')"
 }
