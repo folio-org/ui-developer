@@ -11,7 +11,7 @@
 * *BREAKING* Update `@folio/stripes` to `v10`. Refs UID-186.
 * Provide application icon. Refs UID-197.
 * Remove token display; tokens are no longer user-visible. Refs UID-114.
-* Add `settings.enabled` as a subpermission to all permission sets so they can be accessed in the UI if enabled invidually. Refs UID-199.
+* Add `settings.enabled` as a subpermission to all permission sets so they can be accessed in the UI if enabled individually. Refs UID-199.
 
 ## [9.0.0](https://github.com/folio-org/ui-developer/tree/v9.0.0) (2024-10-09)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v8.0.0...v9.0.0)
