@@ -58,8 +58,8 @@
         "permissionName": "ui-developer.settings.perms",
         "displayName": "Settings (Developer): perms",
         "subPermissions": [
-          "perms.permissions.get",
-          "settings.developer.enabled"
+          "settings.developer.enabled",
+          "perms.permissions.get"
         ],
         "visible": true
       },
@@ -83,9 +83,9 @@
         "permissionName": "ui-developer.settings.okapiConfiguration",
         "displayName": "Settings (developer): Can view tenant configuration values",
         "subPermissions": [
+          "settings.developer.enabled",
           "configuration.entries.collection.get",
-          "configuration.entries.item.get",
-          "settings.developer.enabled"
+          "configuration.entries.item.get"
         ],
         "visible": true
       },
@@ -204,13 +204,16 @@
       {
         "permissionName": "ui-developer.settings.okapiTimers",
         "displayName": "Settings (developer): Can view Okapi timers",
-        "subPermissions": [],
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
         "visible": true
       },
       {
         "permissionName": "ui-developer.settings.app-manager",
         "displayName": "Settings (developer): Can use the app manager",
         "subPermissions": [
+          "settings.developer.enabled",
           "app-manager.apps.collection.get",
           "app-manager.config.sources.all"
         ],
@@ -219,7 +222,9 @@
       {
         "permissionName": "ui-developer.settings.rtr",
         "displayName": "Settings (developer): Can dicker with token expirations in redux",
-        "subPermissions": [],
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
         "visible": true
       }
     ]
