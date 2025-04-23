@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { stripesConnect, useChunkedCQLFetch, useOkapiKy, useStripes } from '@folio/stripes/core';
 import { Button, Pane, Row, Col, SearchField, Select } from '@folio/stripes/components';
 import Capabilities from './Capabilities';
+import { set } from 'lodash';
 
 const ShowCapabilities = () => {
   const SEARCH_BY_TYPES = {
@@ -18,7 +19,8 @@ const ShowCapabilities = () => {
   const stripes = useStripes();
   const [capabilitiesResults, setCapabilitiesResults] = useState({});
   const [capabilitySetsResults, setCapabilitySetsResults] = useState({});
-  const [query, setQuery] = useState('');
+  const [searchText, setSearchText] = useState('');
+  const [searchQuery, setSearchQuery] = useState([]);
   const [searchBy, setSearchBy] = useState(SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME);
 
   const searchParams = {
@@ -46,10 +48,11 @@ const ShowCapabilities = () => {
 
   const submit = async () => {
     if (searchBy === SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME) {
-      const searchIds = searchForPermissionDisplayName(query);
-      searchParams.query = `permission=${searchIds.join(' OR permission=')}`;
+      const searchIds = searchForPermissionDisplayName(searchText);
+      setSearchQuery(searchIds);
+      //searchParams.query = `permission=${searchIds.join(' OR permission=')}`;
     } else {
-      searchParams.query = `permission=*${query}*`;
+      searchParams.query = `permission=*${searchText}*`;
     }
 
     // const capabilitiesResponse = await ky.get('capabilities', { searchParams }).json();
@@ -74,7 +77,7 @@ const ShowCapabilities = () => {
         <h3><FormattedMessage id="ui-developer.capabilitiesSubtitle" /></h3>
       </Row>
       <Row>
-        <SearchField name="query" id="query" value={query} style={{ width: '50vw' }} onInput={e => setQuery(e.target.value)} onKeyDown={handleKeyDown} />
+        <SearchField name="query" id="query" value={searchText} style={{ width: '50vw' }} onInput={e => setSearchText(e.target.value)} onKeyDown={handleKeyDown} />
         &nbsp;&nbsp;
         <Button onClick={submit}><FormattedMessage id="ui-developer.search" /></Button>
       </Row>
@@ -88,7 +91,7 @@ const ShowCapabilities = () => {
       </Row>
       <Row>
         <Col xs={12}>
-          <Capabilities query={searchParams.query} />
+          <Capabilities query={searchQuery} />
           {/* { capabilitiesResults.capabilities?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilities" /></h3> }
           { displayList(capabilitiesResults, 'capabilities') }
           { capabilitySetsResults.capabilitySets?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilitySets" /></h3> }

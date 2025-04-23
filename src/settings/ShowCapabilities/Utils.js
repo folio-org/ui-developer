@@ -1,13 +1,17 @@
 import React from "react";
 
+import  { useStripes } from '@folio/stripes/core';
+
 export const APPLICATIONS_STEP_SIZE = 100;
+
+const stripes = useStripes();
 
 const lookUpPermissionDisplayNameById = (permissionName) => {
   return stripes.discovery?.permissionDisplayNames?.[permissionName];
 };
 
 export const displayList = (resultList, listType) => {
-  return resultList[listType]?.map((value) => (
+  return resultList?.map((value) => (
     <ul>
       <li>{value.name}</li>
       <ul>
