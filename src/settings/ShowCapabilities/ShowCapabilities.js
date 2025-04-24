@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { stripesConnect, useChunkedCQLFetch, useOkapiKy, useStripes } from '@folio/stripes/core';
+import { stripesConnect, useOkapiKy, useStripes } from '@folio/stripes/core';
 import { Button, Pane, Row, Col, SearchField, Select } from '@folio/stripes/components';
 import Capabilities from './Capabilities';
-import { set } from 'lodash';
+import CapabilitySets from './CapabilitySets';
 
 const ShowCapabilities = () => {
   const SEARCH_BY_TYPES = {
@@ -17,16 +17,9 @@ const ShowCapabilities = () => {
 
   const ky = useOkapiKy();
   const stripes = useStripes();
-  const [capabilitiesResults, setCapabilitiesResults] = useState({});
-  const [capabilitySetsResults, setCapabilitySetsResults] = useState({});
   const [searchText, setSearchText] = useState('');
   const [searchQuery, setSearchQuery] = useState([]);
   const [searchBy, setSearchBy] = useState(SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME);
-
-  const searchParams = {
-    limit: stripes.config.maxUnpagedResourceCount,
-    query: '',
-  };
 
   const handleSearchByChange = (e) => {
     setSearchBy(e.target.value);
@@ -50,16 +43,9 @@ const ShowCapabilities = () => {
     if (searchBy === SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME) {
       const searchIds = searchForPermissionDisplayName(searchText);
       setSearchQuery(searchIds);
-      //searchParams.query = `permission=${searchIds.join(' OR permission=')}`;
     } else {
-      searchParams.query = `permission=*${searchText}*`;
+      setSearchQuery([`*${searchText}*`]);
     }
-
-    // const capabilitiesResponse = await ky.get('capabilities', { searchParams }).json();
-    // setCapabilitiesResults(capabilitiesResponse);
-
-    // const capabilitySetsResponse = await ky.get('capability-sets', { searchParams }).json();
-    // setCapabilitySetsResults(capabilitySetsResponse);
   };
 
   const handleKeyDown = (event) => {
@@ -92,10 +78,7 @@ const ShowCapabilities = () => {
       <Row>
         <Col xs={12}>
           <Capabilities query={searchQuery} />
-          {/* { capabilitiesResults.capabilities?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilities" /></h3> }
-          { displayList(capabilitiesResults, 'capabilities') }
-          { capabilitySetsResults.capabilitySets?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilitySets" /></h3> }
-          { displayList(capabilitySetsResults, 'capabilitySets') } */}
+          <CapabilitySets query={searchQuery} />
         </Col>
       </Row>
     </Pane>
