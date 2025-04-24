@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import  { useStripes } from '@folio/stripes/core';
+import { useStripes } from '@folio/stripes/core';
 
 export const APPLICATIONS_STEP_SIZE = 100;
 

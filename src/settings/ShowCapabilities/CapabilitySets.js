@@ -7,32 +7,29 @@ import { Loading } from '@folio/stripes/components';
 import { APPLICATIONS_STEP_SIZE, displayList } from './Utils';
 
 const CapabilitySets = (searchQuery) => {
-
-  const chunkedCapabilitiesReducer = (data) => {
+  const chunkedCapabilitySetsReducer = (data) => {
     return data.flatMap(d => d.data?.capabilitySets || []);
   };
 
   const {
     isLoading,
-    items: capabilitiesResults
+    items: capabilitySetsResults
   } = useChunkedCQLFetch({
     endpoint: 'capability-sets',
     idName: 'permission',
     ids: searchQuery.query?.length ? searchQuery.query : [],
     queryEnabled: searchQuery.query?.length,
-    reduceFunction: chunkedCapabilitiesReducer,
+    reduceFunction: chunkedCapabilitySetsReducer,
     STEP_SIZE: APPLICATIONS_STEP_SIZE,
   });
 
   return (
     <>
       { isLoading && <Loading /> }
-      { !isLoading && capabilitiesResults?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilitySets" /></h3> }
-      { !isLoading && displayList(capabilitiesResults, 'capabilities') }
+      { !isLoading && capabilitySetsResults?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilitySets" /></h3> }
+      { !isLoading && displayList(capabilitySetsResults, 'capabilities') }
     </>
   );
-
-
 };
 
 export default CapabilitySets;

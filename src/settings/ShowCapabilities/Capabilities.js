@@ -7,7 +7,6 @@ import { Loading } from '@folio/stripes/components';
 import { APPLICATIONS_STEP_SIZE, displayList } from './Utils';
 
 const Capabilities = (searchQuery) => {
-
   const chunkedCapabilitiesReducer = (data) => {
     return data.flatMap(d => d.data?.capabilities || []);
   };
@@ -31,8 +30,6 @@ const Capabilities = (searchQuery) => {
       { !isLoading && displayList(capabilitiesResults, 'capabilities') }
     </>
   );
-
-
 };
 
 export default Capabilities;
