@@ -10,7 +10,7 @@ const lookUpPermissionDisplayNameById = (permissionName) => {
   return stripes.discovery?.permissionDisplayNames?.[permissionName];
 };
 
-export const displayList = (resultList, listType) => {
+export const displayList = (resultList) => {
   return resultList?.map((value) => (
     <ul>
       <li>{value.name}</li>

@@ -27,7 +27,7 @@ const CapabilitySets = (searchQuery) => {
     <>
       { isLoading && <Loading /> }
       { !isLoading && capabilitySetsResults?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilitySets" /></h3> }
-      { !isLoading && displayList(capabilitySetsResults, 'capabilities') }
+      { !isLoading && displayList(capabilitySetsResults) }
     </>
   );
 };

@@ -27,7 +27,7 @@ const Capabilities = (searchQuery) => {
     <>
       { isLoading && <Loading /> }
       { !isLoading && capabilitiesResults?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilities" /></h3> }
-      { !isLoading && displayList(capabilitiesResults, 'capabilities') }
+      { !isLoading && displayList(capabilitiesResults) }
     </>
   );
 };
