@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { stripesConnect, useOkapiKy, useStripes } from '@folio/stripes/core';
+import { stripesConnect, useStripes } from '@folio/stripes/core';
 import { Button, Pane, Row, Col, SearchField, Select } from '@folio/stripes/components';
 import Capabilities from './Capabilities';
 import CapabilitySets from './CapabilitySets';
@@ -15,7 +15,6 @@ const ShowCapabilities = () => {
   const searchByOptions = [{ label: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME, value: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME },
     { label: SEARCH_BY_TYPES.PERMISSION_NAME, value: SEARCH_BY_TYPES.PERMISSION_NAME }];
 
-  const ky = useOkapiKy();
   const stripes = useStripes();
   const [searchText, setSearchText] = useState('');
   const [searchQuery, setSearchQuery] = useState([]);
