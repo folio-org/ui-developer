@@ -11,16 +11,16 @@ const lookUpPermissionDisplayNameById = (permissionName) => {
 };
 
 export const displayList = (resultList) => {
-  return resultList?.map((value) => (
+  return resultList?.map((resultItem) => (
     <ul>
-      <li>{value.name}</li>
+      <li>{resultItem.name}</li>
       <ul>
-        <li><strong>type:</strong> {value.type}</li>
-        <li><strong>applicationId:</strong> {value.applicationId}</li>
-        <li><strong>resource:</strong> {value.resource}</li>
-        <li><strong>action:</strong> {value.action}</li>
-        <li><strong>permissionName:</strong> {value.permission}</li>
-        <li><strong>permissionDisplayName:</strong> {lookUpPermissionDisplayNameById(value.permission)}</li>
+        <li><strong>type:</strong> {resultItem.type}</li>
+        <li><strong>applicationId:</strong> {resultItem.applicationId}</li>
+        <li><strong>resource:</strong> {resultItem.resource}</li>
+        <li><strong>action:</strong> {resultItem.action}</li>
+        <li><strong>permissionName:</strong> {resultItem.permission}</li>
+        <li><strong>permissionDisplayName:</strong> {lookUpPermissionDisplayNameById(resultItem.permission)}</li>
       </ul>
     </ul>
   ));
