@@ -66,7 +66,7 @@
     "dependencies.other-modules": "Inne moduły",
     "permission.settings.dependencies": "Ustawienia (programista): może wyświetlać wykresy zależności",
     "perms.visibleOnly": "Pokaż tylko widoczne uprawnienia",
-    "perms.showDisplayName": "Show display name as well as true name",
+    "perms.showDisplayName": "Pokaż nazwę wyświetlaną i prawdziwą nazwę",
     "perms.permissionCount": "{count} uprawnienia:",
     "translations": "Tłumaczenia",
     "stripesInspector": "Stripes inspector",
