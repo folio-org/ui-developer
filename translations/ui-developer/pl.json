@@ -103,7 +103,7 @@
     "okapiConsole.configuration.url": "URL",
     "okapiConsole.configuration.tenant": "Tenant",
     "okapiConsole.configuration.user": "Użytkownika",
-    "okapiConsole.configuration.locale": "Locale",
+    "okapiConsole.configuration.locale": "Lokalne",
     "okapiConsole.environment": "Environment",
     "okapiConsole.modules": "Moduły",
     "okapiConsole.modules.restrictToLatest": "Restrict to latest?",
