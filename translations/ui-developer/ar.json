@@ -14,7 +14,7 @@
     "hotkeys.instructions": "عند التركيز على هذه المنطقة، اكتب:",
     "hotkeys.home": "للذهاب إلى الصفحة الرئيسية",
     "hotkeys.about": "للذهاب إلى صفحة حول",
-    "hotkeys.undefined": "غير معرّف",
+    "hotkeys.undefined": "غير محدد",
     "setToken.authenticationToken": "رمز الاستيثاق (JWT)",
     "sessionLocale.temporarySessionLocale": "الإعدادات المحلية المؤقتة للجلسة",
     "configuration.showHomeLink": "عرض رابط الرئيسية في القائمة العلوية اليمنى",
@@ -148,7 +148,7 @@
     "okapiConsole.modules.deployments": "Has {count} {count, plural, one {deployment} other {deployments}}",
     "okapiConsole.modules.deployments.undeploy": "إلغاء النشر",
     "okapiConsole.modules.deployments.undeploy.success": "Undeployed instance {instId} (module {id})",
-    "okapiConsole.modules.deployments.undeploy.error": "Could not undeploy instance {instId} (module {id}): {error}",
+    "okapiConsole.modules.deployments.undeploy.error": "تعذر إلغاء نشر الوعاء {instId} (الوحدة {id} ): {error}",
     "okapiConsole.modules.deployments.undeploy.confirm": "Are you absolutely sure that you know what you're doing, and want to undeploy?",
     "app-manager": "مدير التطبيقات",
     "app-manager.apps": "التطبيقات",
@@ -179,6 +179,6 @@
     "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimal fraction of how early to refresh the access token (e.g. 0.6 is 60% into the lifetime of the token)",
+    "rtr.rotationIntervalFraction": "rotateIntervalFraction: كسر عشري لمدى سرعة تحديث رمز الوصول (على سبيل المثال 0.6 يمثل 60% من عمر الرمز)",
     "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@folio/developer",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "Developer settings",
   "repository": "folio-org/ui-developer",
   "publishConfig": {
@@ -27,6 +27,7 @@
       }
     ],
     "okapiInterfaces": {
+      "settings": "1.0",
       "okapi": "1.9"
     },
     "optionalOkapiInterfaces": {
@@ -194,9 +195,11 @@
         "displayName": "Settings (developer): Can edit user configuration values",
         "subPermissions": [
           "settings.developer.enabled",
-          "configuration.entries.collection.get",
-          "configuration.entries.item.post",
-          "configuration.entries.item.put",
+          "mod-settings.entries.collection.get",
+          "mod-settings.entries.item.post",
+          "mod-settings.entries.item.put",
+          "mod-settings.owner.read.stripes-core.prefs.manage",
+          "mod-settings.owner.write.stripes-core.prefs.manage",
           "users.collection.get"
         ],
         "visible": true
