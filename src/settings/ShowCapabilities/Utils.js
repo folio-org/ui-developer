@@ -12,7 +12,7 @@ const lookUpPermissionDisplayNameById = (permissionName) => {
 
 export const displayList = (resultList) => {
   return resultList?.map((resultItem) => (
-    <ul>
+    <ul key={resultItem.name}>
       <li>{resultItem.name}</li>
       <ul>
         <li><strong>type:</strong> {resultItem.type}</li>
