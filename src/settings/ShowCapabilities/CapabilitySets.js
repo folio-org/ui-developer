@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { useChunkedCQLFetch } from '@folio/stripes/core';
 import { Loading } from '@folio/stripes/components';
 
-import { APPLICATIONS_STEP_SIZE, displayList } from './Utils';
+import { APPLICATIONS_STEP_SIZE, DisplayList } from './Utils';
 
 const CapabilitySets = (searchQuery) => {
   const chunkedCapabilitySetsReducer = (data) => {
@@ -27,7 +27,7 @@ const CapabilitySets = (searchQuery) => {
     <>
       { isLoading && <Loading /> }
       { !isLoading && capabilitySetsResults?.length > 0 && <h3><FormattedMessage id="ui-developer.capabilitySets" /></h3> }
-      { !isLoading && displayList(capabilitySetsResults) }
+      { !isLoading && DisplayList(capabilitySetsResults) }
     </>
   );
 };

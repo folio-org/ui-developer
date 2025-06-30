@@ -2,15 +2,15 @@ import React from 'react';
 
 import { useStripes } from '@folio/stripes/core';
 
-export const APPLICATIONS_STEP_SIZE = 100;
+export const APPLICATIONS_STEP_SIZE = 75;
 
-const stripes = useStripes();
-
-const lookUpPermissionDisplayNameById = (permissionName) => {
+const lookUpPermissionDisplayNameById = (stripes, permissionName) => {
   return stripes.discovery?.permissionDisplayNames?.[permissionName];
 };
 
-export const displayList = (resultList) => {
+export const DisplayList = (resultList) => {
+  const stripes = useStripes();
+
   return resultList?.map((resultItem) => (
     <ul key={resultItem.name}>
       <li>{resultItem.name}</li>
@@ -20,7 +20,7 @@ export const displayList = (resultList) => {
         <li><strong>resource:</strong> {resultItem.resource}</li>
         <li><strong>action:</strong> {resultItem.action}</li>
         <li><strong>permissionName:</strong> {resultItem.permission}</li>
-        <li><strong>permissionDisplayName:</strong> {lookUpPermissionDisplayNameById(resultItem.permission)}</li>
+        <li><strong>permissionDisplayName:</strong> {lookUpPermissionDisplayNameById(stripes, resultItem.permission)}</li>
       </ul>
     </ul>
   ));
