@@ -81,6 +81,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.sessionTimezone",
+        "displayName": "Settings (Developer): set session timezone",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.okapiConfiguration",
         "displayName": "Settings (developer): Can view tenant configuration values",
         "subPermissions": [

@@ -7,6 +7,7 @@ import { Settings } from '@folio/stripes/smart-components';
 import Configuration from './Configuration';
 import ShowPermissions from './ShowPermissions';
 import SessionLocale from './SessionLocale';
+import SessionTimezone from './SessionTimezone';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
 import FolioBabies from './FolioBabies';
@@ -44,6 +45,12 @@ const pages = [
     labelId: 'ui-developer.sessionLocale',
     component: SessionLocale,
     perm: 'ui-developer.settings.locale',
+  },
+  {
+    route: 'session-timezone',
+    labelId: 'ui-developer.sessionTimezone',
+    component: SessionTimezone,
+    perm: 'ui-developer.settings.sessionTimezone',
   },
   {
     route: 'okapi-paths',
