@@ -5,6 +5,7 @@
 * Add `settings.enabled` as a subpermission to all permission sets so they can be accessed in the UI if enabled individually. Refs UID-199.
 * *BREAKING* Refactor `UserLocale` component to use mod-settings API instead of mod-configuration; remove `Locale` field. Refs UID-202.
 * Support longer queries in ShowCapabilities dev tool. Refs UID-201.
+* Session timezone support. Refs UID-204.
 
 ## [10.0.0](https://github.com/folio-org/ui-developer/tree/v10.0.0) (2025-03-17)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v9.0.0...v10.0.0)

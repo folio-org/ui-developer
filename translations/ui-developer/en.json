@@ -56,6 +56,7 @@
   "setToken.authenticationToken": "Authentication token (JWT)",
 
   "sessionLocale.temporarySessionLocale": "TEMPORARY Session locale",
+
   "passwd": "Passwd",
   "passwd.setUserPassword": "Set a user's password",
   "passwd.username": "Username",
@@ -177,11 +178,17 @@
   "rtr.registerServiceWorker": "Register the service worker",
   "rtr.unregisterServiceWorker": "Unregister the service worker",
 
+  "sessionTimezone": "Session timezone",
+  "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
+  "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
+  "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
   "permission.settings.token": "Settings (Developer): manage JWT authentication token",
   "permission.settings.locale": "Settings (Developer): set session locale",
+  "permission.settings.sessionTimezone": "Settings (Developer): set session timezone",
   "permission.settings.okapiConfiguration": "Settings (developer): Can edit tenant configuration values",
   "permission.settings.passwd": "Settings (developer): Can change users' passwords",
   "permission.settings.okapiQuery": "Settings (developer): Can run queries",
