@@ -28,31 +28,54 @@ const SettingsInspector = () => {
   const parsed = JSON.parse(data);
 
   const columns = [
-    /*
     {
       name: 'id',
+      disabled: true,
+      width: 160,
     },
-    */
     {
       name: 'scope',
+      width: 120,
     },
     {
       name: 'key',
+      width: 160,
     },
     {
+      width: 80,
       name: 'user',
       formatter: x => x.user || <NoValue />,
     },
     {
       name: 'value',
-      formatter: x => JSON.stringify(x.value, null, 2),
+      // ESLint is too stupid to understand that this function does have a consistent return
+      // eslint-disable-next-line consistent-return
+      formatter: x => {
+        if (typeof x.value === 'object') {
+          return <pre>{JSON.stringify(x.value, null, 2)}</pre>;
+        } else if (typeof x.value !== 'string') {
+          return x.value;
+        } else if (x.value.startsWith('{')) {
+          // Heuristically, we guess this might be a string-encoded JSON structure
+          let parsedVal;
+          try {
+            parsedVal = JSON.parse(x.value);
+          } catch (e) {
+            // It's some other kind of string, just display as-is
+            return x.value;
+          }
+          return <pre>{JSON.stringify(parsedVal, null, 2)}</pre>;
+        }
+      },
     },
   ];
 
   const columnMapping = {};
+  const columnWidths = {};
   const formatter = {};
   columns.forEach(x => {
     columnMapping[x.name] = <FormattedMessage id={`ui-developer.settingsInspector.col.${x.name}`} />;
+    if (x.width) columnWidths[x.name] = `${x.width}px`;
     if (x.formatter) formatter[x.name] = x.formatter;
   });
 
@@ -66,8 +89,9 @@ const SettingsInspector = () => {
       </h3>
       <MultiColumnList
         contentData={parsed.items}
-        visibleColumns={columns.map(x => x.name)}
+        visibleColumns={columns.filter(x => !x.disabled).map(x => x.name)}
         columnMapping={columnMapping}
+        columnWidths={columnWidths}
         formatter={formatter}
       />
     </Pane>
