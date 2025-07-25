@@ -25,6 +25,7 @@ import OkapiTimers from './OkapiTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
+import SettingsInspector from './SettingsInspector';
 
 const pages = [
   {
@@ -127,7 +128,12 @@ const pages = [
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
   },
-
+  {
+    route: 'si',
+    labelId: 'ui-developer.settingsInspector',
+    component: SettingsInspector,
+    // perm: 'ui-developer.settings.si',
+  },
 ];
 
 const DeveloperSettings = (props) => {

@@ -177,6 +177,14 @@
   "rtr.registerServiceWorker": "Register the service worker",
   "rtr.unregisterServiceWorker": "Unregister the service worker",
 
+  "settingsInspector": "Settings inspector",
+  "settingsInspector.count": "{count} {count, plural, one {setting} other {settings}}",
+  "settingsInspector.col.id": "ID",
+  "settingsInspector.col.scope": "Scope",
+  "settingsInspector.col.key": "Key",
+  "settingsInspector.col.user": "User",
+  "settingsInspector.col.value": "Value",
+
   "permission.settings.configuration": "Settings (Developer): configuration",
   "permission.settings.perms": "Settings (Developer): perms",
   "permission.settings.hotkeys": "Settings (Developer): hot keys test",
@@ -195,5 +203,6 @@
   "permission.settings.okapiConsole.environment": "Settings (developer): Can use the Okapi console's Environment tab",
   "permission.settings.okapiConsole.modules": "Settings (developer): Can use the Okapi console's Modules tab",
   "permission.settings.userLocale": "Settings (developer): Can edit locale entries for any user",
-  "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers"
+  "permission.settings.okapiTimers": "Settings (developer): Can view okapi timers",
+  "permission.settings.si": "Settings (developer): Can inspect FOLIO settings"
 }
