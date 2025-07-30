@@ -32,7 +32,7 @@
     "okapiConfigurationEntries.value": "Значення",
     "okapiConfigurationEntries.confirm": "Ви впевнені, що хочете видалити цей запис конфігурації? \nМодуль: {module} \nНазва конфігурації: {configName} \nКод: {code}",
     "perms": "Поточні дозволи",
-    "passwd": "Passwd",
+    "passwd": "Пароль",
     "passwd.setUserPassword": "Встановити пароль користувача",
     "passwd.username": "Ім'я користувача",
     "passwd.password": "Пароль",
