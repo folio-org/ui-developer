@@ -180,5 +180,10 @@
     "rtr.idleModalTTL": "空闲模式TTL : 会话终止前应显示空闲模式的持续时间 : 例如 1 小时、1 分钟、5 秒、10 毫秒 ) ",
     "rtr.fixedLengthSessionWarningTTL": "定长会话警告TTL : 在会话终止前应显示“您的会话即将终止！”警告多长时间 : 例如 1 小时、1 分钟、5 秒、10 毫秒 ) ",
     "rtr.rotationIntervalFraction": "轮换间隔分数: 十进制分数，表示刷新访问令牌的时间 : 例如，0.6 表示访问令牌有效期的 60% ) 。",
-    "rtr.activityEvents": "活动事件 : 构成用户活动的 DOM 事件 : 以逗号分隔，例如 \"鼠标移动、按键下移“ ) "
+    "rtr.activityEvents": "活动事件 : 构成用户活动的 DOM 事件 : 以逗号分隔，例如 \"鼠标移动、按键下移“ ) ",
+    "sessionTimezone": "Session timezone",
+    "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
+    "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
+    "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
+    "permission.settings.sessionTimezone": "Settings (Developer): set session timezone"
 }

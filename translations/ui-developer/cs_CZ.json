@@ -180,5 +180,10 @@
     "rtr.idleModalTTL": "idleModalTTL: doba před ukončením relace, po kterou by se měl zobrazit režim nečinnosti (např. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "FixedLengthSessionWarningTTL: jak dlouho před ukončením relace (např. 1h, 1m, 5s, 10ms)  by se mělo zobrazit varování „dojde k ukončí vaší relace!“",
     "rtr.rotationIntervalFraction": "rotationIntervalFraction: desetinný zlomek, který udává, jak brzy se má přístupový token obnovit (např. 0,6 je 60 % životnosti tokenu)",
-    "rtr.activityEvents": "activityEvents: které události DOM představují aktivitu uživatele (oddělené čárkou, např. \"mousemove,keydown\")"
+    "rtr.activityEvents": "activityEvents: které události DOM představují aktivitu uživatele (oddělené čárkou, např. \"mousemove,keydown\")",
+    "sessionTimezone": "Časové pásmo relace",
+    "sessionTimezone.temporarySessionTimezone": "TEMPORARY Časové pásmo relace",
+    "sessionTimezone.timeZone": "Časové pásmo (časové pásmo používané při zobrazování informací o datu a čase)",
+    "sessionTimezone.currentDateTime": "Časové pásmo relace je {timezone}, kde aktuální datum je {date} a aktuální čas je {time}.",
+    "permission.settings.sessionTimezone": "Nastavení (Vývojář): nastavení časového pásma relace"
 }
