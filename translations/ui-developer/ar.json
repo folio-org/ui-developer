@@ -180,5 +180,10 @@
     "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
     "rtr.rotationIntervalFraction": "rotateIntervalFraction: كسر عشري لمدى سرعة تحديث رمز الوصول (على سبيل المثال 0.6 يمثل 60% من عمر الرمز)",
-    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')"
+    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')",
+    "sessionTimezone": "Session timezone",
+    "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
+    "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
+    "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
+    "permission.settings.sessionTimezone": "Settings (Developer): set session timezone"
 }

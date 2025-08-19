@@ -180,5 +180,10 @@
     "rtr.idleModalTTL": "Tempo de vida do modal ocioso: duração que o modal ocioso deve ser exibido antes que a sessão seja encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "Tempo de vida do aviso de duração fixa da sessão: por quanto tempo o aviso \"sua sessão vai morrer!\" deve ser exibido antes que a sessão seja encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
     "rtr.rotationIntervalFraction": "Fração de intervalo de rotação: fração decimal da antecedência com que o token de acesso deve ser atualizado (por exemplo, 0,6 corresponde a 60% da vida útil do token)",
-    "rtr.activityEvents": "Eventos de Atividade: quais eventos DOM constituem a atividade do usuário (separados por vírgulas, por exemplo, 'mousemove,keydown')"
+    "rtr.activityEvents": "Eventos de Atividade: quais eventos DOM constituem a atividade do usuário (separados por vírgulas, por exemplo, 'mousemove,keydown')",
+    "sessionTimezone": "Fuso horário da sessão",
+    "sessionTimezone.temporarySessionTimezone": "Fuso horário da sessão TEMPORÁRIA",
+    "sessionTimezone.timeZone": "Fuso horário (fuso horário utilizado para mostrar informações de data e hora)",
+    "sessionTimezone.currentDateTime": "O fuso horário da sessão é {timezone}, em que a data atual é {date} e a hora atual é {time}.",
+    "permission.settings.sessionTimezone": "Configurações (Desenvolvedor): definir o fuso horário da sessão"
 }

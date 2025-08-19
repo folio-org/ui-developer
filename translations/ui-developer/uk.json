@@ -180,5 +180,10 @@
     "rtr.idleModalTTL": "idleModalTTL: тривалість відображення модального вікна очікування перед завершенням сесії (наприклад, 1 год, 1 хв, 5 с, 10 мс)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: як довго має відображатися попередження \"ваша сесія завершується!\" перед завершенням сесії (наприклад, 1 год, 1 хв, 5 с, 10 мс)",
     "rtr.rotationIntervalFraction": "rotationIntervalFraction: десятковий дріб, що позначає як рано потрібно оновлювати токен доступу (наприклад, 0,6 – це 60% від терміну служби токена)",
-    "rtr.activityEvents": "activityEvents: які події DOM вважаються активністю користувача (розділяються комами, наприклад, \"mousemove, keydown\")"
+    "rtr.activityEvents": "activityEvents: які події DOM вважаються активністю користувача (розділяються комами, наприклад, \"mousemove, keydown\")",
+    "sessionTimezone": "Session timezone",
+    "sessionTimezone.temporarySessionTimezone": "ТИМЧАСОВИЙ часовий пояс сесії",
+    "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
+    "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
+    "permission.settings.sessionTimezone": "Налаштування (Розробник): встановлення часового поясу для сесії"
 }

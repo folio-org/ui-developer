@@ -180,5 +180,10 @@
     "rtr.idleModalTTL": "idleModalTTL: duur dat de idle-modal moet worden getoond voordat de sessie wordt beëindigd (bijv. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: hoe lang de waarschuwing \"uw sessie gaat dood!\" getoond moet worden voordat de sessie wordt beëindigd (bijv. 1h, 1m, 5s, 10ms)",
     "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimale fractie van hoe vroeg het toegangstoken vernieuwd moet worden (bijv. 0,6 is 60% van de levensduur van het token)",
-    "rtr.activityEvents": "activityEvents: welke DOM-events gebruikersactiviteit vormen (door komma's gescheiden, bijv. 'mousemove,keydown')"
+    "rtr.activityEvents": "activityEvents: welke DOM-events gebruikersactiviteit vormen (door komma's gescheiden, bijv. 'mousemove,keydown')",
+    "sessionTimezone": "Session timezone",
+    "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
+    "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
+    "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
+    "permission.settings.sessionTimezone": "Settings (Developer): set session timezone"
 }
