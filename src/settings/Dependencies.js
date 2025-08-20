@@ -93,7 +93,7 @@ const Dependencies = ({ resources }) => {
   const { modules } = resources;
   if (!modules.hasLoaded) return <LoadingPane />;
 
-  modules.records.sort((a, b) => a.name.localeCompare(b.name));
+  modules.records.sort((a, b) => (a.name || a.id).localeCompare(b.name || b.id));
 
   // By inspection, module type can be determined from ID. Four types:
   //      /folio_(.*)-([0-9].)*/    UI module $1, version $2
@@ -104,10 +104,10 @@ const Dependencies = ({ resources }) => {
   modules.records.forEach(module => {
     const { id } = module;
     if ((!includeUI && !includeBackend && !includeEdge && !includeOther) ||
-        (includeUI && id.startsWith('folio_')) ||
-        (includeBackend && id.startsWith('mod-')) ||
-        (includeEdge && id.startsWith('edge-')) ||
-        (includeOther && (!id.startsWith('folio_') && !id.startsWith('mod-') && !id.startsWith('edge-')))) {
+      (includeUI && id.startsWith('folio_')) ||
+      (includeBackend && id.startsWith('mod-')) ||
+      (includeEdge && id.startsWith('edge-')) ||
+      (includeOther && (!id.startsWith('folio_') && !id.startsWith('mod-') && !id.startsWith('edge-')))) {
       active.push(module);
     }
   });
