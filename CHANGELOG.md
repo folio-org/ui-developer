@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## 10.0.1 IN PROGRESS
+
+* Tolerate missing `name` attribute when sorting module descriptors. Refs UID-200.
+
 ## [10.0.0](https://github.com/folio-org/ui-developer/tree/v10.0.0) (2025-03-17)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v9.0.0...v10.0.0)
 
