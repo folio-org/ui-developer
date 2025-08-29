@@ -11,7 +11,7 @@
     "configuration.showPermissionsInMenu": "Показувати дозволи в меню користувача?",
     "configuration.listInvisiblePermissions": "Показати список \"невидимих\" дозволів у меню додавання дозволів (add-perm)?",
     "configuration.actAsRoot": "Діяти так, ніби користувач має всі дозволи?",
-    "hotkeys.instructions": "When this area is focused, type:",
+    "hotkeys.instructions": "Коли ця область активується, введіть:",
     "hotkeys.home": "перейти на головну сторінку",
     "hotkeys.about": "перейти на сторінку \"Про нас\"",
     "hotkeys.undefined": "невизначено",
