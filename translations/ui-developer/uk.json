@@ -89,7 +89,7 @@
     "userLocale.locale": "Мовний стандарт (для мови відображення, формату дати тощо)",
     "userLocale.timeZone": "Часовий пояс (часовий пояс, який використовується для відображення інформації про дату та час)",
     "userLocale.currency": "Основна валюта (для відображення символу валюти)",
-    "userLocale.success": "Successfully stored locale settings for {username}",
+    "userLocale.success": "Успішно збережено налаштування мовного стандарту для {username}",
     "userLocale.numberingSystem": "Система нумерації (змінити значення мовного стандарту за замовчуванням; <a>деталі</a>)",
     "permission.settings.userLocale": "Налаштування (розробник): Редагування даних мовного стандарту для будь-якого користувача",
     "perms-inspector.showInvisible": "Показати невидимі дозволи (сірий колір)?",
@@ -181,9 +181,9 @@
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: як довго має відображатися попередження \"ваша сесія завершується!\" перед завершенням сесії (наприклад, 1 год, 1 хв, 5 с, 10 мс)",
     "rtr.rotationIntervalFraction": "rotationIntervalFraction: десятковий дріб, що позначає як рано потрібно оновлювати токен доступу (наприклад, 0,6 – це 60% від терміну служби токена)",
     "rtr.activityEvents": "activityEvents: які події DOM вважаються активністю користувача (розділяються комами, наприклад, \"mousemove, keydown\")",
-    "sessionTimezone": "Session timezone",
+    "sessionTimezone": "Часовий пояс сесії",
     "sessionTimezone.temporarySessionTimezone": "ТИМЧАСОВИЙ часовий пояс сесії",
-    "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
-    "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
+    "sessionTimezone.timeZone": "Часовий пояс (часовий пояс, який використовується для відображення інформації про дату та час)",
+    "sessionTimezone.currentDateTime": "Часовий пояс сесії — {timezone}, де поточна дата — {date}, а поточний час — {time}.",
     "permission.settings.sessionTimezone": "Налаштування (Розробник): встановлення часового поясу для сесії"
 }
