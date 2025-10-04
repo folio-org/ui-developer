@@ -83,7 +83,7 @@
     "plugin-surface.exampleType": "(Exemplo: <code> {pluginType} </code> )",
     "plugin-surface.data": "Objeto de dados (opcional):",
     "plugin-surface.exampleData": "(Exemplo: <code> {data} </code> )",
-    "userLocale": "Localidade do usuário",
+    "userLocale": "Configuração local do usuário",
     "userLocale.setUserLocale": "Salvar idioma por usuário e localização",
     "userLocale.username": "Nome de usuário",
     "userLocale.locale": "Localidade (para exibição do idioma, formato da data, etc.)",
