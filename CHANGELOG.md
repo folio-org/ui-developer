@@ -7,6 +7,7 @@
 * Support longer queries in ShowCapabilities dev tool. Refs UID-201.
 * Session timezone support. Refs UID-204.
 * Tolerate missing `name` attribute when sorting module descriptors. Refs UID-200.
+* Remove display of mod-configuration values. Refs UID-182.
 
 ## [10.0.0](https://github.com/folio-org/ui-developer/tree/v10.0.0) (2025-03-17)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v9.0.0...v10.0.0)
