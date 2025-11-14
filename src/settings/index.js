@@ -11,7 +11,6 @@ import SessionTimezone from './SessionTimezone';
 import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
 import FolioBabies from './FolioBabies';
-import OkapiConfiguration from './OkapiConfiguration';
 import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
 import Dependencies from './Dependencies';
@@ -61,12 +60,6 @@ const pages = [
     route: 'folio-babies',
     labelId: 'ui-developer.folioBabies',
     component: FolioBabies,
-  },
-  {
-    route: 'okapi-configuration',
-    labelId: 'ui-developer.okapiConfigurationEntries',
-    component: OkapiConfiguration,
-    perm: 'ui-developer.settings.okapiConfiguration',
   },
   {
     route: 'passwd',
