@@ -140,7 +140,7 @@
     "canIUse.availableIn": "Available in these public permission sets",
     "okapiTimers": "Okapi timers",
     "okapiTimers.id": "ID",
-    "okapiTimers.method": "Method",
+    "okapiTimers.method": "Metoda",
     "okapiTimers.path": "Ścieżka",
     "okapiTimers.unit": "Jednostka",
     "okapiTimers.delay": "Delay",
