@@ -1,8 +1,11 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { BrowserRouter } from 'react-router-dom';
 
 import { useStripes } from '@folio/stripes/core';
 import { Settings } from '@folio/stripes/smart-components';
+
+import { NuqsAdapter } from '../hooks/useNuqsAdaptor';
 
 import Configuration from './Configuration';
 import ShowPermissions from './ShowPermissions';
@@ -203,7 +206,13 @@ const DeveloperSettings = (props) => {
     return a.label.localeCompare(b.label);
   });
 
-  return <Settings {...props} pages={allPages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
+  return (
+    <NuqsAdapter>
+      <BrowserRouter>
+        <Settings {...props} pages={allPages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />
+      </BrowserRouter>
+    </NuqsAdapter>
+  );
 };
 
 export default DeveloperSettings;
