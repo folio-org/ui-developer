@@ -22,11 +22,20 @@ import PermissionsInspector from './PermissionsInspector';
 import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
+import SchedulerTimers from './SchedulerTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
+import Test from './Test';
+import Bork from './Bork';
 
 const pages = [
+  {
+    route: 'bork',
+    labelId: 'ui-developer.bork',
+    component: Bork,
+    // perm: 'ui-developer.settings.configuration',
+  },
   {
     route: 'configuration',
     labelId: 'ui-developer.configuration',
@@ -116,18 +125,16 @@ const pages = [
     perm: 'ui-developer.settings.userLocale',
   },
   {
-    route: 'okapi-timers',
-    labelId: 'ui-developer.okapiTimers',
-    component: OkapiTimers,
-    perm: 'ui-developer.settings.okapiTimers',
-  },
-  {
     route: 'rtr',
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
   },
-
+  {
+    route: 'test',
+    labelId: 'ui-developer.test-playground',
+    component: Test,
+  },
 ];
 
 const DeveloperSettings = (props) => {
@@ -164,6 +171,28 @@ const DeveloperSettings = (props) => {
       labelId: 'ui-developer.canIUse',
       component: CanIUse,
     });
+  }
+
+  if (stripes.hasInterface('okapi')) {
+    allPages.push(
+      {
+        route: 'okapi-timers',
+        labelId: 'ui-developer.okapiTimers',
+        component: OkapiTimers,
+        perm: 'ui-developer.settings.okapiTimers',
+      },
+    );
+  }
+
+  if (stripes.hasInterface('scheduler')) {
+    allPages.push(
+      {
+        route: 'scheduler-timers',
+        labelId: 'ui-developer.schedulerTimers',
+        component: SchedulerTimers,
+        perm: 'ui-developer.settings.schedulerTimers',
+      }
+    );
   }
 
   allPages.forEach(p => {

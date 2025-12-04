@@ -134,6 +134,15 @@
   "okapiTimers.unit": "Unit",
   "okapiTimers.delay": "Delay",
 
+
+  "schedulerTimers": "mod-scheduler timers",
+  "schedulerTimers.id": "ID",
+  "schedulerTimers.method": "Method",
+  "schedulerTimers.path": "Path",
+  "schedulerTimers.unit": "Unit",
+  "schedulerTimers.delay": "Delay",
+  "schedulerTimers.schedule": "Schedule",
+
   "app-manager": "App manager",
   "app-manager.apps": "Applications",
   "app-manager.apps.count": "{count} {count, plural, one {application} other {applications}}",

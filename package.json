@@ -211,6 +211,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.schedulerTimers",
+        "displayName": "Settings (developer): Can view mod-scheduler timers",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.app-manager",
         "displayName": "Settings (developer): Can use the app manager",
         "subPermissions": [
