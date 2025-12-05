@@ -31,7 +31,7 @@ import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
 
 const pages = [
-  g  {
+  {
     route: 'configuration',
     labelId: 'ui-developer.configuration',
     component: Configuration,
