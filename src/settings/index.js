@@ -29,17 +29,9 @@ import SchedulerTimers from './SchedulerTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
-import Test from './Test';
-import Bork from './Bork';
 
 const pages = [
-  {
-    route: 'bork',
-    labelId: 'ui-developer.bork',
-    component: Bork,
-    // perm: 'ui-developer.settings.configuration',
-  },
-  {
+  g  {
     route: 'configuration',
     labelId: 'ui-developer.configuration',
     component: Configuration,
@@ -132,11 +124,6 @@ const pages = [
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
-  },
-  {
-    route: 'test',
-    labelId: 'ui-developer.test-playground',
-    component: Test,
   },
 ];
 
