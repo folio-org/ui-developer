@@ -211,6 +211,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.schedulerTimers",
+        "displayName": "Settings (developer): Can view mod-scheduler timers",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.app-manager",
         "displayName": "Settings (developer): Can use the app manager",
         "subPermissions": [
@@ -258,6 +266,7 @@
     "ky": "^0.23.0",
     "localforage": "^1.10.0",
     "lodash": "^4.17.4",
+    "nuqs": "^2.8.2",
     "prop-types": "^15.6.0",
     "react-chartjs-2": "^5.2.0",
     "react-inspector": "^6.0.0",

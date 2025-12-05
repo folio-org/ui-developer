@@ -1,8 +1,11 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { BrowserRouter } from 'react-router-dom';
 
 import { useStripes } from '@folio/stripes/core';
 import { Settings } from '@folio/stripes/smart-components';
+
+import { NuqsAdapter } from '../hooks/useNuqsAdaptor';
 
 import Configuration from './Configuration';
 import ShowPermissions from './ShowPermissions';
@@ -22,6 +25,7 @@ import PermissionsInspector from './PermissionsInspector';
 import OkapiConsole from './OkapiConsole';
 import UserLocale from './UserLocale';
 import OkapiTimers from './OkapiTimers';
+import SchedulerTimers from './SchedulerTimers';
 import AppManager from './AppManager';
 import RefreshTokenRotation from './RefreshTokenRotation';
 import ShowCapabilities from './ShowCapabilities';
@@ -116,18 +120,11 @@ const pages = [
     perm: 'ui-developer.settings.userLocale',
   },
   {
-    route: 'okapi-timers',
-    labelId: 'ui-developer.okapiTimers',
-    component: OkapiTimers,
-    perm: 'ui-developer.settings.okapiTimers',
-  },
-  {
     route: 'rtr',
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
     perm: 'ui-developer.settings.rtr',
   },
-
 ];
 
 const DeveloperSettings = (props) => {
@@ -166,6 +163,28 @@ const DeveloperSettings = (props) => {
     });
   }
 
+  if (stripes.hasInterface('okapi')) {
+    allPages.push(
+      {
+        route: 'okapi-timers',
+        labelId: 'ui-developer.okapiTimers',
+        component: OkapiTimers,
+        perm: 'ui-developer.settings.okapiTimers',
+      },
+    );
+  }
+
+  if (stripes.hasInterface('scheduler')) {
+    allPages.push(
+      {
+        route: 'scheduler-timers',
+        labelId: 'ui-developer.schedulerTimers',
+        component: SchedulerTimers,
+        perm: 'ui-developer.settings.schedulerTimers',
+      }
+    );
+  }
+
   allPages.forEach(p => {
     p.label = intl.formatMessage({ id: p.labelId });
   });
@@ -174,7 +193,13 @@ const DeveloperSettings = (props) => {
     return a.label.localeCompare(b.label);
   });
 
-  return <Settings {...props} pages={allPages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />;
+  return (
+    <NuqsAdapter>
+      <BrowserRouter>
+        <Settings {...props} pages={allPages} paneTitle={<FormattedMessage id="ui-developer.meta.title" />} />
+      </BrowserRouter>
+    </NuqsAdapter>
+  );
 };
 
 export default DeveloperSettings;

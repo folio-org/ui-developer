@@ -1,0 +1,42 @@
+import {
+  unstable_createAdapterProvider as createAdapterProvider,
+  renderQueryString,
+} from 'nuqs/adapters/custom';
+import { useCallback, useMemo } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
+
+function useNuqsReactRouterV5Adapter() {
+  const history = useHistory();
+  const location = useLocation();
+  const searchParams = useMemo(() => {
+    return new URLSearchParams(location.search);
+  }, [location.search]);
+
+  const updateUrl = useCallback(
+    (search, options) => {
+      const queryString = renderQueryString(search);
+      if (options.history === 'push') {
+        history.push({
+          search: queryString,
+          hash: window.location.hash
+        });
+      } else {
+        history.replace({
+          search: queryString,
+          hash: window.location.hash
+        });
+      }
+      if (options.scroll) {
+        window.scrollTo(0, 0);
+      }
+    },
+    [history.push, history.replace]
+  );
+
+  return {
+    searchParams,
+    updateUrl
+  };
+}
+
+export const NuqsAdapter = createAdapterProvider(useNuqsReactRouterV5Adapter);
