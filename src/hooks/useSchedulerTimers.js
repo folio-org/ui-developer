@@ -13,7 +13,7 @@ const useSchedulerTimers = () => {
 
   const searchParams = {
     // limit imposed by the API; > 500 generates an error
-    limit: 500, 
+    limit: 500,
   };
 
   const { data, isLoading } = useQuery(
