@@ -44,7 +44,9 @@
         "permissionName": "settings.developer.enabled",
         "displayName": "Settings (Developer): display list of settings pages",
         "subPermissions": [
-          "settings.enabled"
+          "settings.enabled",
+          "mod-settings.global.read.stripes-core.prefs.manage",
+          "mod-settings.entries.collection.get"
         ]
       },
       {
