@@ -46,8 +46,8 @@ const SchedulerTimers = () => {
       history: 'push'
     }));
   const [sortDirection, setSortDirection] = useQueryState('sortDirection',
-    parseAsStringLiteral(['asc', 'desc']).withOptions({
-      defaultValue: 'asc',
+    parseAsStringLiteral(['ascending', 'descending']).withOptions({
+      defaultValue: 'ascending',
       history: 'push'
     }));
 
@@ -74,15 +74,15 @@ const SchedulerTimers = () => {
     setSortField(m.name);
     setSortDirection(prevState => {
       if (sortField === m.name) {
-        return prevState === 'asc' ? 'desc' : 'asc';
+        return prevState === 'ascending' ? 'descending' : 'ascending';
       }
-      return 'asc';
+      return 'ascending';
     });
   };
 
   const sortedData = () => {
     const list = data.timerDescriptors.toSorted(comparators[sortField]);
-    return sortDirection === 'asc' ? list : list.reverse();
+    return sortDirection === 'ascending' ? list : list.reverse();
   };
 
   if (isLoading) return <LoadingPane />;
