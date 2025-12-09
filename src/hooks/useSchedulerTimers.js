@@ -12,7 +12,8 @@ const useSchedulerTimers = () => {
   const ky = useOkapiKy();
 
   const searchParams = {
-    limit: 500,
+    // limit imposed by the API; > 500 generates an error
+    limit: 500, 
   };
 
   const { data, isLoading } = useQuery(
