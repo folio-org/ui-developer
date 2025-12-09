@@ -36,28 +36,28 @@ const comparators = {
   },
 };
 
+const columnMapping = {
+  delay: <FormattedMessage id="ui-developer.schedulerTimers.delay" />,
+  id: <FormattedMessage id="ui-developer.schedulerTimers.id" />,
+  method: <FormattedMessage id="ui-developer.schedulerTimers.method" />,
+  path: <FormattedMessage id="ui-developer.schedulerTimers.path" />,
+  unit: <FormattedMessage id="ui-developer.schedulerTimers.unit" />,
+  schedule: <FormattedMessage id="ui-developer.schedulerTimers.schedule" />,
+};
+
+const formatter = {
+  type: o => o.type,
+  moduleName: o => o.moduleName,
+  method: o => o.routingEntry.methods.join(', '),
+  path: o => o.routingEntry.pathPattern,
+  unit: o => o.routingEntry.unit ?? <NoValue />,
+  delay: o => (o.routingEntry.delay ? <FormattedNumber value={o.routingEntry.delay} /> : <NoValue />),
+  schedule: o => (o.routingEntry.schedule ? <tt>{o.routingEntry.schedule.cron}, {o.routingEntry.schedule.zone}</tt> : <NoValue />),
+};
+
 const SchedulerTimers = () => {
   const { data, isLoading } = useSchedulerTimers();
   const [dataSort, setDataSort] = useState({ field: 'moduleName', direction: 'ascending' });
-
-  const columnMapping = {
-    delay: <FormattedMessage id="ui-developer.schedulerTimers.delay" />,
-    id: <FormattedMessage id="ui-developer.schedulerTimers.id" />,
-    method: <FormattedMessage id="ui-developer.schedulerTimers.method" />,
-    path: <FormattedMessage id="ui-developer.schedulerTimers.path" />,
-    unit: <FormattedMessage id="ui-developer.schedulerTimers.unit" />,
-    schedule: <FormattedMessage id="ui-developer.schedulerTimers.schedule" />,
-  };
-
-  const formatter = {
-    type: o => o.type,
-    moduleName: o => o.moduleName,
-    method: o => o.routingEntry.methods.join(', '),
-    path: o => o.routingEntry.pathPattern,
-    unit: o => o.routingEntry.unit ?? <NoValue />,
-    delay: o => (o.routingEntry.delay ? <FormattedNumber value={o.routingEntry.delay} /> : <NoValue />),
-    schedule: o => (o.routingEntry.schedule ? <tt>{o.routingEntry.schedule.cron}, {o.routingEntry.schedule.zone}</tt> : <NoValue />),
-  };
 
   const onHeaderClick = (_e, m) => {
     setDataSort(prevState => {
