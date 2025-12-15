@@ -185,5 +185,14 @@
     "sessionTimezone.temporarySessionTimezone": "临时会话时区",
     "sessionTimezone.timeZone": "时区（显示时间信息时使用的时区）",
     "sessionTimezone.currentDateTime": "会话时区为{timezone} ，其中当前日期为{date} ，当前时间为{time} 。",
-    "permission.settings.sessionTimezone": "设置（开发者）：设置会话时区"
+    "permission.settings.sessionTimezone": "设置（开发者）：设置会话时区",
+    "schedulerTimers": "模块调度器定时器",
+    "schedulerTimers.id": "ID",
+    "schedulerTimers.delay": "延迟",
+    "schedulerTimers.method": "方式",
+    "schedulerTimers.moduleName": "模块",
+    "schedulerTimers.path": "路径",
+    "schedulerTimers.schedule": "时间表",
+    "schedulerTimers.type": "类型",
+    "schedulerTimers.unit": "单位"
 }

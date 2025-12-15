@@ -185,5 +185,14 @@
     "sessionTimezone.temporarySessionTimezone": "Fuso horário da sessão TEMPORÁRIA",
     "sessionTimezone.timeZone": "Fuso horário (fuso horário utilizado para mostrar informações de data e hora)",
     "sessionTimezone.currentDateTime": "O fuso horário da sessão é {timezone}, em que a data atual é {date} e a hora atual é {time}.",
-    "permission.settings.sessionTimezone": "Configurações (Desenvolvedor): definir o fuso horário da sessão"
+    "permission.settings.sessionTimezone": "Configurações (Desenvolvedor): definir o fuso horário da sessão",
+    "schedulerTimers": "temporizadores do agendador de modulo",
+    "schedulerTimers.id": "ID",
+    "schedulerTimers.delay": "Atraso",
+    "schedulerTimers.method": "Método de verificação",
+    "schedulerTimers.moduleName": "Módulo",
+    "schedulerTimers.path": "Caminho",
+    "schedulerTimers.schedule": "Agenda",
+    "schedulerTimers.type": "Tipo",
+    "schedulerTimers.unit": "Unidade"
 }

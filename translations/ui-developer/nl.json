@@ -185,5 +185,14 @@
     "sessionTimezone.temporarySessionTimezone": "TIJDELIJKE Sessietijdzone",
     "sessionTimezone.timeZone": "Tijdzone (tijdzone gebruikt bij het tonen van datumtijdinformatie)",
     "sessionTimezone.currentDateTime": "The session tijdzone is {timezone}, where the current datum is {date} en de Huidige tijd is {time}.",
-    "permission.settings.sessionTimezone": "Instellingen (Ontwikkelaar): sessie tijdzone instellen"
+    "permission.settings.sessionTimezone": "Instellingen (Ontwikkelaar): sessie tijdzone instellen",
+    "schedulerTimers": "mod-scheduler timers",
+    "schedulerTimers.id": "ID",
+    "schedulerTimers.delay": "Delay",
+    "schedulerTimers.method": "Method",
+    "schedulerTimers.moduleName": "Module",
+    "schedulerTimers.path": "Path",
+    "schedulerTimers.schedule": "Schedule",
+    "schedulerTimers.type": "Type",
+    "schedulerTimers.unit": "Unit"
 }
