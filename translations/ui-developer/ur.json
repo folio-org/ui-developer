@@ -185,5 +185,14 @@
     "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
     "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
     "sessionTimezone.currentDateTime": "The session timezone is {timezone}, where the current date is {date} and the current time is {time}.",
-    "permission.settings.sessionTimezone": "Settings (Developer): set session timezone"
+    "permission.settings.sessionTimezone": "Settings (Developer): set session timezone",
+    "schedulerTimers": "mod-scheduler timers",
+    "schedulerTimers.id": "ID",
+    "schedulerTimers.delay": "Delay",
+    "schedulerTimers.method": "Method",
+    "schedulerTimers.moduleName": "Module",
+    "schedulerTimers.path": "Path",
+    "schedulerTimers.schedule": "Schedule",
+    "schedulerTimers.type": "Type",
+    "schedulerTimers.unit": "Unit"
 }

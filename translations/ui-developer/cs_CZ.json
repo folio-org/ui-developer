@@ -185,5 +185,14 @@
     "sessionTimezone.temporarySessionTimezone": "TEMPORARY Časové pásmo relace",
     "sessionTimezone.timeZone": "Časové pásmo (časové pásmo používané při zobrazování informací o datu a čase)",
     "sessionTimezone.currentDateTime": "Časové pásmo relace je {timezone}, kde aktuální datum je {date} a aktuální čas je {time}.",
-    "permission.settings.sessionTimezone": "Nastavení (Vývojář): nastavení časového pásma relace"
+    "permission.settings.sessionTimezone": "Nastavení (Vývojář): nastavení časového pásma relace",
+    "schedulerTimers": "mod-scheduler timers",
+    "schedulerTimers.id": "ID",
+    "schedulerTimers.delay": "Delay",
+    "schedulerTimers.method": "Method",
+    "schedulerTimers.moduleName": "Module",
+    "schedulerTimers.path": "Path",
+    "schedulerTimers.schedule": "Schedule",
+    "schedulerTimers.type": "Type",
+    "schedulerTimers.unit": "Unit"
 }
