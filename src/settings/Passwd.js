@@ -33,6 +33,7 @@ class Passwd extends React.Component {
       path: 'authn/credentials-existence',
       fetch: false,
       accumulate: true,
+      throwErrors: false,
     },
   });
 
@@ -95,7 +96,16 @@ class Passwd extends React.Component {
           throw new Error(intl.formatMessage({ id: 'ui-developer.passwd.error.missingUser' }, { username: values.username }));
         }
       })
-      .then(() => mutator.isLocalPasswordSet.GET({ params: { userId } }))
+      .then(async () => {
+        try {
+          const response = await mutator.isLocalPasswordSet.GET({ params: { userId } });
+          return response;
+        } catch (e) {
+          return {
+            credentialsExist: false,
+          };
+        }
+      })
       .then(res => {
         const credentials = {
           username: values.username,
