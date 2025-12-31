@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## Next Release
+
+* Password reset process - ensure proper response for missing user credentials. Fixes UID-209.
+
 ## [10.0.1](https://github.com/folio-org/ui-developer/tree/v10.0.1) (2025-12-15)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v10.0.0...v10.0.1)
 
