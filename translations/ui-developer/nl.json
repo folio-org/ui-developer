@@ -188,11 +188,11 @@
     "permission.settings.sessionTimezone": "Instellingen (Ontwikkelaar): sessie tijdzone instellen",
     "schedulerTimers": "mod-scheduler timers",
     "schedulerTimers.id": "ID",
-    "schedulerTimers.delay": "Delay",
-    "schedulerTimers.method": "Method",
+    "schedulerTimers.delay": "Vertraging",
+    "schedulerTimers.method": "Methode",
     "schedulerTimers.moduleName": "Module",
-    "schedulerTimers.path": "Path",
-    "schedulerTimers.schedule": "Schedule",
-    "schedulerTimers.type": "Type",
+    "schedulerTimers.path": "Pad",
+    "schedulerTimers.schedule": "Schema",
+    "schedulerTimers.type": "Soorten",
     "schedulerTimers.unit": "Unit"
 }
