@@ -95,6 +95,7 @@
         "displayName": "Settings (developer): Can change users' passwords",
         "subPermissions": [
           "settings.developer.enabled",
+          "users.collection.get",
           "login.credentials-existence.get",
           "login.item.post",
           "login.item.delete"
