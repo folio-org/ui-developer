@@ -199,8 +199,8 @@
           "mod-settings.entries.collection.get",
           "mod-settings.entries.item.post",
           "mod-settings.entries.item.put",
-          "mod-settings.owner.read.stripes-core.prefs.manage",
-          "mod-settings.owner.write.stripes-core.prefs.manage",
+          "mod-settings.users.read.stripes-core.prefs.manage",
+          "mod-settings.users.write.stripes-core.prefs.manage",
           "users.collection.get"
         ],
         "visible": true

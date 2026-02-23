@@ -12,6 +12,7 @@
 * Display mod-scheduler's timers. Refs UID-208.
 * Password reset process - ensure proper response for missing user credentials. Fixes UID-209.
 * Supply correct permissions to Passwd's corresponding pset. Refs UID-225.
+* Supply correct permissions to User locale's corresponding pset. Refs UID-229.
 
 ## [10.0.0](https://github.com/folio-org/ui-developer/tree/v10.0.0) (2025-03-17)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v9.0.0...v10.0.0)
