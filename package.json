@@ -50,7 +50,8 @@
         ]
       },
       {
-        "permissionName": "ui-developer.settings.configuration",
+        "permissionName": "ui-developer.settings.configuration.view",
+        "replaces": ["ui-developer.settings.configuration"],
         "displayName": "Settings (Developer): configuration",
         "subPermissions": [
           "settings.developer.enabled"
@@ -58,7 +59,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.perms",
+        "permissionName": "ui-developer.settings.perms.view",
+        "replaces": ["ui-developer.settings.perms"],
         "displayName": "Settings (Developer): perms",
         "subPermissions": [
           "settings.developer.enabled",
@@ -67,15 +69,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.token",
-        "displayName": "Settings (Developer): manage JWT authentication token",
-        "subPermissions": [
-          "settings.developer.enabled"
-        ],
-        "visible": true
-      },
-      {
-        "permissionName": "ui-developer.settings.locale",
+        "permissionName": "ui-developer.settings.locale.execute",
+        "replaces": ["ui-developer.settings.locale"],
         "displayName": "Settings (Developer): set session locale",
         "subPermissions": [
           "settings.developer.enabled"
@@ -83,7 +78,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.sessionTimezone",
+        "permissionName": "ui-developer.settings.sessionTimezone.execute",
+        "replaces": ["ui-developer.settings.sessionTimezone"],
         "displayName": "Settings (Developer): set session timezone",
         "subPermissions": [
           "settings.developer.enabled"
@@ -91,7 +87,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.passwd",
+        "permissionName": "ui-developer.settings.passwd.execute",
+        "replaces": ["ui-developer.settings.passwd"],
         "displayName": "Settings (developer): Can change users' passwords",
         "subPermissions": [
           "settings.developer.enabled",
@@ -103,7 +100,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.okapiQuery",
+        "permissionName": "ui-developer.settings.okapiQuery.view",
+        "replaces": ["ui-developer.settings.okapiQuery"],
         "displayName": "Settings (developer): Can run queries",
         "subPermissions": [
           "settings.developer.enabled"
@@ -111,7 +109,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.dependencies",
+        "permissionName": "ui-developer.settings.dependencies.view",
+        "replaces": ["ui-developer.settings.dependencies"],
         "displayName": "Settings (developer): Can display dependency charts",
         "subPermissions": [
           "settings.developer.enabled",
@@ -120,7 +119,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.translations",
+        "permissionName": "ui-developer.settings.translations.view",
+        "replaces": ["ui-developer.settings.translations"],
         "displayName": "Settings (developer): Can display list of loaded translations",
         "subPermissions": [
           "settings.developer.enabled"
@@ -128,7 +128,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.plugin-surface",
+        "permissionName": "ui-developer.settings.plugin-surface.view",
+        "replaces": ["ui-developer.settings.plugin-surface"],
         "displayName": "Settings (developer): plugin surface for developing plugins",
         "subPermissions": [
           "settings.developer.enabled"
@@ -136,7 +137,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.handler-surface",
+        "permissionName": "ui-developer.settings.handler-surface.view",
+        "replaces": ["ui-developer.settings.handler-surface"],
         "displayName": "Settings (developer): handler surface for developing handlers",
         "subPermissions": [
           "settings.developer.enabled"
@@ -144,7 +146,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.stripesInspector",
+        "permissionName": "ui-developer.settings.stripesInspector.view",
+        "replaces": ["ui-developer.settings.stripesInspector"],
         "displayName": "Settings (developer): Can display the contents of the stripes object",
         "subPermissions": [
           "settings.developer.enabled"
@@ -152,7 +155,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.permissionsInspector",
+        "permissionName": "ui-developer.settings.permissionsInspector.view",
+        "replaces": ["ui-developer.settings.permissionsInspector"],
         "displayName": "Settings (developer): Can display the system's permissions",
         "subPermissions": [
           "settings.developer.enabled",
@@ -161,7 +165,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.okapiConsole",
+        "permissionName": "ui-developer.settings.okapiConsole.view",
+        "replaces": ["ui-developer.settings.okapiConsole"],
         "displayName": "Settings (developer): Can display the Okapi console",
         "subPermissions": [
           "settings.developer.enabled",
@@ -170,7 +175,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.okapiConsole.environment",
+        "permissionName": "ui-developer.settings.okapiConsole.environment.view",
+        "replaces": ["ui-developer.settings.okapiConsole.environment"],
         "displayName": "Settings (developer): Can use the Okapi console's Environment tab",
         "subPermissions": [
           "ui-developer.settings.okapiConsole",
@@ -179,7 +185,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.okapiConsole.modules",
+        "permissionName": "ui-developer.settings.okapiConsole.modules.view",
+        "replaces": ["ui-developer.settings.okapiConsole.modules"],
         "displayName": "Settings (developer): Can use the Okapi console's Modules tab",
         "subPermissions": [
           "ui-developer.settings.okapiConsole",
@@ -192,7 +199,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.userLocale",
+        "permissionName": "ui-developer.settings.userLocale.execute",
+        "replaces": ["ui-developer.settings.userLocale"],
         "displayName": "Settings (developer): Can edit user configuration values",
         "subPermissions": [
           "settings.developer.enabled",
@@ -206,7 +214,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.okapiTimers",
+        "permissionName": "ui-developer.settings.okapiTimers.view",
+        "replaces": ["ui-developer.settings.okapiTimers"],
         "displayName": "Settings (developer): Can view Okapi timers",
         "subPermissions": [
           "settings.developer.enabled"
@@ -214,7 +223,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.schedulerTimers",
+        "permissionName": "ui-developer.settings.schedulerTimers.view",
+        "replaces": ["ui-developer.settings.schedulerTimers"],
         "displayName": "Settings (developer): Can view mod-scheduler timers",
         "subPermissions": [
           "settings.developer.enabled"
@@ -222,7 +232,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.app-manager",
+        "permissionName": "ui-developer.settings.app-manager.manage",
+        "replaces": ["ui-developer.settings.app-manager"],
         "displayName": "Settings (developer): Can use the app manager",
         "subPermissions": [
           "settings.developer.enabled",
@@ -232,7 +243,8 @@
         "visible": true
       },
       {
-        "permissionName": "ui-developer.settings.rtr",
+        "permissionName": "ui-developer.settings.rtr.view",
+        "replaces": ["ui-developer.settings.rtr"],
         "displayName": "Settings (developer): Can dicker with token expirations in redux",
         "subPermissions": [
           "settings.developer.enabled"
