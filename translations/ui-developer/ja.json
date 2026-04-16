@@ -166,7 +166,7 @@
     "rtr": "Refresh token rotation",
     "rtr.registerServiceWorker": "Register the service worker",
     "rtr.unregisterServiceWorker": "Unregister the service worker",
-    "configuration.preserveConsole": "Preserve console on logout",
+    "configuration.preserveConsole": "ログアウト時にコンソールを保持",
     "configuration.suppressIntlWarnings": "Suppress intl warnings",
     "canIUseCapabilities": "I can haz capabilities?",
     "capabilities": "Capabilities",
@@ -190,9 +190,9 @@
     "schedulerTimers.id": "ID",
     "schedulerTimers.delay": "Delay",
     "schedulerTimers.method": "Method",
-    "schedulerTimers.moduleName": "Module",
+    "schedulerTimers.moduleName": "モジュール",
     "schedulerTimers.path": "Path",
-    "schedulerTimers.schedule": "Schedule",
+    "schedulerTimers.schedule": "スケジュール",
     "schedulerTimers.type": "タイプ",
     "schedulerTimers.unit": "Unit"
 }
