@@ -32,25 +32,25 @@ const pages = [
     route: 'configuration',
     labelId: 'ui-developer.configuration',
     component: Configuration,
-    perm: 'ui-developer.settings.configuration',
+    perm: 'ui-developer.settings.configuration.view',
   },
   {
     route: 'perms',
     labelId: 'ui-developer.perms',
     component: ShowPermissions,
-    perm: 'ui-developer.settings.perms',
+    perm: 'ui-developer.settings.perms.view',
   },
   {
     route: 'locale',
     labelId: 'ui-developer.sessionLocale',
     component: SessionLocale,
-    perm: 'ui-developer.settings.locale',
+    perm: 'ui-developer.settings.locale.execute',
   },
   {
     route: 'session-timezone',
     labelId: 'ui-developer.sessionTimezone',
     component: SessionTimezone,
-    perm: 'ui-developer.settings.sessionTimezone',
+    perm: 'ui-developer.settings.sessionTimezone.execute',
   },
   {
     route: 'okapi-paths',
@@ -66,61 +66,61 @@ const pages = [
     route: 'passwd',
     labelId: 'ui-developer.passwd',
     component: Passwd,
-    perm: 'ui-developer.settings.passwd',
+    perm: 'ui-developer.settings.passwd.execute',
   },
   {
     route: 'okapi-query',
     labelId: 'ui-developer.okapiQuery',
     component: OkapiQuery,
-    perm: 'ui-developer.settings.okapiQuery',
+    perm: 'ui-developer.settings.okapiQuery.view',
   },
   {
     route: 'dependencies',
     labelId: 'ui-developer.dependencies',
     component: Dependencies,
-    perm: 'ui-developer.settings.dependencies',
+    perm: 'ui-developer.settings.dependencies.view',
   },
   {
     route: 'translations',
     labelId: 'ui-developer.translations',
     component: Translations,
-    perm: 'ui-developer.settings.translations',
+    perm: 'ui-developer.settings.translations.view',
   },
   {
     route: 'plugin-surface',
     labelId: 'ui-developer.plugin-surface',
     component: PluginSurface,
-    perm: 'ui-developer.settings.plugin-surface',
+    perm: 'ui-developer.settings.plugin-surface.view',
   },
   {
     route: 'handler-surface',
     labelId: 'ui-developer.handler-surface',
     component: HandlerSurface,
-    perm: 'ui-developer.settings.handler-surface',
+    perm: 'ui-developer.settings.handler-surface.view',
   },
   {
     route: 'stripes-inspector',
     labelId: 'ui-developer.stripesInspector',
     component: StripesInspector,
-    perm: 'ui-developer.settings.stripesInspector',
+    perm: 'ui-developer.settings.stripesInspector.view',
   },
   {
     route: 'okapi-console',
     labelId: 'ui-developer.okapiConsole',
     component: OkapiConsole,
-    perm: 'ui-developer.settings.okapiConsole',
+    perm: 'ui-developer.settings.okapiConsole.view',
   },
   {
     route: 'user-locale',
     labelId: 'ui-developer.userLocale',
     component: UserLocale,
-    perm: 'ui-developer.settings.userLocale',
+    perm: 'ui-developer.settings.userLocale.execute',
   },
   {
     route: 'rtr',
     labelId: 'ui-developer.rtr',
     component: RefreshTokenRotation,
-    perm: 'ui-developer.settings.rtr',
+    perm: 'ui-developer.settings.rtr.view',
   },
 ];
 
@@ -166,7 +166,7 @@ const DeveloperSettings = (props) => {
         route: 'okapi-timers',
         labelId: 'ui-developer.okapiTimers',
         component: OkapiTimers,
-        perm: 'ui-developer.settings.okapiTimers',
+        perm: 'ui-developer.settings.okapiTimers.view',
       },
     );
   }
@@ -177,7 +177,7 @@ const DeveloperSettings = (props) => {
         route: 'scheduler-timers',
         labelId: 'ui-developer.schedulerTimers',
         component: SchedulerTimers,
-        perm: 'ui-developer.settings.schedulerTimers',
+        perm: 'ui-developer.settings.schedulerTimers.view',
       }
     );
   }
