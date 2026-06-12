@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FormattedMessage, FormattedDate, FormattedTime } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
 import { getTokenExpiry, useStripes } from '@folio/stripes/core';
 import { LoadingPane, MessageBanner, Pane, PaneHeader } from '@folio/stripes/components';
