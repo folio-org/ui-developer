@@ -1,6 +1,7 @@
 # Change history for ui-developer
 
-## 11.0.0 IN PROGRESS
+## [11.0.0](https://github.com/folio-org/ui-developer/tree/v11.0.0) (2026-04-21)
+[Full Changelog](https://github.com/folio-org/ui-developer/compare/v10.0.0...v11.0.0)
 
 * Add `settings.enabled` as a subpermission to all permission sets so they can be accessed in the UI if enabled individually. Refs UID-199.
 * *BREAKING* Refactor `UserLocale` component to use mod-settings API instead of mod-configuration; remove `Locale` field. Refs UID-202.
