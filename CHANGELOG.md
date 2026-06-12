@@ -1,5 +1,9 @@
 # Change history for ui-developer
 
+## IN PROGRESS
+
+* Display IST, FLST, RTR values statically (no form). Refs UID-234.
+
 ## [11.0.0](https://github.com/folio-org/ui-developer/tree/v11.0.0) (2026-04-21)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v10.0.0...v11.0.0)
 
