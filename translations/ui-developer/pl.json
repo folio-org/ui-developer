@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "Czas, przez jaki nieaktywna sesja trwa, zanim zostanie zakończona np. 1h, 1m, 5s, 10ms",
     "rtr.idleModalTTL": "Czas, przez jaki okno informujące o bezczynności powinno być wyświetlane, zanim sesja zostanie zakończona np. 1h, 1m, 5s, 10ms",
     "rtr.fixedLengthSessionWarningTTL": "Czas, przez jaki powinno być wyświetlane ostrzeżenie „Twoja sesja wkrótce zostanie zakończona!”, zanim sesja zostanie zakończona np. 1h, 1m, 5s, 10ms",
-    "rtr.rotationIntervalFraction": "Ułamek dziesiętny określający, jak wcześnie ma zostać odświeżony token dostępu np. 0.6 oznacza 60% czasu ważności tokenu",
     "rtr.activityEvents": "Które zdarzenia DOM są uznawane za aktywność użytkownika, oddzielone przecinkami np. \"ruch myszą,naciśnięcie klawisza\"",
     "sessionTimezone": "Session timezone",
     "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Path",
     "schedulerTimers.schedule": "Schedule",
     "schedulerTimers.type": "Type",
-    "schedulerTimers.unit": "Unit"
+    "schedulerTimers.unit": "Unit",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }

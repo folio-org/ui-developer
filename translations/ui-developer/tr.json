@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "idleSessionTTL: boşta kalan bir oturumun öldürülmeden önce dayanacağı süre (örn. 1 saat, 1 dakika, 5 saniye, 10 saniye)",
     "rtr.idleModalTTL": "idleModalTTL: oturum sonlandırılmadan önce boşta modalinin gösterilmesi gereken süre (örn. 1 saat, 1 dakika, 5 saniye, 10 saniye)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: oturum öldürülmeden önce \"oturumunuz ölecek!\" uyarısının ne kadar süre gösterilmesi gerektiği (örn. 1 saat, 1 dakika, 5 saniye, 10 saniye)",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: erişim belirtecinin ne kadar erken yenileneceğine dair ondalık kesir (örn. 0,6 belirtecin kullanım ömrünün %60'ıdır)",
     "rtr.activityEvents": "activityEvents: hangi DOM olaylarının kullanıcı etkinliğini oluşturduğu (virgülle ayrılmış, örneğin 'mousemove,keydown')",
     "sessionTimezone": "Oturum zaman dilimi",
     "sessionTimezone.temporarySessionTimezone": "GEÇİCİ Oturum saat dilimi",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Yol",
     "schedulerTimers.schedule": "Program",
     "schedulerTimers.type": "Tip",
-    "schedulerTimers.unit": "Birim"
+    "schedulerTimers.unit": "Birim",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }
