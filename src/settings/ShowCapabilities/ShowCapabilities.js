@@ -80,7 +80,7 @@ const ShowCapabilities = () => {
       </Row>
       <Row>
         <Col xs={12}>
-          <Checkbox label="Exact match only" checked={exactMatchOnly} onChange={e => setExactMatchOnly(e.target.checked)} />
+          <Checkbox label={<FormattedMessage id="ui-developer.capabilities.exactMatchOnly" />} checked={exactMatchOnly} onChange={e => setExactMatchOnly(e.target.checked)} />
         </Col>
       </Row>
       <Layout element={Row} className="marginTop1">
