@@ -6,50 +6,52 @@ import { Button, Checkbox, Layout, Pane, Row, Col, SearchField, Select } from '@
 import Capabilities from './Capabilities';
 import CapabilitySets from './CapabilitySets';
 
+const searchForPermissionDisplayName = (displayNameQuery, stripes, exactMatchSearch) => {
+  const searchIds = [];
+
+  if (stripes.discovery?.permissionDisplayNames) {
+    const normalizedQuery = displayNameQuery?.toUpperCase().trim();
+
+    for (const [key, value] of Object.entries(stripes.discovery.permissionDisplayNames)) {
+      const normalizedValue = value?.toUpperCase().trim();
+      const isMatch = exactMatchSearch ? normalizedValue === normalizedQuery : normalizedValue?.includes(normalizedQuery);
+
+      if (isMatch) {
+        searchIds.push(key);
+      }
+    }
+  }
+
+  return searchIds;
+};
+
 const ShowCapabilities = () => {
   const SEARCH_BY_TYPES = {
     PERMISSION_DISPLAY_NAME: 'permissionDisplayName',
     PERMISSION_NAME: 'permissionName'
   };
 
-  const searchByOptions = [{ label: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME, value: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME },
-  { label: SEARCH_BY_TYPES.PERMISSION_NAME, value: SEARCH_BY_TYPES.PERMISSION_NAME }];
+  const searchByOptions = [
+    { label: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME, value: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME },
+    { label: SEARCH_BY_TYPES.PERMISSION_NAME, value: SEARCH_BY_TYPES.PERMISSION_NAME }
+  ];
 
   const stripes = useStripes();
   const [searchText, setSearchText] = useState('');
   const [searchQuery, setSearchQuery] = useState([]);
   const [searchBy, setSearchBy] = useState(SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME);
-  const [exactMatchOnly, setExactMatchOnly] = useState(false);
+  const [exactMatchSearch, setExactMatchSearch] = useState(false);
 
   const handleSearchByChange = (e) => {
     setSearchBy(e.target.value);
   };
 
-  const searchForPermissionDisplayName = (displayNameQuery, isExactMatch) => {
-    const searchIds = [];
-
-    if (stripes.discovery?.permissionDisplayNames) {
-      const normalizedQuery = displayNameQuery?.toUpperCase().trim();
-
-      for (const [key, value] of Object.entries(stripes.discovery.permissionDisplayNames)) {
-        const normalizedValue = value?.toUpperCase().trim();
-        const isMatch = isExactMatch ? normalizedValue === normalizedQuery : normalizedValue?.includes(normalizedQuery);
-
-        if (isMatch) {
-          searchIds.push(key);
-        }
-      }
-    }
-
-    return searchIds;
-  };
-
-  const submit = async () => {
+  const submit = () => {
     if (searchBy === SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME) {
-      const searchIds = searchForPermissionDisplayName(searchText, exactMatchOnly);
+      const searchIds = searchForPermissionDisplayName(searchText, stripes, exactMatchSearch);
       setSearchQuery(searchIds);
     } else {
-      setSearchQuery([exactMatchOnly ? searchText : `*${searchText}*`]);
+      setSearchQuery([exactMatchSearch ? searchText : `*${searchText}*`]);
     }
   };
 
@@ -80,7 +82,7 @@ const ShowCapabilities = () => {
       </Row>
       <Row>
         <Col xs={12}>
-          <Checkbox label={<FormattedMessage id="ui-developer.capabilities.exactMatchOnly" />} checked={exactMatchOnly} onChange={e => setExactMatchOnly(e.target.checked)} />
+          <Checkbox label={<FormattedMessage id="ui-developer.capabilities.exactMatchOnly" />} checked={exactMatchSearch} onChange={e => setExactMatchSearch(e.target.checked)} />
         </Col>
       </Row>
       <Layout element={Row} className="marginTop1">
