@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { stripesConnect, useStripes } from '@folio/stripes/core';
+import { useStripes } from '@folio/stripes/core';
 import { Button, Checkbox, Layout, Pane, Row, Col, SearchField, Select } from '@folio/stripes/components';
 import Capabilities from './Capabilities';
 import CapabilitySets from './CapabilitySets';
@@ -100,4 +100,4 @@ const ShowCapabilities = () => {
   );
 };
 
-export default stripesConnect(ShowCapabilities);
+export default ShowCapabilities;
