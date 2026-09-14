@@ -1,10 +1,29 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { stripesConnect, useStripes } from '@folio/stripes/core';
-import { Button, Pane, Row, Col, SearchField, Select } from '@folio/stripes/components';
+import { useStripes } from '@folio/stripes/core';
+import { Button, Checkbox, Layout, Pane, Row, Col, SearchField, Select } from '@folio/stripes/components';
 import Capabilities from './Capabilities';
 import CapabilitySets from './CapabilitySets';
+
+const searchForPermissionDisplayName = (displayNameQuery, stripes, exactMatchSearch) => {
+  const searchIds = [];
+
+  if (stripes.discovery?.permissionDisplayNames) {
+    const normalizedQuery = displayNameQuery?.toUpperCase().trim();
+
+    for (const [key, value] of Object.entries(stripes.discovery.permissionDisplayNames)) {
+      const normalizedValue = value?.toUpperCase().trim();
+      const isMatch = exactMatchSearch ? normalizedValue === normalizedQuery : normalizedValue?.includes(normalizedQuery);
+
+      if (isMatch) {
+        searchIds.push(key);
+      }
+    }
+  }
+
+  return searchIds;
+};
 
 const ShowCapabilities = () => {
   const SEARCH_BY_TYPES = {
@@ -12,38 +31,27 @@ const ShowCapabilities = () => {
     PERMISSION_NAME: 'permissionName'
   };
 
-  const searchByOptions = [{ label: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME, value: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME },
-    { label: SEARCH_BY_TYPES.PERMISSION_NAME, value: SEARCH_BY_TYPES.PERMISSION_NAME }];
+  const searchByOptions = [
+    { label: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME, value: SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME },
+    { label: SEARCH_BY_TYPES.PERMISSION_NAME, value: SEARCH_BY_TYPES.PERMISSION_NAME }
+  ];
 
   const stripes = useStripes();
   const [searchText, setSearchText] = useState('');
   const [searchQuery, setSearchQuery] = useState([]);
   const [searchBy, setSearchBy] = useState(SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME);
+  const [exactMatchSearch, setExactMatchSearch] = useState(false);
 
   const handleSearchByChange = (e) => {
     setSearchBy(e.target.value);
   };
 
-  const searchForPermissionDisplayName = (displayNameQuery) => {
-    const searchIds = [];
-
-    if (stripes.discovery?.permissionDisplayNames) {
-      for (const [key, value] of Object.entries(stripes.discovery.permissionDisplayNames)) {
-        if (value?.toUpperCase().trim().includes(displayNameQuery?.toUpperCase().trim())) {
-          searchIds.push(key);
-        }
-      }
-    }
-
-    return searchIds;
-  };
-
-  const submit = async () => {
+  const submit = () => {
     if (searchBy === SEARCH_BY_TYPES.PERMISSION_DISPLAY_NAME) {
-      const searchIds = searchForPermissionDisplayName(searchText);
+      const searchIds = searchForPermissionDisplayName(searchText, stripes, exactMatchSearch);
       setSearchQuery(searchIds);
     } else {
-      setSearchQuery([`*${searchText}*`]);
+      setSearchQuery([exactMatchSearch ? searchText : `*${searchText}*`]);
     }
   };
 
@@ -63,8 +71,6 @@ const ShowCapabilities = () => {
       </Row>
       <Row>
         <SearchField name="query" id="query" value={searchText} style={{ width: '50vw' }} onInput={e => setSearchText(e.target.value)} onKeyDown={handleKeyDown} />
-        &nbsp;&nbsp;
-        <Button onClick={submit}><FormattedMessage id="ui-developer.search" /></Button>
       </Row>
       <Row>
         <Select
@@ -76,6 +82,16 @@ const ShowCapabilities = () => {
       </Row>
       <Row>
         <Col xs={12}>
+          <Checkbox label={<FormattedMessage id="ui-developer.capabilities.exactMatchOnly" />} checked={exactMatchSearch} onChange={e => setExactMatchSearch(e.target.checked)} />
+        </Col>
+      </Row>
+      <Layout element={Row} className="marginTop1">
+        <Col xs={12}>
+          <Button onClick={submit}><FormattedMessage id="ui-developer.search" /></Button>
+        </Col>
+      </Layout>
+      <Row>
+        <Col xs={12}>
           <Capabilities query={searchQuery} />
           <CapabilitySets query={searchQuery} />
         </Col>
@@ -84,4 +100,4 @@ const ShowCapabilities = () => {
   );
 };
 
-export default stripesConnect(ShowCapabilities);
+export default ShowCapabilities;
