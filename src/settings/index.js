@@ -12,7 +12,6 @@ import OkapiPaths from './OkapiPaths';
 import CanIUse from './CanIUse';
 import FolioBabies from './FolioBabies';
 import Passwd from './Passwd';
-import OkapiQuery from './OkapiQuery';
 import ApiConsole from './ApiConsole';
 import Dependencies from './Dependencies';
 import Translations from './Translations';
@@ -68,12 +67,6 @@ const pages = [
     labelId: 'ui-developer.passwd',
     component: Passwd,
     perm: 'ui-developer.settings.passwd.execute',
-  },
-  {
-    route: 'okapi-query',
-    labelId: 'ui-developer.okapiQuery',
-    component: OkapiQuery,
-    perm: 'ui-developer.settings.okapiQuery.view',
   },
   {
     route: 'api-console',
