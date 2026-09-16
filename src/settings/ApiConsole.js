@@ -13,11 +13,10 @@ import {
   TextField,
 } from '@folio/stripes/components';
 
+// for to provide list of HTTP methods, determine which ones get a body and
+// disable/enable the body input field accordingly.
 const METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD'];
 const METHODS_WITHOUT_BODY = new Set(['GET', 'HEAD']);
-
-const STRUCTURAL_CHARS = '{}[]:,';
-const JSON_LITERAL_RE = /^(-?\d+(\.\d+)?([eE][+-]?\d+)?|true|false|null)$/;
 
 /**
  * Quote a single bare token as needed to make it valid JSON: numbers,
@@ -27,6 +26,8 @@ const JSON_LITERAL_RE = /^(-?\d+(\.\d+)?([eE][+-]?\d+)?|true|false|null)$/;
  */
 function quotifyToken(raw) {
   if (raw === '') return '';
+
+  const JSON_LITERAL_RE = /^(-?\d+(\.\d+)?([eE][+-]?\d+)?|true|false|null)$/;
 
   const isDoubleQuoted = raw.startsWith('"') && raw.endsWith('"') && raw.length >= 2;
   const isSingleQuoted = raw.startsWith('\'') && raw.endsWith('\'') && raw.length >= 2;
@@ -56,6 +57,7 @@ function quotifyToken(raw) {
  * etc.) into the request body and turn it into valid JSON with one click.
  */
 function quotifyBody(text) {
+  const STRUCTURAL_CHARS = '{}[]:,';
   let out = '';
   let buffer = '';
   let i = 0;
