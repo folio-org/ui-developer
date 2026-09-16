@@ -2,6 +2,7 @@
 
 ## IN PROGRESS
 
+* Add API console dev tool for issuing arbitrary REST requests against the backend. Refs UID-XXX.
 * Display IST, FLST, RTR values statically (no form). Refs UID-234.
 * Add 'Exact match' filter to "I can hax capabilities?". Refs UID-157.
 

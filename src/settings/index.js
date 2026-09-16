@@ -13,6 +13,7 @@ import CanIUse from './CanIUse';
 import FolioBabies from './FolioBabies';
 import Passwd from './Passwd';
 import OkapiQuery from './OkapiQuery';
+import ApiConsole from './ApiConsole';
 import Dependencies from './Dependencies';
 import Translations from './Translations';
 import PluginSurface from './PluginSurface';
@@ -73,6 +74,12 @@ const pages = [
     labelId: 'ui-developer.okapiQuery',
     component: OkapiQuery,
     perm: 'ui-developer.settings.okapiQuery.view',
+  },
+  {
+    route: 'api-console',
+    labelId: 'ui-developer.apiConsole',
+    component: ApiConsole,
+    perm: 'ui-developer.settings.apiConsole.execute',
   },
   {
     route: 'dependencies',
