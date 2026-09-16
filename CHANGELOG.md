@@ -5,6 +5,7 @@
 * Add API console dev tool for issuing arbitrary REST requests against the backend. Refs UID-XXX.
 * Display IST, FLST, RTR values statically (no form). Refs UID-234.
 * Add 'Exact match' filter to "I can hax capabilities?". Refs UID-157.
+* Add API console page for performing data operations necessary for dev. Refs UID-251.
 
 ## [11.0.0](https://github.com/folio-org/ui-developer/tree/v11.0.0) (2026-04-21)
 [Full Changelog](https://github.com/folio-org/ui-developer/compare/v10.0.0...v11.0.0)
