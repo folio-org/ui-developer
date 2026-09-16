@@ -109,6 +109,14 @@
         "visible": true
       },
       {
+        "permissionName": "ui-developer.settings.apiConsole.execute",
+        "displayName": "Settings (developer): Can use the API console",
+        "subPermissions": [
+          "settings.developer.enabled"
+        ],
+        "visible": true
+      },
+      {
         "permissionName": "ui-developer.settings.dependencies.view",
         "replaces": ["ui-developer.settings.dependencies"],
         "displayName": "Settings (developer): Can display dependency charts",
