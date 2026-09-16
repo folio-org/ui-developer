@@ -14,7 +14,7 @@ import {
 } from '@folio/stripes/components';
 
 const METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD'];
-const METHODS_WITHOUT_BODY = ['GET', 'HEAD'];
+const METHODS_WITHOUT_BODY = new Set(['GET', 'HEAD']);
 
 const STRUCTURAL_CHARS = '{}[]:,';
 const JSON_LITERAL_RE = /^(-?\d+(\.\d+)?([eE][+-]?\d+)?|true|false|null)$/;
@@ -40,7 +40,7 @@ function quotifyToken(raw) {
   }
 
   if (isSingleQuoted) {
-    return JSON.stringify(raw.slice(1, -1).replace(/\\'/g, '\''));
+    return JSON.stringify(raw.slice(1, -1).replaceAll('\\\'', '\''));
   }
 
   if (JSON_LITERAL_RE.test(raw)) return raw;
@@ -108,7 +108,7 @@ const ApiConsole = () => {
   const [sending, setSending] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const bodyDisabled = METHODS_WITHOUT_BODY.includes(method);
+  const bodyDisabled = METHODS_WITHOUT_BODY.has(method);
 
   const updateQueryParam = (index, field, value) => {
     setQueryParams(queryParams.map((qp, i) => (i === index ? { ...qp, [field]: value } : qp)));
