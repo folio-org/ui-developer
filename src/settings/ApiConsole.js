@@ -209,7 +209,7 @@ const ApiConsole = () => {
             label={<FormattedMessage id="ui-developer.apiConsole.endpoint" />}
             name="path"
             fullWidth
-            placeholder="/users/users"
+            placeholder="Ex: /users"
             value={path}
             onChange={(event) => setPath(event.target.value)}
           />
@@ -227,7 +227,7 @@ const ApiConsole = () => {
           <Col xs={5}>
             <TextField
               aria-label={<FormattedMessage id="ui-developer.apiConsole.paramKey" />}
-              placeholder="limit"
+              placeholder="Ex: limit"
               fullWidth
               value={qp.key}
               onChange={(event) => updateQueryParam(index, 'key', event.target.value)}
@@ -236,7 +236,7 @@ const ApiConsole = () => {
           <Col xs={5}>
             <TextField
               aria-label={<FormattedMessage id="ui-developer.apiConsole.paramValue" />}
-              placeholder="100"
+              placeholder="Ex: 100"
               fullWidth
               value={qp.value}
               onChange={(event) => updateQueryParam(index, 'value', event.target.value)}
