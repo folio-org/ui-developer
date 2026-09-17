@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "空闲会话TTL : 空闲会话在被终止之前持续的时长 : 例如 1 小时、1 分钟、5 秒、10 毫秒 ) ",
     "rtr.idleModalTTL": "空闲模式TTL : 会话终止前应显示空闲模式的持续时间 : 例如 1 小时、1 分钟、5 秒、10 毫秒 ) ",
     "rtr.fixedLengthSessionWarningTTL": "定长会话警告TTL : 在会话终止前应显示“您的会话即将终止！”警告多长时间 : 例如 1 小时、1 分钟、5 秒、10 毫秒 ) ",
-    "rtr.rotationIntervalFraction": "轮换间隔分数: 十进制分数，表示刷新访问令牌的时间 : 例如，0.6 表示访问令牌有效期的 60% ) 。",
     "rtr.activityEvents": "活动事件 : 构成用户活动的 DOM 事件 : 以逗号分隔，例如 \"鼠标移动、按键下移“ ) ",
     "sessionTimezone": "会话时区",
     "sessionTimezone.temporarySessionTimezone": "临时会话时区",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "路径",
     "schedulerTimers.schedule": "时间表",
     "schedulerTimers.type": "类型",
-    "schedulerTimers.unit": "单位"
+    "schedulerTimers.unit": "单位",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }

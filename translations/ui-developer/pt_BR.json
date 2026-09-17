@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "Tempo de vida da sessão ociosa: duração de uma sessão ociosa antes de ser encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "Tempo de vida do modal ocioso: duração que o modal ocioso deve ser exibido antes que a sessão seja encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "Tempo de vida do aviso de duração fixa da sessão: por quanto tempo o aviso \"sua sessão vai morrer!\" deve ser exibido antes que a sessão seja encerrada (por exemplo: 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "Fração de intervalo de rotação: fração decimal da antecedência com que o token de acesso deve ser atualizado (por exemplo, 0,6 corresponde a 60% da vida útil do token)",
     "rtr.activityEvents": "Eventos de Atividade: quais eventos DOM constituem a atividade do usuário (separados por vírgulas, por exemplo, 'mousemove,keydown')",
     "sessionTimezone": "Fuso horário da sessão",
     "sessionTimezone.temporarySessionTimezone": "Fuso horário da sessão TEMPORÁRIA",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Caminho",
     "schedulerTimers.schedule": "Agenda",
     "schedulerTimers.type": "Tipo",
-    "schedulerTimers.unit": "Unidade"
+    "schedulerTimers.unit": "Unidade",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }
