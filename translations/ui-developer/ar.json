@@ -177,10 +177,9 @@
     "searchBy": "Search by",
     "rtr.forceRefresh": "فرض التحديث",
     "rtr.idleSessionTTL": "idleSessionTTL: duration an idle session lasts before being killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.idleModalTTL": "idleModalTTL: duration the idle modal should be shown before session is killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session is going to die!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "rotateIntervalFraction: كسر عشري لمدى سرعة تحديث رمز الوصول (على سبيل المثال 0.6 يمثل 60% من عمر الرمز)",
-    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity (comma-separated, e.g. 'mousemove,keydown')",
+    "rtr.idleModalTTL": "idleModalTTL: duration the 'keep working?' modal is shown before an idle session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: how long the “your session will end soon!” warning should be shown before the session is killed (e.g. 1h, 1m, 5s, 10ms)",
+    "rtr.activityEvents": "activityEvents: which DOM events constitute user activity",
     "sessionTimezone": "Session timezone",
     "sessionTimezone.temporarySessionTimezone": "TEMPORARY Session timezone",
     "sessionTimezone.timeZone": "Time zone (time zone used when showing date time information)",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Path",
     "schedulerTimers.schedule": "Schedule",
     "schedulerTimers.type": "Type",
-    "schedulerTimers.unit": "Unit"
+    "schedulerTimers.unit": "Unit",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }

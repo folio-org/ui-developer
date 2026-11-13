@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "Inaktivitätssitzungslebensdauer: Dauer einer inaktiven Sitzung bis zum Sitzungsende (z. B. 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "Inaktivitätsdialoglebensdauer: Dauer der Anzeige des Inaktivitätsdialogs vor dem Sitzungsende (z. B. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "Sitzungswarnungslebensdauer: Dauer der Anzeige „Ihre Sitzung läuft ab!“ vor dem Sitzungsende (z. B. 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "Rotationsintervall-Bruchteil: Dezimalbruch für die vorzeitige Aktualisierung des Zugriffstokens (z. B. 0.6 entspricht 60% der Token-Lebensdauer)",
     "rtr.activityEvents": "Aktivitätsereignisse: Welche DOM-Ereignisse bilden eine Personenaktivität (kommagetrennt, z. B. „mousemove, keydown“)",
     "sessionTimezone": "Sitzungszeitzone",
     "sessionTimezone.temporarySessionTimezone": "TEMPORÄRES Sitzungszeitzone",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Pfad",
     "schedulerTimers.schedule": "Zeitplan",
     "schedulerTimers.type": "Typ",
-    "schedulerTimers.unit": "Einheit"
+    "schedulerTimers.unit": "Einheit",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }
