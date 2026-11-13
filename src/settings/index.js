@@ -105,12 +105,6 @@ const pages = [
     perm: 'ui-developer.settings.stripesInspector.view',
   },
   {
-    route: 'okapi-console',
-    labelId: 'ui-developer.okapiConsole',
-    component: OkapiConsole,
-    perm: 'ui-developer.settings.okapiConsole.view',
-  },
-  {
     route: 'user-locale',
     labelId: 'ui-developer.userLocale',
     component: UserLocale,
@@ -129,6 +123,16 @@ const DeveloperSettings = (props) => {
   const intl = useIntl();
 
   const allPages = [...pages];
+
+  if (!stripes.okapi.authnUrl) {
+    allPages.push({
+      route: 'okapi-console',
+      labelId: 'ui-developer.okapiConsole',
+      component: OkapiConsole,
+      perm: 'ui-developer.settings.okapiConsole.view',
+    });
+  }
+
   if (stripes.hasInterface('app-manager')) {
     allPages.push({
       route: 'app-manager',
