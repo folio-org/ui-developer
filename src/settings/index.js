@@ -131,6 +131,17 @@ const DeveloperSettings = (props) => {
       component: OkapiConsole,
       perm: 'ui-developer.settings.okapiConsole.view',
     });
+
+    if (stripes.hasInterface('okapi')) {
+      allPages.push(
+        {
+          route: 'okapi-timers',
+          labelId: 'ui-developer.okapiTimers',
+          component: OkapiTimers,
+          perm: 'ui-developer.settings.okapiTimers.view',
+        },
+      );
+    }
   }
 
   if (stripes.hasInterface('app-manager')) {
@@ -162,17 +173,6 @@ const DeveloperSettings = (props) => {
       labelId: 'ui-developer.canIUse',
       component: CanIUse,
     });
-  }
-
-  if (stripes.hasInterface('okapi')) {
-    allPages.push(
-      {
-        route: 'okapi-timers',
-        labelId: 'ui-developer.okapiTimers',
-        component: OkapiTimers,
-        perm: 'ui-developer.settings.okapiTimers.view',
-      },
-    );
   }
 
   if (stripes.hasInterface('scheduler')) {
