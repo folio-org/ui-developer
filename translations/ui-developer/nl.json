@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "idleSessionTTL: duur dat een idle sessie duurt voordat deze wordt gedood (bijv. 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "idleModalTTL: duur dat de idle-modal moet worden getoond voordat de sessie wordt beëindigd (bijv. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: hoe lang de waarschuwing \"uw sessie gaat dood!\" getoond moet worden voordat de sessie wordt beëindigd (bijv. 1h, 1m, 5s, 10ms)",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: decimale fractie van hoe vroeg het toegangstoken vernieuwd moet worden (bijv. 0,6 is 60% van de levensduur van het token)",
     "rtr.activityEvents": "activityEvents: welke DOM-events gebruikersactiviteit vormen (door komma's gescheiden, bijv. 'mousemove,keydown')",
     "sessionTimezone": "Sessie tijdzone",
     "sessionTimezone.temporarySessionTimezone": "TIJDELIJKE Sessietijdzone",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Pad",
     "schedulerTimers.schedule": "Schema",
     "schedulerTimers.type": "Soorten",
-    "schedulerTimers.unit": "Unit"
+    "schedulerTimers.unit": "Unit",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }

@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "idleSessionTTL: doba trvání nečinné relace před jejím ukončením (např. 1h, 1m, 5s, 10ms)",
     "rtr.idleModalTTL": "idleModalTTL: doba před ukončením relace, po kterou by se měl zobrazit režim nečinnosti (např. 1h, 1m, 5s, 10ms)",
     "rtr.fixedLengthSessionWarningTTL": "FixedLengthSessionWarningTTL: jak dlouho před ukončením relace (např. 1h, 1m, 5s, 10ms)  by se mělo zobrazit varování „dojde k ukončí vaší relace!“",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: desetinný zlomek, který udává, jak brzy se má přístupový token obnovit (např. 0,6 je 60 % životnosti tokenu)",
     "rtr.activityEvents": "activityEvents: které události DOM představují aktivitu uživatele (oddělené čárkou, např. \"mousemove,keydown\")",
     "sessionTimezone": "Časové pásmo relace",
     "sessionTimezone.temporarySessionTimezone": "TEMPORARY Časové pásmo relace",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Cesta",
     "schedulerTimers.schedule": "Naplánovat",
     "schedulerTimers.type": "Typ",
-    "schedulerTimers.unit": "Jednotka"
+    "schedulerTimers.unit": "Jednotka",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }

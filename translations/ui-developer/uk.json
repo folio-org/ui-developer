@@ -179,7 +179,6 @@
     "rtr.idleSessionTTL": "idleSessionTTL: тривалість неактивної сесії перед її завершенням (наприклад, 1 год, 1 м, 5 с, 10 мс)",
     "rtr.idleModalTTL": "idleModalTTL: тривалість відображення модального вікна очікування перед завершенням сесії (наприклад, 1 год, 1 хв, 5 с, 10 мс)",
     "rtr.fixedLengthSessionWarningTTL": "fixedLengthSessionWarningTTL: як довго має відображатися попередження \"ваша сесія завершується!\" перед завершенням сесії (наприклад, 1 год, 1 хв, 5 с, 10 мс)",
-    "rtr.rotationIntervalFraction": "rotationIntervalFraction: десятковий дріб, що позначає як рано потрібно оновлювати токен доступу (наприклад, 0,6 – це 60% від терміну служби токена)",
     "rtr.activityEvents": "activityEvents: які події DOM вважаються активністю користувача (розділяються комами, наприклад, \"mousemove, keydown\")",
     "sessionTimezone": "Часовий пояс сесії",
     "sessionTimezone.temporarySessionTimezone": "ТИМЧАСОВИЙ часовий пояс сесії",
@@ -194,5 +193,8 @@
     "schedulerTimers.path": "Шлях",
     "schedulerTimers.schedule": "Розклад",
     "schedulerTimers.type": "Тип",
-    "schedulerTimers.unit": "Одиниця"
+    "schedulerTimers.unit": "Одиниця",
+    "rtr.logCategories": "stripes logs RTR events in the categories <code>rtr, rtrv</code>",
+    "rtr.atExpiration": "AT Expiration date (next rotation on/after)",
+    "rtr.rtExpiration": "RT Expiration date (end of session)"
 }
